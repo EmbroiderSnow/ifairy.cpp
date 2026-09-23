@@ -1,0 +1,67 @@
+[
+  {
+    "file": "ggml/src/ggml-cpu/ggml-cpu.c",
+    "exit_code": 0,
+    "log": "ggml__src__ggml-cpu__ggml-cpu.c.log"
+  },
+  {
+    "file": "ggml/src/ggml-cpu/ggml-cpu.cpp",
+    "exit_code": 0,
+    "log": "ggml__src__ggml-cpu__ggml-cpu.cpp.log"
+  },
+  {
+    "file": "ggml/src/ggml-cpu/ops.cpp",
+    "exit_code": 0,
+    "log": "ggml__src__ggml-cpu__ops.cpp.log"
+  },
+  {
+    "file": "ggml/src/ggml-quants.c",
+    "exit_code": 0,
+    "log": "ggml__src__ggml-quants.c.log"
+  },
+  {
+    "file": "ggml/src/ggml.c",
+    "exit_code": 0,
+    "log": "ggml__src__ggml.c.log"
+  },
+  {
+    "file": "src/llama-arch.cpp",
+    "exit_code": 0,
+    "log": "src__llama-arch.cpp.log"
+  },
+  {
+    "file": "src/llama-context.cpp",
+    "exit_code": 0,
+    "log": "src__llama-context.cpp.log"
+  },
+  {
+    "file": "src/llama-graph.cpp",
+    "exit_code": 0,
+    "log": "src__llama-graph.cpp.log"
+  },
+  {
+    "file": "src/llama-model-loader.cpp",
+    "exit_code": 0,
+    "log": "src__llama-model-loader.cpp.log"
+  },
+  {
+    "file": "src/llama-model.cpp",
+    "exit_code": 0,
+    "log": "src__llama-model.cpp.log"
+  },
+  {
+    "file": "src/llama-quant.cpp",
+    "exit_code": 0,
+    "log": "src__llama-quant.cpp.log"
+  },
+  {
+    "file": "tests/test-backend-ops.cpp",
+    "exit_code": 0,
+    "log": "tests__test-backend-ops.cpp.log"
+  },
+  {
+    "file": "tests/test-ifairy-model.cpp",
+    "exit_code": 0,
+    "log": "tests__test-ifairy-model.cpp.log"
+  }
+]

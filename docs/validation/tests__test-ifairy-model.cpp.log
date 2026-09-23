@@ -1,0 +1,212 @@
+1242 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:49:10: warning: enum 'ggml_backend_buffer_usage' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   49 |     enum ggml_backend_buffer_usage {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:130:10: warning: enum 'ggml_backend_dev_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  130 |     enum ggml_backend_dev_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:5: warning: initial values in enum 'ggml_numa_strategy' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   25 |     enum ggml_numa_strategy {
+      |     ^
+   26 |         GGML_NUMA_STRATEGY_DISABLED   = 0,
+   27 |         GGML_NUMA_STRATEGY_DISTRIBUTE = 1,
+   28 |         GGML_NUMA_STRATEGY_ISOLATE    = 2,
+   29 |         GGML_NUMA_STRATEGY_NUMACTL    = 3,
+   30 |         GGML_NUMA_STRATEGY_MIRROR     = 4,
+   31 |         GGML_NUMA_STRATEGY_COUNT
+      |                                 
+      |                                  = 5
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:10: warning: enum 'ggml_numa_strategy' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   25 |     enum ggml_numa_strategy {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:7:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    7 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:30:10: warning: enum 'ggml_opt_loss_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   30 |     enum ggml_opt_loss_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:71:10: warning: enum 'ggml_opt_build_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   71 |     enum ggml_opt_build_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:77:10: warning: enum 'ggml_opt_optimizer_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   77 |     enum ggml_opt_optimizer_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:346:10: warning: enum 'ggml_status' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  346 |     enum ggml_status {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:377:10: warning: enum 'ggml_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  377 |     enum ggml_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:437:10: warning: enum 'ggml_prec' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  437 |     enum ggml_prec {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:443:10: warning: enum 'ggml_ftype' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  443 |     enum ggml_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:472:10: warning: enum 'ggml_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  472 |     enum ggml_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:595:10: warning: enum 'ggml_unary_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  595 |     enum ggml_unary_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:617:10: warning: enum 'ggml_glu_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  617 |     enum ggml_glu_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:628:10: warning: enum 'ggml_object_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  628 |     enum ggml_object_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:634:10: warning: enum 'ggml_log_level' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  634 |     enum ggml_log_level {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:644:10: warning: enum 'ggml_tensor_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  644 |     enum ggml_tensor_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1608:10: warning: enum 'ggml_set_rows_bf16_carrier_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 1608 |     enum ggml_set_rows_bf16_carrier_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2136:10: warning: enum 'ggml_op_pool' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2136 |     enum ggml_op_pool {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:10: warning: enum 'ggml_scale_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2175 |     enum ggml_scale_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2182:10: warning: enum 'ggml_scale_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+ 2182 |     enum ggml_scale_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2267:10: warning: enum 'ggml_sort_order' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2267 |     enum ggml_sort_order {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2637:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2637 | #    if defined(__GNUC__)
+      |      ^~~~~~~~~~~~~~~~~~~~
+      |      ifdef __GNUC__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2673:10: warning: enum 'ggml_sched_priority' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2673 |     enum ggml_sched_priority {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:10: warning: enum 'gguf_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   53 |     enum gguf_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:38:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+   38 | #define LLAMA_TOKEN_NULL -1
+      |                          ^ 
+      |                          ( )
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:77:10: warning: enum 'llama_vocab_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   77 |     enum llama_vocab_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:87:10: warning: enum 'llama_rope_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   87 |     enum llama_rope_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:95:10: warning: enum 'llama_token_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   95 |     enum llama_token_type { //TODO: remove, required until per token attributes are available from GGUF file
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:105:10: warning: enum 'llama_token_attr' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+  105 |     enum llama_token_attr {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:120:10: warning: enum 'llama_ftype' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+  120 |     enum llama_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:166:10: warning: enum 'llama_rope_scaling_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  166 |     enum llama_rope_scaling_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:175:10: warning: enum 'llama_pooling_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  175 |     enum llama_pooling_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:184:10: warning: enum 'llama_attention_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  184 |     enum llama_attention_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:190:10: warning: enum 'llama_flash_attn_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  190 |     enum llama_flash_attn_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:198:10: warning: enum 'llama_split_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  198 |     enum llama_split_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:249:10: warning: enum 'llama_model_kv_override_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  249 |     enum llama_model_kv_override_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:3:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+    3 | #if defined(GGML_COMMON_DECL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:74:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   74 | #if defined(GGML_COMMON_DECL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:312:30: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  312 |                 uint8_t   qh[n / 2];                   \
+      |                              ^
+      |                              ()
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:320:34: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  320 |                 uint8_t   qh[2 * n_groups];                  \
+      |                                  ^       
+      |                                  (       )
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:505:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+  505 | #define IQ3S_N_SCALE QK_K/64
+      |                          ^  
+      |                      (      )
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:560:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  560 | #if defined(GGML_COMMON_IMPL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-common.h:598:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  598 | #if defined(GGML_COMMON_IMPL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-quants.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/../ggml/src/ggml-quants.h:192:89: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  192 |     GGML_API void   quantize_row_turbo2m4_##suffix##_ref(const float * GGML_RESTRICT x, block_type * GGML_RESTRICT y, \
+      |                                                                                         ^
+      |                                                                                         (         )
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-ifairy-model.cpp:23:8: warning: struct 'fixture' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   23 | struct fixture {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-ifairy-model.cpp:96:10: warning: method 'write' can be made const [readability-make-member-function-const]
+   96 |     void write(const char * arch) {
+      |          ^
+      |                                   const
+Suppressed 1186 warnings (1186 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

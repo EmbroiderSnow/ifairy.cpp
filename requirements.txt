@@ -1,0 +1,5 @@
+# Optional conversion/reference-test dependencies; C++ inference needs none of these.
+./gguf-py
+numpy
+safetensors
+torch

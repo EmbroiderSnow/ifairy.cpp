@@ -1,0 +1,14 @@
+Source commit: fe79b5dc5a449922caa64a37451948f30c124318
+Formatting baseline: local source snapshot 30b1e128038bd5a653edaf5c64519c15dfac86b8 (temporary validation commit)
+cmake -B build-rel -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_LEGACY_IFAIRY_CPU_LUT=ON -DLLAMA_CURL=OFF
+cmake --build build-rel -j 8
+ctest --test-dir build-rel --output-on-failure
+cmake -B build-direct -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_LEGACY_IFAIRY_CPU_LUT=OFF
+cmake --build build-direct -j 8
+ctest --test-dir build-direct --output-on-failure
+GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_DEBUG=1 ./build-rel/bin/test-ifairy-model
+python3 scripts/check-ifairy-only.py
+nm -g build-rel/bin/*.dylib (verified no fairy2i symbols)
+git clang-format --style=file --diff <merge-base with validation snapshot> -- '*.c' '*.cc' '*.cpp' '*.cxx' '*.h' '*.hh' '*.hpp'
+clang-tidy -p build-rel --extra-arg=-isysroot$(xcrun --show-sdk-path) --checks=-misc-include-cleaner <each of the 13 sources in clang-tidy-summary.json>
+No benchmark or real-model inference was run.

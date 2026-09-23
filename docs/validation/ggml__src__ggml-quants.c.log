@@ -1,0 +1,1482 @@
+731 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:5: warning: initial values in enum 'ggml_numa_strategy' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   25 |     enum ggml_numa_strategy {
+      |     ^
+   26 |         GGML_NUMA_STRATEGY_DISABLED   = 0,
+   27 |         GGML_NUMA_STRATEGY_DISTRIBUTE = 1,
+   28 |         GGML_NUMA_STRATEGY_ISOLATE    = 2,
+   29 |         GGML_NUMA_STRATEGY_NUMACTL    = 3,
+   30 |         GGML_NUMA_STRATEGY_MIRROR     = 4,
+   31 |         GGML_NUMA_STRATEGY_COUNT
+      |                                 
+      |                                  = 5
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:3:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+    3 | #if defined(GGML_COMMON_DECL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:74:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   74 | #if defined(GGML_COMMON_DECL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:312:30: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  312 |                 uint8_t   qh[n / 2];                   \
+      |                              ^
+      |                              ()
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:320:34: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  320 |                 uint8_t   qh[2 * n_groups];                  \
+      |                                  ^       
+      |                                  (       )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:505:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+  505 | #define IQ3S_N_SCALE QK_K/64
+      |                          ^  
+      |                      (      )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:560:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  560 | #if defined(GGML_COMMON_IMPL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:598:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  598 | #if defined(GGML_COMMON_IMPL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:1224:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 1224 | #if defined(GGML_COMMON_IMPL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:30:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   30 | #if defined(_MSC_VER)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef _MSC_VER
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:71:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   71 | #if defined(__ARM_FEATURE_SVE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:75:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   75 | #if defined(__ARM_NEON)
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_NEON
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:84:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+   84 | #if !defined(__aarch64__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef __aarch64__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:304:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+  304 | #if !defined(__ARM_FEATURE_DOTPROD)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef __ARM_FEATURE_DOTPROD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:339:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  339 | #if defined(__loongarch64)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __loongarch64
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:503:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  503 | #if defined(__loongarch_asx)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __loongarch_asx
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:27:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   27 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:25:21: warning: statement should be inside braces [readability-braces-around-statements]
+   25 |     if (x <= val[0]) return 0;
+      |                     ^         
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:26:23: warning: statement should be inside braces [readability-braces-around-statements]
+   26 |     if (x >= val[n-1]) return n-1;
+      |                       ^           
+      |                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:27:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+   27 |     int ml = 0, mu = n-1;
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:30:26: warning: statement should be inside braces [readability-braces-around-statements]
+   30 |         if (x < val[mav]) mu = mav; else ml = mav;
+      |                          ^
+      |                           {         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:30:41: warning: statement should be inside braces [readability-braces-around-statements]
+   30 |         if (x < val[mav]) mu = mav; else ml = mav;
+      |                                         ^         
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:87:25: warning: statement should be inside braces [readability-braces-around-statements]
+   87 |             if (v < min) min = v;
+      |                         ^        
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:88:25: warning: statement should be inside braces [readability-braces-around-statements]
+   88 |             if (v > max) max = v;
+      |                         ^        
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:101:33: warning: casting (double + 0.5) to integer leads to incorrect rounding; consider using lround (#include <cmath>) instead [bugprone-incorrect-roundings]
+  101 |             const uint8_t xi0 = MIN(15, (int8_t)(x0 + 0.5f));
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:38:42: note: expanded from macro 'MIN'
+   38 | #    define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:102:33: warning: casting (double + 0.5) to integer leads to incorrect rounding; consider using lround (#include <cmath>) instead [bugprone-incorrect-roundings]
+  102 |             const uint8_t xi1 = MIN(15, (int8_t)(x1 + 0.5f));
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:38:42: note: expanded from macro 'MIN'
+   38 | #    define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:168:25: warning: statement should be inside braces [readability-braces-around-statements]
+  168 |             if (v < min) min = v;
+      |                         ^        
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:169:25: warning: statement should be inside braces [readability-braces-around-statements]
+  169 |             if (v > max) max = v;
+      |                         ^        
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:363:34: warning: redundant parentheses around expression [readability-redundant-parentheses]
+  363 |             const uint8_t xh_1 = ((qh >> (j + 12))     ) & 0x10;
+      |                                  ^                     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:390:34: warning: redundant parentheses around expression [readability-redundant-parentheses]
+  390 |             const uint8_t xh_1 = ((qh >> (j + 12))     ) & 0x10;
+      |                                  ^                     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:32: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:19: note: parent conditional operator here
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:63: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:32: note: parent conditional operator here
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:84: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:489:63: note: parent conditional operator here
+  489 |         float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:494:22: warning: statement should be inside braces [readability-braces-around-statements]
+  494 |     if (return_early) return suml2 > 0 ? 0.5f*(scale + 1/iscale) : 1/iscale;
+      |                      ^                                                      
+      |                       {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:36: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:23: note: parent conditional operator here
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:67: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:36: note: parent conditional operator here
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:88: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:505:67: note: parent conditional operator here
+  505 |             float w = qw ? qw[i] : rmse_type == 1 ? x[i] * x[i] : rmse_type == 2 ? 1 : rmse_type == 3 ? fabsf(x[i]) : sqrtf(fabsf(x[i]));
+      |                                                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:584:24: warning: statement should be inside braces [readability-braces-around-statements]
+  584 |         if (x[i] < min) min = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:585:24: warning: statement should be inside braces [readability-braces-around-statements]
+  585 |         if (x[i] > max) max = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:588:36: warning: statement should be inside braces [readability-braces-around-statements]
+  588 |         for (int i = 0; i < n; ++i) L[i] = 0;
+      |                                    ^         
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:592:17: warning: statement should be inside braces [readability-braces-around-statements]
+  592 |     if (min > 0) min = 0;
+      |                 ^        
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:614:21: warning: statement should be inside braces [readability-braces-around-statements]
+  614 |         if (min > 0) min = 0;
+      |                     ^        
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:616:25: warning: statement should be inside braces [readability-braces-around-statements]
+  616 |         if (!did_change) break;
+      |                         ^      
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:635:24: warning: statement should be inside braces [readability-braces-around-statements]
+  635 |         if (x[i] < min) min = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:636:24: warning: statement should be inside braces [readability-braces-around-statements]
+  636 |         if (x[i] > max) max = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:641:17: warning: statement should be inside braces [readability-braces-around-statements]
+  641 |     if (min > 0) min = 0;
+      |                 ^        
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:643:36: warning: statement should be inside braces [readability-braces-around-statements]
+  643 |         for (int i = 0; i < n; ++i) L[i] = 0;
+      |                                    ^         
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:664:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  664 |         float sum_l = 0, sum_l2 = 0, sum_xl = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:730:41: warning: statement should be inside braces [readability-braces-around-statements]
+  730 |             for (int l = 0; l < 16; ++l) weights[l] = fabsf(x[16*j + l]);
+      |                                         ^                                
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:750:46: warning: statement should be inside braces [readability-braces-around-statements]
+  750 |             for (int j = 0; j < QK_K/16; ++j) y[i].scales[j] = 0;
+      |                                              ^                   
+      |                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:765:20: warning: statement should be inside braces [readability-braces-around-statements]
+  765 |             if (!d) continue;
+      |                    ^         
+      |                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:796:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  796 |         float dl, ml;
+      |         ^~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:803:45: warning: statement should be inside braces [readability-braces-around-statements]
+  803 |                 for (int l = 0; l < 16; ++l) *y++ = dl * ((int8_t)((q[l] >> shift) & 3)) - ml;
+      |                                             ^                                                 
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:807:45: warning: statement should be inside braces [readability-braces-around-statements]
+  807 |                 for (int l = 0; l < 16; ++l) *y++ = dl * ((int8_t)((q[l+16] >> shift) & 3)) - ml;
+      |                                             ^                                                    
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:829:24: warning: statement should be inside braces [readability-braces-around-statements]
+  829 |         if (x[i] < min) min = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:830:24: warning: statement should be inside braces [readability-braces-around-statements]
+  830 |         if (x[i] > max) max = x[i];
+      |                        ^           
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:860:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  860 |         float sum_l = 0, sum_l2 = 0, sum_xl = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:920:21: warning: statement should be inside braces [readability-braces-around-statements]
+  920 |         if (is == 0) continue;
+      |                     ^         
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:984:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  984 |     uint8_t Ls[QK_K/16], Lm[QK_K/16];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:989:39: warning: statement should be inside braces [readability-braces-around-statements]
+  989 |         for (int j = 0; j < QK_K; ++j) sumx2 += x[j]*x[j];
+      |                                       ^                   
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:993:41: warning: statement should be inside braces [readability-braces-around-statements]
+  993 |             for (int l = 0; l < 16; ++l) weight[l] = qw[l] * sqrtf(sigma2 + x[16*j + l]*x[16*j + l]);
+      |                                         ^                                                            
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:994:46: warning: statement should be inside braces [readability-braces-around-statements]
+  994 |             for (int l = 0; l < QK_K/16; ++l) sw[j] += weight[l];
+      |                                              ^                   
+      |                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:998:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  998 |         float dm, mm;
+      |         ^~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1014:24: warning: statement should be inside braces [readability-braces-around-statements]
+ 1014 |                 if (!d) continue;
+      |                        ^         
+      |                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1037:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1037 |         quantize_row_q2_K_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1034:89: note: source type originates from referencing this parameter
+ 1034 | size_t quantize_q2_K(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1191:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 1191 |         for (int j = 0; j < QK_K; ++j) sumx2 += x[j]*x[j];
+      |                                       ^                   
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1197:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1197 |                 for (int l = 0; l < 16; ++l) weight[l] = qw[l] * sqrtf(sigma2 + x[16*j+l]*x[16*j+l]);
+      |                                             ^                                                        
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1199:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1199 |                 for (int l = 0; l < 16; ++l) weight[l] = x[16*j+l]*x[16*j+l];
+      |                                             ^                                
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1202:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1202 |             for (int l = 0; l < 16; ++l) sumw += weight[l];
+      |                                         ^                  
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1213:21: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [bugprone-signed-char-misuse]
+ 1213 |             int l = Ls[j];
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1265:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1265 |         quantize_row_q3_K_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1262:89: note: source type originates from referencing this parameter
+ 1262 | size_t quantize_q3_K(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1296:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1296 |             for (int l = 0; l < 32; ++l) sum_x2 += x[32*j + l] * x[32*j + l];
+      |                                         ^                                    
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1298:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1298 |             for (int l = 0; l < 32; ++l) weights[l] = av_x + fabsf(x[32*j + l]);
+      |                                         ^                                       
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1329:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1329 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1333:20: warning: statement should be inside braces [readability-braces-around-statements]
+ 1333 |             if (!d) continue;
+      |                    ^         
+      |                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1344:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1344 |             for (int l = 0; l < 32; ++l) q[l] = L[j + l] | (L[j + l + 32] << 4);
+      |                                         ^                                       
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1363:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1363 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1369:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1369 |             for (int l = 0; l < 32; ++l) *y++ = d1 * (q[l] & 0xF) - m1;
+      |                                         ^                              
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1370:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1370 |             for (int l = 0; l < 32; ++l) *y++ = d2 * (q[l]  >> 4) - m2;
+      |                                         ^                              
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1392:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 1392 |         for (int l = 0; l < QK_K; ++l) sum_x2 += x[l] * x[l];
+      |                                       ^                      
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1399:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1399 |                 for (int l = 0; l < 32; ++l) weights[l] = qw[l] * sqrtf(sigma2 + x[32*j + l]*x[32*j + l]);
+      |                                             ^                                                             
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1401:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1401 |                 for (int l = 0; l < 32; ++l) weights[l] = av_x + fabsf(x[32*j + l]);
+      |                                             ^                                       
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1404:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1404 |             for (int l = 0; l < 32; ++l) sumw += weights[l];
+      |                                         ^                   
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1426:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1426 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1430:20: warning: statement should be inside braces [readability-braces-around-statements]
+ 1430 |             if (!d) continue;
+      |                    ^         
+      |                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1440:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1440 |             for (int l = 0; l < 32; ++l) q[l] = L[j + l] | (L[j + l + 32] << 4);
+      |                                         ^                                       
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1452:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1452 |         quantize_row_q4_K_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1449:89: note: source type originates from referencing this parameter
+ 1449 | size_t quantize_q4_K(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1483:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1483 |             for (int l = 0; l < 32; ++l) sum_x2 += x[32*j + l] * x[32*j + l];
+      |                                         ^                                    
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1485:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1485 |             for (int l = 0; l < 32; ++l) weights[l] = av_x + fabsf(x[32*j + l]);
+      |                                         ^                                       
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1516:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1516 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1520:20: warning: statement should be inside braces [readability-braces-around-statements]
+ 1520 |             if (!d) continue;
+      |                    ^         
+      |                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1533:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1533 |         uint8_t m1 = 1, m2 = 2;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1566:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1566 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1567:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1567 |         uint8_t u1 = 1, u2 = 2;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1573:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1573 |             for (int l = 0; l < 32; ++l) *y++ = d1 * ((ql[l] & 0xF) + (qh[l] & u1 ? 16 : 0)) - m1;
+      |                                         ^                                                         
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1574:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1574 |             for (int l = 0; l < 32; ++l) *y++ = d2 * ((ql[l]  >> 4) + (qh[l] & u2 ? 16 : 0)) - m2;
+      |                                         ^                                                         
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1597:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 1597 |         for (int l = 0; l < QK_K; ++l) sum_x2 += x[l] * x[l];
+      |                                       ^                      
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1604:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1604 |                 for (int l = 0; l < 32; ++l) weights[l] = qw[l] * sqrtf(sigma2 + x[32*j + l]*x[32*j + l]);
+      |                                             ^                                                             
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1606:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 1606 |                 for (int l = 0; l < 32; ++l) weights[l] = av_x + fabsf(x[32*j + l]);
+      |                                             ^                                       
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1609:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 1609 |             for (int l = 0; l < 32; ++l) sumw += weights[l];
+      |                                         ^                   
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1635:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1635 |         uint8_t sc, m;
+      |         ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1639:20: warning: statement should be inside braces [readability-braces-around-statements]
+ 1639 |             if (!d) continue;
+      |                    ^         
+      |                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1652:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1652 |         uint8_t m1 = 1, m2 = 2;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1677:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1677 |         quantize_row_q5_K_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1674:89: note: source type originates from referencing this parameter
+ 1674 | size_t quantize_q5_K(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1746:31: warning: 'q1' is confusable with 'ql' [misc-confusable-identifiers]
+ 1746 |                 const uint8_t q1 = L[j + l +  0] & 0xF;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1742:33: note: other declaration found here
+ 1742 |         uint8_t * GGML_RESTRICT ql = y[i].ql;
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1776:30: warning: 'q1' is confusable with 'ql' [misc-confusable-identifiers]
+ 1776 |                 const int8_t q1 = (int8_t)((ql[l +  0] & 0xF) | (((qh[l] >> 0) & 3) << 4)) - 32;
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1769:39: note: other declaration found here
+ 1769 |         const uint8_t * GGML_RESTRICT ql = x[i].ql;
+      |                                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1860:31: warning: 'q1' is confusable with 'ql' [misc-confusable-identifiers]
+ 1860 |                 const uint8_t q1 = L[j + l +  0] & 0xF;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1856:33: note: other declaration found here
+ 1856 |         uint8_t * GGML_RESTRICT ql = y[i].ql;
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1880:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1880 |         quantize_row_q6_K_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1877:89: note: source type originates from referencing this parameter
+ 1877 | size_t quantize_q6_K(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1905:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 1905 |     for (int j = 0; j < n_per_row; ++j) sum_x2 += x[j]*x[j];
+      |                                        ^                    
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1912:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 1912 |         for (int j = 0; j < QK4_0; ++j) weight[j] = qw[j] * sqrtf(sigma2 + xb[j]*xb[j]);
+      |                                        ^                                                
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1923:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1923 |         quantize_row_q4_0_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1921:89: note: source type originates from referencing this parameter
+ 1921 | size_t quantize_q4_0(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1945:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1945 |     uint8_t L[QK4_1], Laux[QK4_1];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1948:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 1948 |     for (int j = 0; j < n_per_row; ++j) sum_x2 += x[j]*x[j];
+      |                                        ^                    
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1955:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 1955 |         for (int j = 0; j < QK4_1; ++j) weight[j] = qw[j] * sqrtf(sigma2 + xb[j]*xb[j]);
+      |                                        ^                                                
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1968:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 1968 |         quantize_row_q4_1_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1966:89: note: source type originates from referencing this parameter
+ 1966 | size_t quantize_q4_1(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:1993:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 1993 |     for (int j = 0; j < n_per_row; ++j) sum_x2 += x[j]*x[j];
+      |                                        ^                    
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2000:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 2000 |         for (int j = 0; j < QK5_0; ++j) weight[j] = qw[j] * sqrtf(sigma2 + xb[j]*xb[j]);
+      |                                        ^                                                
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2022:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2022 |         quantize_row_q5_0_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2020:89: note: source type originates from referencing this parameter
+ 2020 | size_t quantize_q5_0(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2044:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 2044 |     uint8_t L[QK5_1], Laux[QK5_1];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2047:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 2047 |     for (int j = 0; j < n_per_row; ++j) sum_x2 += x[j]*x[j];
+      |                                        ^                    
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2054:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 2054 |         for (int j = 0; j < QK5_1; ++j) weight[j] = qw[j] * sqrtf(sigma2 + xb[j]*xb[j]);
+      |                                        ^                                                
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2075:41: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2075 |         quantize_row_q5_1_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                         ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2073:89: note: source type originates from referencing this parameter
+ 2073 | size_t quantize_q5_1(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2091:37: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2091 |     quantize_row_q8_0_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                     ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2088:89: note: source type originates from referencing this parameter
+ 2088 | size_t quantize_q8_0(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                 ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2097:38: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2097 |     quantize_row_mxfp4_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                      ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2095:90: note: source type originates from referencing this parameter
+ 2095 | size_t quantize_mxfp4(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                  ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2165:11: warning: suspicious usage of 'sizeof(...)' in pointer arithmetic; this scaled value will be scaled again by the '+=' operator [bugprone-sizeof-expression]
+ 2165 |         x += 4*sizeof(y->qh);
+      |           ^    ~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2165:11: note: '+=' in pointer arithmetic internally scales with 'sizeof(const float)' == 4
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2204:38: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2204 |     quantize_row_tq1_0_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                      ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2201:90: note: source type originates from referencing this parameter
+ 2201 | size_t quantize_tq1_0(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                  ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2211:38: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 2211 |     quantize_row_tq2_0_ref(src, dst, (int64_t)nrow*n_per_row);
+      |                                      ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2208:90: note: source type originates from referencing this parameter
+ 2208 | size_t quantize_tq2_0(const float * GGML_RESTRICT src, void * GGML_RESTRICT dst, int64_t nrow, int64_t n_per_row, const float * quant_weights) {
+      |                                                                                  ~~~~~~~ ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2535:45: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 2535 |                 const int code = ar > ai ? (xr >= 0.0f ? 1 : 0) : (xi >= 0.0f ? 3 : 2);
+      |                                             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2535:34: note: parent conditional operator here
+ 2535 |                 const int code = ar > ai ? (xr >= 0.0f ? 1 : 0) : (xi >= 0.0f ? 3 : 2);
+      |                                  ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2859:9: warning: Value stored to 'qs' is never read [clang-analyzer-deadcode.DeadStores]
+ 2859 |         qs += QK4_NL/2;
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2859:9: note: Value stored to 'qs' is never read
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2951:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2951 |             ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2952:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2952 |             ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2966:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2966 |             ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2967:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2967 |             ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2994:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2994 |             ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:2995:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 2995 |             ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3009:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3009 |             ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3010:62: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3010 |             ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                              ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3036:64: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3036 |         const ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                                ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3037:64: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3037 |         const ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                                ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3060:68: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3060 |             const ggml_bf16_t x_real_bf16 = ((const ggml_bf16_t *) (x_com))[0];
+      |                                                                    ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3061:68: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3061 |             const ggml_bf16_t x_imag_bf16 = ((const ggml_bf16_t *) (x_com))[1];
+      |                                                                    ^     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3133:12: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3133 |            type == GGML_TYPE_IQ2_XS  ? 1 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3132:12: note: parent conditional operator here
+ 3132 |     return type == GGML_TYPE_IQ2_XXS ? 0 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3134:12: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3134 |            type == GGML_TYPE_IQ1_S || type == GGML_TYPE_IQ1_M ? 2 : 3;
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3133:12: note: parent conditional operator here
+ 3133 |            type == GGML_TYPE_IQ2_XS  ? 1 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3140:12: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3140 |            type == GGML_TYPE_IQ2_XS  ? 512 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3139:12: note: parent conditional operator here
+ 3139 |     return type == GGML_TYPE_IQ2_XXS ? 256 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3141:12: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3141 |            type == GGML_TYPE_IQ1_S || type == GGML_TYPE_IQ1_M ? NGRID_IQ1S : 1024;
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3140:12: note: parent conditional operator here
+ 3140 |            type == GGML_TYPE_IQ2_XS  ? 512 :
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:31: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:12: note: parent conditional operator here
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:49: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:31: note: parent conditional operator here
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:68: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3147:49: note: parent conditional operator here
+ 3147 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3407:80: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3407 |     const int nwant = type == GGML_TYPE_IQ1_S || type == GGML_TYPE_IQ1_M ? 3 : type == GGML_TYPE_IQ2_S ? 1 : 2;
+      |                                                                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3407:23: note: parent conditional operator here
+ 3407 |     const int nwant = type == GGML_TYPE_IQ1_S || type == GGML_TYPE_IQ1_M ? 3 : type == GGML_TYPE_IQ2_S ? 1 : 2;
+      |                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3409:30: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3409 |                              type == GGML_TYPE_IQ2_XS  ? kgrid_2bit_512 :
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3408:30: note: parent conditional operator here
+ 3408 |     const uint16_t * kgrid = type == GGML_TYPE_IQ2_XXS ? kgrid_2bit_256 :
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3410:30: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3410 |                              type == GGML_TYPE_IQ1_S || type == GGML_TYPE_IQ1_M ? kgrid_1bit_2048 : kgrid_2bit_1024;
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3409:30: note: parent conditional operator here
+ 3409 |                              type == GGML_TYPE_IQ2_XS  ? kgrid_2bit_512 :
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3428:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 3428 |     for (int i = 0; i < kmap_size; ++i) kmap_q2xs[i] = -1;
+      |                                        ^                  
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3442:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3442 |     int num_neighbors = 0, num_not_in_map = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3444:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 3444 |         if (kmap_q2xs[i] >= 0) continue;
+      |                               ^         
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3453:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 3453 |             for (int k = 0; k < 8; ++k) d2 += (pg[k] - pos[k])*(pg[k] - pos[k]);
+      |                                        ^                                        
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3462:36: warning: statement should be inside braces [readability-braces-around-statements]
+ 3462 |                 if (nhave == nwant) break;
+      |                                    ^      
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3475:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 3475 |         if (kmap_q2xs[i] >= 0) continue;
+      |                               ^         
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3483:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 3483 |             for (int k = 0; k < 8; ++k) d2 += (pg[k] - pos[k])*(pg[k] - pos[k]);
+      |                                        ^                                        
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3491:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3491 |         int n = 0, nhave = 1;
+      |         ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3494:36: warning: statement should be inside braces [readability-braces-around-statements]
+ 3494 |                 if (nhave == nwant) break;
+      |                                    ^      
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3536:32: warning: statement should be inside braces [readability-braces-around-statements]
+ 3536 |     for (int i = 0; i < 8; ++i) L[i] = (pg[i] - 1)/2;
+      |                                ^                     
+      |                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3578:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 3578 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3584:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3584 |             for (int i = 0; i < 32; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                         ^                                                
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3585:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3585 |             for (int i = 0; i < 32; ++i) waux[i] = sqrtf(weight[i]);
+      |                                         ^                           
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3590:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 3590 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 3591 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3590:42: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+ 3590 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 3591 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3609:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3609 |             for (int i = 1; i < 32; ++i) max = MAX(max, xval[i]);
+      |                                         ^                        
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3627:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 3627 |                     for (int i = 0; i < 8; ++i) u |= (Laux[8*k+i] << 2*i);
+      |                                                ^                          
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3631:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 3631 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3631:25: note: Value stored to 'grid_index' is never read
+ 3631 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3634:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3634 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3661:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 3661 |                     for (int i = 0; i < 8; ++i) L[8*k+i] = (pg[i] - 1)/2;
+      |                                                ^                         
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3663:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3663 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3670:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 3670 |                 if (sumq2 > 0) scale = sumqx/sumq2;
+      |                               ^                    
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3676:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 3676 |                 for (int k = 0; k < 4; ++k) block_signs[k] = (~block_signs[k]) & 127;
+      |                                            ^                                         
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3680:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 3680 |                 for (int i = 0; i < 8; ++i) u |= (L[8*k+i] << 2*i);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3684:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 3684 |                     for (int i = 0; i < 8; ++i) printf(" %d", L[8*k+i]);
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3754:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 3754 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3760:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3760 |             for (int i = 0; i < 16; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                         ^                                                
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3761:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3761 |             for (int i = 0; i < 16; ++i) waux[i] = sqrtf(weight[i]);
+      |                                         ^                           
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3766:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 3766 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 3767 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3766:42: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+ 3766 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 3767 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3785:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 3785 |             for (int i = 1; i < 16; ++i) max = MAX(max, xval[i]);
+      |                                         ^                        
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3803:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 3803 |                     for (int i = 0; i < 8; ++i) u |= (Laux[8*k+i] << 2*i);
+      |                                                ^                          
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3809:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 3809 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3809:25: note: Value stored to 'grid_index' is never read
+ 3809 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3812:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3812 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3821:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 3821 |                     for (int i = 0; i < 16; ++i) L[i] = Laux[i];
+      |                                                 ^               
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3822:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 3822 |                     for (int k = 0; k <  2; ++k) is_on_grid[k] = is_on_grid_aux[k];
+      |                                                 ^                                  
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3826:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 3826 |             for (int k = 0; k < 2; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                        ^                                   
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3826:60: warning: statement should be inside braces [readability-braces-around-statements]
+ 3826 |             for (int k = 0; k < 2; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                                            ^               
+      |                                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3830:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 3830 |                     if (is_on_grid[k]) continue;
+      |                                       ^         
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3841:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 3841 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, scale, L + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3841:25: note: Value stored to 'grid_index' is never read
+ 3841 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, scale, L + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3844:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 3844 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3851:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 3851 |                 if (sumq2 > 0) scale = sumqx/sumq2;
+      |                               ^                    
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3855:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 3855 |                 for (int k = 0; k < 2; ++k) block_signs[k] = (~block_signs[k]) & 127;
+      |                                            ^                                         
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3859:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 3859 |                 for (int i = 0; i < 8; ++i) u |= (L[8*k+i] << 2*i);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3863:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 3863 |                     for (int i = 0; i < 8; ++i) printf(" %d", L[8*k+i]);
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3885:27: warning: statement should be inside braces [readability-braces-around-statements]
+ 3885 |             if (ib%2 == 0) y[ibl].scales[ib/2] = l;
+      |                           ^
+      |                            {
+ 3886 |             else y[ibl].scales[ib/2] |= (l << 4);
+      |             } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3886:17: warning: statement should be inside braces [readability-braces-around-statements]
+ 3886 |             else y[ibl].scales[ib/2] |= (l << 4);
+      |                 ^                                
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:31: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:12: note: parent conditional operator here
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:49: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:31: note: parent conditional operator here
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:68: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:3941:49: note: parent conditional operator here
+ 3941 |     return l[0] < r[0] ? -1 : l[0] > r[0] ? 1 : l[1] < r[1] ? -1 : l[1] > r[1] ? 1 : 0;
+      |                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4022:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 4022 |     for (int i = 0; i < kmap_size; ++i) kmap_q3xs[i] = -1;
+      |                                        ^                  
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4036:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4036 |     int num_neighbors = 0, num_not_in_map = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4038:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 4038 |         if (kmap_q3xs[i] >= 0) continue;
+      |                               ^         
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4047:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 4047 |             for (int k = 0; k < 4; ++k) d2 += (pg[k] - pos[k])*(pg[k] - pos[k]);
+      |                                        ^                                        
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4056:36: warning: statement should be inside braces [readability-braces-around-statements]
+ 4056 |                 if (nhave == nwant) break;
+      |                                    ^      
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4069:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 4069 |         if (kmap_q3xs[i] >= 0) continue;
+      |                               ^         
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4077:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 4077 |             for (int k = 0; k < 4; ++k) d2 += (pg[k] - pos[k])*(pg[k] - pos[k]);
+      |                                        ^                                        
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4085:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4085 |         int n = 0, nhave = 1;
+      |         ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4088:36: warning: statement should be inside braces [readability-braces-around-statements]
+ 4088 |                 if (nhave == nwant) break;
+      |                                    ^      
+      |                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4130:32: warning: statement should be inside braces [readability-braces-around-statements]
+ 4130 |     for (int i = 0; i < 4; ++i) L[i] = (pg[i] - 1)/2;
+      |                                ^                     
+      |                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4191:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 4191 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4198:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 4198 |                 for (int i = 0; i < 32; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                             ^                                                
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4200:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 4200 |                 for (int i = 0; i < 32; ++i) weight[i] = xb[i]*xb[i];
+      |                                             ^                        
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4202:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 4202 |             for (int i = 0; i < 32; ++i) waux[i] = sqrtf(weight[i]);
+      |                                         ^                           
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4207:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 4207 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 4208 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4207:42: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+ 4207 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 4208 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4226:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 4226 |             for (int i = 1; i < 32; ++i) max = MAX(max, xval[i]);
+      |                                         ^                        
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4243:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4243 |                     for (int i = 0; i < 4; ++i) u |= (Laux[4*k+i] << 3*i);
+      |                                                ^                          
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4249:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 4249 |                         grid_index = iq3_find_best_neighbour(neighbours, kgrid_q3xs, xval + 4*k, waux + 4*k, this_scale, Laux + 4*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4249:25: note: Value stored to 'grid_index' is never read
+ 4249 |                         grid_index = iq3_find_best_neighbour(neighbours, kgrid_q3xs, xval + 4*k, waux + 4*k, this_scale, Laux + 4*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4252:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4252 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4261:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4261 |                     for (int i = 0; i < 32; ++i) L[i] = Laux[i];
+      |                                                 ^               
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4262:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4262 |                     for (int k = 0; k <  8; ++k) is_on_grid[k] = is_on_grid_aux[k];
+      |                                                 ^                                  
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4266:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 4266 |             for (int k = 0; k < 8; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                        ^                                   
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4266:60: warning: statement should be inside braces [readability-braces-around-statements]
+ 4266 |             for (int k = 0; k < 8; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                                            ^               
+      |                                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4270:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 4270 |                     if (is_on_grid[k]) continue;
+      |                                       ^         
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4283:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4283 |                     for (int i = 0; i < 4; ++i) L[4*k+i] = (pg[i] - 1)/2;
+      |                                                ^                         
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4285:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4285 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4292:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 4292 |                 if (sumq2 > 0) scale = sumqx/sumq2;
+      |                               ^                    
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4298:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 4298 |                 for (int k = 0; k < 4; ++k) block_signs[k] = (~block_signs[k]) & 127;
+      |                                            ^                                         
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4302:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 4302 |                 for (int i = 0; i < 4; ++i) u |= (L[4*k+i] << 3*i);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4306:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4306 |                     for (int i = 0; i < 4; ++i) printf(" %d", L[4*k+i]);
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4326:16: warning: suspicious usage of 'sizeof(...)' in pointer arithmetic; this scaled value will be scaled again by the '+=' operator [bugprone-sizeof-expression]
+ 4326 |             dh += block_size/sizeof(ggml_fp16_t);
+      |                ^             ~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4326:16: note: '+=' in pointer arithmetic internally scales with 'sizeof(ggml_fp16_t)' == 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4341:12: warning: suspicious usage of 'sizeof(...)' in pointer arithmetic; this scaled value will be scaled again by the '+=' operator [bugprone-sizeof-expression]
+ 4341 |         dh += block_size/sizeof(ggml_fp16_t);
+      |            ^             ~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4341:12: note: '+=' in pointer arithmetic internally scales with 'sizeof(ggml_fp16_t)' == 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4410:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 4410 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4417:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 4417 |                 for (int i = 0; i < block_size; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                                     ^                                                
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4419:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 4419 |                 for (int i = 0; i < block_size; ++i) weight[i] = xb[i]*xb[i];
+      |                                                     ^                        
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4421:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4421 |             for (int i = 0; i < block_size; ++i) waux[i] = sqrtf(weight[i]);
+      |                                                 ^                           
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4425:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 4425 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 4426 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4425:42: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+ 4425 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 4426 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4433:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4433 |             for (int i = 1; i < block_size; ++i) max = MAX(max, xval[i]);
+      |                                                 ^                        
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4440:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 4440 |             for (int k = 0; k < bs4; ++k) is_on_grid[k] = false;
+      |                                          ^                      
+      |                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4450:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4450 |                     for (int i = 0; i < 4; ++i) u |= (Laux[4*k+i] << 3*i);
+      |                                                ^                          
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4456:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 4456 |                         grid_index = iq3_find_best_neighbour(neighbours, kgrid_q3xs, xval + 4*k, waux + 4*k, this_scale, Laux + 4*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4456:25: note: Value stored to 'grid_index' is never read
+ 4456 |                         grid_index = iq3_find_best_neighbour(neighbours, kgrid_q3xs, xval + 4*k, waux + 4*k, this_scale, Laux + 4*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4459:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4459 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4468:57: warning: statement should be inside braces [readability-braces-around-statements]
+ 4468 |                     for (int i = 0; i < block_size; ++i) L[i] = Laux[i];
+      |                                                         ^               
+      |                                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4469:50: warning: statement should be inside braces [readability-braces-around-statements]
+ 4469 |                     for (int k = 0; k < bs4; ++k) is_on_grid[k] = is_on_grid_aux[k];
+      |                                                  ^                                  
+      |                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4473:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 4473 |             for (int k = 0; k < bs4; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                          ^                                   
+      |                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4473:62: warning: statement should be inside braces [readability-braces-around-statements]
+ 4473 |             for (int k = 0; k < bs4; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                                              ^               
+      |                                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4490:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4490 |                     for (int i = 0; i < 4; ++i) L[4*k+i] = (pg[i] - 1)/2;
+      |                                                ^                         
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4492:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4492 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4499:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 4499 |                 if (sumq2 > 0) scale = sumqx/sumq2;
+      |                               ^                    
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4505:46: warning: statement should be inside braces [readability-braces-around-statements]
+ 4505 |                 for (int k = 0; k < bs8; ++k) block_signs[k] = ~block_signs[k];
+      |                                              ^                                 
+      |                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4509:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 4509 |                 for (int i = 0; i < 4; ++i) u |= (L[4*k+i] << 3*i);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4513:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 4513 |                     for (int i = 0; i < 4; ++i) printf(" %d", L[4*k+i]);
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4521:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 4521 |             for (int k = 0; k < bs8; ++k) signs[k] = block_signs[k];
+      |                                          ^                          
+      |                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4585:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4585 |         float sumqx = 0, sumq2 = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4587:23: warning: result of integer division used in a floating point context; possible loss of precision [bugprone-integer-division]
+ 4587 |             float q = (pg[i] - 3)/2;
+      |                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4600:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4600 |             float sumqx = 0, sumq2 = 0;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4603:27: warning: result of integer division used in a floating point context; possible loss of precision [bugprone-integer-division]
+ 4603 |                 float q = (grid_i[j] - 3)/2;
+      |                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4618:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4618 |             float sumqx = 0, sumq2 = 0;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4620:27: warning: result of integer division used in a floating point context; possible loss of precision [bugprone-integer-division]
+ 4620 |                 float q = (pg[i] - 3)/2;
+      |                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4633:32: warning: statement should be inside braces [readability-braces-around-statements]
+ 4633 |     for (int i = 0; i < 8; ++i) L[i] = (pg[i] - 1)/2;
+      |                                ^                     
+      |                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4678:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4678 |             float sumqx = 0, sumq2 = 0;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4690:32: warning: statement should be inside braces [readability-braces-around-statements]
+ 4690 |     for (int i = 0; i < 8; ++i) L[i] = (pg[i] - 1)/2;
+      |                                ^                     
+      |                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4697:27: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 4697 |     return *l < *r ? -1 : *l > *r ? 1 : 0;
+      |                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4697:12: note: parent conditional operator here
+ 4697 |     return *l < *r ? -1 : *l > *r ? 1 : 0;
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4746:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 4746 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4752:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4752 |             for (int i = 0; i < block_size; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                                 ^                                                
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4754:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4754 |             for (int i = 1; i < block_size; ++i) max = MAX(max, fabsf(xb[i]));
+      |                                                 ^                             
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4779:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4779 |             float best_score = -FLT_MAX, scale = max;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4780:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4780 |             int besti1 = -1, besti2 = -1, best_shift = 0;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4798:50: warning: statement should be inside braces [readability-braces-around-statements]
+ 4798 |             for (int j =      0; j < besti1; ++j) L[idx[2*j]] = 0;
+      |                                                  ^                
+      |                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4799:50: warning: statement should be inside braces [readability-braces-around-statements]
+ 4799 |             for (int j = besti1; j < besti2; ++j) L[idx[2*j]] = 1;
+      |                                                  ^                
+      |                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4800:54: warning: statement should be inside braces [readability-braces-around-statements]
+ 4800 |             for (int j = besti2; j < block_size; ++j) L[idx[2*j]] = 2;
+      |                                                      ^                
+      |                                                       {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4802:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 4802 |                 for (int j = 0; j < block_size; ++j) L[j] = 2 - L[j];
+      |                                                     ^                
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4809:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 4809 |                 for (int j = 0; j < 8; ++j) u |= (L[8*k+j] << 2*j);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4820:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4820 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4830:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 4830 |                 if (sumqx > 0 && sumq2 > 0) scale = sumqx/sumq2;
+      |                                            ^                    
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4854:34: warning: statement should be inside braces [readability-braces-around-statements]
+ 4854 |             if (shifts[ib] == -1) l |= 8;
+      |                                  ^       
+      |                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4912:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4912 |     float sumqx[4], sumq2[4];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4926:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 4926 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4933:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 4933 |                 for (int i = 0; i < block_size; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                                     ^                                                
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4935:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 4935 |                 for (int i = 0; i < block_size; ++i) weight[i] = xb[i]*xb[i];
+      |                                                     ^                        
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4938:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 4938 |             for (int i = 1; i < block_size; ++i) max = MAX(max, fabsf(xb[i]));
+      |                                                 ^                             
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4955:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4955 |             float best_score = -FLT_MAX, scale = max;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:4956:13: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 4956 |             int besti1 = -1, besti2 = -1, best_k = -1;
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5040:50: warning: statement should be inside braces [readability-braces-around-statements]
+ 5040 |             for (int j =      0; j < besti1; ++j) L[idx[2*j]] = 0;
+      |                                                  ^                
+      |                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5041:50: warning: statement should be inside braces [readability-braces-around-statements]
+ 5041 |             for (int j = besti1; j < besti2; ++j) L[idx[2*j]] = 1;
+      |                                                  ^                
+      |                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5042:54: warning: statement should be inside braces [readability-braces-around-statements]
+ 5042 |             for (int j = besti2; j < block_size; ++j) L[idx[2*j]] = 2;
+      |                                                      ^                
+      |                                                       {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5044:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 5044 |                 for (int j = 0; j < block_size; ++j) L[j] = 2 - L[j];
+      |                                                     ^                
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5046:44: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 5046 |                 best_k = best_k == 0 ? 3 : best_k == 1 ? 2 : best_k == 2 ? 1 : 0;
+      |                                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5046:26: note: parent conditional operator here
+ 5046 |                 best_k = best_k == 0 ? 3 : best_k == 1 ? 2 : best_k == 2 ? 1 : 0;
+      |                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5046:62: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 5046 |                 best_k = best_k == 0 ? 3 : best_k == 1 ? 2 : best_k == 2 ? 1 : 0;
+      |                                                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5046:44: note: parent conditional operator here
+ 5046 |                 best_k = best_k == 0 ? 3 : best_k == 1 ? 2 : best_k == 2 ? 1 : 0;
+      |                                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5050:28: warning: statement should be inside braces [readability-braces-around-statements]
+ 5050 |                 if (k == 0) xx = best_k < 2 ? x_p : x_m;
+      |                            ^
+      |                             {
+ 5051 |                 else xx = best_k%2 == 0 ? x_p : x_m;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5051:21: warning: statement should be inside braces [readability-braces-around-statements]
+ 5051 |                 else xx = best_k%2 == 0 ? x_p : x_m;
+      |                     ^                               
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5053:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 5053 |                 for (int j = 0; j < 8; ++j) u |= (L[8*k+j] << 2*j);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5064:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5064 |                 float sumqx_f = 0, sumq2_f = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5066:32: warning: statement should be inside braces [readability-braces-around-statements]
+ 5066 |                     if (k == 0) xx = best_k < 2 ? x_p : x_m;
+      |                                ^
+      |                                 {
+ 5067 |                     else xx = best_k%2 == 0 ? x_p : x_m;
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5067:25: warning: statement should be inside braces [readability-braces-around-statements]
+ 5067 |                     else xx = best_k%2 == 0 ? x_p : x_m;
+      |                         ^                               
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5076:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 5076 |                 if (sumqx_f > 0 && sumq2_f > 0) scale = sumqx_f/sumq2_f;
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5094:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5094 |         float sumqx_f = 0, sumq2_f = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5103:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 5103 |                 for (int i = 0; i < block_size; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                                     ^                                                
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5105:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 5105 |                 for (int i = 0; i < block_size; ++i) weight[i] = xb[i]*xb[i];
+      |                                                     ^                        
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5108:28: warning: statement should be inside braces [readability-braces-around-statements]
+ 5108 |                 if (k == 0) xx = shifts[ib] < 2 ? x_p : x_m;
+      |                            ^
+      |                             {
+ 5109 |                 else xx = shifts[ib]%2 == 0 ? x_p : x_m;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5109:21: warning: statement should be inside braces [readability-braces-around-statements]
+ 5109 |                 else xx = shifts[ib]%2 == 0 ? x_p : x_m;
+      |                     ^                                   
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5119:25: warning: statement should be inside braces [readability-braces-around-statements]
+ 5119 |         if (sumq2_f > 0) d = sumqx_f/sumq2_f;
+      |                         ^                    
+      |                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5156:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 5156 |     for (int j = 0; j < super_block_size; ++j) sigma2 += x[j]*x[j];
+      |                                               ^                    
+      |                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5162:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5162 |     float max_scale = 0, amax_scale = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5168:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 5168 |             for (int j = 0; j < block_size; ++j) weight[j] = qw[j] * sqrtf(sigma2 + xb[j]*xb[j]);
+      |                                                 ^                                                
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5170:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 5170 |             for (int j = 0; j < block_size; ++j) weight[j] = xb[j]*xb[j];
+      |                                                 ^                        
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5172:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5172 |         float amax = 0, max = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5185:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5185 |         float sumqx = 0, sumq2 = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5238:27: warning: statement should be inside braces [readability-braces-around-statements]
+ 5238 |             if (ib%2 == 0) scales_l[ib/2] = l_l;
+      |                           ^
+      |                            {
+ 5239 |             else scales_l[ib/2] |= (l_l << 4);
+      |             } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5239:17: warning: statement should be inside braces [readability-braces-around-statements]
+ 5239 |             else scales_l[ib/2] |= (l_l << 4);
+      |                 ^                             
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5362:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 5362 |         for (int i = 0; i < QK_K; ++i) sumx2 += xbl[i]*xbl[i];
+      |                                       ^                       
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5369:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 5369 |                 for (int i = 0; i < 16; ++i) weight[i] = qw[i] * sqrtf(sigma2 + xb[i]*xb[i]);
+      |                                             ^                                                
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5371:45: warning: statement should be inside braces [readability-braces-around-statements]
+ 5371 |                 for (int i = 0; i < 16; ++i) weight[i] = 0.25f*sigma2 + xb[i]*xb[i];
+      |                                             ^                                       
+      |                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5373:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 5373 |             for (int i = 0; i < 16; ++i) waux[i] = sqrtf(weight[i]);
+      |                                         ^                           
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5377:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 5377 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 5378 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5377:42: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+ 5377 |                     if (xb[8*k + i] >= 0) xval[8*k + i] = xb[8*k + i];
+      |                                          ^
+      |                                           {
+ 5378 |                     else {
+      |                     } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5385:41: warning: statement should be inside braces [readability-braces-around-statements]
+ 5385 |             for (int i = 1; i < 16; ++i) max = MAX(max, xval[i]);
+      |                                         ^                        
+      |                                          {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5402:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 5402 |                     for (int i = 0; i < 8; ++i) u |= (Laux[8*k+i] << 2*i);
+      |                                                ^                          
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5408:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 5408 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5408:25: note: Value stored to 'grid_index' is never read
+ 5408 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, this_scale, Laux + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5411:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5411 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5420:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 5420 |                     for (int i = 0; i < 16; ++i) L[i] = Laux[i];
+      |                                                 ^               
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5421:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 5421 |                     for (int k = 0; k <  2; ++k) is_on_grid[k] = is_on_grid_aux[k];
+      |                                                 ^                                  
+      |                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5425:40: warning: statement should be inside braces [readability-braces-around-statements]
+ 5425 |             for (int k = 0; k < 2; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                        ^                                   
+      |                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5425:60: warning: statement should be inside braces [readability-braces-around-statements]
+ 5425 |             for (int k = 0; k < 2; ++k) if (!is_on_grid[k]) ++n_not_ongrid;
+      |                                                            ^               
+      |                                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5429:39: warning: statement should be inside braces [readability-braces-around-statements]
+ 5429 |                     if (is_on_grid[k]) continue;
+      |                                       ^         
+      |                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5440:25: warning: Value stored to 'grid_index' is never read [clang-analyzer-deadcode.DeadStores]
+ 5440 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, scale, L + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5440:25: note: Value stored to 'grid_index' is never read
+ 5440 |                         grid_index = iq2_find_best_neighbour(neighbours, kgrid_q2xs, xval + 8*k, waux + 8*k, scale, L + 8*k);
+      |                         ^            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5443:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 5443 |                 float sumqx = 0, sumq2 = 0;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5450:31: warning: statement should be inside braces [readability-braces-around-statements]
+ 5450 |                 if (sumq2 > 0) scale = sumqx/sumq2;
+      |                               ^                    
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5454:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 5454 |                 for (int k = 0; k < 2; ++k) block_signs[k] = ~block_signs[k];
+      |                                            ^                                 
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5458:44: warning: statement should be inside braces [readability-braces-around-statements]
+ 5458 |                 for (int i = 0; i < 8; ++i) u |= (L[8*k+i] << 2*i);
+      |                                            ^                       
+      |                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5462:48: warning: statement should be inside braces [readability-braces-around-statements]
+ 5462 |                     for (int i = 0; i < 8; ++i) printf(" %d", L[8*k+i]);
+      |                                                ^                        
+      |                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5486:27: warning: statement should be inside braces [readability-braces-around-statements]
+ 5486 |             if (ib%2 == 0) y[ibl].scales[ib/2] = l;
+      |                           ^
+      |                            {
+ 5487 |             else y[ibl].scales[ib/2] |= (l << 4);
+      |             } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5487:17: warning: statement should be inside braces [readability-braces-around-statements]
+ 5487 |             else y[ibl].scales[ib/2] |= (l << 4);
+      |                 ^                                
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5634:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 5634 | #if defined(__AVX2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.c:5675:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 5675 | #if defined(__AVX2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.h:192:89: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  192 |     GGML_API void   quantize_row_turbo2m4_##suffix##_ref(const float * GGML_RESTRICT x, block_type * GGML_RESTRICT y, \
+      |                                                                                         ^
+      |                                                                                         (         )
+Suppressed 378 warnings (378 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

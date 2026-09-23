@@ -1,0 +1,1104 @@
+585 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:5: warning: initial values in enum 'ggml_numa_strategy' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   25 |     enum ggml_numa_strategy {
+      |     ^
+   26 |         GGML_NUMA_STRATEGY_DISABLED   = 0,
+   27 |         GGML_NUMA_STRATEGY_DISTRIBUTE = 1,
+   28 |         GGML_NUMA_STRATEGY_ISOLATE    = 2,
+   29 |         GGML_NUMA_STRATEGY_NUMACTL    = 3,
+   30 |         GGML_NUMA_STRATEGY_MIRROR     = 4,
+   31 |         GGML_NUMA_STRATEGY_COUNT
+      |                                 
+      |                                  = 5
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:359:55: warning: all parameters should be named in a function [readability-named-parameter]
+  359 |     GGML_API float       ggml_fp16_to_fp32(ggml_fp16_t);
+      |                                                       ^
+      |                                                        /*x*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:360:49: warning: all parameters should be named in a function [readability-named-parameter]
+  360 |     GGML_API ggml_fp16_t ggml_fp32_to_fp16(float);
+      |                                                 ^
+      |                                                  /*x*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:361:67: warning: all parameters should be named in a function [readability-named-parameter]
+  361 |     GGML_API void        ggml_fp16_to_fp32_row(const ggml_fp16_t *, float *, int64_t);
+      |                                                                   ^                 
+      |                                                                    /*x*/    /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:362:61: warning: all parameters should be named in a function [readability-named-parameter]
+  362 |     GGML_API void        ggml_fp32_to_fp16_row(const float *, ggml_fp16_t *, int64_t);
+      |                                                             ^                       
+      |                                                              /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:366:49: warning: all parameters should be named in a function [readability-named-parameter]
+  366 |     GGML_API ggml_bf16_t ggml_fp32_to_bf16(float);
+      |                                                 ^
+      |                                                  /*x*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:367:55: warning: all parameters should be named in a function [readability-named-parameter]
+  367 |     GGML_API float       ggml_bf16_to_fp32(ggml_bf16_t);  // consider just doing << 16
+      |                                                       ^
+      |                                                        /*x*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:368:67: warning: all parameters should be named in a function [readability-named-parameter]
+  368 |     GGML_API void        ggml_bf16_to_fp32_row(const ggml_bf16_t *, float *, int64_t);
+      |                                                                   ^                 
+      |                                                                    /*x*/    /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:369:65: warning: all parameters should be named in a function [readability-named-parameter]
+  369 |     GGML_API void        ggml_fp32_to_bf16_row_ref(const float *, ggml_bf16_t *, int64_t);
+      |                                                                 ^                       
+      |                                                                  /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:370:61: warning: all parameters should be named in a function [readability-named-parameter]
+  370 |     GGML_API void        ggml_fp32_to_bf16_row(const float *, ggml_bf16_t *, int64_t);
+      |                                                             ^                       
+      |                                                              /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:3:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+    3 | #if defined(GGML_COMMON_DECL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:74:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   74 | #if defined(GGML_COMMON_DECL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:312:30: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  312 |                 uint8_t   qh[n / 2];                   \
+      |                              ^
+      |                              ()
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:320:34: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  320 |                 uint8_t   qh[2 * n_groups];                  \
+      |                                  ^       
+      |                                  (       )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:505:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+  505 | #define IQ3S_N_SCALE QK_K/64
+      |                          ^  
+      |                      (      )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:560:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  560 | #if defined(GGML_COMMON_IMPL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-common.h:598:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  598 | #if defined(GGML_COMMON_IMPL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-impl.h:27:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   27 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-quants.h:192:89: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  192 |     GGML_API void   quantize_row_turbo2m4_##suffix##_ref(const float * GGML_RESTRICT x, block_type * GGML_RESTRICT y, \
+      |                                                                                         ^
+      |                                                                                         (         )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-threading.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1:9: warning: declaration uses identifier '_CRT_SECURE_NO_DEPRECATE', which is a reserved identifier [bugprone-reserved-identifier]
+    1 | #define _CRT_SECURE_NO_DEPRECATE // Disables "unsafe" warnings on Windows
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         CRT_SECURE_NO_DEPRECATE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2:9: warning: declaration uses identifier '_USE_MATH_DEFINES', which is a reserved identifier [bugprone-reserved-identifier]
+    2 | #define _USE_MATH_DEFINES // For M_PI on MSVC
+      |         ^~~~~~~~~~~~~~~~~
+      |         USE_MATH_DEFINES
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:36:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   36 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:40:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   40 | #if defined(__APPLE__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __APPLE__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:46:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   46 | #if defined(_WIN32)
+      |  ^~~~~~~~~~~~~~~~~~
+      |  ifdef _WIN32
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:56:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   56 | #if defined(_MSC_VER)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef _MSC_VER
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:72:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   72 | #if defined(__linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:76:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   76 | #if defined(__ANDROID__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ANDROID__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:138:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  138 | #if defined(__linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:160:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  160 | #if defined(__linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:165:7: warning: do not use 'else' after 'return' [readability-else-after-return]
+  165 |     } else if (child_pid == 0) { // child
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  166 |         char attach[32];
+      |         ~~~~~~~~~~~~~~~~
+  167 |         snprintf(attach, sizeof(attach), "attach %d", parent_pid);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  168 | #if defined(__linux__)
+      | ~~~~~~~~~~~~~~~~~~~~~~
+  169 |         close(lock[1]);
+      |         ~~~~~~~~~~~~~~~
+  170 |         (void) !read(lock[0], lock, 1);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  171 |         close(lock[0]);
+      |         ~~~~~~~~~~~~~~~
+  172 | #endif
+      | ~~~~~~
+  173 |         // try gdb
+      |         ~~~~~~~~~~
+  174 |         execlp("gdb", "gdb", "--batch",
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  175 |             "-ex", "set style enabled on",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  176 |             "-ex", attach,
+      |             ~~~~~~~~~~~~~~
+  177 |             "-ex", "bt -frame-info source-and-location",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  178 |             "-ex", "detach",
+      |             ~~~~~~~~~~~~~~~~
+  179 |             "-ex", "quit",
+      |             ~~~~~~~~~~~~~~
+  180 |             (char *) NULL);
+      |             ~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:168:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+note: this fix will not be applied because it overlaps with another fix
+  168 | #if defined(__linux__)
+      |  ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:191:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+note: this fix will not be applied because it overlaps with another fix
+  191 | #if defined(__linux__)
+      |  ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:206:30: warning: variable 'ggml_debug_last_node' can be made static to enforce internal linkage [misc-use-internal-linkage]
+  206 | struct ggml_tensor *         ggml_debug_last_node = NULL;
+      |                              ^
+      | static 
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:303:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  303 | #if defined(__s390x__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __s390x__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:343:9: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+  343 |         switch (result) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:467:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  467 | #if defined(__AVX512BF16__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX512BF16__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:999:27: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  999 |         .type_name      = name,                                                     \
+      |                           ^   
+      |                           (   )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1415:12: warning: Out of bound access to memory after the end of 'GGML_OP_NAME' [clang-analyzer-security.ArrayBound]
+ 1415 |     return GGML_OP_NAME[op];
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:40: note: Left side of '&&' is false
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_COUNT:'  at line 6998
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7000:85: note: Calling 'ggml_op_name'
+ 7000 |             GGML_ABORT("%s: unsupported ggml op for backward pass: %s\n", __func__, ggml_op_name(tensor->op));
+      |                                                                                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:275:56: note: expanded from macro 'GGML_ABORT'
+  275 | #define GGML_ABORT(...) ggml_abort(__FILE__, __LINE__, __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1415:12: note: Access of 'GGML_OP_NAME' at index 107, while it holds only 107 'const char *' elements
+ 1415 |     return GGML_OP_NAME[op];
+      |            ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1504:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 1504 |         case GGML_FTYPE_UNKNOWN:              wtype = GGML_TYPE_COUNT; break;
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1505:77: note: last of these clones ends here
+ 1505 |         case GGML_FTYPE_MOSTLY_Q4_1_SOME_F16: wtype = GGML_TYPE_COUNT; break;
+      |                                                                             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1522:37: warning: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'tensor') [clang-analyzer-core.NullDereference]
+ 1522 |     size_t next_nb = ggml_type_size(tensor->type);
+      |                                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_GLU:'  at line 6979
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6980:13: note: Control jumps to 'case GGML_GLU_OP_SWIGLU:'  at line 6981
+ 6980 |             switch (ggml_get_glu_op(tensor)) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6982:25: note: 'src0_needs_grads' is false
+ 6982 |                     if (src0_needs_grads) {
+      |                         ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6982:21: note: Taking false branch
+ 6982 |                     if (src0_needs_grads) {
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6986:25: note: Assuming 'src1_needs_grads' is true
+ 6986 |                     if (src1_needs_grads) {
+      |                         ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6986:21: note: Taking true branch
+ 6986 |                     if (src1_needs_grads) {
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6987:90: note: Passing null pointer value via 2nd parameter 'a'
+ 6987 |                         ggml_add_or_set(ctx, cgraph, isrc1, ggml_mul(ctx, ggml_silu(ctx, src0), grad));
+      |                                                                                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6987:75: note: Calling 'ggml_silu'
+ 6987 |                         ggml_add_or_set(ctx, cgraph, isrc1, ggml_mul(ctx, ggml_silu(ctx, src0), grad));
+      |                                                                           ^~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2814:28: note: Passing null pointer value via 2nd parameter 'a'
+ 2814 |     return ggml_unary(ctx, a, GGML_UNARY_OP_SILU);
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2814:12: note: Calling 'ggml_unary'
+ 2814 |     return ggml_unary(ctx, a, GGML_UNARY_OP_SILU);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6093:33: note: Passing null pointer value via 2nd parameter 'a'
+ 6093 |     return ggml_unary_impl(ctx, a, op, false);
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6093:12: note: Calling 'ggml_unary_impl'
+ 6093 |     return ggml_unary_impl(ctx, a, op, false);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6077:38: note: Passing null pointer value via 1st parameter 'tensor'
+ 6077 |     GGML_ASSERT(ggml_is_contiguous_1(a));
+      |                                      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6077:17: note: Calling 'ggml_is_contiguous_1'
+ 6077 |     GGML_ASSERT(ggml_is_contiguous_1(a));
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1552:33: note: Passing null pointer value via 1st parameter 'tensor'
+ 1552 |     return ggml_is_contiguous_n(tensor, 1);
+      |                                 ^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1552:12: note: Calling 'ggml_is_contiguous_n'
+ 1552 |     return ggml_is_contiguous_n(tensor, 1);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1522:37: note: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'tensor')
+ 1522 |     size_t next_nb = ggml_type_size(tensor->type);
+      |                                     ^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1605:10: warning: Array access (via field 'ne') results in a null pointer dereference [clang-analyzer-core.NullDereference]
+ 1605 |         (t0->ne[0] == t1->ne[0]) &&
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_ADD:'  at line 6560
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6561:17: note: 'src0_needs_grads' is false
+ 6561 |             if (src0_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6561:13: note: Taking false branch
+ 6561 |             if (src0_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6564:17: note: Assuming 'src1_needs_grads' is true
+ 6564 |             if (src1_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6564:13: note: Taking true branch
+ 6564 |             if (src1_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6566:42: note: Passing null pointer value via 1st parameter 't0'
+ 6566 |                 if (!ggml_are_same_shape(src0, src1)) {
+      |                                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6566:22: note: Calling 'ggml_are_same_shape'
+ 6566 |                 if (!ggml_are_same_shape(src0, src1)) {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1605:10: note: Array access (via field 'ne') results in a null pointer dereference
+ 1605 |         (t0->ne[0] == t1->ne[0]) &&
+      |          ^   ~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1626:10: warning: Array access (via field 'ne') results in a null pointer dereference [clang-analyzer-core.NullDereference]
+ 1626 |         (t1->ne[0]%t0->ne[0] == 0) &&
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_MUL:'  at line 6605
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6606:17: note: 'src0_needs_grads' is false
+ 6606 |             if (src0_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6606:13: note: Taking false branch
+ 6606 |             if (src0_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6609:17: note: Assuming 'src1_needs_grads' is true
+ 6609 |             if (src1_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6609:13: note: Taking true branch
+ 6609 |             if (src1_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6610:58: note: Passing null pointer value via 2nd parameter 'a'
+ 6610 |                 struct ggml_tensor * tmp = ggml_mul(ctx, src0, grad);
+      |                                                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6610:44: note: Calling 'ggml_mul'
+ 6610 |                 struct ggml_tensor * tmp = ggml_mul(ctx, src0, grad);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2298:31: note: Passing null pointer value via 2nd parameter 'a'
+ 2298 |     return ggml_mul_impl(ctx, a, b, false);
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2298:12: note: Calling 'ggml_mul_impl'
+ 2298 |     return ggml_mul_impl(ctx, a, b, false);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2283:36: note: Passing null pointer value via 2nd parameter 't1'
+ 2283 |     GGML_ASSERT(ggml_can_repeat(b, a));
+      |                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2283:17: note: Calling 'ggml_can_repeat'
+ 2283 |     GGML_ASSERT(ggml_can_repeat(b, a));
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1625:12: note: Assuming the condition is false
+ 1625 |     return ggml_is_empty(t0) ? ggml_is_empty(t1) :
+      |            ^~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1625:12: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1626:10: note: Array access (via field 'ne') results in a null pointer dereference
+ 1626 |         (t1->ne[0]%t0->ne[0] == 0) &&
+      |          ^   ~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1915:33: warning: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'src') [clang-analyzer-core.NullDereference]
+ 1915 |     return ggml_new_tensor(ctx, src->type, GGML_MAX_DIMS, src->ne);
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_MUL:'  at line 6605
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6606:17: note: 'src0_needs_grads' is false
+ 6606 |             if (src0_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6606:13: note: Taking false branch
+ 6606 |             if (src0_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6609:17: note: Assuming 'src1_needs_grads' is true
+ 6609 |             if (src1_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6609:13: note: Taking true branch
+ 6609 |             if (src1_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6610:58: note: Passing null pointer value via 2nd parameter 'a'
+ 6610 |                 struct ggml_tensor * tmp = ggml_mul(ctx, src0, grad);
+      |                                                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6610:44: note: Calling 'ggml_mul'
+ 6610 |                 struct ggml_tensor * tmp = ggml_mul(ctx, src0, grad);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2298:31: note: Passing null pointer value via 2nd parameter 'a'
+ 2298 |     return ggml_mul_impl(ctx, a, b, false);
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2298:12: note: Calling 'ggml_mul_impl'
+ 2298 |     return ggml_mul_impl(ctx, a, b, false);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2283:5: note: Assuming the condition is false
+ 2283 |     GGML_ASSERT(ggml_can_repeat(b, a));
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:28: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                            ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2283:5: note: Taking false branch
+ 2283 |     GGML_ASSERT(ggml_can_repeat(b, a));
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2285:35: note: 'inplace' is false
+ 2285 |     struct ggml_tensor * result = inplace ? ggml_view_tensor(ctx, a) : ggml_dup_tensor(ctx, a);
+      |                                   ^~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2285:35: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2285:93: note: Passing null pointer value via 2nd parameter 'src'
+ 2285 |     struct ggml_tensor * result = inplace ? ggml_view_tensor(ctx, a) : ggml_dup_tensor(ctx, a);
+      |                                                                                             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2285:72: note: Calling 'ggml_dup_tensor'
+ 2285 |     struct ggml_tensor * result = inplace ? ggml_view_tensor(ctx, a) : ggml_dup_tensor(ctx, a);
+      |                                                                        ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:1915:33: note: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'src')
+ 1915 |     return ggml_new_tensor(ctx, src->type, GGML_MAX_DIMS, src->ne);
+      |                                 ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:2884:90: warning: statement should be inside braces [readability-braces-around-statements]
+ 2884 |     int64_t ne[GGML_MAX_DIMS] = { a->ne[0] / 2 }; for (int i = 1; i < GGML_MAX_DIMS; i++) ne[i] = a->ne[i];
+      |                                                                                          ^                 
+      |                                                                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:3258:13: warning: Array access (via field 'ne') results in a null pointer dereference [clang-analyzer-core.NullDereference]
+ 3258 |     return (t0->ne[1] == t1->ne[1])   &&
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_MUL_MAT:'  at line 6682
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6698:17: note: 'src0_needs_grads' is false
+ 6698 |             if (src0_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6698:13: note: Taking false branch
+ 6698 |             if (src0_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6719:17: note: Assuming 'src1_needs_grads' is true
+ 6719 |             if (src1_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6719:13: note: Taking true branch
+ 6719 |             if (src1_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6730:29: note: Passing null pointer value via 2nd parameter 'a'
+ 6730 |                             src0,               // [n,m,q1,r1]
+      |                             ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6729:25: note: Calling 'ggml_out_prod'
+ 6729 |                         ggml_out_prod(ctx,      // [n,p,qq,rr]
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 6730 |                             src0,               // [n,m,q1,r1]
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 6731 |                             ggml_transpose(ctx, // [p,m,qq,rr]
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 6732 |                                 grad)));        // [m,p,qq,rr]
+      |                                 ~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:3267:35: note: Passing null pointer value via 1st parameter 't0'
+ 3267 |     GGML_ASSERT(ggml_can_out_prod(a, b));
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:3267:17: note: Calling 'ggml_can_out_prod'
+ 3267 |     GGML_ASSERT(ggml_can_out_prod(a, b));
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:3258:13: note: Array access (via field 'ne') results in a null pointer dereference
+ 3258 |     return (t0->ne[1] == t1->ne[1])   &&
+      |             ^   ~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4136:9: warning: Null pointer passed as 2nd argument to memory copy function [clang-analyzer-unix.cstring.NullArg]
+ 4136 |         memcpy(params + 11, sections,  sizeof(int32_t) * GGML_MROPE_SECTIONS);
+      |         ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:234:21: note: expanded from macro 'memcpy'
+  234 | #define memcpy(...) __memcpy_chk_func (__VA_ARGS__)
+      |                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:127:3: note: expanded from macro '__memcpy_chk_func'
+  127 |                 __builtin___memcpy_chk (dest, __VA_ARGS__, __darwin_obsz0 (dest))
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4652:35: note: Calling 'ggml_rope_ext'
+ 4652 |     struct ggml_tensor * result = ggml_rope_ext(
+      |                                   ^~~~~~~~~~~~~~
+ 4653 |         ctx, a, b, c, n_dims, mode, n_ctx_orig, freq_base, freq_scale, ext_factor, attn_factor, beta_fast, beta_slow);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4556:31: note: Passing null pointer value via 6th parameter 'sections'
+ 4556 |         ctx, a, b, c, n_dims, NULL, mode, n_ctx_orig, freq_base, freq_scale,
+      |                               ^
+/private/tmp/ifairy-check-tools/lib/python3.12/site-packages/clang_tidy/data/lib/clang/22/include/__stddef_null.h:26:14: note: expanded from macro 'NULL'
+   26 | #define NULL ((void*)0)
+      |              ^~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4555:12: note: Calling 'ggml_rope_impl'
+ 4555 |     return ggml_rope_impl(
+      |            ^~~~~~~~~~~~~~~
+ 4556 |         ctx, a, b, c, n_dims, NULL, mode, n_ctx_orig, freq_base, freq_scale,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 4557 |         ext_factor, attn_factor, beta_fast, beta_slow, false
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 4558 |     );
+      |     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4109:17: note: Assuming the condition is true
+ 4109 |     GGML_ASSERT((mode & 1) == 0 && "mode & 1 == 1 is no longer supported");
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4109:17: note: Left side of '&&' is true
+ 4109 |     GGML_ASSERT((mode & 1) == 0 && "mode & 1 == 1 is no longer supported");
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4109:5: note: Taking false branch
+ 4109 |     GGML_ASSERT((mode & 1) == 0 && "mode & 1 == 1 is no longer supported");
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4111:5: note: Taking false branch
+ 4111 |     GGML_ASSERT(ggml_is_vector(b));
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4112:17: note: Assuming field 'type' is equal to GGML_TYPE_I32
+ 4112 |     GGML_ASSERT(b->type == GGML_TYPE_I32);
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4112:5: note: Taking false branch
+ 4112 |     GGML_ASSERT(b->type == GGML_TYPE_I32);
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4115:9: note: Assuming 'mrope_used' is true
+ 4115 |     if (mrope_used) {
+      |         ^~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4115:5: note: Taking true branch
+ 4115 |     if (mrope_used) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4116:21: note: Assuming the condition is true
+ 4116 |         GGML_ASSERT(a->ne[2] * 4 == b->ne[0]); // mrope expecting 4 position ids per token
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4116:9: note: Taking false branch
+ 4116 |         GGML_ASSERT(a->ne[2] * 4 == b->ne[0]); // mrope expecting 4 position ids per token
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4121:9: note: Assuming 'c' is null
+ 4121 |     if (c) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4121:5: note: Taking false branch
+ 4121 |     if (c) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4126:35: note: 'inplace' is false
+ 4126 |     struct ggml_tensor * result = inplace ? ggml_view_tensor(ctx, a) : ggml_dup_tensor(ctx, a);
+      |                                   ^~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4126:35: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4135:9: note: 'mrope_used' is true
+ 4135 |     if (mrope_used) {
+      |         ^~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4135:5: note: Taking true branch
+ 4135 |     if (mrope_used) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:4136:9: note: Null pointer passed as 2nd argument to memory copy function
+ 4136 |         memcpy(params + 11, sections,  sizeof(int32_t) * GGML_MROPE_SECTIONS);
+      |         ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:234:21: note: expanded from macro 'memcpy'
+  234 | #define memcpy(...) __memcpy_chk_func (__VA_ARGS__)
+      |                     ^                  ~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:127:3: note: expanded from macro '__memcpy_chk_func'
+  127 |                 __builtin___memcpy_chk (dest, __VA_ARGS__, __darwin_obsz0 (dest))
+      |                 ^                             ~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6400:19: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 6400 |     result.keys = GGML_MALLOC(sizeof(struct ggml_tensor *) * size);
+      |                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:403:32: note: expanded from macro 'GGML_MALLOC'
+  403 | #define GGML_MALLOC(size)      ggml_malloc(size)
+      |                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6411:15: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 6411 |     GGML_FREE(hash_set->keys);
+      |               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6448:20: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 6448 |     result->vals = GGML_CALLOC(result->set.size, sizeof(struct ggml_tensor *));
+      |                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:404:32: note: expanded from macro 'GGML_CALLOC'
+  404 | #define GGML_CALLOC(num, size) ggml_calloc(num, size)
+      |                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6454:15: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 6454 |     GGML_FREE(map->vals);
+      |               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6751:29: warning: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'src0') [clang-analyzer-core.NullDereference]
+ 6751 |                 GGML_ASSERT(src0->type == tensor->type);
+      |                             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:9: note: Assuming 'grad' is non-null
+ 6539 |     if (!grad) {
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6539:5: note: Taking false branch
+ 6539 |     if (!grad) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6543:5: note: 'src0' initialized here
+ 6543 |     struct ggml_tensor * src0 = tensor->src[0];
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: Assuming 'src0' is null
+ 6547 |     const size_t isrc0 = src0 ? ggml_hash_find(hash_set, src0) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6547:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: Assuming 'src1' is non-null
+ 6548 |     const size_t isrc1 = src1 ? ggml_hash_find(hash_set, src1) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6548:26: note: '?' condition is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: Assuming 'src2' is null
+ 6549 |     const size_t isrc2 = src2 ? ggml_hash_find(hash_set, src2) : (size_t) -1;
+      |                          ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6549:26: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:35: note: 'src0' is null
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6550:40: note: Left side of '&&' is false
+ 6550 |     const bool src0_needs_grads = src0 && isrc0 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc0) && grads_needed[isrc0];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: 'src1' is non-null
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:43: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:73: note: Assuming the condition is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6551:35: note: Left side of '&&' is true
+ 6551 |     const bool src1_needs_grads = src1 && isrc1 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc1) && grads_needed[isrc1];
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:35: note: 'src2' is null
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                   ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6552:40: note: Left side of '&&' is false
+ 6552 |     const bool src2_needs_grads = src2 && isrc2 != GGML_HASHSET_FULL && ggml_bitset_get(hash_set->used, isrc2) && grads_needed[isrc2];
+      |                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6554:5: note: Control jumps to 'case GGML_OP_SET:'  at line 6742
+ 6554 |     switch (tensor->op) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6750:17: note: 'src0_needs_grads' is false
+ 6750 |             if (src0_needs_grads || src1_needs_grads) {
+      |                 ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6750:17: note: Left side of '||' is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6750:37: note: Assuming 'src1_needs_grads' is true
+ 6750 |             if (src0_needs_grads || src1_needs_grads) {
+      |                                     ^~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6750:13: note: Taking true branch
+ 6750 |             if (src0_needs_grads || src1_needs_grads) {
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6751:29: note: Access to field 'type' results in a dereference of a null pointer (loaded from variable 'src0')
+ 6751 |                 GGML_ASSERT(src0->type == tensor->type);
+      |                             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:6885:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6885 |                 float freq_base, freq_scale, ext_factor, attn_factor, beta_fast, beta_slow;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7026:13: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 7026 |             (cgraph->order == GGML_CGRAPH_EVAL_ORDER_RIGHT_TO_LEFT) ? (GGML_MAX_SRC-1-i) :
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7025:13: note: parent conditional operator here
+ 7025 |             (cgraph->order == GGML_CGRAPH_EVAL_ORDER_LEFT_TO_RIGHT) ? i :
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7095:12: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7095 |     memset(cgraph->grads,     0, cgraph->visited_hash_set.size*sizeof(struct ggml_tensor *));
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7095:12: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7096:12: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7096 |     memset(cgraph->grad_accs, 0, cgraph->visited_hash_set.size*sizeof(struct ggml_tensor *));
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7096:12: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7186:11: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+ 7186 |     ptr = (void *) GGML_PAD((uintptr_t) ptr, align);
+      |           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7187:33: warning: Addition of a null pointer and a nonzero integer value (from variable 'size') results in undefined behavior [clang-analyzer-core.NullPointerArithm]
+ 7187 |     *p = (void *) ((char *) ptr + size);
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7262:12: note: Calling 'ggml_new_graph_custom'
+ 7262 |     return ggml_new_graph_custom(ctx, GGML_DEFAULT_GRAPH_SIZE, false);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7218:29: note: Calling 'ggml_graph_nbytes'
+ 7218 |     const size_t obj_size = ggml_graph_nbytes(size, grads);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7194:5: note: Calling 'incr_ptr_aligned'
+ 7194 |     incr_ptr_aligned(&p, sizeof(struct ggml_cgraph), 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7186:5: note: Null pointer value stored to 'ptr'
+ 7186 |     ptr = (void *) GGML_PAD((uintptr_t) ptr, align);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7187:33: note: Addition of a null pointer and a nonzero integer value (from variable 'size') results in undefined behavior
+ 7187 |     *p = (void *) ((char *) ptr + size);
+      |                                 ^ ~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7227:52: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7227 |     struct ggml_tensor ** nodes_ptr      =         incr_ptr_aligned(&p, size      * sizeof(struct ggml_tensor *), sizeof(struct ggml_tensor *));
+      |                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7228:52: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7228 |     struct ggml_tensor ** leafs_ptr      =         incr_ptr_aligned(&p, size      * sizeof(struct ggml_tensor *), sizeof(struct ggml_tensor *));
+      |                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7230:52: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7230 |     struct ggml_tensor ** hash_keys_ptr  =         incr_ptr_aligned(&p, hash_size * sizeof(struct ggml_tensor *), sizeof(struct ggml_tensor *));
+      |                                                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7231:44: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7231 |     struct ggml_tensor ** grads_ptr      = grads ? incr_ptr_aligned(&p, hash_size * sizeof(struct ggml_tensor *), sizeof(struct ggml_tensor *)) : NULL;
+      |                                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7232:44: warning: multilevel pointer conversion from 'void *' to 'struct ggml_tensor **', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7232 |     struct ggml_tensor ** grad_accs_ptr  = grads ? incr_ptr_aligned(&p, hash_size * sizeof(struct ggml_tensor *), sizeof(struct ggml_tensor *)) : NULL;
+      |                                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7254:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7254 |         memset(cgraph->grads,     0, hash_size*sizeof(struct ggml_tensor *));
+      |                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7254:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7255:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7255 |         memset(cgraph->grad_accs, 0, hash_size*sizeof(struct ggml_tensor *));
+      |                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7255:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7308:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7308 |         memset(dst->grads,     0, dst->visited_hash_set.size*sizeof(struct ggml_tensor *));
+      |                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7308:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7309:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'const void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+ 7309 |         memset(dst->grad_accs, 0, dst->visited_hash_set.size*sizeof(struct ggml_tensor *));
+      |                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7309:16: warning: multilevel pointer conversion from 'struct ggml_tensor **' to 'void *', please use explicit cast [bugprone-multi-level-implicit-pointer-conversion]
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7540:13: warning: Access to field 'flags' results in a dereference of a null pointer (loaded from variable 'node') [clang-analyzer-core.NullDereference]
+ 7540 |         if (node->flags & GGML_TENSOR_FLAG_PARAM) {
+      |             ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7526:17: note: 'fp' is non-null
+ 7526 |     GGML_ASSERT(fp);
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7526:5: note: Taking false branch
+ 7526 |     GGML_ASSERT(fp);
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7532:10: note: 'i' initialized to 0
+ 7532 |     for (int i = 0; i < gb->n_nodes; i++) {
+      |          ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7532:21: note: Assuming 'i' is < field 'n_nodes'
+ 7532 |     for (int i = 0; i < gb->n_nodes; i++) {
+      |                     ^~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7532:5: note: Loop condition is true.  Entering loop body
+ 7532 |     for (int i = 0; i < gb->n_nodes; i++) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7533:9: note: 'node' initialized here
+ 7533 |         struct ggml_tensor * node = gb->nodes[i];
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7536:13: note: Calling 'ggml_graph_get_parent'
+ 7536 |         if (ggml_graph_get_parent(gb, node) != NULL) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7492:21: note: 'i' is < field 'n_nodes'
+ 7492 |     for (int i = 0; i < cgraph->n_nodes; i++) {
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7492:5: note: Loop condition is true.  Entering loop body
+ 7492 |     for (int i = 0; i < cgraph->n_nodes; i++) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7496:13: note: Assuming 'grad' is equal to 'node'
+ 7496 |         if (grad == node) {
+      |             ^~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7496:9: note: Taking true branch
+ 7496 |         if (grad == node) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7536:13: note: Returning from 'ggml_graph_get_parent'
+ 7536 |         if (ggml_graph_get_parent(gb, node) != NULL) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7536:13: note: Assuming pointer value is null
+ 7536 |         if (ggml_graph_get_parent(gb, node) != NULL) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7536:9: note: Taking false branch
+ 7536 |         if (ggml_graph_get_parent(gb, node) != NULL) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7540:13: note: Access to field 'flags' results in a dereference of a null pointer (loaded from variable 'node')
+ 7540 |         if (node->flags & GGML_TENSOR_FLAG_PARAM) {
+      |             ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7717:23: warning: redundant explicit casting to the same type 'int64_t' (aka 'long long') as the sub-expression, remove this casting [readability-redundant-casting]
+ 7717 |     const int64_t n = (int64_t) nrows * n_per_row;
+      |                       ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7714:26: note: source type originates from referencing this parameter
+ 7714 |                int64_t   nrows,
+      |                ~~~~~~~   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7837:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 7837 |     if (p0->n_threads      != p1->n_threads  )    return false;
+      |                                               ^                
+      |                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7838:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 7838 |     if (p0->prio           != p1->prio       )    return false;
+      |                                               ^                
+      |                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7839:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 7839 |     if (p0->poll           != p1->poll       )    return false;
+      |                                               ^                
+      |                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml.c:7840:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 7840 |     if (p0->strict_cpu     != p1->strict_cpu )    return false;
+      |                                               ^                
+      |                                                {
+Suppressed 497 warnings (497 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

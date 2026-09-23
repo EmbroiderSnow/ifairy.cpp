@@ -1,0 +1,15 @@
+Test project /Users/1806-admin/Projects/llama.cpp-ifairy/build-rel
+    Start 1: test-legacy-ifairy-direct
+1/5 Test #1: test-legacy-ifairy-direct ........   Passed    0.94 sec
+    Start 2: test-ifairy-model
+2/5 Test #2: test-ifairy-model ................   Passed    0.10 sec
+    Start 3: test-ifairy-ops
+3/5 Test #3: test-ifairy-ops ..................   Passed    0.20 sec
+    Start 4: test-legacy-ifairy
+4/5 Test #4: test-legacy-ifairy ...............   Passed    0.28 sec
+    Start 5: test-ifairy-model-lut
+5/5 Test #5: test-ifairy-model-lut ............   Passed    0.01 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   1.53 sec

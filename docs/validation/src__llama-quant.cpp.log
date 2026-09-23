@@ -1,0 +1,541 @@
+1342 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:49:10: warning: enum 'ggml_backend_buffer_usage' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   49 |     enum ggml_backend_buffer_usage {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:130:10: warning: enum 'ggml_backend_dev_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  130 |     enum ggml_backend_dev_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpp.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:5: warning: initial values in enum 'ggml_numa_strategy' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   25 |     enum ggml_numa_strategy {
+      |     ^
+   26 |         GGML_NUMA_STRATEGY_DISABLED   = 0,
+   27 |         GGML_NUMA_STRATEGY_DISTRIBUTE = 1,
+   28 |         GGML_NUMA_STRATEGY_ISOLATE    = 2,
+   29 |         GGML_NUMA_STRATEGY_NUMACTL    = 3,
+   30 |         GGML_NUMA_STRATEGY_MIRROR     = 4,
+   31 |         GGML_NUMA_STRATEGY_COUNT
+      |                                 
+      |                                  = 5
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:10: warning: enum 'ggml_numa_strategy' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   25 |     enum ggml_numa_strategy {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:7:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    7 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:30:10: warning: enum 'ggml_opt_loss_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   30 |     enum ggml_opt_loss_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:71:10: warning: enum 'ggml_opt_build_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   71 |     enum ggml_opt_build_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-opt.h:77:10: warning: enum 'ggml_opt_optimizer_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   77 |     enum ggml_opt_optimizer_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:346:10: warning: enum 'ggml_status' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  346 |     enum ggml_status {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:377:10: warning: enum 'ggml_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  377 |     enum ggml_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:437:10: warning: enum 'ggml_prec' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  437 |     enum ggml_prec {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:443:10: warning: enum 'ggml_ftype' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  443 |     enum ggml_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:472:10: warning: enum 'ggml_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  472 |     enum ggml_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:595:10: warning: enum 'ggml_unary_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  595 |     enum ggml_unary_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:617:10: warning: enum 'ggml_glu_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  617 |     enum ggml_glu_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:628:10: warning: enum 'ggml_object_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  628 |     enum ggml_object_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:634:10: warning: enum 'ggml_log_level' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  634 |     enum ggml_log_level {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:644:10: warning: enum 'ggml_tensor_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  644 |     enum ggml_tensor_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1608:10: warning: enum 'ggml_set_rows_bf16_carrier_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 1608 |     enum ggml_set_rows_bf16_carrier_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2136:10: warning: enum 'ggml_op_pool' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2136 |     enum ggml_op_pool {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:10: warning: enum 'ggml_scale_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2175 |     enum ggml_scale_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2182:10: warning: enum 'ggml_scale_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+ 2182 |     enum ggml_scale_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2267:10: warning: enum 'ggml_sort_order' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2267 |     enum ggml_sort_order {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2637:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2637 | #    if defined(__GNUC__)
+      |      ^~~~~~~~~~~~~~~~~~~~
+      |      ifdef __GNUC__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2673:10: warning: enum 'ggml_sched_priority' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2673 |     enum ggml_sched_priority {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:10: warning: enum 'gguf_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   53 |     enum gguf_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:38:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+   38 | #define LLAMA_TOKEN_NULL -1
+      |                          ^ 
+      |                          ( )
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:77:10: warning: enum 'llama_vocab_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   77 |     enum llama_vocab_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:87:10: warning: enum 'llama_rope_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   87 |     enum llama_rope_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:95:10: warning: enum 'llama_token_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   95 |     enum llama_token_type { //TODO: remove, required until per token attributes are available from GGUF file
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:105:10: warning: enum 'llama_token_attr' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+  105 |     enum llama_token_attr {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:120:10: warning: enum 'llama_ftype' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+  120 |     enum llama_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:166:10: warning: enum 'llama_rope_scaling_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  166 |     enum llama_rope_scaling_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:175:10: warning: enum 'llama_pooling_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  175 |     enum llama_pooling_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:184:10: warning: enum 'llama_attention_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  184 |     enum llama_attention_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:190:10: warning: enum 'llama_flash_attn_type' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  190 |     enum llama_flash_attn_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:198:10: warning: enum 'llama_split_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  198 |     enum llama_split_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/../include/llama.h:249:10: warning: enum 'llama_model_kv_override_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  249 |     enum llama_model_kv_override_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-adapter.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:11:6: warning: enum 'llm_arch' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   11 | enum llm_arch {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:109:6: warning: enum 'llm_kv' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  109 | enum llm_kv {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:275:6: warning: enum 'llm_tensor' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  275 | enum llm_tensor {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:453:6: warning: enum 'llm_tensor_layer' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  453 | enum llm_tensor_layer {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-batch.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-cparams.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:28:6: warning: enum 'llm_graph_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   28 | enum llm_graph_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:34:6: warning: enum 'llm_ffn_op_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   34 | enum llm_ffn_op_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:45:6: warning: enum 'llm_ffn_gate_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   45 | enum llm_ffn_gate_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:50:6: warning: enum 'llm_norm_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   50 | enum llm_norm_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-graph.h:83:43: warning: 'atoi' used to convert a string to an integer value, but function will not report conversion errors; consider using 'strtol' instead [bugprone-unchecked-string-to-number-conversion]
+   83 |         debug = LLAMA_GRAPH_INPUT_DEBUG ? atoi(LLAMA_GRAPH_INPUT_DEBUG) : 0;
+      |                                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-hparams.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-hparams.h:11:6: warning: enum 'llama_expert_gating_func_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   11 | enum llama_expert_gating_func_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-hparams.h:18:6: warning: enum 'llama_swa_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   18 | enum llama_swa_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-memory.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-memory.h:24:6: warning: enum 'llama_memory_status' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   24 | enum llama_memory_status {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-mmap.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model-loader.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model-loader.h:18:6: warning: enum 'llama_fver' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   18 | enum llama_fver {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model-loader.h:52:13: warning: 'sscanf' used to convert a string to an integer value, but function will not report conversion errors; consider using 'strtol' instead [bugprone-unchecked-string-to-number-conversion]
+   52 |             sscanf(a.c_str(), "blk.%d.", &a_layer);
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model-loader.h:53:13: warning: 'sscanf' used to convert a string to an integer value, but function will not report conversion errors; consider using 'strtol' instead [bugprone-unchecked-string-to-number-conversion]
+   53 |             sscanf(b.c_str(), "blk.%d.", &b_layer);
+      |             ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-model.h:21:6: warning: enum 'llm_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   21 | enum llm_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:17:8: warning: struct 'tensor_quantization' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   17 | struct tensor_quantization {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:83:8: warning: struct 'quantize_state_impl' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   83 | struct quantize_state_impl {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:200:17: warning: 'sscanf' used to convert a string to an integer value, but function will not report conversion errors; consider using 'strtol' instead [bugprone-unchecked-string-to-number-conversion]
+  200 |             if (sscanf(name, "blk.%d.", &i_layer) != 1) {
+      |                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:219:56: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  219 |             if (ftype == LLAMA_FTYPE_MOSTLY_MXFP4_MOE) {
+      |                                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:221:14: note: end of the original
+  221 |             }
+      |              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:222:65: note: clone 1 starts here
+  222 |             else if (arch == LLM_ARCH_FALCON || nx % qk_k != 0) {
+      |                                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:250:94: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  250 |             else if (ftype == LLAMA_FTYPE_MOSTLY_IQ2_S || ftype == LLAMA_FTYPE_MOSTLY_IQ2_M) {
+      |                                                                                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:252:14: note: end of the original
+  252 |             }
+      |              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:253:59: note: clone 1 starts here
+  253 |             else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_XXS) {
+      |                                                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:266:81: warning: statement should be inside braces [readability-braces-around-statements]
+  266 |             if (qs.model.hparams.n_gqa() >= 4 || qs.model.hparams.n_expert >= 4) new_type = GGML_TYPE_Q4_K;
+      |                                                                                 ^
+      |                                                                                  {
+  267 |             else new_type = ftype == LLAMA_FTYPE_MOSTLY_IQ2_S || ftype == LLAMA_FTYPE_MOSTLY_IQ2_M ? GGML_TYPE_IQ3_S : GGML_TYPE_Q2_K;
+      |             } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:267:17: warning: statement should be inside braces [readability-braces-around-statements]
+  267 |             else new_type = ftype == LLAMA_FTYPE_MOSTLY_IQ2_S || ftype == LLAMA_FTYPE_MOSTLY_IQ2_M ? GGML_TYPE_IQ3_S : GGML_TYPE_Q2_K;
+      |                 ^                                                                                                                     
+      |                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:283:92: warning: statement should be inside braces [readability-braces-around-statements]
+  283 |                 if (ftype == LLAMA_FTYPE_MOSTLY_IQ1_S || ftype == LLAMA_FTYPE_MOSTLY_IQ1_M) new_type = GGML_TYPE_IQ2_XXS;
+      |                                                                                            ^
+      |                                                                                             {
+  284 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ2_S || ftype == LLAMA_FTYPE_MOSTLY_IQ2_M) new_type = GGML_TYPE_IQ3_S;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:284:97: warning: statement should be inside braces [readability-braces-around-statements]
+  284 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ2_S || ftype == LLAMA_FTYPE_MOSTLY_IQ2_M) new_type = GGML_TYPE_IQ3_S;
+      |                                                                                                 ^                           
+      |                                                                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:291:87: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  291 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q2_K_S && qs.model.hparams.n_gqa() >= 4) {
+      |                                                                                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:293:10: note: end of the original
+  293 |         }
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:297:126: note: clone 1 starts here
+  297 |         else if ((ftype == LLAMA_FTYPE_MOSTLY_IQ3_XS || ftype == LLAMA_FTYPE_MOSTLY_IQ3_S) && qs.model.hparams.n_gqa() >= 4) {
+      |                                                                                                                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:300:53: note: clone 2 starts here
+  300 |         else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_M) {
+      |                                                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:295:73: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  295 |             new_type = qs.model.hparams.n_gqa() >= 4 ? GGML_TYPE_Q4_K : !qs.has_imatrix ? GGML_TYPE_IQ3_S : GGML_TYPE_IQ3_XXS;
+      |                                                                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:295:24: note: parent conditional operator here
+  295 |             new_type = qs.model.hparams.n_gqa() >= 4 ? GGML_TYPE_Q4_K : !qs.has_imatrix ? GGML_TYPE_IQ3_S : GGML_TYPE_IQ3_XXS;
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:306:53: warning: statement should be inside braces [readability-braces-around-statements]
+  306 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L) new_type = GGML_TYPE_Q5_K;
+      |                                                     ^
+      |                                                      {
+  307 |         else if ((ftype == LLAMA_FTYPE_MOSTLY_IQ4_NL || ftype == LLAMA_FTYPE_MOSTLY_IQ4_XS) && qs.model.hparams.n_gqa() >= 4) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:306:53: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  306 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L) new_type = GGML_TYPE_Q5_K;
+      |                                                     ^
+      |                                                      {
+  307 |         else if ((ftype == LLAMA_FTYPE_MOSTLY_IQ4_NL || ftype == LLAMA_FTYPE_MOSTLY_IQ4_XS) && qs.model.hparams.n_gqa() >= 4) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:306:54: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  306 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L) new_type = GGML_TYPE_Q5_K;
+      |                                                      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:306:79: note: end of the original
+  306 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L) new_type = GGML_TYPE_Q5_K;
+      |                                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:307:127: note: clone 1 starts here
+  307 |         else if ((ftype == LLAMA_FTYPE_MOSTLY_IQ4_NL || ftype == LLAMA_FTYPE_MOSTLY_IQ4_XS) && qs.model.hparams.n_gqa() >= 4) {
+      |                                                                                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:312:79: note: clone 2 starts here
+  312 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && qs.i_attention_wv < 4) new_type = GGML_TYPE_Q5_K;
+      |                                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:311:69: warning: statement should be inside braces [readability-braces-around-statements]
+  311 |                 use_more_bits(qs.i_attention_wv, qs.n_attention_wv)) new_type = GGML_TYPE_Q6_K;
+      |                                                                     ^
+      |                                                                      {
+  312 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && qs.i_attention_wv < 4) new_type = GGML_TYPE_Q5_K;
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:311:69: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  311 |                 use_more_bits(qs.i_attention_wv, qs.n_attention_wv)) new_type = GGML_TYPE_Q6_K;
+      |                                                                     ^
+      |                                                                      {
+  312 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && qs.i_attention_wv < 4) new_type = GGML_TYPE_Q5_K;
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:312:78: warning: statement should be inside braces [readability-braces-around-statements]
+  312 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && qs.i_attention_wv < 4) new_type = GGML_TYPE_Q5_K;
+      |                                                                              ^                          
+      |                                                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:312:78: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  312 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && qs.i_attention_wv < 4) new_type = GGML_TYPE_Q5_K;
+      |                                                                              ^                          
+      |                                                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:317:74: warning: statement should be inside braces [readability-braces-around-statements]
+  317 |             if (new_type == GGML_TYPE_Q3_K || new_type == GGML_TYPE_Q4_K) new_type = GGML_TYPE_Q5_K;
+      |                                                                          ^                          
+      |                                                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:346:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  346 |         int i_layer = info.first, n_layer = info.second;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:347:51: warning: statement should be inside braces [readability-braces-around-statements]
+  347 |         if      (ftype == LLAMA_FTYPE_MOSTLY_Q2_K) new_type = GGML_TYPE_Q3_K;
+      |                                                   ^
+      |                                                    {
+  348 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q2_K_S) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:347:51: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  347 |         if      (ftype == LLAMA_FTYPE_MOSTLY_Q2_K) new_type = GGML_TYPE_Q3_K;
+      |                                                   ^
+      |                                                    {
+  348 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q2_K_S) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:349:37: warning: statement should be inside braces [readability-braces-around-statements]
+  349 |             if (i_layer < n_layer/8) new_type = GGML_TYPE_Q4_K;
+      |                                     ^                          
+      |                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:356:24: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  356 |                      : arch != LLM_ARCH_FALCON || use_more_bits(i_layer, n_layer) ? GGML_TYPE_Q4_K
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:355:24: note: parent conditional operator here
+  355 |             new_type = i_layer < n_layer/16 ? GGML_TYPE_Q5_K
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:369:28: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  369 |                            use_more_bits(i_layer, n_layer) ? GGML_TYPE_Q5_K : GGML_TYPE_Q4_K;
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:368:28: note: parent conditional operator here
+  368 |                 new_type = i_layer < n_layer/16 ? GGML_TYPE_Q6_K :
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:371:53: warning: statement should be inside braces [readability-braces-around-statements]
+  371 |                 if (use_more_bits(i_layer, n_layer)) new_type = GGML_TYPE_Q6_K;
+      |                                                     ^                          
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:374:136: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  374 |         else if (i_layer < n_layer/8 && (ftype == LLAMA_FTYPE_MOSTLY_IQ4_NL || ftype == LLAMA_FTYPE_MOSTLY_IQ4_XS) && !qs.has_imatrix) {
+      |                                                                                                                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:376:10: note: end of the original
+  376 |         }
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:378:104: note: clone 1 starts here
+  378 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && arch != LLM_ARCH_FALCON && i_layer < n_layer/8) {
+      |                                                                                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:377:88: warning: statement should be inside braces [readability-braces-around-statements]
+  377 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M && use_more_bits(i_layer, n_layer)) new_type = GGML_TYPE_Q6_K;
+      |                                                                                        ^
+      |                                                                                         {
+  378 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && arch != LLM_ARCH_FALCON && i_layer < n_layer/8) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:377:88: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  377 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M && use_more_bits(i_layer, n_layer)) new_type = GGML_TYPE_Q6_K;
+      |                                                                                        ^
+      |                                                                                         {
+  378 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_S && arch != LLM_ARCH_FALCON && i_layer < n_layer/8) {
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:399:62: warning: statement should be inside braces [readability-braces-around-statements]
+  399 |                 if      (ftype == LLAMA_FTYPE_MOSTLY_Q2_K   ) new_type = GGML_TYPE_Q3_K;
+      |                                                              ^
+      |                                                               {
+  400 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_XXS) new_type = GGML_TYPE_IQ3_S;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:400:62: warning: statement should be inside braces [readability-braces-around-statements]
+  400 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_XXS) new_type = GGML_TYPE_IQ3_S;
+      |                                                              ^
+      |                                                               {
+  401 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_M ) new_type = GGML_TYPE_Q4_K;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:401:62: warning: statement should be inside braces [readability-braces-around-statements]
+  401 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_M ) new_type = GGML_TYPE_Q4_K;
+      |                                                              ^
+      |                                                               {
+  402 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L ) new_type = GGML_TYPE_Q5_K;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:401:63: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  401 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_M ) new_type = GGML_TYPE_Q4_K;
+      |                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:401:88: note: end of the original
+  401 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_M ) new_type = GGML_TYPE_Q4_K;
+      |                                                                                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:403:63: note: clone 1 starts here
+  403 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_M  ) new_type = GGML_TYPE_Q4_K;
+      |                                                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:402:62: warning: statement should be inside braces [readability-braces-around-statements]
+  402 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L ) new_type = GGML_TYPE_Q5_K;
+      |                                                              ^
+      |                                                               {
+  403 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_M  ) new_type = GGML_TYPE_Q4_K;
+      |                 } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:403:62: warning: statement should be inside braces [readability-braces-around-statements]
+  403 |                 else if (ftype == LLAMA_FTYPE_MOSTLY_IQ3_M  ) new_type = GGML_TYPE_Q4_K;
+      |                                                              ^                          
+      |                                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:406:52: warning: statement should be inside braces [readability-braces-around-statements]
+  406 |             if (ftype == LLAMA_FTYPE_MOSTLY_Q3_K_L) new_type = GGML_TYPE_Q4_K;
+      |                                                    ^                          
+      |                                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:412:53: warning: statement should be inside braces [readability-braces-around-statements]
+  412 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_M) new_type = GGML_TYPE_Q5_K;
+      |                                                     ^
+      |                                                      {
+  413 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M) new_type = GGML_TYPE_Q6_K;
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:412:53: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  412 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q4_K_M) new_type = GGML_TYPE_Q5_K;
+      |                                                     ^
+      |                                                      {
+  413 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M) new_type = GGML_TYPE_Q6_K;
+      |         } 
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:413:53: warning: statement should be inside braces [readability-braces-around-statements]
+  413 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M) new_type = GGML_TYPE_Q6_K;
+      |                                                     ^                          
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:413:53: warning: statement should have braces [readability-inconsistent-ifelse-braces]
+  413 |         else if (ftype == LLAMA_FTYPE_MOSTLY_Q5_K_M) new_type = GGML_TYPE_Q6_K;
+      |                                                     ^                          
+      |                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:416:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  416 |         int i_layer = info.first, n_layer = info.second;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:423:9: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  423 |         int i_layer = info.first, n_layer = info.second;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:590:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+  590 |         case LLAMA_FTYPE_MOSTLY_IQ2_XS:  default_type = GGML_TYPE_IQ2_XS;  break;
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:591:81: note: last of these clones ends here
+  591 |         case LLAMA_FTYPE_MOSTLY_IQ2_S:   default_type = GGML_TYPE_IQ2_XS;  break;
+      |                                                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:598:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+  598 |         case LLAMA_FTYPE_MOSTLY_IQ3_S:   default_type = GGML_TYPE_IQ3_S;   break;
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:599:81: note: last of these clones ends here
+  599 |         case LLAMA_FTYPE_MOSTLY_IQ3_M:   default_type = GGML_TYPE_IQ3_S;   break;
+      |                                                                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:683:31: warning: statement should be inside braces [readability-braces-around-statements]
+  683 |             if (o.key[0] == 0) break;
+      |                               ^      
+      |                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:716:11: warning: do not use 'else' after 'continue' [readability-else-after-return]
+  716 |         } else if (remapped_name != it.first) {
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  717 |             ggml_set_name(it.second.tensor, remapped_name.c_str());
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  718 |             LLAMA_LOG_DEBUG("%s: tensor %s remapped to %s\n", __func__, it.first.c_str(), ggml_get_name(it.second.tensor));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  719 |         }
+      |         ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:728:9: warning: sorting pointers is nondeterministic [bugprone-nondeterministic-pointer-iteration-order]
+  728 |         std::sort(tensors.begin(), tensors.end(), [](const llama_model_loader::llama_tensor_weight * a, const llama_model_loader::llama_tensor_weight * b) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  729 |             if (a->idx == b->idx) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~
+  730 |                 return a->offs < b->offs;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+  731 |             }
+      |             ~
+  732 |             return a->idx < b->idx;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~
+  733 |         });
+      |         ~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.cpp:988:50: warning: function 'strcmp' is called without explicitly comparing result [bugprone-suspicious-string-compare]
+  988 |                  (new_type == GGML_TYPE_IQ1_M && strcmp(tensor->name, "token_embd.weight") && !is_output_tensor) ||
+      |                                                  ^
+      |                                                                                            != 0
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-quant.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-vocab.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-vocab.h:10:6: warning: enum 'llama_vocab_pre_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   10 | enum llama_vocab_pre_type {
+      |      ^
+Suppressed 1218 warnings (1218 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,0 +1,854 @@
+1436 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:49:10: warning: enum 'ggml_backend_buffer_usage' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   49 |     enum ggml_backend_buffer_usage {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:130:10: warning: enum 'ggml_backend_dev_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  130 |     enum ggml_backend_dev_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpp.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:346:10: warning: enum 'ggml_status' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  346 |     enum ggml_status {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:377:10: warning: enum 'ggml_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  377 |     enum ggml_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:437:10: warning: enum 'ggml_prec' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  437 |     enum ggml_prec {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:443:10: warning: enum 'ggml_ftype' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  443 |     enum ggml_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:472:10: warning: enum 'ggml_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  472 |     enum ggml_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:595:10: warning: enum 'ggml_unary_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  595 |     enum ggml_unary_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:617:10: warning: enum 'ggml_glu_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  617 |     enum ggml_glu_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:628:10: warning: enum 'ggml_object_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  628 |     enum ggml_object_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:634:10: warning: enum 'ggml_log_level' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  634 |     enum ggml_log_level {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:644:10: warning: enum 'ggml_tensor_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  644 |     enum ggml_tensor_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1608:10: warning: enum 'ggml_set_rows_bf16_carrier_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 1608 |     enum ggml_set_rows_bf16_carrier_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2136:10: warning: enum 'ggml_op_pool' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2136 |     enum ggml_op_pool {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:10: warning: enum 'ggml_scale_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2175 |     enum ggml_scale_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2182:10: warning: enum 'ggml_scale_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+ 2182 |     enum ggml_scale_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2267:10: warning: enum 'ggml_sort_order' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2267 |     enum ggml_sort_order {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2637:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2637 | #    if defined(__GNUC__)
+      |      ^~~~~~~~~~~~~~~~~~~~
+      |      ifdef __GNUC__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2673:10: warning: enum 'ggml_sched_priority' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2673 |     enum ggml_sched_priority {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:10: warning: enum 'gguf_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   53 |     enum gguf_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:347:20: warning: declaration uses identifier '_isinf', which is reserved in the global namespace [bugprone-reserved-identifier]
+  347 | static bool inline _isinf(float f) { return std::isinf(f); }
+      |                    ^~~~~~
+      |                    isinf
+  348 | #endif
+  349 | 
+  350 | // accept FLT_MAX as infinity
+  351 | static bool isinf_or_max(float f) {
+  352 |     return _isinf(f) || f == FLT_MAX || f == -FLT_MAX;
+      |            ~~~~~~
+      |            isinf
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:359:6: warning: enum 'test_mode' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  359 | enum test_mode {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:359:6: warning: enum 'test_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:367:6: warning: enum 'output_formats' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  367 | enum output_formats { CONSOLE, SQL, CSV };
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:367:6: warning: enum 'output_formats' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:396:8: warning: struct 'test_result' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  396 | struct test_result {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:471:10: warning: enum 'field_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  471 |     enum field_type { STRING, BOOL, INT, FLOAT };
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:507:12: warning: enum 'test_status_t' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  507 | enum class test_status_t { NOT_SUPPORTED, OK, FAIL };
+      |            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:507:12: warning: enum 'test_status_t' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:509:8: warning: struct 'test_operation_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  509 | struct test_operation_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:589:8: warning: struct 'test_summary_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  589 | struct test_summary_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:602:8: warning: struct 'testing_start_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  602 | struct testing_start_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:610:8: warning: struct 'backend_init_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  610 | struct backend_init_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:637:8: warning: struct 'backend_status_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  637 | struct backend_status_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:648:8: warning: struct 'overall_summary_info' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  648 | struct overall_summary_info {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:661:8: warning: struct 'printer' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  661 | struct printer {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:685:8: warning: struct 'console_printer' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  685 | struct console_printer : public printer {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:801:10: warning: method 'print_test_console' can be made static [readability-convert-member-functions-to-static]
+  801 |     void print_test_console(const test_result & result) {
+      |          ^
+      |     static 
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:818:10: warning: method 'print_perf_console' can be made static [readability-convert-member-functions-to-static]
+  818 |     void print_perf_console(const test_result & result) {
+      |          ^
+      |     static 
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:860:10: warning: method 'print_support_console' can be made static [readability-convert-member-functions-to-static]
+  860 |     void print_support_console(const test_result & result) {
+      |          ^
+      |     static 
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:872:8: warning: struct 'sql_printer' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  872 | struct sql_printer : public printer {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:888:34: warning: the variable 'fields' of type 'std::vector<std::string>' (aka 'std::vector<basic_string<char>>') is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  888 |         std::vector<std::string> fields = test_result::get_fields();
+      |                                  ^
+      |         const                   &
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:899:34: warning: the variable 'fields' of type 'std::vector<std::string>' (aka 'std::vector<basic_string<char>>') is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  899 |         std::vector<std::string> fields = test_result::get_fields();
+      |                                  ^
+      |         const                   &
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:912:8: warning: struct 'csv_printer' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  912 | struct csv_printer : public printer {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:915:34: warning: the variable 'fields' of type 'std::vector<std::string>' (aka 'std::vector<basic_string<char>>') is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  915 |         std::vector<std::string> fields     = test_result::get_fields();
+      |                                  ^
+      |         const                   &
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:929:34: warning: the variable 'fields' of type 'std::vector<std::string>' (aka 'std::vector<basic_string<char>>') is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  929 |         std::vector<std::string> fields     = test_result::get_fields();
+      |                                  ^
+      |         const                   &
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:941:46: warning: 'find' called with a string literal consisting of a single character; consider using the more effective overload accepting a character [performance-faster-string-find]
+  941 |             while ((pos = escaped_value.find("\"", pos)) != std::string::npos) {
+      |                                              ^~~~
+      |                                              '\"'
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:976:8: warning: struct 'test_case' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+  976 | struct test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1120:11: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1120 |         } else {
+      |           ^~~~~~
+ 1121 |             return true;
+      |             ~~~~~~~~~~~~
+ 1122 |         }
+      |         ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1284:55: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 1284 |         std::string error_msg   = test_passed ? "" : (!cmp_ok ? "compare failed" : "test failed");
+      |                                                       ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1284:35: note: parent conditional operator here
+ 1284 |         std::string error_msg   = test_passed ? "" : (!cmp_ok ? "compare failed" : "test failed");
+      |                                   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1356:95: warning: Division by zero [clang-analyzer-core.DivideZero]
+ 1356 |             n_runs = std::min<int>(ggml_graph_size(gf) - ggml_graph_n_nodes(gf), target_flops / op_flops(out)) + 1;
+      |                                                                                  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1306:9: note: Taking false branch
+ 1306 |         GGML_ASSERT(ctx);
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1310:13: note: Assuming the condition is false
+ 1310 |         if (!matches_filter(out, op_names_filter)) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1310:9: note: Taking false branch
+ 1310 |         if (!matches_filter(out, op_names_filter)) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1315:13: note: Assuming the condition is false
+ 1315 |         if (!ggml_backend_supports_op(backend, out)) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1315:9: note: Taking false branch
+ 1315 |         if (!ggml_backend_supports_op(backend, out)) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1328:9: note: Taking false branch
+ 1328 |         if (buf == NULL) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1342:13: note: Assuming 'status' is equal to GGML_STATUS_SUCCESS
+ 1342 |         if (status != GGML_STATUS_SUCCESS) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1342:9: note: Taking false branch
+ 1342 |         if (status != GGML_STATUS_SUCCESS) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1349:23: note: Assuming the condition is false
+ 1349 |         bool is_cpu = ggml_backend_dev_type(ggml_backend_get_device(backend)) == GGML_BACKEND_DEVICE_TYPE_CPU;
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1350:13: note: Assuming the condition is true
+ 1350 |         if (op_flops(out) > 0) {
+      |             ^~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1350:9: note: Taking true branch
+ 1350 |         if (op_flops(out) > 0) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1355:37: note: 'is_cpu' is false
+ 1355 |             uint64_t target_flops = is_cpu ? target_flops_cpu : target_flops_gpu;
+      |                                     ^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1355:37: note: '?' condition is false
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1356:97: note: Calling 'test_case::op_flops'
+ 1356 |             n_runs = std::min<int>(ggml_graph_size(gf) - ggml_graph_n_nodes(gf), target_flops / op_flops(out)) + 1;
+      |                                                                                                 ^~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1040:9: note: Returning zero
+ 1040 |         return 0;
+      |         ^~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1356:97: note: Returning from 'test_case::op_flops'
+ 1356 |             n_runs = std::min<int>(ggml_graph_size(gf) - ggml_graph_n_nodes(gf), target_flops / op_flops(out)) + 1;
+      |                                                                                                 ^~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1356:95: note: Division by zero
+ 1356 |             n_runs = std::min<int>(ggml_graph_size(gf) - ggml_graph_n_nodes(gf), target_flops / op_flops(out)) + 1;
+      |                                                                                  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1637:17: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 1637 |                 float fu, fuh, fdh, fd; // output values for xiu, xiuh, xid, xidh
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1718:8: warning: struct 'test_example' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1718 | struct test_example : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1762:8: warning: struct 'test_unary' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1762 | struct test_unary : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1834:8: warning: struct 'test_glu' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1834 | struct test_glu : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1880:8: warning: struct 'test_glu_split' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1880 | struct test_glu_split : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1938:8: warning: struct 'test_swiglu_oai' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1938 | struct test_swiglu_oai : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1999:8: warning: struct 'test_get_rows' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 1999 | struct test_get_rows : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2045:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [clang-analyzer-security.insecureAPI.rand]
+ 2045 |                     data[i] = rand() % m;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2045:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+ 2045 |                     data[i] = rand() % m;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2045:31: warning: rand() has limited randomness; use C++11 random library instead [misc-predictable-rand]
+ 2045 |                     data[i] = rand() % m;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2056:8: warning: struct 'test_get_rows_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2056 | struct test_get_rows_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2098:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [clang-analyzer-security.insecureAPI.rand]
+ 2098 |                     data[i] = rand() % m;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2098:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+ 2098 |                     data[i] = rand() % m;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2098:31: warning: rand() has limited randomness; use C++11 random library instead [misc-predictable-rand]
+ 2098 |                     data[i] = rand() % m;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2109:8: warning: struct 'test_set_rows' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2109 | struct test_set_rows : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2179:8: warning: struct 'test_turbo_wht' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2179 | struct test_turbo_wht : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2210:8: warning: struct 'test_turbo_k_mean_center' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2210 | struct test_turbo_k_mean_center : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2291:8: warning: struct 'test_set_rows_turbo' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2291 | struct test_set_rows_turbo : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2381:8: warning: struct 'test_argmax' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2381 | struct test_argmax : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2429:8: warning: struct 'test_count_equal' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2429 | struct test_count_equal : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2486:8: warning: struct 'test_repeat' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2486 | struct test_repeat : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2520:8: warning: struct 'test_repeat_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2520 | struct test_repeat_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2573:8: warning: struct 'test_dup' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2573 | struct test_dup : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2581:26: warning: statement should be inside braces [readability-braces-around-statements]
+ 2581 |         if (_use_permute) v += "," + VAR_TO_STR(permute);
+      |                          ^                               
+      |                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2609:8: warning: struct 'test_set' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2609 | struct test_set : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2654:8: warning: struct 'test_cpy' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2654 | struct test_cpy : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2716:8: warning: struct 'test_cont' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2716 | struct test_cont : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2747:8: warning: struct 'test_bin_bcast' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2747 | struct test_bin_bcast : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2784:55: warning: 2nd function call argument is an uninitialized value [clang-analyzer-core.CallAndMessage]
+ 2784 |         const bool grad_supported = op == ggml_add && ggml_are_same_shape(a, b[0]) && nf == 1;
+      |                                                       ^                      ~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2772:21: note: Assuming field 'nf' is <= 16
+ 2772 |         GGML_ASSERT(nf <= 16);
+      |                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:30: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                              ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2772:9: note: Taking false branch
+ 2772 |         GGML_ASSERT(nf <= 16);
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:276:24: note: expanded from macro 'GGML_ASSERT'
+  276 | #define GGML_ASSERT(x) if (!(x)) GGML_ABORT("GGML_ASSERT(%s) failed", #x)
+      |                        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2778:25: note: Assuming 'i' is >= field 'nf'
+ 2778 |         for (int i = 0; i < nf; ++i) {
+      |                         ^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2778:9: note: Loop condition is false. Execution continues on line 2784
+ 2778 |         for (int i = 0; i < nf; ++i) {
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2784:37: note: Assuming field 'op' is equal to ggml_add
+ 2784 |         const bool grad_supported = op == ggml_add && ggml_are_same_shape(a, b[0]) && nf == 1;
+      |                                     ^~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2784:37: note: Left side of '&&' is true
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2784:55: note: 2nd function call argument is an uninitialized value
+ 2784 |         const bool grad_supported = op == ggml_add && ggml_are_same_shape(a, b[0]) && nf == 1;
+      |                                                       ^                      ~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2825:8: warning: struct 'test_ifairy_binary' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2825 | struct test_ifairy_binary : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2843:27: warning: 1 uninitialized field at the end of the constructor call [clang-analyzer-optin.cplusplus.UninitializedObject]
+ 2843 |         : op(op), ne(ne), nr(nr) {}
+      |                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:1050:15: note: uninitialized field 'this->test_case::mode'
+ 1050 |     test_mode mode;
+      |               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7680:20: note: Assuming '__begin1' is equal to '__end1'
+ 7680 |     for (bool w8a8 : { false, true }) {
+      |                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7686:9: note: 'row4_decode_perf_shapes' is null
+ 7686 |     if (row4_decode_perf_shapes && strcmp(row4_decode_perf_shapes, "0") != 0) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7686:33: note: Left side of '&&' is false
+ 7686 |     if (row4_decode_perf_shapes && strcmp(row4_decode_perf_shapes, "0") != 0) {
+      |                                 ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7720:9: note: 'row4_prefill_perf_shapes' is null
+ 7720 |     if (row4_prefill_perf_shapes && strcmp(row4_prefill_perf_shapes, "0") != 0) {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7720:34: note: Left side of '&&' is false
+ 7720 |     if (row4_prefill_perf_shapes && strcmp(row4_prefill_perf_shapes, "0") != 0) {
+      |                                  ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7732:33: note: Calling default constructor for 'test_ifairy_mul'
+ 7732 |     test_cases.emplace_back(new test_ifairy_mul({1048576, 1, 1, 1}, {1, 1, 1, 1}));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2891:11: note: Calling constructor for 'test_ifairy_binary'
+ 2891 |         : test_ifairy_binary(ggml_ifairy_mul, ne, nr) {}
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2843:27: note: 1 uninitialized field at the end of the constructor call
+ 2843 |         : op(op), ne(ne), nr(nr) {}
+      |                           ^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2884:8: warning: struct 'test_ifairy_add' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2884 | struct test_ifairy_add : public test_ifairy_binary {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2889:8: warning: struct 'test_ifairy_mul' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2889 | struct test_ifairy_mul : public test_ifairy_binary {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2894:8: warning: struct 'test_ifairy_rms_norm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2894 | struct test_ifairy_rms_norm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:2946:8: warning: struct 'test_ifairy_rms_norm_mul' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 2946 | struct test_ifairy_rms_norm_mul : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3007:8: warning: struct 'test_ifairy_split' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3007 | struct test_ifairy_split : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3056:8: warning: struct 'test_ifairy_merge' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3056 | struct test_ifairy_merge : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3101:8: warning: struct 'test_ifairy_relu2' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3101 | struct test_ifairy_relu2 : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3147:8: warning: struct 'test_ifairy_rope' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3147 | struct test_ifairy_rope : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3207:8: warning: struct 'test_row_quant_linear' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3207 | struct test_row_quant_linear : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3238:31: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+ 3238 |                               pair2 ? ggml_new_tensor_4d(ctx, GGML_TYPE_ROW4_CODES_PAIR2, 128, 8, K / 256, O / 32) :
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3237:31: note: parent conditional operator here
+ 3237 |         ggml_tensor * codes = w8a8  ? ggml_new_tensor_4d(ctx, GGML_TYPE_I8, 128, 16, K / 128, O / 16) :
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3310:8: warning: struct 'test_add_id' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3310 | struct test_add_id : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3372:8: warning: struct 'test_add1' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3372 | struct test_add1 : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3405:8: warning: struct 'test_scale' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3405 | struct test_scale : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3434:8: warning: struct 'test_softcap' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3434 | struct test_softcap : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3469:8: warning: struct 'test_silu_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3469 | struct test_silu_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3502:8: warning: struct 'test_norm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3502 | struct test_norm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3535:8: warning: struct 'test_norm_mul_add' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3535 | struct test_norm_mul_add : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3578:8: warning: struct 'test_rms_norm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3578 | struct test_rms_norm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3626:8: warning: struct 'test_rms_norm_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3626 | struct test_rms_norm_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3661:8: warning: struct 'test_rms_norm_mul_add' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3661 | struct test_rms_norm_mul_add : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3725:8: warning: struct 'test_ssm_conv' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3725 | struct test_ssm_conv : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3748:8: warning: struct 'test_ssm_scan' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3748 | struct test_ssm_scan : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3807:8: warning: struct 'test_rwkv_wkv6' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3807 | struct test_rwkv_wkv6 : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3837:8: warning: struct 'test_gla' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3837 | struct test_gla : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3866:8: warning: struct 'test_rwkv_wkv7' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3866 | struct test_rwkv_wkv7 : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:3900:8: warning: struct 'test_mul_mat' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 3900 | struct test_mul_mat : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4017:8: warning: struct 'test_mul_mat_id' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4017 | struct test_mul_mat_id : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4107:8: warning: struct 'test_out_prod' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4107 | struct test_out_prod : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4153:8: warning: struct 'test_sqr' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4153 | struct test_sqr : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4182:8: warning: struct 'test_sqrt' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4182 | struct test_sqrt : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4222:8: warning: struct 'test_log' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4222 | struct test_log : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4258:8: warning: struct 'test_sin' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4258 | struct test_sin : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4301:8: warning: struct 'test_cos' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4301 | struct test_cos : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4344:8: warning: struct 'test_clamp' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4344 | struct test_clamp : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4379:8: warning: struct 'test_diag_mask_inf' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4379 | struct test_diag_mask_inf : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4406:8: warning: struct 'test_soft_max' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4406 | struct test_soft_max : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4466:8: warning: struct 'test_soft_max_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4466 | struct test_soft_max_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4497:8: warning: struct 'test_rope' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4497 | struct test_rope : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4598:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [clang-analyzer-security.insecureAPI.rand]
+ 4598 |                     data[i] = rand() % n_ctx;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4598:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+ 4598 |                     data[i] = rand() % n_ctx;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4598:31: warning: rand() has limited randomness; use C++11 random library instead [misc-predictable-rand]
+ 4598 |                     data[i] = rand() % n_ctx;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4622:8: warning: struct 'test_pool2d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4622 | struct test_pool2d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4661:8: warning: struct 'test_conv_transpose_1d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4661 | struct test_conv_transpose_1d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4693:8: warning: struct 'test_conv_transpose_2d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4693 | struct test_conv_transpose_2d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4722:8: warning: struct 'test_im2col' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4722 | struct test_im2col : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4769:8: warning: struct 'test_im2col_3d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4769 | struct test_im2col_3d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4826:8: warning: struct 'test_conv_2d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4826 | struct test_conv_2d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4919:8: warning: struct 'test_conv_2d_dw' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4919 | struct test_conv_2d_dw : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:4961:8: warning: struct 'test_conv_3d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 4961 | struct test_conv_3d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5030:8: warning: struct 'test_concat' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5030 | struct test_concat : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5083:8: warning: struct 'test_argsort' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5083 | struct test_argsort : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5115:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [clang-analyzer-security.insecureAPI.rand]
+ 5115 |                     data[i] = rand();
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5115:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+ 5115 |                     data[i] = rand();
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5115:31: warning: rand() has limited randomness; use C++11 random library instead [misc-predictable-rand]
+ 5115 |                     data[i] = rand();
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5137:8: warning: struct 'test_sum' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5137 | struct test_sum : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5166:8: warning: struct 'test_sum_rows' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5166 | struct test_sum_rows : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5203:8: warning: struct 'test_mean' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5203 | struct test_mean : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5232:8: warning: struct 'test_upscale' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5232 | struct test_upscale : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5265:8: warning: struct 'test_interpolate' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5265 | struct test_interpolate : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5293:8: warning: struct 'test_group_norm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5293 | struct test_group_norm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5321:8: warning: struct 'test_group_norm_mul_add' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5321 | struct test_group_norm_mul_add : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5359:8: warning: struct 'test_l2_norm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5359 | struct test_l2_norm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5385:8: warning: struct 'test_acc' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5385 | struct test_acc : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5416:8: warning: struct 'test_pad' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5416 | struct test_pad : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5442:8: warning: struct 'test_pad_ext' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5442 | struct test_pad_ext : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5483:8: warning: struct 'test_pad_reflect_1d' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5483 | struct test_pad_reflect_1d : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5510:8: warning: struct 'test_roll' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5510 | struct test_roll : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5536:8: warning: struct 'test_arange' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5536 | struct test_arange : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5559:8: warning: struct 'test_timestep_embedding' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5559 | struct test_timestep_embedding : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5586:8: warning: struct 'test_leaky_relu' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5586 | struct test_leaky_relu : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5612:8: warning: struct 'test_flash_attn_ext' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5612 | struct test_flash_attn_ext : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5866:8: warning: struct 'test_cross_entropy_loss' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5866 | struct test_cross_entropy_loss : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5914:8: warning: struct 'test_cross_entropy_loss_back' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5914 | struct test_cross_entropy_loss_back : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5948:8: warning: struct 'test_opt_step_adamw' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5948 | struct test_opt_step_adamw : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:5994:8: warning: struct 'test_opt_step_sgd' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 5994 | struct test_opt_step_sgd : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6033:6: warning: enum 'llm_norm_type' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 6033 | enum llm_norm_type {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6033:6: warning: enum 'llm_norm_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6038:8: warning: struct 'llama_hparams' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 6038 | struct llama_hparams {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6068:8: warning: struct 'test_llm' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 6068 | struct test_llm : public test_case {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6073:14: warning: std::move of the variable 'hp' of the trivially-copyable type 'llama_hparams' has no effect; remove std::move() [performance-move-const-arg]
+ 6073 |         : hp(std::move(hp)) {
+      |              ^~~~~~~~~~  ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6077:26: warning: method 'llm_build_norm' can be made const [readability-make-member-function-const]
+ 6077 |     struct ggml_tensor * llm_build_norm(
+      |                          ^
+ 6078 |             struct ggml_context * ctx,
+ 6079 |              struct ggml_tensor * cur,
+ 6080 |              struct ggml_tensor * mw,
+ 6081 |              struct ggml_tensor * mb,
+ 6082 |                   llm_norm_type   type) {
+      |                                         const
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6094:10: warning: method 'llm_build_kv_store' can be made const [readability-make-member-function-const]
+ 6094 |     void llm_build_kv_store(
+      |          ^
+ 6095 |             struct ggml_context * ctx,
+ 6096 |              struct ggml_tensor * k_l,
+ 6097 |              struct ggml_tensor * v_l,
+ 6098 |              struct ggml_tensor * k_cur,
+ 6099 |              struct ggml_tensor * v_cur) {
+      |                                          const
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6104:61: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6104 |                 (ggml_row_size(k_l->type, hp.n_embd_gqa()))*hp.kv_head);
+      |                                                             ^~~
+      |                                                             llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6107:20: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6107 |                 (  hp.n_ctx)*ggml_element_size(v_l),
+      |                    ^~~
+      |                    llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6108:18: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6108 |                 (hp.kv_head)*ggml_element_size(v_l));
+      |                  ^~~
+      |                  llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6126:37: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6126 |                     hp.n_embd_head, hp.n_kv, hp.n_head_kv,
+      |                                     ^~~
+      |                                     llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6138:21: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6138 |                     hp.n_kv, hp.n_embd_head, hp.n_head_kv,
+      |                     ^~~
+      |                     llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6139:44: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6139 |                     ggml_element_size(v_l)*hp.n_ctx,
+      |                                            ^~~
+      |                                            llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6140:44: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6140 |                     ggml_element_size(v_l)*hp.n_ctx*hp.n_embd_head,
+      |                                            ^~~
+      |                                            llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6161:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [clang-analyzer-security.insecureAPI.rand]
+ 6161 |                     data[i] = rand() % hp.n_ctx;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6161:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+ 6161 |                     data[i] = rand() % hp.n_ctx;
+      |                               ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6161:31: warning: rand() has limited randomness; use C++11 random library instead [misc-predictable-rand]
+ 6161 |                     data[i] = rand() % hp.n_ctx;
+      |                               ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6161:40: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6161 |                     data[i] = rand() % hp.n_ctx;
+      |                                        ^~~
+      |                                        llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6172:8: warning: struct 'test_llama' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 6172 | struct test_llama : public test_llm {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6224:79: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6224 |         struct ggml_tensor * KQ_mask = ggml_new_tensor_3d(ctx, GGML_TYPE_F16, hp.n_kv, hp.n_tokens, 1);
+      |                                                                               ^~~
+      |                                                                               llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6229:36: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6229 |         for (uint32_t il = 0; il < hp.n_layer; ++il) {
+      |                                    ^~~
+      |                                    llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6249:34: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6249 |                     hp.n_rot, 0, hp.n_ctx_orig, freq_base, freq_scale,
+      |                                  ^~~
+      |                                  llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6255:34: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6255 |                     hp.n_rot, 0, hp.n_ctx_orig, freq_base, freq_scale,
+      |                                  ^~~
+      |                                  llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6299:8: warning: struct 'test_falcon' can be moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+ 6299 | struct test_falcon : public test_llm {
+      |        ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6346:79: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6346 |         struct ggml_tensor * KQ_mask = ggml_new_tensor_3d(ctx, GGML_TYPE_F16, hp.n_kv, hp.n_tokens, 1);
+      |                                                                               ^~~
+      |                                                                               llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6351:36: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6351 |         for (uint32_t il = 0; il < hp.n_layer; ++il) {
+      |                                    ^~~
+      |                                    llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6374:63: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6374 |                     ctx, Qcur, inp_pos, nullptr, hp.n_rot, 2, hp.n_ctx_orig,
+      |                                                               ^~~
+      |                                                               llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6379:63: warning: static member accessed through instance [readability-static-accessed-through-instance]
+ 6379 |                     ctx, Kcur, inp_pos, nullptr, hp.n_rot, 2, hp.n_ctx_orig,
+      |                                                               ^~~
+      |                                                               llama_hparams::
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6466:48: warning: function 'make_test_cases_eval' exceeds recommended size/complexity thresholds [readability-function-size]
+ 6466 | static std::vector<std::unique_ptr<test_case>> make_test_cases_eval() {
+      |                                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6466:48: note: 1139 statements (threshold 800)
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6468:32: warning: random number generator seeded with a constant value will generate a predictable sequence of values [bugprone-random-generator-seed]
+ 6468 |     std::default_random_engine rng(0);
+      |                                ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6792:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6792 |                                 int64_t IW = 20, IH = 22, ID = 18;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6793:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6793 |                                 int64_t KW = 3,  KH = 3,  KD = 3;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6794:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6794 |                                 int s1 = s0, s2 = s0;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6795:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6795 |                                 int p0 = p1, p2 = p1;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6796:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6796 |                                 int d0 = d2, d1 = d2;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6810:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6810 |                                 int64_t asym_KW = 5, asym_KH = 1, asym_KD = 3;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6811:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6811 |                                 int asym_s0 = 2, asym_s1 = 1, asym_s2 = 1;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6812:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6812 |                                 int asym_p0 = 2, asym_p1 = 0, asym_p2 = 1;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:6813:33: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+ 6813 |                                 int asym_d0 = 1, asym_d1 = 1, asym_d2 = 2;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7351:46: warning: statement should be inside braces [readability-braces-around-statements]
+ 7351 |                 if (!mask && max_bias > 0.0f) continue;
+      |                                              ^         
+      |                                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7504:56: warning: statement should be inside braces [readability-braces-around-statements]
+ 7504 |             if (hsk != 192 && hsk != 576 && hsk != hsv) continue;
+      |                                                        ^         
+      |                                                         {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7505:58: warning: statement should be inside braces [readability-braces-around-statements]
+ 7505 |             if (hsk == 192 && (hsv != 128 && hsv != 192)) continue;
+      |                                                          ^         
+      |                                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7506:42: warning: statement should be inside braces [readability-braces-around-statements]
+ 7506 |             if (hsk == 576 && hsv != 512) continue; // DeepSeek MLA
+      |                                          ^                         
+      |                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7511:54: warning: statement should be inside braces [readability-braces-around-statements]
+ 7511 |                         if (!mask && max_bias > 0.0f) continue;
+      |                                                      ^         
+      |                                                       {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7513:69: warning: statement should be inside braces [readability-braces-around-statements]
+ 7513 |                             if (hsk != 128 && logit_softcap != 0.0f) continue;
+      |                                                                     ^         
+      |                                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7516:61: warning: statement should be inside braces [readability-braces-around-statements]
+ 7516 |                                     if (hsk > 64 && nr3 > 1) continue; // skip broadcast for large head sizes
+      |                                                             ^                                                
+      |                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7518:69: warning: statement should be inside braces [readability-braces-around-statements]
+ 7518 |                                         if (nr2 == 16 && hsk != 128) continue;
+      |                                                                     ^         
+      |                                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7520:71: warning: statement should be inside braces [readability-braces-around-statements]
+ 7520 |                                             if (nr2 != 1 && kv != 512) continue;
+      |                                                                       ^         
+      |                                                                        {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:7523:97: warning: statement should be inside braces [readability-braces-around-statements]
+ 7523 |                                                     if (hsk != 128 && prec == GGML_PREC_DEFAULT) continue;
+      |                                                                                                 ^         
+      |                                                                                                  {
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:8138:5: warning: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]
+ 8138 | int main(int argc, char ** argv) {
+      |     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__new/exceptions.h:73:3: note: frame #0: unhandled exception of type 'bad_array_new_length' may be thrown in function '__throw_bad_array_new_length' here
+   73 |   throw bad_array_new_length();
+      |   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator.h:88:7: note: frame #1: function 'allocate' calls function '__throw_bad_array_new_length' here
+   88 |       std::__throw_bad_array_new_length();
+      |       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocate_at_least.h:46:86: note: frame #2: function '__allocate_at_least<std::allocator<char>, std::allocator_traits<std::allocator<char>>>' calls function 'allocate' here
+   46 |   return __allocation_result<typename _Traits::pointer, typename _Traits::size_type>(__alloc.allocate(__n), __n);
+      |                                                                                      ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:2289:21: note: frame #3: function '__allocate_long_buffer' calls function '__allocate_at_least<std::allocator<char>, std::allocator_traits<std::allocator<char>>>' here
+ 2289 |     auto __buffer = std::__allocate_at_least(__alloc, __align_allocation_size(__capacity));
+      |                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:2321:20: note: frame #4: function '__init_internal_buffer' calls function '__allocate_long_buffer' here
+ 2321 |       __rep_.__l = __allocate_long_buffer(__alloc_, __size);
+      |                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:2674:17: note: frame #5: function '__init' calls function '__init_internal_buffer' here
+ 2674 |   pointer __p = __init_internal_buffer(__sz);
+      |                 ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:1075:5: note: frame #6: function 'basic_string<0>' calls function '__init' here
+ 1075 |     __init(__s, traits_type::length(__s));
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/tests/test-backend-ops.cpp:8177:45: note: frame #7: function 'main' calls function 'basic_string<0>' here
+ 8177 |                 if (!output_format_from_str(argv[++i], output_format)) {
+      |                                             ^
+Suppressed 1227 warnings (1226 in non-user code, 1 NOLINT).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

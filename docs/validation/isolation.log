@@ -1,0 +1,2 @@
+PASS: no Fairy2i production implementation; only the iFairy graph builder remains.
+PASS: no Fairy2i exported symbols in Release dynamic libraries.

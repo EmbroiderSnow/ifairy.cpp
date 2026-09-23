@@ -1,0 +1,109 @@
+1158 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:346:10: warning: enum 'ggml_status' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  346 |     enum ggml_status {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:377:10: warning: enum 'ggml_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  377 |     enum ggml_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:437:10: warning: enum 'ggml_prec' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  437 |     enum ggml_prec {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:443:10: warning: enum 'ggml_ftype' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  443 |     enum ggml_ftype {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:472:10: warning: enum 'ggml_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  472 |     enum ggml_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:595:10: warning: enum 'ggml_unary_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  595 |     enum ggml_unary_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:617:10: warning: enum 'ggml_glu_op' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  617 |     enum ggml_glu_op {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:628:10: warning: enum 'ggml_object_type' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  628 |     enum ggml_object_type {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:634:10: warning: enum 'ggml_log_level' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  634 |     enum ggml_log_level {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:644:10: warning: enum 'ggml_tensor_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  644 |     enum ggml_tensor_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1608:10: warning: enum 'ggml_set_rows_bf16_carrier_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 1608 |     enum ggml_set_rows_bf16_carrier_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2136:10: warning: enum 'ggml_op_pool' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2136 |     enum ggml_op_pool {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:10: warning: enum 'ggml_scale_mode' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2175 |     enum ggml_scale_mode {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2182:10: warning: enum 'ggml_scale_flag' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint16_t' (2 bytes) as the base type to reduce its size [performance-enum-size]
+ 2182 |     enum ggml_scale_flag {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2267:10: warning: enum 'ggml_sort_order' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2267 |     enum ggml_sort_order {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2637:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2637 | #    if defined(__GNUC__)
+      |      ^~~~~~~~~~~~~~~~~~~~
+      |      ifdef __GNUC__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2673:10: warning: enum 'ggml_sched_priority' uses a larger base type ('int', size: 4 bytes) than necessary for its value set, consider using 'std::int8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+ 2673 |     enum ggml_sched_priority {
+      |          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.cpp:7:47: warning: initialization of 'LLM_ARCH_NAMES' with static storage duration may throw an exception that cannot be caught [bugprone-throwing-static-initialization]
+    7 | static const std::map<llm_arch, const char *> LLM_ARCH_NAMES = {
+      |                                               ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:1043:25: note: possibly throwing constructor declared here
+ 1043 |   _LIBCPP_HIDE_FROM_ABI map(initializer_list<value_type> __il, const key_compare& __comp = key_compare())
+      |                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.cpp:106:45: warning: initialization of 'LLM_KV_NAMES' with static storage duration may throw an exception that cannot be caught [bugprone-throwing-static-initialization]
+  106 | static const std::map<llm_kv, const char *> LLM_KV_NAMES = {
+      |                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:1043:25: note: possibly throwing constructor declared here
+ 1043 |   _LIBCPP_HIDE_FROM_ABI map(initializer_list<value_type> __il, const key_compare& __comp = key_compare())
+      |                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.cpp:272:69: warning: initialization of 'LLM_TENSOR_NAMES' with static storage duration may throw an exception that cannot be caught [bugprone-throwing-static-initialization]
+  272 | static const std::map<llm_arch, std::map<llm_tensor, const char *>> LLM_TENSOR_NAMES = {
+      |                                                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:1043:25: note: possibly throwing constructor declared here
+ 1043 |   _LIBCPP_HIDE_FROM_ABI map(initializer_list<value_type> __il, const key_compare& __comp = key_compare())
+      |                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.cpp:2030:52: warning: initialization of 'LLM_TENSOR_INFOS' with static storage duration may throw an exception that cannot be caught [bugprone-throwing-static-initialization]
+ 2030 | static const std::map<llm_tensor, llm_tensor_info> LLM_TENSOR_INFOS = {
+      |                                                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map:1043:25: note: possibly throwing constructor declared here
+ 1043 |   _LIBCPP_HIDE_FROM_ABI map(initializer_list<value_type> __il, const key_compare& __comp = key_compare())
+      |                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:11:6: warning: enum 'llm_arch' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   11 | enum llm_arch {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:109:6: warning: enum 'llm_kv' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  109 | enum llm_kv {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:275:6: warning: enum 'llm_tensor' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  275 | enum llm_tensor {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-arch.h:453:6: warning: enum 'llm_tensor_layer' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+  453 | enum llm_tensor_layer {
+      |      ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/src/llama-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+Suppressed 1129 warnings (1129 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

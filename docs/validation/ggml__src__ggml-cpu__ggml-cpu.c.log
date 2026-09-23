@@ -1,0 +1,1296 @@
+1374 warnings generated.
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-alloc.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-backend.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:25:5: warning: initial values in enum 'ggml_numa_strategy' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   25 |     enum ggml_numa_strategy {
+      |     ^
+   26 |         GGML_NUMA_STRATEGY_DISABLED   = 0,
+   27 |         GGML_NUMA_STRATEGY_DISTRIBUTE = 1,
+   28 |         GGML_NUMA_STRATEGY_ISOLATE    = 2,
+   29 |         GGML_NUMA_STRATEGY_NUMACTL    = 3,
+   30 |         GGML_NUMA_STRATEGY_MIRROR     = 4,
+   31 |         GGML_NUMA_STRATEGY_COUNT
+      |                                 
+      |                                  = 5
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:136:62: warning: all parameters should be named in a function [readability-named-parameter]
+  136 |     GGML_BACKEND_API void ggml_cpu_fp32_to_fp32(const float *,       float *, int64_t);
+      |                                                              ^                       
+      |                                                               /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:137:62: warning: all parameters should be named in a function [readability-named-parameter]
+  137 |     GGML_BACKEND_API void ggml_cpu_fp32_to_i32 (const float *,     int32_t *, int64_t);
+      |                                                              ^                       
+      |                                                               /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:138:62: warning: all parameters should be named in a function [readability-named-parameter]
+  138 |     GGML_BACKEND_API void ggml_cpu_fp32_to_fp16(const float *, ggml_fp16_t *, int64_t);
+      |                                                              ^                       
+      |                                                               /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:139:68: warning: all parameters should be named in a function [readability-named-parameter]
+  139 |     GGML_BACKEND_API void ggml_cpu_fp16_to_fp32(const ggml_fp16_t *, float *, int64_t);
+      |                                                                    ^                 
+      |                                                                     /*x*/    /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:140:62: warning: all parameters should be named in a function [readability-named-parameter]
+  140 |     GGML_BACKEND_API void ggml_cpu_fp32_to_bf16(const float *, ggml_bf16_t *, int64_t);
+      |                                                              ^                       
+      |                                                               /*x*/          /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml-cpu.h:141:68: warning: all parameters should be named in a function [readability-named-parameter]
+  141 |     GGML_BACKEND_API void ggml_cpu_bf16_to_fp32(const ggml_bf16_t *, float *, int64_t);
+      |                                                                    ^                 
+      |                                                                     /*x*/    /*y*/    /*n*/
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:2175:5: warning: initial values in enum 'ggml_scale_mode' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+ 2175 |     enum ggml_scale_mode {
+      |     ^
+ 2176 |         GGML_SCALE_MODE_NEAREST  = 0,
+ 2177 |         GGML_SCALE_MODE_BILINEAR = 1,
+ 2178 | 
+ 2179 |         GGML_SCALE_MODE_COUNT
+      |                              
+      |                               = 2
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:34:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+   34 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/gguf.h:53:5: warning: initial values in enum 'gguf_type' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   53 |     enum gguf_type {
+      |     ^
+   54 |         GGUF_TYPE_UINT8   = 0,
+   55 |         GGUF_TYPE_INT8    = 1,
+   56 |         GGUF_TYPE_UINT16  = 2,
+   57 |         GGUF_TYPE_INT16   = 3,
+   58 |         GGUF_TYPE_UINT32  = 4,
+   59 |         GGUF_TYPE_INT32   = 5,
+   60 |         GGUF_TYPE_FLOAT32 = 6,
+   61 |         GGUF_TYPE_BOOL    = 7,
+   62 |         GGUF_TYPE_STRING  = 8,
+   63 |         GGUF_TYPE_ARRAY   = 9,
+   64 |         GGUF_TYPE_UINT64  = 10,
+   65 |         GGUF_TYPE_INT64   = 11,
+   66 |         GGUF_TYPE_FLOAT64 = 12,
+   67 |         GGUF_TYPE_COUNT,       // marks the end of the enum
+      |                        
+      |                         = 13
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-backend-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:3:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+    3 | #if defined(GGML_COMMON_DECL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:74:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   74 | #if defined(GGML_COMMON_DECL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_DECL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:312:30: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  312 |                 uint8_t   qh[n / 2];                   \
+      |                              ^
+      |                              ()
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:320:34: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  320 |                 uint8_t   qh[2 * n_groups];                  \
+      |                                  ^       
+      |                                  (       )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:505:26: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+  505 | #define IQ3S_N_SCALE QK_K/64
+      |                          ^  
+      |                      (      )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:560:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  560 | #if defined(GGML_COMMON_IMPL_C)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL_C
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-common.h:598:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  598 | #if defined(GGML_COMMON_IMPL)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_COMMON_IMPL
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-impl.h:27:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   27 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-quants.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-quants.h:192:89: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  192 |     GGML_API void   quantize_row_turbo2m4_##suffix##_ref(const float * GGML_RESTRICT x, block_type * GGML_RESTRICT y, \
+      |                                                                                         ^
+      |                                                                                         (         )
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/./ggml-threading.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/binary-ops.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/common.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:30:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   30 | #if defined(_MSC_VER)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef _MSC_VER
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:71:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   71 | #if defined(__ARM_FEATURE_SVE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:75:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   75 | #if defined(__ARM_NEON)
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_NEON
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:84:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+   84 | #if !defined(__aarch64__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef __aarch64__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:304:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+  304 | #if !defined(__ARM_FEATURE_DOTPROD)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef __ARM_FEATURE_DOTPROD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:339:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  339 | #if defined(__loongarch64)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __loongarch64
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu-impl.h:503:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  503 | #if defined(__loongarch_asx)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __loongarch_asx
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1:9: warning: declaration uses identifier '_CRT_SECURE_NO_DEPRECATE', which is a reserved identifier [bugprone-reserved-identifier]
+    1 | #define _CRT_SECURE_NO_DEPRECATE // Disables "unsafe" warnings on Windows
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         CRT_SECURE_NO_DEPRECATE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2:9: warning: declaration uses identifier '_USE_MATH_DEFINES', which is a reserved identifier [bugprone-reserved-identifier]
+    2 | #define _USE_MATH_DEFINES // For M_PI on MSVC
+      |         ^~~~~~~~~~~~~~~~~
+      |         USE_MATH_DEFINES
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:47:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   47 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:77:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   77 | #if defined(__has_feature)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __has_feature
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:93:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   93 | #if defined(__ARM_ARCH)
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_ARCH
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:96:3: warning: variable 'ggml_arm_arch_features' can be made static to enforce internal linkage [misc-use-internal-linkage]
+   94 | struct ggml_arm_arch_features_type {
+      | static 
+   95 |     int sve_cnt;
+   96 | } ggml_arm_arch_features = { 0 };
+      |   ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:124:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  124 | #if defined(_WIN32)
+      |  ^~~~~~~~~~~~~~~~~~
+      |  ifdef _WIN32
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:215:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  215 | #if defined(__FreeBSD__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __FreeBSD__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:229:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  229 | #if defined(__APPLE__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __APPLE__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:290:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  290 | #if defined (__ARM_FEATURE_MATMUL_INT8)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_MATMUL_INT8
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:300:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  300 | #if defined (__ARM_FEATURE_MATMUL_INT8)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_MATMUL_INT8
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:322:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  322 | #if defined (__ARM_FEATURE_MATMUL_INT8)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_MATMUL_INT8
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:355:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  355 | #if defined (__ARM_FEATURE_MATMUL_INT8)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_MATMUL_INT8
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:371:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  371 | #if defined (__ARM_FEATURE_MATMUL_INT8)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_MATMUL_INT8
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:524:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  524 | #if defined(_WIN32)
+      |  ^~~~~~~~~~~~~~~~~~
+      |  ifdef _WIN32
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:577:8: warning: Excessive padding in 'struct ggml_threadpool' (206 padding bytes, where 142 is optimal). Optimal fields order: n_barrier, n_graph, cgraph, cplan, workers, cond, mutex, abort, n_threads_max, n_threads_cur, prio, poll, ec, stop, pause, n_barrier_passed, current_chunk, consider reordering the fields or adding explicit padding members [clang-analyzer-optin.performance.Padding]
+  577 | struct ggml_threadpool {
+      | ~~~~~~~^~~~~~~~~~~~~~~~~
+  578 |     ggml_mutex_t mutex;       // mutex for cond.var
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  579 |     ggml_cond_t  cond;        // cond.var for waiting for new work
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  580 | 
+  581 |     struct ggml_cgraph * cgraph;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  582 |     struct ggml_cplan  * cplan;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  583 | 
+  584 |     // synchronization primitives
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  585 |     atomic_int n_graph;       // incremented when there is work to be done (i.e each graph)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  586 |     atomic_int GGML_CACHE_ALIGN n_barrier;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  587 |     atomic_int GGML_CACHE_ALIGN n_barrier_passed;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |     atomic_int GGML_CACHE_ALIGN current_chunk; // currently processing chunk during Mat_Mul, shared between all the threads.
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  589 | 
+  590 |     // these are atomic as an annotation for thread-sanitizer
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  591 |     atomic_bool stop;         // Used for stopping the threadpool altogether
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  592 |     atomic_bool pause;        // Used for pausing the threadpool or individual threads
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:577:8: note: Excessive padding in 'struct ggml_threadpool' (206 padding bytes, where 142 is optimal). Optimal fields order: n_barrier, n_graph, cgraph, cplan, workers, cond, mutex, abort, n_threads_max, n_threads_cur, prio, poll, ec, stop, pause, n_barrier_passed, current_chunk, consider reordering the fields or adding explicit padding members
+  577 | struct ggml_threadpool {
+      | ~~~~~~~^~~~~~~~~~~~~~~~~
+  578 |     ggml_mutex_t mutex;       // mutex for cond.var
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  579 |     ggml_cond_t  cond;        // cond.var for waiting for new work
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  580 | 
+  581 |     struct ggml_cgraph * cgraph;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  582 |     struct ggml_cplan  * cplan;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  583 | 
+  584 |     // synchronization primitives
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  585 |     atomic_int n_graph;       // incremented when there is work to be done (i.e each graph)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  586 |     atomic_int GGML_CACHE_ALIGN n_barrier;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  587 |     atomic_int GGML_CACHE_ALIGN n_barrier_passed;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |     atomic_int GGML_CACHE_ALIGN current_chunk; // currently processing chunk during Mat_Mul, shared between all the threads.
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  589 | 
+  590 |     // these are atomic as an annotation for thread-sanitizer
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  591 |     atomic_bool stop;         // Used for stopping the threadpool altogether
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  592 |     atomic_bool pause;        // Used for pausing the threadpool or individual threads
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:648:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  648 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:711:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  711 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:733:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  733 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:818:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  818 | #if defined(__ARM_ARCH)
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_ARCH
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1084:28: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1084 |                 ((int8_t *)(data))[0] = value;
+      |                            ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1088:29: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1088 |                 ((int16_t *)(data))[0] = value;
+      |                             ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1092:29: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1092 |                 ((int32_t *)(data))[0] = value;
+      |                             ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1096:33: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1096 |                 ((ggml_fp16_t *)(data))[0] = GGML_CPU_FP32_TO_FP16(value);
+      |                                 ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1100:33: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1100 |                 ((ggml_bf16_t *)(data))[0] = GGML_FP32_TO_BF16(value);
+      |                                 ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1104:27: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1104 |                 ((float *)(data))[0] = value;
+      |                           ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1215:28: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1215 |                 ((int8_t *)(data))[0] = value;
+      |                            ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1219:29: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1219 |                 ((int16_t *)(data))[0] = value;
+      |                             ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1223:29: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1223 |                 ((int32_t *)(data))[0] = value;
+      |                             ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1227:33: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1227 |                 ((ggml_fp16_t *)(data))[0] = GGML_CPU_FP32_TO_FP16(value);
+      |                                 ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1231:33: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1231 |                 ((ggml_bf16_t *)(data))[0] = GGML_FP32_TO_BF16(value);
+      |                                 ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1235:27: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 1235 |                 ((float *)(data))[0] = value;
+      |                           ^    ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1269:29: warning: Division by zero [clang-analyzer-core.DivideZero]
+ 1269 |     const int64_t r2 = ne12 / ne02;
+      |                        ~~~~~^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: Assuming 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'ne02' initialized to 0
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: Assuming 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^~~~~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1269:29: note: Division by zero
+ 1269 |     const int64_t r2 = ne12 / ne02;
+      |                        ~~~~~^~~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1617:11: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+ 1617 |     ptr = (void *) GGML_PAD((uintptr_t) ptr, align);
+      |           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:1754:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 1754 | #if defined(__aarch64__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __aarch64__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2137:13: warning: 'break' will never be executed [clang-diagnostic-unreachable-code-break]
+ 2137 |             break;
+      |             ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2343:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2343 | #if defined(__gnu_linux__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __gnu_linux__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2527:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 2527 |         case GGML_OP_GET_ROWS:
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2545:20: note: last of these clones ends here
+ 2545 |             } break;
+      |                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2546:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 2546 |         case GGML_OP_DIAG_MASK_ZERO:
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2569:20: note: last of these clones ends here
+ 2569 |             } break;
+      |                    ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2692:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 2692 | #if defined(_WIN32)
+      |  ^~~~~~~~~~~~~~~~~~
+      |  ifdef _WIN32
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2787:5: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+ 2787 |     switch (prio) {
+      |     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2789:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 2789 |         case GGML_SCHED_PRIO_LOW:      policy = SCHED_OTHER; p.sched_priority = 0;  break;
+      |         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2790:90: note: last of these clones ends here
+ 2790 |         case GGML_SCHED_PRIO_NORMAL:   policy = SCHED_OTHER; p.sched_priority = 0;  break;
+      |                                                                                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2892:7: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 2892 |     } else {
+      |       ^~~~~~
+ 2893 |         memset(local_mask, 0, GGML_MAX_N_THREADS);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2894 |         int32_t base_idx = *iter;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2895 |         for (int32_t i = 0; i < GGML_MAX_N_THREADS; i++) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2896 |             int32_t idx = base_idx + i;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2897 |             if (idx >= GGML_MAX_N_THREADS) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2898 |                 // Just a cheaper modulo
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~
+ 2899 |                 idx -= GGML_MAX_N_THREADS;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2900 |             }
+      |             ~
+ 2901 |             if (global_mask[idx]) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~
+ 2902 |                 local_mask[idx] = 1;
+      |                 ~~~~~~~~~~~~~~~~~~~~
+ 2903 |                 *iter = idx + 1;
+      |                 ~~~~~~~~~~~~~~~~
+ 2904 |                 return;
+      |                 ~~~~~~~
+ 2905 |             }
+      |             ~
+ 2906 |         }
+      |         ~
+ 2907 |     }
+      |     ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:2911:21: warning: statement should be inside braces [readability-braces-around-statements]
+ 2911 |     if (!threadpool) return;
+      |                     ^       
+      |                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3157:66: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+ 3157 |                         if (node->src[1]->type == GGML_TYPE_F32) {
+      |                                                                  ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3160:26: note: end of the original
+ 3160 |                         } else if (node->src[1]->type == GGML_TYPE_F16) {
+      |                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3160:73: note: clone 1 starts here
+ 3160 |                         } else if (node->src[1]->type == GGML_TYPE_F16) {
+      |                                                                         ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3163:74: note: clone 2 starts here
+ 3163 |                         } else if (node->src[1]->type == GGML_TYPE_BF16) {
+      |                                                                          ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3186:38: warning: redundant parentheses around expression [readability-redundant-parentheses]
+ 3186 |         work_size += CACHE_LINE_SIZE*(n_threads);
+      |                                      ^         ~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3333:30: warning: statement should be inside braces [readability-braces-around-statements]
+ 3333 |         if (threadpool->stop) break;
+      |                              ^      
+      |                               {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3639:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3639 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3672:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3672 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3713:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3713 | #if defined(__AVX2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3741:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3741 | #if defined(__AVX__)
+      |  ^~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3749:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3749 | #if defined(__AVXVNNI__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVXVNNI__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3757:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3757 | #if defined(__AVX2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3765:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3765 | #if defined(__AVX512F__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX512F__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3773:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3773 | #if defined(__AVX512VBMI__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX512VBMI__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3781:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3781 | #if defined(__AVX512VNNI__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX512VNNI__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3789:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3789 | #if defined(__AVX512BF16__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX512BF16__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3797:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3797 | #if defined(__AMX_INT8__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AMX_INT8__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3805:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3805 | #if defined(__BMI2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __BMI2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3813:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3813 | #if defined(__FMA__)
+      |  ^~~~~~~~~~~~~~~~~~~
+      |  ifdef __FMA__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3821:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3821 | #if defined(__ARM_FEATURE_FMA)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_FMA
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3829:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3829 | #if defined(__riscv_v_intrinsic)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __riscv_v_intrinsic
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3837:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3837 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3845:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3845 | #if defined(__ARM_FEATURE_FP16_VECTOR_ARITHMETIC)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_FP16_VECTOR_ARITHMETIC
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3853:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3853 | #if defined(__wasm_simd128__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __wasm_simd128__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3861:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3861 | #if defined(GGML_USE_LLAMAFILE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_USE_LLAMAFILE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3869:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3869 | #if defined(__SSE3__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __SSE3__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3877:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3877 | #if defined(__SSSE3__)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __SSSE3__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:3885:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 3885 | #if defined(__POWER9_VECTOR__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __POWER9_VECTOR__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ggml-cpu.c:4000:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+ 4000 | #if defined(__ARM_ARCH)
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_ARCH
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ops.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ops.h:9:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+    9 | #if defined(__cpp_lib_hardware_interference_size)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __cpp_lib_hardware_interference_size
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ops.h:12:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   12 | #if defined(__POWER9_VECTOR__)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __POWER9_VECTOR__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/ops.h:99:9: warning: parameter 'masked' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions [readability-avoid-const-params-in-decls]
+   99 |         const bool masked,
+      |         ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/quants.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/row4/row4-cpu.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:17:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   17 | #if defined(__F16C__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __F16C__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:21:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   21 | #if defined(__riscv_v_intrinsic)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __riscv_v_intrinsic
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:126:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+  126 | #if !defined(GGML_CPU_FP16_TO_FP32)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef GGML_CPU_FP16_TO_FP32
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:136:2: warning: preprocessor condition can be written more concisely using '#ifndef' [readability-use-concise-preprocessor-directives]
+  136 | #if !defined(GGML_CPU_FP32_TO_FP16)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifndef GGML_CPU_FP32_TO_FP16
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/simd-mappings.h:356:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  356 | #if defined(__ARM_FEATURE_FP16_VECTOR_ARITHMETIC)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef __ARM_FEATURE_FP16_VECTOR_ARITHMETIC
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/traits.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/unary-ops.h:1:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    1 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:3:1: warning: avoid 'pragma once' directive; use include guards instead [portability-avoid-pragma-once]
+    3 | #pragma once
+      | ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:10:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   10 | #if defined(GGML_USE_ACCELERATE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_USE_ACCELERATE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:46:24: warning: parameter 'n' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions [readability-avoid-const-params-in-decls]
+   46 | void ggml_vec_silu_f32(const int n, float * y, const float * x);
+      |                        ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:47:34: warning: parameter 'n' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions [readability-avoid-const-params-in-decls]
+   47 | ggml_float ggml_vec_soft_max_f32(const int n, float * y, const float * x, float max);
+      |                                  ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:48:38: warning: parameter 'n' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions [readability-avoid-const-params-in-decls]
+   48 | ggml_float ggml_vec_log_soft_max_f32(const int n, float * y, const float * x, float max);
+      |                                      ^~~~~
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:50:106: warning: statement should be inside braces [readability-braces-around-statements]
+   50 | inline static void ggml_vec_set_i8(const int n, int8_t * x, const int8_t v) { for (int i = 0; i < n; ++i) x[i] = v; }
+      |                                                                                                          ^
+      |                                                                                                           {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:51:109: warning: statement should be inside braces [readability-braces-around-statements]
+   51 | inline static void ggml_vec_set_i16(const int n, int16_t * x, const int16_t v) { for (int i = 0; i < n; ++i) x[i] = v; }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:53:111: warning: statement should be inside braces [readability-braces-around-statements]
+   53 | inline static void ggml_vec_set_i32(const int n, int32_t * x, const int32_t   v) { for (int i = 0; i < n; ++i) x[i] = v;    }
+      |                                                                                                               ^
+      |                                                                                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:54:111: warning: statement should be inside braces [readability-braces-around-statements]
+   54 | inline static void ggml_vec_cpy_i32(const int n, int32_t * y, const int32_t * x) { for (int i = 0; i < n; ++i) y[i] = x[i]; }
+      |                                                                                                               ^
+      |                                                                                                                {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:56:117: warning: statement should be inside braces [readability-braces-around-statements]
+   56 | inline static void ggml_vec_set_f16(const int n, ggml_fp16_t * x, const ggml_fp16_t v) { for (int i = 0; i < n; ++i) x[i] = v; }
+      |                                                                                                                     ^
+      |                                                                                                                      {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:57:118: warning: statement should be inside braces [readability-braces-around-statements]
+   57 | inline static void ggml_vec_set_bf16(const int n, ggml_bf16_t * x, const ggml_bf16_t v) { for (int i = 0; i < n; ++i) x[i] = v; }
+      |                                                                                                                      ^
+      |                                                                                                                       {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:61:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+   61 | #if defined(__AVX2__)
+      |  ^~~~~~~~~~~~~~~~~~~~
+      |  ifdef __AVX2__
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:79:125: warning: statement should be inside braces [readability-braces-around-statements]
+   79 | inline static void ggml_vec_add1_f32(const int n, float * z, const float * x, const float   v) { for (int i = 0; i < n; ++i) z[i]  = x[i] + v;    }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:80:125: warning: statement should be inside braces [readability-braces-around-statements]
+   80 | inline static void ggml_vec_acc_f32 (const int n, float * y, const float * x)                  { for (int i = 0; i < n; ++i) y[i] += x[i];        }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:81:125: warning: statement should be inside braces [readability-braces-around-statements]
+   81 | inline static void ggml_vec_acc1_f32(const int n, float * y, const float   v)                  { for (int i = 0; i < n; ++i) y[i] += v;           }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:82:125: warning: statement should be inside braces [readability-braces-around-statements]
+   82 | inline static void ggml_vec_sub_f32 (const int n, float * z, const float * x, const float * y) { for (int i = 0; i < n; ++i) z[i]  = x[i] - y[i]; }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:88:125: warning: statement should be inside braces [readability-braces-around-statements]
+   88 | inline static void ggml_vec_set_f32 (const int n, float * x, const float   v)                  { for (int i = 0; i < n; ++i) x[i]  = v;           }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:89:125: warning: statement should be inside braces [readability-braces-around-statements]
+   89 | inline static void ggml_vec_cpy_f32 (const int n, float * y, const float * x)                  { for (int i = 0; i < n; ++i) y[i]  = x[i];        }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:90:125: warning: statement should be inside braces [readability-braces-around-statements]
+   90 | inline static void ggml_vec_neg_f32 (const int n, float * y, const float * x)                  { for (int i = 0; i < n; ++i) y[i]  = -x[i];       }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:97:125: warning: statement should be inside braces [readability-braces-around-statements]
+   97 | inline static void ggml_vec_mul_f32 (const int n, float * z, const float * x, const float * y) { for (int i = 0; i < n; ++i) z[i]  = x[i]*y[i];   }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:103:125: warning: statement should be inside braces [readability-braces-around-statements]
+  103 | inline static void ggml_vec_div_f32 (const int n, float * z, const float * x, const float * y) { for (int i = 0; i < n; ++i) z[i]  = x[i]/y[i];   }
+      |                                                                                                                             ^
+      |                                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:121:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  121 | #if defined(GGML_SIMD)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_SIMD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:122:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  122 |     #if defined(__ARM_FEATURE_SVE)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:279:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  279 | #if defined(GGML_SIMD)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_SIMD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:280:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  280 |     #if defined(__ARM_FEATURE_SVE)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:399:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  399 | #if defined(GGML_SIMD)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_SIMD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:400:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  400 |     #if defined(__ARM_FEATURE_SVE)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:525:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  525 | #if defined(GGML_SIMD)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_SIMD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:526:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  526 |     #if defined(__ARM_FEATURE_SVE)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:586:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  586 | #if defined(GGML_USE_ACCELERATE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_USE_ACCELERATE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:634:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  634 | #if defined(GGML_USE_ACCELERATE)
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_USE_ACCELERATE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:700:2: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  700 | #if defined(GGML_SIMD)
+      |  ^~~~~~~~~~~~~~~~~~~~~
+      |  ifdef GGML_SIMD
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:701:6: warning: preprocessor condition can be written more concisely using '#ifdef' [readability-use-concise-preprocessor-directives]
+  701 |     #if defined(__ARM_FEATURE_SVE)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      ifdef __ARM_FEATURE_SVE
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:763:109: warning: statement should be inside braces [readability-braces-around-statements]
+  763 | inline static void ggml_vec_sqr_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = x[i]*x[i];   }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:770:109: warning: statement should be inside braces [readability-braces-around-statements]
+  770 | inline static void ggml_vec_sqrt_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = sqrtf(x[i]); }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:776:109: warning: statement should be inside braces [readability-braces-around-statements]
+  776 | inline static void ggml_vec_log_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = logf(x[i]);  }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:782:109: warning: statement should be inside braces [readability-braces-around-statements]
+  782 | inline static void ggml_vec_sin_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = sinf(x[i]);  }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:788:109: warning: statement should be inside braces [readability-braces-around-statements]
+  788 | inline static void ggml_vec_cos_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = cosf(x[i]);  }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:794:109: warning: statement should be inside braces [readability-braces-around-statements]
+  794 | inline static void ggml_vec_abs_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = fabsf(x[i]); }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:800:109: warning: statement should be inside braces [readability-braces-around-statements]
+  800 | inline static void ggml_vec_sgn_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? 1.f : ((x[i] < 0.f) ? -1.f : 0.f); }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:800:139: warning: conditional operator is used as sub-expression of parent conditional operator, refrain from using nested conditional operators [readability-avoid-nested-conditional-operator]
+  800 | inline static void ggml_vec_sgn_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? 1.f : ((x[i] < 0.f) ? -1.f : 0.f); }
+      |                                                                                                                                           ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:800:117: note: parent conditional operator here
+  800 | inline static void ggml_vec_sgn_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? 1.f : ((x[i] < 0.f) ? -1.f : 0.f); }
+      |                                                                                                                     ^
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:807:109: warning: statement should be inside braces [readability-braces-around-statements]
+  807 | inline static void ggml_vec_step_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? 1.f : 0.f; }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:813:109: warning: statement should be inside braces [readability-braces-around-statements]
+  813 | inline static void ggml_vec_tanh_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = tanhf(x[i]);  }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:819:109: warning: statement should be inside braces [readability-braces-around-statements]
+  819 | inline static void ggml_vec_elu_f32  (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? x[i] : expm1f(x[i]); }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:825:109: warning: statement should be inside braces [readability-braces-around-statements]
+  825 | inline static void ggml_vec_relu_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = (x[i] > 0.f) ? x[i] : 0.f; }
+      |                                                                                                             ^
+      |                                                                                                              {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:832:131: warning: statement should be inside braces [readability-braces-around-statements]
+  832 | inline static void ggml_vec_leaky_relu_f32 (const int n, float * y, const float * x, const float ns) { for (int i = 0; i < n; ++i) y[i] = ((x[i] > 0.f) ? x[i] : 0.f) + ns * ((x[i] < 0.0f) ? x[i] : 0.f); }
+      |                                                                                                                                   ^
+      |                                                                                                                                    {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:839:112: warning: statement should be inside braces [readability-braces-around-statements]
+  839 | inline static void ggml_vec_sigmoid_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = 1.f / (1.f + expf(-x[i])); }
+      |                                                                                                                ^
+      |                                                                                                                 {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:846:114: warning: statement should be inside braces [readability-braces-around-statements]
+  846 | inline static void ggml_vec_hardswish_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = x[i] * fminf(1.0f, fmaxf(0.0f, (x[i] + 3.0f) / 6.0f)); }
+      |                                                                                                                  ^
+      |                                                                                                                   {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:853:116: warning: statement should be inside braces [readability-braces-around-statements]
+  853 | inline static void ggml_vec_hardsigmoid_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = fminf(1.0f, fmaxf(0.0f, (x[i] + 3.0f) / 6.0f)); }
+      |                                                                                                                    ^
+      |                                                                                                                     {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:859:108: warning: statement should be inside braces [readability-braces-around-statements]
+  859 | inline static void ggml_vec_exp_f32 (const int n, float * y, const float * x) { for (int i = 0; i < n; ++i) y[i] = expf(x[i]); }
+      |                                                                                                            ^
+      |                                                                                                             {
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:1057:47: warning: statement should be inside braces [readability-braces-around-statements]
+ 1057 |     if (!vpaddd_u64(vreinterpretq_u64_u32(c)))
+      |                                               ^
+      |                                                {
+ 1058 |         return vfmaq_f32(k, j, k);
+      |                                   
+/Users/1806-admin/Projects/llama.cpp-ifairy/ggml/src/ggml-cpu/vec.h:1355:26: warning: parameter 'n' is const-qualified in the function declaration; const-qualification of parameters only has an effect in function definitions [readability-avoid-const-params-in-decls]
+ 1355 | void ggml_vec_swiglu_f32(const int n, float * y, const float * x, const float * g);
+      |                          ^~~~~
+Suppressed 1198 warnings (1198 in non-user code).
+Use -header-filter=.* or leave it as default to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

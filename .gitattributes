@@ -1,0 +1,2 @@
+# Preserve raw compiler/test output without applying source whitespace checks.
+docs/validation/*.log -whitespace
