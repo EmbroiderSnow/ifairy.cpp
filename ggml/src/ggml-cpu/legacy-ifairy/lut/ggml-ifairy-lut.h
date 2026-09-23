@@ -94,7 +94,8 @@ static_assert(sizeof(struct ifairy64_lut_wtile_16) == 320, "wrong ifairy64_lut_w
 // iFairy 2-weight LUT API
 //
 // Current state:
-// - CPU-only iFairy LUT path integrated into ggml mul_mat (guarded by GGML_IFAIRY_LUT_CPU + GGML_IFAIRY_LUT env).
+// - CPU-only IFAIRY 2D mul_mat dispatch is guarded by GGML_USE_LEGACY_IFAIRY_CPU_LUT + GGML_IFAIRY_LUT.
+//   Other layouts and ordinary IFAIRY64 mul_mat keep the direct fallback; fused W2 has its own LUT path.
 // - Correctness matches ggml_vec_dot_ifairy_q16_K_generic semantics (w * conj(x)).
 // - Index encoding is 4-bit pattern per 2 weights: pat = c0 | (c1<<2), 16 entries.
 // - V2 core path keeps a single production layout/kernel:
@@ -103,9 +104,9 @@ static_assert(sizeof(struct ifairy64_lut_wtile_16) == 320, "wrong ifairy64_lut_w
 // - Runtime env:
 //   - `GGML_IFAIRY_LUT=0/1` (enable/disable)
 //   - `GGML_IFAIRY_LUT_DEBUG=0/1` (debug logging)
-//   - `GGML_IFAIRY_LUT_IMPL=auto|lut16|lut_c` (optional impl selection; `lut_c` uses 42.6-scaled Q8 activations
-//     when src1 is F32; otherwise falls back to lut16);
-//     set `GGML_IFAIRY_LUT_IMPL=lut16` to force lut16.
+//   - `GGML_IFAIRY_LUT_IMPL=auto|lut16|lut_c`: F32 packed-complex activations use existing
+//     42.6-scaled Q8 quantization (per tensor row for auto/lut16; per block for lut_c).
+//     Prequantized Q16 keeps its scales and uses lut16; values outside [-63,63] fall back to direct.
 
 void   ggml_ifairy_lut_init(void);
 void   ggml_ifairy_lut_free(void);

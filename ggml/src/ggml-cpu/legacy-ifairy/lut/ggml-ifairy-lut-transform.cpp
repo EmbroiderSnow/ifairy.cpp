@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <memory>
 #include <mutex>
 #include <type_traits>
 #include <unordered_map>
@@ -23,7 +24,9 @@
 static_assert(QK_IFAIRY == 256, "lut packing assumes QK_IFAIRY=256");
 static_assert(QK_IFAIRY64 == 64, "lut packing assumes QK_IFAIRY64=64");
 
-static std::vector<ifairy_lut_extra *> g_ifairy_lut_extras;
+// Tensor extras remain valid across cache resets; release their metadata
+// when the backend is unloaded instead of leaking every packed tensor.
+static std::vector<std::unique_ptr<ifairy_lut_extra>> g_ifairy_lut_extras;
 static std::mutex                      g_ifairy_lut_mutex;
 
 struct ifairy_lut_index_cache_key {
@@ -74,7 +77,7 @@ void ggml_ifairy_lut_free(void) {
         }
     }
     g_ifairy_lut_index_cache.clear();
-    for (auto * e : g_ifairy_lut_extras) {
+    for (const auto & e : g_ifairy_lut_extras) {
         if (e) {
             if ((e->indexes || e->packed_w) && e->index_tensor == NULL && e->index_buffer == NULL) {
                 const size_t index_bytes_aligned = GGML_PAD(e->size, GGML_IFAIRY_LUT_WTILE_ALIGNMENT);
@@ -171,7 +174,7 @@ static bool ggml_ifairy_lut_transform_tensor_impl(
             if (!extra) {
                 extra         = new ifairy_lut_extra;
                 tensor->extra = extra;
-                g_ifairy_lut_extras.push_back(extra);
+                g_ifairy_lut_extras.emplace_back(extra);
             }
 
             extra->indexes       = keep_indexes ? it->second.base : NULL;
@@ -301,7 +304,7 @@ static bool ggml_ifairy_lut_transform_tensor_impl(
         if (!extra) {
             extra         = new ifairy_lut_extra;
             tensor->extra = extra;
-            g_ifairy_lut_extras.push_back(extra);
+            g_ifairy_lut_extras.emplace_back(extra);
         }
 
         extra->indexes       = keep_indexes ? buf : NULL;

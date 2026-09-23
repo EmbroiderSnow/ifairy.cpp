@@ -8,6 +8,10 @@ endfunction()
 
 ifairy_test(test-legacy-ifairy-direct)
 ifairy_test(test-ifairy-model)
+# Real weights are supplied explicitly; keep this probe out of weight-free CTest runs.
+add_executable(test-ifairy-real-model test-ifairy-real-model.cpp)
+target_link_libraries(test-ifairy-real-model PRIVATE llama)
+target_include_directories(test-ifairy-real-model PRIVATE ../vendor)
 add_executable(test-backend-ops test-backend-ops.cpp get-model.cpp)
 target_link_libraries(test-backend-ops PRIVATE common)
 set_property(TEST test-ifairy-model PROPERTY ENVIRONMENT "GGML_IFAIRY_LUT=0")
@@ -15,6 +19,11 @@ add_test(NAME test-ifairy-ops COMMAND test-backend-ops test -b CPU
     -o IFAIRY_ADD,IFAIRY_MUL,IFAIRY_RMS_NORM,IFAIRY_SPLIT,IFAIRY_MERGE,IFAIRY_RELU2,IFAIRY_ROPE)
 
 if (GGML_LEGACY_IFAIRY_CPU_LUT)
+    add_executable(test-ifairy-lut-mul-mat test-ifairy-lut-mul-mat.cpp)
+    target_link_libraries(test-ifairy-lut-mul-mat PRIVATE ggml)
+    target_include_directories(test-ifairy-lut-mul-mat PRIVATE ../ggml/src ../ggml/src/ggml-cpu)
+    add_test(NAME test-ifairy-lut-mul-mat COMMAND test-ifairy-lut-mul-mat)
+    set_property(TEST test-ifairy-lut-mul-mat PROPERTY SKIP_RETURN_CODE 77)
     ifairy_test(test-legacy-ifairy)
     target_compile_definitions(test-legacy-ifairy PRIVATE GGML_USE_LEGACY_IFAIRY_CPU_LUT)
     set_property(TEST test-legacy-ifairy PROPERTY ENVIRONMENT "GGML_IFAIRY_LUT=1")

@@ -1,13 +1,21 @@
 #include "legacy-ifairy-cpu.h"
-#include "wide-linear.h"
 
+#include "ggml-cpu-impl.h"
+#include "ggml-impl.h"
 #include "ggml.h"
 #include "quants.h"
+#include "wide-linear.h"
 
 #ifdef GGML_USE_LEGACY_IFAIRY_CPU_LUT
+#    include "ggml-ifairy-lut-impl.h"
 #    include "ggml-ifairy-lut.h"
+
+#    include <limits.h>
+
+#    include <algorithm>
 #endif
 
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -50,9 +58,110 @@ static struct ggml_legacy_ifairy_lut_config ggml_legacy_ifairy_lut_config_from_e
 
     return cfg;
 }
+
+static bool ggml_legacy_ifairy_cpu_can_mul_mat(const struct ggml_tensor * dst) {
+    if (!dst || dst->op != GGML_OP_MUL_MAT || !ggml_ifairy_env_enabled("GGML_IFAIRY_LUT")) {
+        return false;
+    }
+    const struct ggml_tensor * w = dst->src[0];
+    const struct ggml_tensor * x = dst->src[1];
+    // The weight packer handles one contiguous 2D matrix. Keep broadcasts,
+    // views with gaps in the weights, and IFAIRY64 on their existing paths.
+    if (!w || !x || w->type != GGML_TYPE_IFAIRY || w->op != GGML_OP_NONE || !ggml_is_matrix(w) || !ggml_is_matrix(x) ||
+        !ggml_is_matrix(dst) || !ggml_is_contiguous(w) || x->nb[0] != ggml_type_size(x->type) ||
+        dst->nb[0] != sizeof(float) || w->ne[0] <= 0 || w->ne[0] > INT_MAX || w->ne[1] <= 0 || w->ne[1] > INT_MAX ||
+        x->ne[1] <= 0 || x->ne[1] > INT_MAX) {
+        return false;
+    }
+    return ggml_ifairy_lut_can_mul_mat(w, x, dst);
+}
+
+static bool ggml_legacy_ifairy_cpu_compute_mul_mat(const struct ggml_compute_params *    params,
+                                                   struct ggml_tensor *                  dst,
+                                                   const ggml_legacy_ifairy_lut_config & cfg) {
+    const struct ggml_tensor * w     = dst->src[0];
+    const struct ggml_tensor * x     = dst->src[1];
+    const auto *               extra = static_cast<const ifairy_lut_extra *>(w->extra);
+    const size_t               need  = ggml_ifairy_lut_get_wsize(w, x, dst, params->nth);
+    if (!extra || !extra->packed_w || !params->wdata || params->wsize < need) {
+        return false;
+    }
+
+    const int    m          = (int) w->ne[1];
+    const int    k          = (int) w->ne[0];
+    const int    n          = (int) x->ne[1];
+    const size_t blocks     = k / QK_IFAIRY;
+    const size_t q_stride   = ggml_row_size(GGML_TYPE_IFAIRY_Q16, k);
+    const size_t q_bytes    = x->type == GGML_TYPE_F32 ? GGML_PAD((size_t) n * q_stride, 64) : 0;
+    const size_t lut_bytes  = (size_t) n * blocks * QK_IFAIRY_GROUPS_PER_BLOCK * k_ifairy_lut_group_bytes;
+    auto *       lut        = static_cast<uint8_t *>(params->wdata) + q_bytes;
+    auto *       scales     = reinterpret_cast<float *>(lut + lut_bytes);
+    const void * act        = x->data;
+    size_t       act_stride = x->nb[1];
+    const bool   lut_c      = cfg.impl == GGML_LEGACY_IFAIRY_LUT_IMPL_LUT_C && x->type == GGML_TYPE_F32;
+
+    if (x->type == GGML_TYPE_F32) {
+        // A table entry sums two signed activations: native x86 Q8 (127)
+        // would saturate int8 LUT entries. Use the existing LUT-safe Q8
+        // quantizers: tensor scale for auto/lut16, block scale for lut_c.
+        for (int col = params->ith; col < n; col += params->nth) {
+            const auto * row   = reinterpret_cast<const float *>(static_cast<const char *>(x->data) + col * x->nb[1]);
+            void *       q_row = static_cast<char *>(params->wdata) + col * q_stride;
+            if (lut_c) {
+                quantize_row_ifairy_q16_lut_c(row, q_row, k);
+            } else {
+                quantize_row_ifairy_q16_tensor(row, q_row, k);
+            }
+        }
+        act        = params->wdata;
+        act_stride = q_stride;
+        ggml_barrier(params->threadpool);
+    } else {
+        // External Q16 tensors may use the full int8 range. All workers
+        // make the same decision before any barrier; fall back without
+        // clipping or changing the caller's activation quantization.
+        for (int col = 0; col < n; ++col) {
+            const auto * row =
+                reinterpret_cast<const block_ifairy_q16 *>(static_cast<const char *>(x->data) + col * x->nb[1]);
+            for (size_t b = 0; b < blocks; ++b) {
+                for (int j = 0; j < QK_IFAIRY; ++j) {
+                    const int r = row[b].x_real[j];
+                    const int i = row[b].x_imag[j];
+                    if ((r > 63 && r < 193) || (i > 63 && i < 193)) {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    ggml_ifairy_lut_preprocess_ex_lut16(m, k, n, act, act_stride, scales, lut, params->ith, params->nth);
+    ggml_barrier(params->threadpool);
+
+    const int64_t tiles = ((int64_t) m + 15) / 16;
+    const int64_t tile0 = tiles * params->ith / params->nth;
+    const int64_t tile1 = tiles * (params->ith + 1) / params->nth;
+    const int64_t row0  = tile0 * 16;
+    const int     rows  = (int) (std::min<int64_t>(tile1 * 16, m) - row0);
+    if (rows > 0) {
+        const auto * packed = static_cast<const ifairy_lut_wtile_16 *>(extra->packed_w) + tile0 * blocks;
+        auto *       out    = reinterpret_cast<float *>(static_cast<char *>(dst->data) + row0 * dst->nb[0]);
+        ggml_ifairy_lut_qgemm_lut16(rows, k, n, packed, lut, scales, out, dst->nb[1], dst->nb[0], true, false);
+    }
+    if (params->ith == 0 && cfg.dbg) {
+        GGML_LOG_INFO("ifairy_lut: executed MUL_MAT %s M=%d N=%d K=%d threads=%d quant=%s\n", dst->name, m, n, k,
+                      params->nth, x->type != GGML_TYPE_F32 ? "prequantized" : (lut_c ? "block42.6" : "tensor42.6"));
+    }
+    return true;
+}
 #endif
 
 bool ggml_legacy_ifairy_cpu_supports_op(const struct ggml_tensor * dst) {
+#ifdef GGML_USE_LEGACY_IFAIRY_CPU_LUT
+    if (ggml_legacy_ifairy_cpu_can_mul_mat(dst)) {
+        return true;
+    }
+#endif
     return dst != nullptr && dst->op == GGML_OP_IFAIRY_WIDE_LINEAR_W2;
 }
 
@@ -69,6 +178,14 @@ size_t ggml_legacy_ifairy_cpu_work_size(const struct ggml_tensor * dst, int n_ta
     if (!ggml_legacy_ifairy_cpu_supports_op(dst)) {
         return 0;
     }
+
+#ifdef GGML_USE_LEGACY_IFAIRY_CPU_LUT
+    if (dst->op == GGML_OP_MUL_MAT) {
+        // This includes the direct path's quantization buffer, so an
+        // unavailable weight pack can safely fall back during execution.
+        return ggml_ifairy_lut_get_wsize(dst->src[0], dst->src[1], dst, n_tasks);
+    }
+#endif
 
     const struct ggml_tensor * x = dst->src[0];
     GGML_ASSERT(x && x->type == GGML_TYPE_F32);
@@ -114,8 +231,7 @@ void ggml_legacy_ifairy_cpu_prepare_graph(const struct ggml_cgraph * cgraph) {
         }
 
         struct ggml_tensor * src0 = node->src[0];
-        struct ggml_tensor * src1 = node->src[1];
-        if (!src0 || !src1 || !ggml_ifairy_lut_can_mul_mat(src0, src1, node)) {
+        if (!ggml_legacy_ifairy_cpu_can_mul_mat(node)) {
             continue;
         }
 
@@ -177,7 +293,7 @@ static bool ggml_legacy_ifairy_cpu_compute_wide_linear_w2(
     struct ggml_tensor *                dst,
     bool                                use_lut,
     bool                                lut_c) {
-    if (!ggml_legacy_ifairy_cpu_supports_op(dst)) {
+    if (!dst || dst->op != GGML_OP_IFAIRY_WIDE_LINEAR_W2) {
         return false;
     }
 
@@ -199,6 +315,9 @@ bool ggml_legacy_ifairy_cpu_compute(const struct ggml_compute_params * params, s
     const struct ggml_legacy_ifairy_lut_config cfg = ggml_legacy_ifairy_lut_config_from_env();
     const bool use_lut = cfg.lut_enabled;
     const bool lut_c   = cfg.impl == GGML_LEGACY_IFAIRY_LUT_IMPL_LUT_C;
+    if (ggml_legacy_ifairy_cpu_can_mul_mat(dst)) {
+        return ggml_legacy_ifairy_cpu_compute_mul_mat(params, dst, cfg);
+    }
 #else
     const bool use_lut = false;
     const bool lut_c   = false;

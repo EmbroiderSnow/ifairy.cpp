@@ -410,10 +410,12 @@ static void ggml_ifairy_lut_preprocess_lut16_one(const block_ifairy_q16 * act_bl
                                                  int8_t *                 lut_out,
                                                  int64_t                  g0,
                                                  int64_t                  gstep) {
-
-    for (int64_t blk = 0; blk < blocks; ++blk) {
-        scales_out[blk * 2 + 0] = GGML_FP16_TO_FP32(act_blocks[blk].d_real);
-        scales_out[blk * 2 + 1] = GGML_FP16_TO_FP32(act_blocks[blk].d_imag);
+    // With group sharding, workers share this column's scales.
+    if (g0 == 0) {
+        for (int64_t blk = 0; blk < blocks; ++blk) {
+            scales_out[blk * 2 + 0] = GGML_FP16_TO_FP32(act_blocks[blk].d_real);
+            scales_out[blk * 2 + 1] = GGML_FP16_TO_FP32(act_blocks[blk].d_imag);
+        }
     }
 
     const int64_t groups = blocks * groups_per_block;

@@ -1812,10 +1812,13 @@ static bool ggml_cpu_extension_compute_forward(struct ggml_compute_params * para
 
 #ifdef GGML_USE_LEGACY_IFAIRY_CPU
     if (ggml_legacy_ifairy_cpu_supports_op(tensor)) {
-        if (!ggml_legacy_ifairy_cpu_compute(params, tensor)) {
-            GGML_ABORT("%s failed", ggml_op_name(tensor->op));
+        if (ggml_legacy_ifairy_cpu_compute(params, tensor)) {
+            return true;
         }
-        return true;
+        // MUL_MAT can decline LUT when a weight pack is unavailable or
+        // prequantized activations exceed its range. Its direct workspace
+        // is included in the extension's plan.
+        GGML_ASSERT(tensor->op == GGML_OP_MUL_MAT);
     }
 #endif
 
