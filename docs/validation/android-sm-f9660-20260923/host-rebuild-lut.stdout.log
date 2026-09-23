@@ -1,0 +1,20 @@
+[  0%] Built target build_info
+[ 10%] Built target ggml-base
+[ 33%] Built target ggml-cpu
+[ 35%] Built target ggml
+[ 60%] Built target llama
+Consolidate compiler generated dependencies of target test-ifairy-real-model
+[ 61%] Building CXX object tests/CMakeFiles/test-ifairy-real-model.dir/test-ifairy-real-model.cpp.o
+[ 76%] Built target common
+[ 89%] Built target test-backend-ops
+[ 91%] Built target llama-perplexity
+[ 91%] Built target test-legacy-ifairy-direct
+[ 91%] Built target test-ifairy-model
+[ 88%] Built target llama-cli
+[ 91%] Built target llama-bench
+[ 93%] Built target test-legacy-ifairy
+[ 96%] Built target ifairy-vecdot-microbench
+[ 97%] Built target ifairy-microbench
+[ 99%] Built target ifairy-actq-microbench
+[100%] Linking CXX executable ../bin/test-ifairy-real-model
+[100%] Built target test-ifairy-real-model

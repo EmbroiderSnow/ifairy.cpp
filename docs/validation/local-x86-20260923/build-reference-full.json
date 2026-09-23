@@ -1,0 +1,15 @@
+{
+  "tag": "build-reference-full",
+  "command": [
+    "cmake",
+    "--build",
+    "build-lut-reference",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-lut-reference -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:38:51.818985+08:00",
+  "elapsed_seconds": 18.672,
+  "returncode": 0
+}

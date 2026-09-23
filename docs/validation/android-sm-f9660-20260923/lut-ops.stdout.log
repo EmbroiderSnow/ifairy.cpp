@@ -1,0 +1,36 @@
+Testing 1 devices
+
+Backend 1/1: CPU
+  Device description: CPU
+  Device memory: 11085 MB (11085 MB free)
+
+  IFAIRY_ADD(ne=[1,1,8,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,1,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,2,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,2,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,1,2]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[1,1,8,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,1,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,2,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,2,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,1,2]): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[1,1,1,1],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[33,2,1,1],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[64,5,4,3],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[64,5,4,3],eps=0.000100,near_zero=1): [1;32mOK[0m
+  IFAIRY_SPLIT(ne=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_SPLIT(ne=[32,5,4,3]): [1;32mOK[0m
+  IFAIRY_MERGE(ne=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_MERGE(ne=[64,5,4,3]): [1;32mOK[0m
+  IFAIRY_RELU2(ne=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_RELU2(ne=[32,5,4,3]): [1;32mOK[0m
+  IFAIRY_ROPE(ne=[2,1,1,1],n_dims=4,n_ctx=32): [1;32mOK[0m
+  IFAIRY_ROPE(ne=[32,5,4,3],n_dims=64,n_ctx=512): [1;32mOK[0m
+  14967/14967 tests passed
+  Backend CPU: [1;32mOK[0m
+1/1 backends passed
+[1;32mOK[0m

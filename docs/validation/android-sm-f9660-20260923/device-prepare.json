@@ -1,0 +1,15 @@
+{
+  "tag": "device-prepare",
+  "command": [
+    "/home/zybi/Android/Sdk/platform-tools/adb",
+    "-s",
+    "R3CY405CZET",
+    "shell",
+    "mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests"
+  ],
+  "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET shell 'mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests'",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:50:00.723824+08:00",
+  "elapsed_seconds": 0.714,
+  "returncode": 1
+}

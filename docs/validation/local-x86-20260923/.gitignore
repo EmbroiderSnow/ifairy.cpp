@@ -1,0 +1,3 @@
+# Preserve the small evidence files for this validation run.
+!*.log
+!build-*.json

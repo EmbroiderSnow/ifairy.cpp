@@ -1,0 +1,23 @@
+38879 warnings generated.
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:2:1: warning: included header ggml-backend.h is not used directly [misc-include-cleaner]
+    2 | #include "ggml-backend.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+    3 | #include "ggml-common.h"
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:24:1: warning: included header type_traits is not used directly [misc-include-cleaner]
+   24 | #include <type_traits>
+      | ^~~~~~~~~~~~~~~~~~~~~~
+   25 | 
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:37:5: warning: no header providing "GGML_ASSERT" is directly included [misc-include-cleaner]
+    1 |     GGML_ASSERT(a == 0 || b <= SIZE_MAX / a);
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:784:77: warning: no header providing "ifairy_lut_wtile_16" is directly included [misc-include-cleaner]
+    1 | static inline void ggml_ifairy_lut_accumulate_single_tile_avx2(const struct ifairy_lut_wtile_16 * wt,
+      |                                                                             ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:1883:42: warning: no header providing "GGML_PAD" is directly included [misc-include-cleaner]
+ 1883 |         const size_t lut_bytes_aligned = GGML_PAD(lut_bytes, 64);
+      |                                          ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp:1971:18: warning: no header providing "ifairy64_lut_wtile_16" is directly included [misc-include-cleaner]
+ 1971 |     const struct ifairy64_lut_wtile_16 * wtiles           = (const struct ifairy64_lut_wtile_16 *) packed_wtiles;
+      |                  ^
+Suppressed 38873 warnings (38873 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

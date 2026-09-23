@@ -1,0 +1,24 @@
+{
+  "tag": "configure-direct",
+  "command": [
+    "cmake",
+    "-B",
+    "build-android-direct",
+    "-DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake",
+    "-DANDROID_ABI=arm64-v8a",
+    "-DANDROID_PLATFORM=android-28",
+    "-DANDROID_STL=c++_static",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DGGML_NATIVE=OFF",
+    "-DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16",
+    "-DGGML_LEGACY_IFAIRY_CPU_LUT=OFF",
+    "-DGGML_CCACHE=OFF",
+    "-DGGML_OPENMP=OFF"
+  ],
+  "shell_command": "cmake -B build-android-direct -DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-28 -DANDROID_STL=c++_static -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_NATIVE=OFF -DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16 -DGGML_LEGACY_IFAIRY_CPU_LUT=OFF -DGGML_CCACHE=OFF -DGGML_OPENMP=OFF",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:55:00.532938+08:00",
+  "elapsed_seconds": 0.758,
+  "returncode": 0
+}

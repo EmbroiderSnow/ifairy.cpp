@@ -1,0 +1,15 @@
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:45:76: warning: no header providing "int32_t" is directly included [misc-include-cleaner]
+    8 |         const int count = llama_tokenize(vocab, prompt.data(), static_cast<int32_t>(prompt.size()), tokens.data(),
+      |                                                                            ^
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:54:43: warning: no header providing "std::ios" is directly included [misc-include-cleaner]
+   10 |         std::ofstream     dump(path, std::ios::binary);
+      |                                           ^
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:67:81: warning: no header providing "std::streamsize" is directly included [misc-include-cleaner]
+   67 |             dump.write(reinterpret_cast<const char *>(logits), static_cast<std::streamsize>(n_vocab) * sizeof(float));
+      |                                                                                 ^
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:118:16: warning: no header providing "rusage" is directly included [misc-include-cleaner]
+    5 |         struct rusage usage{};
+      |                ^
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:126:25: warning: no header providing "std::exception" is directly included [misc-include-cleaner]
+    9 |     } catch (const std::exception & error) {
+      |                         ^

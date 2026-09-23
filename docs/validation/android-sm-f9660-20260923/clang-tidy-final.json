@@ -1,0 +1,14 @@
+{
+  "tag": "clang-tidy-final",
+  "command": [
+    "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+    "-p",
+    "build-rel",
+    "tests/test-ifairy-real-model.cpp"
+  ],
+  "shell_command": "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy -p build-rel tests/test-ifairy-real-model.cpp",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:58:09.976961+08:00",
+  "elapsed_seconds": 6.163,
+  "returncode": 0
+}

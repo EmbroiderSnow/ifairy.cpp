@@ -1,0 +1,7 @@
+[ 25%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 91%] Built target ggml-cpu
+[ 97%] Built target ggml
+[ 97%] Building CXX object tests/CMakeFiles/test-ifairy-lut-mul-mat.dir/test-ifairy-lut-mul-mat.cpp.o
+[100%] Linking CXX executable ../bin/test-ifairy-lut-mul-mat
+[100%] Built target test-ifairy-lut-mul-mat

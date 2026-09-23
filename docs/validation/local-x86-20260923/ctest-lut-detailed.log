@@ -1,0 +1,589 @@
+Start testing: Sep 23 16:32 CST
+----------------------------------------------------------
+1/5 Testing: test-legacy-ifairy-direct
+1/5 Test: test-legacy-ifairy-direct
+Command: "/home/zybi/projects/ifairy.cpp/build-lut/bin/test-legacy-ifairy-direct"
+Directory: /home/zybi/projects/ifairy.cpp/build-lut/tests
+"test-legacy-ifairy-direct" start time: Sep 23 16:32 CST
+Output:
+----------------------------------------------------------
+========================================
+Legacy iFairy Direct CPU Tests
+========================================
+
+=== legacy iFairy vecdot direct compare (per-block) ===
+  vecdot compare (per-block): PASS
+
+=== legacy iFairy vecdot direct compare (tensor-scale) ===
+  vecdot compare (tensor-scale): PASS
+
+=== legacy iFairy64 W2 direct fuse smoke ===
+  packed compare max diff: 0.000732 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+
+legacy iFairy direct tests: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test-legacy-ifairy-direct" end time: Sep 23 16:32 CST
+"test-legacy-ifairy-direct" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: test-ifairy-model
+2/5 Test: test-ifairy-model
+Command: "/home/zybi/projects/ifairy.cpp/build-lut/bin/test-ifairy-model"
+Directory: /home/zybi/projects/ifairy.cpp/build-lut/tests
+"test-ifairy-model" start time: Sep 23 16:32 CST
+Output:
+----------------------------------------------------------
+llama_model_loader: loaded meta data with 10 key-value pairs and 14 tensors from /tmp/ifairy-model-682287373345.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                      ifairy.context_length u32              = 32
+llama_model_loader: - kv   1:                    ifairy.embedding_length u32              = 256
+llama_model_loader: - kv   2:                         ifairy.block_count u32              = 1
+llama_model_loader: - kv   3:                 ifairy.feed_forward_length u32              = 256
+llama_model_loader: - kv   4:                ifairy.attention.head_count u32              = 4
+llama_model_loader: - kv   5:             ifairy.attention.head_count_kv u32              = 4
+llama_model_loader: - kv   6:        ifairy.attention.layer_norm_epsilon f32              = 0.000010
+llama_model_loader: - kv   7:                          ifairy.vocab_size u32              = 32
+llama_model_loader: - kv   8:                       tokenizer.ggml.model str              = no_vocab
+llama_model_loader: - kv   9:                       general.architecture str              = ifairy
+llama_model_loader: - type  f32:    6 tensors
+llama_model_loader: - type  f16:    1 tensors
+llama_model_loader: - type ifairy:    7 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = IFairy (guessed)
+print_info: file size   = 0.19 MiB (3.25 BPW) 
+load: adding 32 dummy tokens
+print_info: arch             = ifairy
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 32
+print_info: n_embd           = 256
+print_info: n_layer          = 1
+print_info: n_head           = 4
+print_info: n_head_kv        = 4
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: is_swa_any       = 0
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 1
+print_info: n_embd_k_gqa     = 512
+print_info: n_embd_v_gqa     = 512
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 256
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 10000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 32
+print_info: rope_finetuned   = unknown
+print_info: model type       = ?B
+print_info: model params     = 485.89 K
+print_info: general.name     = n/a
+print_info: vocab type       = no vocab
+print_info: n_vocab          = 32
+print_info: n_merges         = 0
+print_info: max token length = 0
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+load_tensors: layer   0 assigned to device CPU, is_swa = 0
+load_tensors: layer   1 assigned to device CPU, is_swa = 0
+create_tensor: loading tensor token_embd
+create_tensor: loading tensor output_norm
+create_tensor: loading tensor output
+create_tensor: loading tensor blk.0.attn_norm
+create_tensor: loading tensor blk.0.attn_sub_norm
+create_tensor: loading tensor blk.0.attn_q
+create_tensor: loading tensor blk.0.attn_k
+create_tensor: loading tensor blk.0.attn_v
+create_tensor: loading tensor blk.0.attn_output
+create_tensor: loading tensor blk.0.ffn_norm
+create_tensor: loading tensor blk.0.ffn_sub_norm
+create_tensor: loading tensor blk.0.ffn_gate
+create_tensor: loading tensor blk.0.ffn_down
+create_tensor: loading tensor blk.0.ffn_up
+load_tensors: tensor 'token_embd' (f32) (and 13 others) cannot be used with preferred buffer type CPU_REPACK, using CPU instead
+load_tensors:   CPU_Mapped model buffer size =     0.19 MiB
+..............
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got fairy2i)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got llama)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got qwen3)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got unknown)
+llama_model_load_from_file_impl: failed to load model
+iFairy model load, prefill, decode, repeatability and isolation passed; max difference 0.00000000
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test-ifairy-model" end time: Sep 23 16:32 CST
+"test-ifairy-model" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: test-ifairy-ops
+3/5 Test: test-ifairy-ops
+Command: "/home/zybi/projects/ifairy.cpp/build-lut/bin/test-backend-ops" "test" "-b" "CPU" "-o" "IFAIRY_ADD,IFAIRY_MUL,IFAIRY_RMS_NORM,IFAIRY_SPLIT,IFAIRY_MERGE,IFAIRY_RELU2,IFAIRY_ROPE"
+Directory: /home/zybi/projects/ifairy.cpp/build-lut/tests
+"test-ifairy-ops" start time: Sep 23 16:32 CST
+Output:
+----------------------------------------------------------
+Testing 1 devices
+
+Backend 1/1: CPU
+  Device description: AMD Ryzen 7 H 255 w/ Radeon 780M Graphics
+  Device memory: 31347 MB (31347 MB free)
+
+  IFAIRY_ADD(ne=[1,1,8,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,1,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,2,1,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,2,1]): [1;32mOK[0m
+  IFAIRY_ADD(ne=[10,5,4,3],nr=[1,1,1,2]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[1,1,8,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,1,1],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,2,1,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,2,1]): [1;32mOK[0m
+  IFAIRY_MUL(ne=[10,5,4,3],nr=[1,1,1,2]): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[1,1,1,1],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[33,2,1,1],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[64,5,4,3],eps=0.000001,near_zero=0): [1;32mOK[0m
+  IFAIRY_RMS_NORM(ne=[64,5,4,3],eps=0.000100,near_zero=1): [1;32mOK[0m
+  IFAIRY_SPLIT(ne=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_SPLIT(ne=[32,5,4,3]): [1;32mOK[0m
+  IFAIRY_MERGE(ne=[2,1,1,1]): [1;32mOK[0m
+  IFAIRY_MERGE(ne=[64,5,4,3]): [1;32mOK[0m
+  IFAIRY_RELU2(ne=[1,1,1,1]): [1;32mOK[0m
+  IFAIRY_RELU2(ne=[32,5,4,3]): [1;32mOK[0m
+  IFAIRY_ROPE(ne=[2,1,1,1],n_dims=4,n_ctx=32): [1;32mOK[0m
+  IFAIRY_ROPE(ne=[32,5,4,3],n_dims=64,n_ctx=512): [1;32mOK[0m
+  14967/14967 tests passed
+  Backend CPU: [1;32mOK[0m
+1/1 backends passed
+[1;32mOK[0m
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"test-ifairy-ops" end time: Sep 23 16:32 CST
+"test-ifairy-ops" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: test-legacy-ifairy
+4/5 Test: test-legacy-ifairy
+Command: "/home/zybi/projects/ifairy.cpp/build-lut/bin/test-legacy-ifairy"
+Directory: /home/zybi/projects/ifairy.cpp/build-lut/tests
+"test-legacy-ifairy" start time: Sep 23 16:32 CST
+Output:
+----------------------------------------------------------
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1.2 (per-block): iFairy vec_dot direct compare ===
+  vec_dot compare (per-block) - PASS
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1.2 (tensor-scale): iFairy vec_dot direct compare ===
+  vec_dot compare (tensor-scale) - PASS
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1: Quantization/Dequantization ===
+Testing quantization with 256 elements
+Comparing real part:
+  Max diff: 0.000074 (threshold: 0.100000) - PASS
+Comparing imag part:
+  Max diff: 0.000190 (threshold: 0.100000) - PASS
+
+=== Test 1.1: iFairy Q16 Tensor-Scale Quantization ===
+  d_real=0.04693604 expected=0.04694836 diff=1.232326e-05
+  d_imag=0.04693604 expected=0.04694836 diff=1.232326e-05
+  max_abs_err_real=0.028687
+  max_abs_err_imag=0.028687
+  max_abs_q_real=42 max_abs_q_imag=42
+  tensor-scale quantization - PASS
+
+=== Test 1.2: iFairy vec_dot direct compare ===
+  vec_dot direct compare - PASS
+
+=== Test 1.3: iFairy64 vec_dot direct compare ===
+  ifairy64 vec_dot compare - PASS
+
+=== Test 2: iFairy 2-weight index encoding ===
+  groups_per_row=128, first bytes=[04 0e 0f 09]
+
+=== Test 2.0: iFairy64 2-weight index encoding ===
+  groups_per_row=32, first bytes=[04 0e 0f 09]
+
+=== Test 2.1: iFairy64 LUT transform pack ===
+  ifairy64 transform pack - PASS
+
+=== Test 2.1: iFairy LUT transform cache ===
+  transform cache/concurrency - PASS
+
+=== Test 2.2: iFairy LUT transform invalid shape ===
+  invalid shape - PASS
+
+=== Test 2.4: iFairy LUT index alignment ===
+  index alignment - PASS
+
+=== Test 2.5: iFairy LUT index encode failure ===
+  index encode failure - PASS
+
+=== Test 2.6: iFairy LUT env semantics ===
+  env semantics - PASS
+
+=== Test 3: iFairy ROPE ===
+Testing ROPE with shape [1, 4, 2, 8], n_dims=8, freq_base=10000.0
+ROPE computation completed
+  ROPE test - PASS (simplified)
+
+=== Test 4: iFairy LUT scalar matmul ===
+  Max diff: 0.000000 (threshold: 0.001000) - PASS
+
+=== Test 4.1: iFairy LUT scalar small dims ===
+  Max diff: 0.000000 (threshold: 0.001000) - PASS
+
+=== Test 5: iFairy LUT backend smoke ===
+
+=== Test 5.1: iFairy LUT backend F32 vs Q16 ===
+  Packed compare max diff: 0.009766 (threshold: 0.010000) - PASS
+
+=== Test 5.2: iFairy LUT backend lut_c F32 vs Q16 ===
+  Packed compare max diff: 0.009766 (threshold: 0.010000) - PASS
+
+=== Test 5.3: iFairy64 LUT backend compare ===
+  Packed compare max diff: 0.000000 (threshold: 0.010000) - PASS
+
+=== Test 5.4: iFairy64 backend F32 vs Q16 ===
+  Bitwise compare: PASS (16 elements)
+
+=== Test 5.5: iFairy64 fused wide linear W2 ===
+  Packed compare max diff: 0.000732 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003418 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003418 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.003906 (threshold: 0.010000) - PASS
+
+=== Test 6: Complex Matrix Multiplication ===
+Testing complex matmul: (4 x 8) @ (8 x 6)
+Comparing real part:
+  Max diff: 0.000000 (threshold: 0.010000) - PASS
+Comparing imag part:
+  Max diff: 0.000000 (threshold: 0.010000) - PASS
+
+========================================
+All tests PASSED!
+========================================
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"test-legacy-ifairy" end time: Sep 23 16:32 CST
+"test-legacy-ifairy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: test-ifairy-model-lut
+5/5 Test: test-ifairy-model-lut
+Command: "/home/zybi/projects/ifairy.cpp/build-lut/bin/test-ifairy-model"
+Directory: /home/zybi/projects/ifairy.cpp/build-lut/tests
+"test-ifairy-model-lut" start time: Sep 23 16:32 CST
+Output:
+----------------------------------------------------------
+llama_model_loader: loaded meta data with 10 key-value pairs and 14 tensors from /tmp/ifairy-model-682473775686.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                      ifairy.context_length u32              = 32
+llama_model_loader: - kv   1:                    ifairy.embedding_length u32              = 256
+llama_model_loader: - kv   2:                         ifairy.block_count u32              = 1
+llama_model_loader: - kv   3:                 ifairy.feed_forward_length u32              = 256
+llama_model_loader: - kv   4:                ifairy.attention.head_count u32              = 4
+llama_model_loader: - kv   5:             ifairy.attention.head_count_kv u32              = 4
+llama_model_loader: - kv   6:        ifairy.attention.layer_norm_epsilon f32              = 0.000010
+llama_model_loader: - kv   7:                          ifairy.vocab_size u32              = 32
+llama_model_loader: - kv   8:                       tokenizer.ggml.model str              = no_vocab
+llama_model_loader: - kv   9:                       general.architecture str              = ifairy
+llama_model_loader: - type  f32:    6 tensors
+llama_model_loader: - type  f16:    1 tensors
+llama_model_loader: - type ifairy:    7 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = IFairy (guessed)
+print_info: file size   = 0.19 MiB (3.25 BPW) 
+load: adding 32 dummy tokens
+print_info: arch             = ifairy
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 32
+print_info: n_embd           = 256
+print_info: n_layer          = 1
+print_info: n_head           = 4
+print_info: n_head_kv        = 4
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: is_swa_any       = 0
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 1
+print_info: n_embd_k_gqa     = 512
+print_info: n_embd_v_gqa     = 512
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: f_attn_scale     = 0.0e+00
+print_info: n_ff             = 256
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 10000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 32
+print_info: rope_finetuned   = unknown
+print_info: model type       = ?B
+print_info: model params     = 485.89 K
+print_info: general.name     = n/a
+print_info: vocab type       = no vocab
+print_info: n_vocab          = 32
+print_info: n_merges         = 0
+print_info: max token length = 0
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+load_tensors: layer   0 assigned to device CPU, is_swa = 0
+load_tensors: layer   1 assigned to device CPU, is_swa = 0
+create_tensor: loading tensor token_embd
+create_tensor: loading tensor output_norm
+create_tensor: loading tensor output
+create_tensor: loading tensor blk.0.attn_norm
+create_tensor: loading tensor blk.0.attn_sub_norm
+create_tensor: loading tensor blk.0.attn_q
+create_tensor: loading tensor blk.0.attn_k
+create_tensor: loading tensor blk.0.attn_v
+create_tensor: loading tensor blk.0.attn_output
+create_tensor: loading tensor blk.0.ffn_norm
+create_tensor: loading tensor blk.0.ffn_sub_norm
+create_tensor: loading tensor blk.0.ffn_gate
+create_tensor: loading tensor blk.0.ffn_down
+create_tensor: loading tensor blk.0.ffn_up
+load_tensors: tensor 'token_embd' (f32) (and 13 others) cannot be used with preferred buffer type CPU_REPACK, using CPU instead
+load_tensors:   CPU_Mapped model buffer size =     0.19 MiB
+..............
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_context: constructing llama_context
+llama_context: n_batch is less than GGML_KQ_MASK_PAD - increasing to 64
+llama_context: n_seq_max     = 1
+llama_context: n_ctx         = 32
+llama_context: n_ctx_per_seq = 32
+llama_context: n_batch       = 64
+llama_context: n_ubatch      = 8
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = disabled
+llama_context: kv_unified    = false
+llama_context: freq_base     = 10000.0
+llama_context: freq_scale    = 1
+set_abort_callback: call
+llama_context:        CPU  output buffer size =     0.00 MiB
+create_memory: n_ctx = 32 (padded)
+llama_kv_cache: layer   0: dev = CPU
+llama_kv_cache:        CPU KV buffer size =     0.06 MiB
+llama_kv_cache: size =    0.06 MiB (    32 cells,   1 layers,  1/1 seqs), K (f16):    0.03 MiB, V (f16):    0.03 MiB
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 1
+llama_context: max_nodes = 1024
+llama_context: reserving full memory module
+llama_context: worst-case: n_tokens = 8, n_seqs = 1, n_outputs = 1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  1, n_outputs =    1
+graph_reserve: reserving a graph for ubatch with n_tokens =    8, n_seqs =  1, n_outputs =    8
+llama_context:        CPU compute buffer size =     0.11 MiB
+llama_context: graph nodes  = 61
+llama_context: graph splits = 1
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got fairy2i)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got llama)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got qwen3)
+llama_model_load_from_file_impl: failed to load model
+llama_model_load: error loading model: this repository supports only general.architecture=ifairy (got unknown)
+llama_model_load_from_file_impl: failed to load model
+iFairy model load, prefill, decode, repeatability and isolation passed; max difference 0.00000000
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test-ifairy-model-lut" end time: Sep 23 16:32 CST
+"test-ifairy-model-lut" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 23 16:32 CST

@@ -1,0 +1,239 @@
+{
+  "runs": [
+    {
+      "tag": "phone-bench-4t-off",
+      "threads": 4,
+      "lut_enabled": false,
+      "started_utc": "2026-09-23T09:45:32Z",
+      "finished_utc": "2026-09-23T09:46:32Z",
+      "idle_before_s": null,
+      "exit_code": 0,
+      "raw_json": "phone-bench-4t-off.stdout.log",
+      "metrics": {
+        "pp128": {
+          "avg_ts": 75.003065,
+          "stddev_ts": 6.736918,
+          "samples_ts": [
+            82.7554,
+            71.6856,
+            70.5682
+          ],
+          "samples_ns": [
+            1546727083,
+            1785573854,
+            1813848958
+          ]
+        },
+        "pp512": {
+          "avg_ts": 48.124979,
+          "stddev_ts": 0.103264,
+          "samples_ts": [
+            48.0097,
+            48.1562,
+            48.2091
+          ],
+          "samples_ns": [
+            10664507444,
+            10632077548,
+            10620410308
+          ]
+        },
+        "tg128": {
+          "avg_ts": 33.311147,
+          "stddev_ts": 0.148516,
+          "samples_ts": [
+            33.4413,
+            33.1494,
+            33.3427
+          ],
+          "samples_ns": [
+            3827596874,
+            3861307968,
+            3838920936
+          ]
+        }
+      }
+    },
+    {
+      "tag": "phone-bench-4t-on",
+      "threads": 4,
+      "lut_enabled": true,
+      "started_utc": "2026-09-23T09:48:02Z",
+      "finished_utc": "2026-09-23T09:49:19Z",
+      "idle_before_s": 90.0,
+      "exit_code": 0,
+      "raw_json": "phone-bench-4t-on.stdout.log",
+      "metrics": {
+        "pp128": {
+          "avg_ts": 66.259575,
+          "stddev_ts": 6.501667,
+          "samples_ts": [
+            73.0866,
+            65.5507,
+            60.1414
+          ],
+          "samples_ns": [
+            1751346093,
+            1952687552,
+            2128317447
+          ]
+        },
+        "pp512": {
+          "avg_ts": 36.433878,
+          "stddev_ts": 1.205784,
+          "samples_ts": [
+            37.8255,
+            35.6994,
+            35.7767
+          ],
+          "samples_ns": [
+            13535848693,
+            14341974057,
+            14310972963
+          ]
+        },
+        "tg128": {
+          "avg_ts": 28.794037,
+          "stddev_ts": 0.120965,
+          "samples_ts": [
+            28.8507,
+            28.8762,
+            28.6551
+          ],
+          "samples_ns": [
+            4436629061,
+            4432710050,
+            4466912863
+          ]
+        }
+      }
+    },
+    {
+      "tag": "phone-bench-8t-on",
+      "threads": 8,
+      "lut_enabled": true,
+      "started_utc": "2026-09-23T09:50:49Z",
+      "finished_utc": "2026-09-23T09:51:35Z",
+      "idle_before_s": 90.0,
+      "exit_code": 0,
+      "raw_json": "phone-bench-8t-on.stdout.log",
+      "metrics": {
+        "pp128": {
+          "avg_ts": 117.944761,
+          "stddev_ts": 11.564851,
+          "samples_ts": [
+            130.322,
+            107.415,
+            116.097
+          ],
+          "samples_ns": [
+            982180624,
+            1191639271,
+            1102526666
+          ]
+        },
+        "pp512": {
+          "avg_ts": 67.657241,
+          "stddev_ts": 1.517727,
+          "samples_ts": [
+            68.9961,
+            67.9671,
+            66.0085
+          ],
+          "samples_ns": [
+            7420706091,
+            7533056924,
+            7756577132
+          ]
+        },
+        "tg128": {
+          "avg_ts": 31.270185,
+          "stddev_ts": 1.536463,
+          "samples_ts": [
+            32.744,
+            31.3887,
+            29.6779
+          ],
+          "samples_ns": [
+            3909118436,
+            4077900051,
+            4312974478
+          ]
+        }
+      }
+    },
+    {
+      "tag": "phone-bench-8t-off",
+      "threads": 8,
+      "lut_enabled": false,
+      "started_utc": "2026-09-23T09:53:05Z",
+      "finished_utc": "2026-09-23T09:53:49Z",
+      "idle_before_s": 90.0,
+      "exit_code": 0,
+      "raw_json": "phone-bench-8t-off.stdout.log",
+      "metrics": {
+        "pp128": {
+          "avg_ts": 135.164221,
+          "stddev_ts": 6.077771,
+          "samples_ts": [
+            141.073,
+            135.49,
+            128.93
+          ],
+          "samples_ns": [
+            907334270,
+            944719739,
+            992785624
+          ]
+        },
+        "pp512": {
+          "avg_ts": 69.224508,
+          "stddev_ts": 0.516483,
+          "samples_ts": [
+            69.5123,
+            68.6282,
+            69.533
+          ],
+          "samples_ns": [
+            7365601976,
+            7460485309,
+            7363413279
+          ]
+        },
+        "tg128": {
+          "avg_ts": 32.19235,
+          "stddev_ts": 1.864662,
+          "samples_ts": [
+            34.3373,
+            31.2821,
+            30.9576
+          ],
+          "samples_ns": [
+            3727723749,
+            4091793279,
+            4134685623
+          ]
+        }
+      }
+    }
+  ],
+  "total_measured_samples": 36,
+  "lut_on_over_off_observed_throughput": {
+    "4": {
+      "pp128": 0.883424897369194,
+      "pp512": 0.7570679251621075,
+      "tg128": 0.864396443628915
+    },
+    "8": {
+      "pp128": 0.8726034162546611,
+      "pp512": 0.9773596512957521,
+      "tg128": 0.9713545298805463
+    }
+  },
+  "limitations": [
+    "Different activation quantization and full-model outputs between LUT and default direct.",
+    "Sequential, fixed-order runs; USB charging, no affinity or frequency lock.",
+    "Thermal throttling observed; 90-second idle did not equalize all starting conditions.",
+    "Snapshots are endpoints, not continuous telemetry; SKIN values are thermalservice cached readings."
+  ]
+}

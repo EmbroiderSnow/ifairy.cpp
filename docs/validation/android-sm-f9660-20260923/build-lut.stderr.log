@@ -1,0 +1,4 @@
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2137:13: warning: 'break' will never be executed [-Wunreachable-code-break]
+ 2137 |             break;
+      |             ^~~~~
+1 warning generated.

@@ -1,0 +1,2 @@
+ifairy-microbench ifairy qgemm lut16 N==1: m=1536 k=1536 blocks=6 groups=768 tiles=96
+iters=100 warmup=10 ns/iter=53749.7 checksum=-3.2970e+06

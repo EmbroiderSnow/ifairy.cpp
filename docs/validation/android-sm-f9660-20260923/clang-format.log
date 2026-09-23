@@ -1,0 +1,4 @@
+Temporary index used; real Git index unchanged.
+git clang-format --diff a6256d61ffd3ebe4cba06fdb3b46e0b7eb78feaa -- tests/test-ifairy-real-model.cpp
+`git read-tree --index-output=.git/clang-format-index --empty` returned 128
+fatal: unable to write new index file

@@ -1,0 +1,18 @@
+{
+  "tag": "logits-prefill-batched",
+  "command": [
+    "env",
+    "GGML_IFAIRY_LUT=1",
+    "GGML_IFAIRY_LUT_IMPL=auto",
+    "IFAIRY_PROBE_DUMP_DIR=/tmp/ifairy-prefill-batched",
+    "python3",
+    "docs/validation/local-x86-20260923/check_logits.py",
+    "build-lut",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf"
+  ],
+  "shell_command": "env GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=auto IFAIRY_PROBE_DUMP_DIR=/tmp/ifairy-prefill-batched python3 docs/validation/local-x86-20260923/check_logits.py build-lut /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:35:19.938909+08:00",
+  "elapsed_seconds": 3.164,
+  "returncode": 0
+}

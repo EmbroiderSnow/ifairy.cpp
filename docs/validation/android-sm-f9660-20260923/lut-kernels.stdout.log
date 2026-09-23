@@ -1,0 +1,110 @@
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1.2 (per-block): iFairy vec_dot direct compare ===
+  vec_dot compare (per-block) - PASS
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1.2 (tensor-scale): iFairy vec_dot direct compare ===
+  vec_dot compare (tensor-scale) - PASS
+========================================
+iFairy Model Unit Tests
+========================================
+
+=== Test 1: Quantization/Dequantization ===
+Testing quantization with 256 elements
+Comparing real part:
+  Max diff: 0.000074 (threshold: 0.100000) - PASS
+Comparing imag part:
+  Max diff: 0.000190 (threshold: 0.100000) - PASS
+
+=== Test 1.1: iFairy Q16 Tensor-Scale Quantization ===
+  d_real=0.04693604 expected=0.04694836 diff=1.232326e-05
+  d_imag=0.04693604 expected=0.04694836 diff=1.232326e-05
+  max_abs_err_real=0.028687
+  max_abs_err_imag=0.028687
+  max_abs_q_real=42 max_abs_q_imag=42
+  tensor-scale quantization - PASS
+
+=== Test 1.2: iFairy vec_dot direct compare ===
+  vec_dot direct compare - PASS
+
+=== Test 1.3: iFairy64 vec_dot direct compare ===
+  ifairy64 vec_dot compare - PASS
+
+=== Test 2: iFairy 2-weight index encoding ===
+  groups_per_row=128, first bytes=[04 0e 0f 09]
+
+=== Test 2.0: iFairy64 2-weight index encoding ===
+  groups_per_row=32, first bytes=[04 0e 0f 09]
+
+=== Test 2.1: iFairy64 LUT transform pack ===
+  ifairy64 transform pack - PASS
+
+=== Test 2.1: iFairy LUT transform cache ===
+  transform cache/concurrency - PASS
+
+=== Test 2.2: iFairy LUT transform invalid shape ===
+  invalid shape - PASS
+
+=== Test 2.4: iFairy LUT index alignment ===
+  index alignment - PASS
+
+=== Test 2.5: iFairy LUT index encode failure ===
+  index encode failure - PASS
+
+=== Test 2.6: iFairy LUT env semantics ===
+  env semantics - PASS
+
+=== Test 3: iFairy ROPE ===
+Testing ROPE with shape [1, 4, 2, 8], n_dims=8, freq_base=10000.0
+ROPE computation completed
+  ROPE test - PASS (simplified)
+
+=== Test 4: iFairy LUT scalar matmul ===
+  Max diff: 0.000000 (threshold: 0.001000) - PASS
+
+=== Test 4.1: iFairy LUT scalar small dims ===
+  Max diff: 0.000000 (threshold: 0.001000) - PASS
+
+=== Test 5: iFairy LUT backend smoke ===
+
+=== Test 5.1: iFairy LUT backend F32 vs Q16 ===
+  Packed compare max diff: 0.007812 (threshold: 0.010000) - PASS
+
+=== Test 5.2: iFairy LUT backend lut_c F32 vs Q16 ===
+  Packed compare max diff: 0.007812 (threshold: 0.010000) - PASS
+
+=== Test 5.3: iFairy64 LUT backend compare ===
+  Packed compare max diff: 0.000000 (threshold: 0.010000) - PASS
+
+=== Test 5.4: iFairy64 backend F32 vs Q16 ===
+  Bitwise compare: PASS (16 elements)
+
+=== Test 5.5: iFairy64 fused wide linear W2 ===
+  Packed compare max diff: 0.000732 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.000732 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.000732 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+  Packed compare max diff: 0.001953 (threshold: 0.010000) - PASS
+
+=== Test 6: Complex Matrix Multiplication ===
+Testing complex matmul: (4 x 8) @ (8 x 6)
+Comparing real part:
+  Max diff: 0.000000 (threshold: 0.010000) - PASS
+Comparing imag part:
+  Max diff: 0.000000 (threshold: 0.010000) - PASS
+
+========================================
+All tests PASSED!
+========================================

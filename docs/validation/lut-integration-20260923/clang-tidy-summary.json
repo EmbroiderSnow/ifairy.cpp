@@ -1,0 +1,114 @@
+[
+  {
+    "source": "ggml/src/ggml-cpu/ggml-cpu.c",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "ggml/src/ggml-cpu/ggml-cpu.c"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/include",
+      "--extra-arg=-std=c++17"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "tests/test-ifairy-lut-mul-mat.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "tests/test-ifairy-lut-mul-mat.cpp",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/include",
+      "--extra-arg=-std=c++17"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "tests/test-ifairy-real-model.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "tests/test-ifairy-real-model.cpp"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu",
+      "--extra-arg=-I/home/zybi/projects/ifairy.cpp/ggml/include",
+      "--extra-arg=-std=c++17"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-lut",
+      "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-lut",
+      "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "tests/test-ifairy-lut-mul-mat.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-lut",
+      "tests/test-ifairy-lut-mul-mat.cpp"
+    ],
+    "returncode": 0
+  },
+  {
+    "source": "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-lut",
+      "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp"
+    ],
+    "returncode": 0
+  }
+]

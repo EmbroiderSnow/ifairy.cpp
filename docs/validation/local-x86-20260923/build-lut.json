@@ -1,0 +1,15 @@
+{
+  "tag": "build-lut",
+  "command": [
+    "cmake",
+    "--build",
+    "build-lut",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-lut -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:30:50.901835+08:00",
+  "elapsed_seconds": 77.923,
+  "returncode": 0
+}

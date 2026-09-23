@@ -1,0 +1,15 @@
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index 871dd67..1035592 100644
+--- a/tests/CMakeLists.txt
++++ b/tests/CMakeLists.txt
+@@ -8,6 +8,10 @@ endfunction()
+ 
+ ifairy_test(test-legacy-ifairy-direct)
+ ifairy_test(test-ifairy-model)
++# Real weights are supplied explicitly; keep this probe out of weight-free CTest runs.
++add_executable(test-ifairy-real-model test-ifairy-real-model.cpp)
++target_link_libraries(test-ifairy-real-model PRIVATE llama)
++target_include_directories(test-ifairy-real-model PRIVATE ../vendor)
+ add_executable(test-backend-ops test-backend-ops.cpp get-model.cpp)
+ target_link_libraries(test-backend-ops PRIVATE common)
+ set_property(TEST test-ifairy-model PROPERTY ENVIRONMENT "GGML_IFAIRY_LUT=0")

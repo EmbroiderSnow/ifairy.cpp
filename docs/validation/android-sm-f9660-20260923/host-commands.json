@@ -1,0 +1,380 @@
+[
+  {
+    "tag": "device-prepare",
+    "command": [
+      "/home/zybi/Android/Sdk/platform-tools/adb",
+      "-s",
+      "R3CY405CZET",
+      "shell",
+      "mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET shell 'mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests'",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:50:00.723824+08:00",
+    "elapsed_seconds": 0.714,
+    "returncode": 1
+  },
+  {
+    "tag": "device-prepare-retry",
+    "command": [
+      "/home/zybi/Android/Sdk/platform-tools/adb",
+      "-s",
+      "R3CY405CZET",
+      "shell",
+      "mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET shell 'mkdir -p /data/local/tmp/ifairy-validation-20260923/models /data/local/tmp/ifairy-validation-20260923/results /data/local/tmp/ifairy-validation-20260923/tests'",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:53:21.620707+08:00",
+    "elapsed_seconds": 0.044,
+    "returncode": 0
+  },
+  {
+    "tag": "model-push",
+    "command": [
+      "/home/zybi/Android/Sdk/platform-tools/adb",
+      "-s",
+      "R3CY405CZET",
+      "push",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET push /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf /data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:53:21.725848+08:00",
+    "elapsed_seconds": 13.213,
+    "returncode": 0
+  },
+  {
+    "tag": "model-device-sha256",
+    "command": [
+      "/home/zybi/Android/Sdk/platform-tools/adb",
+      "-s",
+      "R3CY405CZET",
+      "shell",
+      "sha256sum",
+      "/data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET shell sha256sum /data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:53:35.002958+08:00",
+    "elapsed_seconds": 0.344,
+    "returncode": 0
+  },
+  {
+    "tag": "configure-direct",
+    "command": [
+      "cmake",
+      "-B",
+      "build-android-direct",
+      "-DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake",
+      "-DANDROID_ABI=arm64-v8a",
+      "-DANDROID_PLATFORM=android-28",
+      "-DANDROID_STL=c++_static",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DGGML_NATIVE=OFF",
+      "-DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16",
+      "-DGGML_LEGACY_IFAIRY_CPU_LUT=OFF",
+      "-DGGML_CCACHE=OFF",
+      "-DGGML_OPENMP=OFF"
+    ],
+    "shell_command": "cmake -B build-android-direct -DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-28 -DANDROID_STL=c++_static -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_NATIVE=OFF -DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16 -DGGML_LEGACY_IFAIRY_CPU_LUT=OFF -DGGML_CCACHE=OFF -DGGML_OPENMP=OFF",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:00.532938+08:00",
+    "elapsed_seconds": 0.758,
+    "returncode": 0
+  },
+  {
+    "tag": "build-direct",
+    "command": [
+      "cmake",
+      "--build",
+      "build-android-direct",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-android-direct -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:01.317377+08:00",
+    "elapsed_seconds": 46.004,
+    "returncode": 0
+  },
+  {
+    "tag": "host-configure-direct",
+    "command": [
+      "cmake",
+      "-B",
+      "build-rel",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    ],
+    "shell_command": "cmake -B build-rel -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:17.744342+08:00",
+    "elapsed_seconds": 0.178,
+    "returncode": 0
+  },
+  {
+    "tag": "host-build-direct",
+    "command": [
+      "cmake",
+      "--build",
+      "build-rel",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-rel -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:17.969629+08:00",
+    "elapsed_seconds": 5.075,
+    "returncode": 0
+  },
+  {
+    "tag": "host-ctest-direct",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-rel",
+      "--output-on-failure"
+    ],
+    "shell_command": "ctest --test-dir build-rel --output-on-failure",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:23.075073+08:00",
+    "elapsed_seconds": 0.805,
+    "returncode": 0
+  },
+  {
+    "tag": "host-configure-lut",
+    "command": [
+      "cmake",
+      "-B",
+      "build-lut",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DGGML_LEGACY_IFAIRY_CPU_LUT=ON"
+    ],
+    "shell_command": "cmake -B build-lut -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_LEGACY_IFAIRY_CPU_LUT=ON",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:23.911038+08:00",
+    "elapsed_seconds": 0.129,
+    "returncode": 0
+  },
+  {
+    "tag": "host-build-lut",
+    "command": [
+      "cmake",
+      "--build",
+      "build-lut",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-lut -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:24.075377+08:00",
+    "elapsed_seconds": 3.544,
+    "returncode": 0
+  },
+  {
+    "tag": "host-ctest-lut",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-lut",
+      "--output-on-failure"
+    ],
+    "shell_command": "ctest --test-dir build-lut --output-on-failure",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:27.646921+08:00",
+    "elapsed_seconds": 0.773,
+    "returncode": 0
+  },
+  {
+    "tag": "clang-tidy-host",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "tests/test-ifairy-real-model.cpp"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy -p build-rel tests/test-ifairy-real-model.cpp",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:47.252287+08:00",
+    "elapsed_seconds": 6.554,
+    "returncode": 0
+  },
+  {
+    "tag": "configure-lut",
+    "command": [
+      "cmake",
+      "-B",
+      "build-android-lut",
+      "-DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake",
+      "-DANDROID_ABI=arm64-v8a",
+      "-DANDROID_PLATFORM=android-28",
+      "-DANDROID_STL=c++_static",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DGGML_NATIVE=OFF",
+      "-DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16",
+      "-DGGML_LEGACY_IFAIRY_CPU_LUT=ON",
+      "-DGGML_CCACHE=OFF",
+      "-DGGML_OPENMP=OFF"
+    ],
+    "shell_command": "cmake -B build-android-lut -DCMAKE_TOOLCHAIN_FILE=/home/zybi/Android/Sdk/ndk/30.0.14904198/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=android-28 -DANDROID_STL=c++_static -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_NATIVE=OFF -DGGML_CPU_ARM_ARCH=armv8.6-a+dotprod+i8mm+fp16 -DGGML_LEGACY_IFAIRY_CPU_LUT=ON -DGGML_CCACHE=OFF -DGGML_OPENMP=OFF",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:47.349630+08:00",
+    "elapsed_seconds": 0.501,
+    "returncode": 0
+  },
+  {
+    "tag": "build-lut",
+    "command": [
+      "cmake",
+      "--build",
+      "build-android-lut",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-android-lut -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:55:47.877902+08:00",
+    "elapsed_seconds": 49.002,
+    "returncode": 0
+  },
+  {
+    "tag": "rebuild-direct-probe",
+    "command": [
+      "cmake",
+      "--build",
+      "build-android-direct",
+      "--target",
+      "test-ifairy-real-model",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-android-direct --target test-ifairy-real-model -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:42.267237+08:00",
+    "elapsed_seconds": 2.926,
+    "returncode": 0
+  },
+  {
+    "tag": "rebuild-lut-probe",
+    "command": [
+      "cmake",
+      "--build",
+      "build-android-lut",
+      "--target",
+      "test-ifairy-real-model",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-android-lut --target test-ifairy-real-model -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:45.218884+08:00",
+    "elapsed_seconds": 2.483,
+    "returncode": 0
+  },
+  {
+    "tag": "host-rebuild-direct",
+    "command": [
+      "cmake",
+      "--build",
+      "build-rel",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-rel -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:47.726903+08:00",
+    "elapsed_seconds": 3.628,
+    "returncode": 0
+  },
+  {
+    "tag": "host-retest-direct",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-rel",
+      "--output-on-failure"
+    ],
+    "shell_command": "ctest --test-dir build-rel --output-on-failure",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:51.394879+08:00",
+    "elapsed_seconds": 0.158,
+    "returncode": 0
+  },
+  {
+    "tag": "host-rebuild-lut",
+    "command": [
+      "cmake",
+      "--build",
+      "build-lut",
+      "-j",
+      "8"
+    ],
+    "shell_command": "cmake --build build-lut -j 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:51.578187+08:00",
+    "elapsed_seconds": 3.825,
+    "returncode": 0
+  },
+  {
+    "tag": "host-retest-lut",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-lut",
+      "--output-on-failure"
+    ],
+    "shell_command": "ctest --test-dir build-lut --output-on-failure",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:55.437393+08:00",
+    "elapsed_seconds": 0.202,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe",
+    "command": [
+      "env",
+      "GGML_IFAIRY_LUT=0",
+      "build-rel/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-host-probe",
+      "batched",
+      "8"
+    ],
+    "shell_command": "env GGML_IFAIRY_LUT=0 build-rel/bin/test-ifairy-real-model /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf /tmp/ifairy-host-probe batched 8",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:57:55.669624+08:00",
+    "elapsed_seconds": 1.603,
+    "returncode": 0
+  },
+  {
+    "tag": "clang-tidy-final",
+    "command": [
+      "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy",
+      "-p",
+      "build-rel",
+      "tests/test-ifairy-real-model.cpp"
+    ],
+    "shell_command": "/home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang-tidy -p build-rel tests/test-ifairy-real-model.cpp",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T16:58:09.976961+08:00",
+    "elapsed_seconds": 6.163,
+    "returncode": 0
+  },
+  {
+    "tag": "source-isolation",
+    "command": [
+      "python3",
+      "scripts/check-ifairy-only.py"
+    ],
+    "shell_command": "python3 scripts/check-ifairy-only.py",
+    "cwd": "/home/zybi/projects/ifairy.cpp",
+    "started": "2026-09-23T17:03:17.488519+08:00",
+    "elapsed_seconds": 0.141,
+    "returncode": 0
+  }
+]

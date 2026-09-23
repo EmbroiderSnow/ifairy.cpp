@@ -1,0 +1,78 @@
+[
+  {
+    "tag": "bench-4t-off",
+    "started": "2026-09-23T09:02:05Z",
+    "finished": "2026-09-23T09:03:05Z",
+    "before": {
+      "battery_temp_c": 32.1,
+      "battery_level_pct": 31,
+      "thermal_status": 0,
+      "skin_c": 37.9,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n2745600\n3532800\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n4473600"
+    },
+    "after": {
+      "battery_temp_c": 32.8,
+      "battery_level_pct": 31,
+      "thermal_status": 0,
+      "skin_c": 37.9,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1785600\n1785600\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1689600"
+    }
+  },
+  {
+    "tag": "bench-4t-on",
+    "started": "2026-09-23T09:03:05Z",
+    "finished": "2026-09-23T09:04:18Z",
+    "before": {
+      "battery_temp_c": 32.8,
+      "battery_level_pct": 31,
+      "thermal_status": 0,
+      "skin_c": 37.9,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1785600\n1785600\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1689600"
+    },
+    "after": {
+      "battery_temp_c": 33.8,
+      "battery_level_pct": 31,
+      "thermal_status": 1,
+      "skin_c": 40.0,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1152000\n1785600\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1689600"
+    }
+  },
+  {
+    "tag": "bench-8t-on",
+    "started": "2026-09-23T09:04:18Z",
+    "finished": "2026-09-23T09:05:09Z",
+    "before": {
+      "battery_temp_c": 33.8,
+      "battery_level_pct": 31,
+      "thermal_status": 1,
+      "skin_c": 40.0,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1555200\n1785600\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1689600"
+    },
+    "after": {
+      "battery_temp_c": 34.4,
+      "battery_level_pct": 31,
+      "thermal_status": 2,
+      "skin_c": 42.0,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1363200\n1363200\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1401600"
+    }
+  },
+  {
+    "tag": "bench-8t-off",
+    "started": "2026-09-23T09:05:10Z",
+    "finished": "2026-09-23T09:06:06Z",
+    "before": {
+      "battery_temp_c": 34.4,
+      "battery_level_pct": 31,
+      "thermal_status": 2,
+      "skin_c": 42.0,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n1363200\n1363200\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1401600"
+    },
+    "after": {
+      "battery_temp_c": 35.0,
+      "battery_level_pct": 31,
+      "thermal_status": 2,
+      "skin_c": 42.0,
+      "frequencies": "/sys/devices/system/cpu/cpufreq/policy0\n556800\n1363200\n/sys/devices/system/cpu/cpufreq/policy6\n1017600\n1401600"
+    }
+  }
+]

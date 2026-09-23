@@ -1,0 +1,37 @@
+[  0%] Built target build_info
+[  9%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp.o
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp.o
+[ 12%] Linking CXX shared library ../../bin/libggml-cpu.so
+[ 33%] Built target ggml-cpu
+[ 34%] Linking CXX shared library ../../bin/libggml.so
+[ 35%] Built target ggml
+Consolidate compiler generated dependencies of target test-ifairy-lut-mul-mat
+[ 36%] Linking CXX executable ../bin/test-ifairy-lut-mul-mat
+[ 37%] Linking CXX shared library ../bin/libllama.so
+[ 38%] Built target test-ifairy-lut-mul-mat
+[ 62%] Built target llama
+[ 63%] Linking CXX executable ../bin/test-ifairy-real-model
+[ 78%] Built target common
+[ 84%] Linking CXX executable ../../bin/llama-bench
+[ 85%] Linking CXX executable ../../bin/llama-cli
+[ 85%] Linking CXX executable ../bin/test-ifairy-model
+[ 85%] Linking CXX executable ../bin/test-backend-ops
+[ 85%] Linking CXX executable ../../bin/llama-perplexity
+[ 84%] Linking CXX executable ../bin/test-legacy-ifairy
+[ 85%] Built target test-ifairy-real-model
+[ 84%] Linking CXX executable ../bin/test-legacy-ifairy-direct
+[ 86%] Linking CXX executable ../../bin/ifairy-actq-microbench
+[ 89%] Built target test-ifairy-model
+[ 89%] Built target test-legacy-ifairy-direct
+[ 91%] Built target test-legacy-ifairy
+[ 92%] Built target llama-bench
+[ 94%] Linking CXX executable ../../bin/ifairy-vecdot-microbench
+[ 94%] Linking CXX executable ../../bin/ifairy-microbench
+[ 96%] Built target test-backend-ops
+[ 97%] Built target ifairy-actq-microbench
+[ 98%] Built target llama-cli
+[ 99%] Built target llama-perplexity
+[100%] Built target ifairy-microbench
+[100%] Built target ifairy-vecdot-microbench

@@ -1,0 +1,12 @@
+{
+  "tag": "model-sha256",
+  "command": [
+    "sha256sum",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf"
+  ],
+  "shell_command": "sha256sum /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:30:28.538641+08:00",
+  "elapsed_seconds": 0.407,
+  "returncode": 0
+}

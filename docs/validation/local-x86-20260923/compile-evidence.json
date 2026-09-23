@@ -1,0 +1,21 @@
+{
+  "build-rel": [
+    {
+      "directory": "/home/zybi/projects/ifairy.cpp/build-rel/ggml/src",
+      "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_LEGACY_IFAIRY_CPU -DGGML_USE_LLAMAFILE -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/zybi/projects/ifairy.cpp/ggml/src/.. -I/home/zybi/projects/ifairy.cpp/ggml/src/. -I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu -I/home/zybi/projects/ifairy.cpp/ggml/src/../include -O3 -DNDEBUG -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=native -fopenmp -std=gnu11 -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o -c /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/arch/x86/quants.c",
+      "file": "/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/arch/x86/quants.c"
+    }
+  ],
+  "build-lut": [
+    {
+      "directory": "/home/zybi/projects/ifairy.cpp/build-lut/ggml/src",
+      "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_LEGACY_IFAIRY_CPU -DGGML_USE_LEGACY_IFAIRY_CPU_LUT -DGGML_USE_LLAMAFILE -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/zybi/projects/ifairy.cpp/ggml/src/.. -I/home/zybi/projects/ifairy.cpp/ggml/src/. -I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu -I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut -I/home/zybi/projects/ifairy.cpp/ggml/src/../include -O3 -DNDEBUG -fPIC -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=native -fopenmp -std=gnu++17 -o CMakeFiles/ggml-cpu.dir/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp.o -c /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp",
+      "file": "/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp"
+    },
+    {
+      "directory": "/home/zybi/projects/ifairy.cpp/build-lut/ggml/src",
+      "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_LEGACY_IFAIRY_CPU -DGGML_USE_LEGACY_IFAIRY_CPU_LUT -DGGML_USE_LLAMAFILE -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I/home/zybi/projects/ifairy.cpp/ggml/src/.. -I/home/zybi/projects/ifairy.cpp/ggml/src/. -I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu -I/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut -I/home/zybi/projects/ifairy.cpp/ggml/src/../include -O3 -DNDEBUG -fPIC -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=native -fopenmp -std=gnu11 -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o -c /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/arch/x86/quants.c",
+      "file": "/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/arch/x86/quants.c"
+    }
+  ]
+}

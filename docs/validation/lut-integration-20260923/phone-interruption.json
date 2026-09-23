@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-09-23T10:07:47.077562+00:00",
+  "adb_devices": [],
+  "benchmark_adb_exit_code": 255,
+  "functional_results_saved": true,
+  "benchmark_results_pulled": true,
+  "state": "resolved_all_results_retrieved",
+  "state_at_recorded_utc": "waiting_for_device_reconnection",
+  "resolved_utc": "2026-09-23T10:20:59.717206+00:00",
+  "device_serial": "R3CY405CZET",
+  "resumed_local_results": "/tmp/ifairy-lut-phone-results-resumed",
+  "benchmark_exit_codes": {
+    "phone-bench-4t-off": 0,
+    "phone-bench-4t-on": 0,
+    "phone-bench-8t-on": 0,
+    "phone-bench-8t-off": 0
+  },
+  "benchmark_reruns_needed": false,
+  "note": "The host ADB connection returned 255, but all four device benchmark processes completed with exit 0 before reconnection. All JSON and endpoint thermal logs were retrieved and validated."
+}

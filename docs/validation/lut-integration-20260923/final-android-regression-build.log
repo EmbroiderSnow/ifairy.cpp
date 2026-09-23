@@ -1,0 +1,31 @@
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- GGML_LEGACY_IFAIRY_CPU_LUT=ON: enforcing CPU-only build (disabling accelerator backends)
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+error: unknown target CPU 'armv8.6-a+dotprod+i8mm+fp16'
+note: valid target CPU values are: nocona, core2, penryn, bonnell, atom, silvermont, slm, goldmont, goldmont-plus, tremont, nehalem, corei7, westmere, sandybridge, corei7-avx, ivybridge, core-avx-i, haswell, core-avx2, broadwell, skylake, skylake-avx512, skx, cascadelake, cooperlake, cannonlake, icelake-client, rocketlake, icelake-server, tigerlake, sapphirerapids, alderlake, raptorlake, meteorlake, arrowlake, arrowlake-s, lunarlake, gracemont, pantherlake, sierraforest, grandridge, graniterapids, graniterapids-d, emeraldrapids, clearwaterforest, diamondrapids, knl, knm, k8, athlon64, athlon-fx, opteron, k8-sse3, athlon64-sse3, opteron-sse3, amdfam10, barcelona, btver1, btver2, bdver1, bdver2, bdver3, bdver4, znver1, znver2, znver3, znver4, znver5, x86-64, x86-64-v2, x86-64-v3, x86-64-v4
+CMake Warning at ggml/src/ggml-cpu/CMakeLists.txt:269 (message):
+  Failed to get ARM features
+Call Stack (most recent call first):
+  ggml/src/CMakeLists.txt:377 (ggml_add_cpu_backend_variant_impl)
+
+
+-- Adding CPU backend variant ggml-cpu: -march=armv8.6-a+dotprod+i8mm+fp16 
+-- ggml version: 0.0.2
+-- ggml commit:  a6256d6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zybi/projects/ifairy.cpp/build-android-lut
+Consolidate compiler generated dependencies of target ggml-base
+[ 24%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 89%] Built target ggml-cpu
+Consolidate compiler generated dependencies of target ggml
+[ 94%] Built target ggml
+Consolidate compiler generated dependencies of target test-ifairy-lut-mul-mat
+[ 97%] Building CXX object tests/CMakeFiles/test-ifairy-lut-mul-mat.dir/test-ifairy-lut-mul-mat.cpp.o
+[100%] Linking CXX executable ../bin/test-ifairy-lut-mul-mat
+[100%] Built target test-ifairy-lut-mul-mat

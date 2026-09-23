@@ -19,7 +19,7 @@
 | 存储、量化、反量化、索引编码 | `ggml/src/ggml-common.h`、`ggml-quants.*`、`ggml.c` | 保留 `IFAIRY=40`、`IFAIRY_Q16=41` 及 legacy 64-value 兼容类型；不重编号现有 GGUF 类型 |
 | CPU matmul 与量化策略 | `ggml/src/ggml-cpu/ggml-cpu.c`、`legacy-ifairy/legacy-ifairy-cpu.cpp` | 保留 vecdot 和 tensor-scale 激活策略 |
 | ARM 内核 | `ggml/src/ggml-cpu/legacy-ifairy/arm/` | 原有 iFairy NEON/dotprod 文件保留 |
-| LUT、打包与兼容 W2 | `ggml/src/ggml-cpu/legacy-ifairy/lut/`、`wide-linear*`、`lut-qgemm*` | 保留历史 iFairy 算子及单测；普通 matmul 的 LUT 分派缺口见下文 |
+| LUT、打包与兼容 W2 | `ggml/src/ggml-cpu/legacy-ifairy/lut/`、`wide-linear*`、`lut-qgemm*` | 保留历史 iFairy 算子；2026-09-23 已接入普通二维 IFAIRY matmul，范围及回退见下文 |
 | 复数基础算子 | `ggml/src/ggml-cpu/ops.cpp`、`binary-ops.cpp`、`unary-ops.cpp` | 保留 split/merge、add/mul、norm、ReLU²、RoPE |
 | GGUF 转换 | `gguf-py/convert_ifairy.py`、gguf 包中的 iFairy 常量和映射 | 保留原始入口；删除 Fairy2i 转换器及共享的 Fairy2i Python 包 |
 | 验证 | `test-legacy-ifairy-direct.cpp`、`test-legacy-ifairy.cpp`、`test-ifairy-ref.py`、backend-op 用例 | 保留；新增完整模型加载与推理隔离回归 |
@@ -47,26 +47,25 @@
 
 ## 还剩下的工作 / 已知限制
 
-### 普通 iFairy 的 LUT 执行入口需要接回
+### 普通 iFairy 的 LUT 执行入口（2026-09-23 更新）
 
-这是源提交已有的状态，不是此次拆分新增的行为：
+原提取版本只有普通 MUL_MAT 的权重预打包。后续已在 CPU 扩展层接入资格判断、工作区规划、激活 LUT 预处理、线程分片及 QGEMM 执行。具体实现、测试证据与吞吐见 [LUT 接入与复测报告](LUT_MUL_MAT_INTEGRATION_REPORT_2026-09-23.md)。
 
-- `ggml_legacy_ifairy_cpu_supports_op()` 只接受 `GGML_OP_IFAIRY_WIDE_LINEAR_W2`。
-- `ggml_legacy_ifairy_cpu_prepare_graph()` 对普通 MUL_MAT 做资格判断与权重预打包。
-- `ggml_compute_forward_mul_mat()` 的实际执行仍使用 vecdot，没有调用 iFairy LUT QGEMM。
-- 因而 `GGML_IFAIRY_LUT=1`、`ifairy_lut: can_mul_mat=true` 和 LUT 内核单测通过都不能用作整模型 LUT 加速证据。
+- 普通二维 IFAIRY 权重与 F32/IFAIRY_Q16 激活支持 LUT；高维广播、非连续/视图权重、普通 IFAIRY64 等保留直接回退，W2 保留独立路径。
+- `GGML_IFAIRY_LUT=1` 显式启用；默认保持直接路径。调试日志的 `executed MUL_MAT` 表明发生实际计算，`can_mul_mat=true` 仍只代表资格判断。
+- LUT 使用已有 42.6 缩放的激活量化，auto/lut16 为行级、lut_c 为块级；不保证与默认直接推理逐位相同。质量和 PyTorch 对齐仍未验证。
 
-本版保留此兼容行为，默认使用已验证的直接路径。若下一步接入 LUT，需要独立完成工作区大小、线程分片、激活预处理与执行分派的设计，再用真实模型做 correctness 和顺序运行的 benchmark 验证。
+新增回归覆盖实际分派、独立复数参考及回退，本机 LUT CTest 6/6 和 Android 对应测试命令 6/6 均通过；仍未覆盖任意布局、所有模型或完整语言质量。
 
 ### 真实权重、质量与平台验证
 
-- 本地所检查的 `models/` 和 `/Users/1806-admin/Checkpoints` 中未找到原始 iFairy 推理权重。未运行真实 700M checkpoint 的文本生成、困惑度或吞吐基线。
-- 没有测试 x86/AVX512、Linux 或 Android 实机；保留了现有条件编译和通用回退代码。
+- 原提取时未找到原始推理权重；2026-09-23 已使用外部 Fairy 700M GGUF 在 Linux x86 和 Android 实机测试生成、数值及吞吐，详见上述报告。困惑度和原始模型对齐仍未验证。
+- x86 AVX2 和 ARM NEON 路径已有实测；独立 legacy AVX512 开关仍未验证。
 - 转换脚本仍从当前工作目录读取 tokenizer，且保留原有分片/名称映射行为；需要真实 checkpoint 才能确认全流程转换兼容性。
 - 历史 `test-legacy-ifairy` 中基础 RoPE 和复数矩阵测试有简化检查；不能只看其 PASS。另用 backend-op 参考比较及新增完整模型 fixture 补充验证。
 - clang-tidy 按原配置运行，没有错误退出，但有现有共享代码和风格告警；没有做无关全库整改。
 
-## 验证结果
+## 原始提取版本的验证结果（历史记录）
 
 环境：Apple M5 Max / macOS arm64，Apple clang 21.0.0，CMake Release (`-O3 -DNDEBUG`)；CPU native flags 包含 `-mcpu=native+dotprod+i8mm+nosve+sme`。构建 `-j 8`；合成模型回归使用 2 个推理线程。没有运行吞吐基准。
 

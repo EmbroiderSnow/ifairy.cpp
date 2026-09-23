@@ -1,0 +1,12 @@
+Consolidate compiler generated dependencies of target ggml-base
+[ 14%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 53%] Built target ggml-cpu
+Consolidate compiler generated dependencies of target ggml
+[ 57%] Built target ggml
+Consolidate compiler generated dependencies of target llama
+[ 96%] Built target llama
+Consolidate compiler generated dependencies of target test-ifairy-real-model
+[ 98%] Building CXX object tests/CMakeFiles/test-ifairy-real-model.dir/test-ifairy-real-model.cpp.o
+[100%] Linking CXX executable ../bin/test-ifairy-real-model
+[100%] Built target test-ifairy-real-model

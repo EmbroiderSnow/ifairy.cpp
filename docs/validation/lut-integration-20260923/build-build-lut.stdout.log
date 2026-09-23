@@ -1,0 +1,38 @@
+Consolidate compiler generated dependencies of target build_info
+Consolidate compiler generated dependencies of target ggml-base
+[  0%] Built target build_info
+[  9%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 32%] Built target ggml-cpu
+Consolidate compiler generated dependencies of target ggml
+[ 34%] Built target ggml
+Consolidate compiler generated dependencies of target test-ifairy-lut-mul-mat
+[ 34%] Building CXX object tests/CMakeFiles/test-ifairy-lut-mul-mat.dir/test-ifairy-lut-mul-mat.cpp.o
+Consolidate compiler generated dependencies of target llama
+[ 58%] Built target llama
+Consolidate compiler generated dependencies of target test-ifairy-real-model
+[ 60%] Built target test-ifairy-real-model
+Consolidate compiler generated dependencies of target common
+[ 75%] Built target common
+Consolidate compiler generated dependencies of target test-legacy-ifairy-direct
+Consolidate compiler generated dependencies of target test-ifairy-model
+Consolidate compiler generated dependencies of target llama-perplexity
+Consolidate compiler generated dependencies of target test-legacy-ifairy
+Consolidate compiler generated dependencies of target llama-cli
+Consolidate compiler generated dependencies of target test-backend-ops
+Consolidate compiler generated dependencies of target llama-bench
+[ 87%] Built target test-ifairy-model
+[ 87%] Built target test-legacy-ifairy
+[ 87%] Built target llama-perplexity
+[ 87%] Built target test-legacy-ifairy-direct
+[ 93%] Built target test-backend-ops
+[ 93%] Built target llama-bench
+[ 93%] Built target llama-cli
+Consolidate compiler generated dependencies of target ifairy-vecdot-microbench
+Consolidate compiler generated dependencies of target ifairy-actq-microbench
+Consolidate compiler generated dependencies of target ifairy-microbench
+[ 97%] Built target ifairy-microbench
+[ 97%] Built target ifairy-vecdot-microbench
+[ 99%] Built target ifairy-actq-microbench
+[100%] Linking CXX executable ../bin/test-ifairy-lut-mul-mat
+[100%] Built target test-ifairy-lut-mul-mat

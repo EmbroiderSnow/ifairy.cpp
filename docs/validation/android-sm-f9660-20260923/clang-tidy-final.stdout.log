@@ -1,0 +1,3 @@
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:121:16: warning: no header providing "rusage" is directly included [misc-include-cleaner]
+    5 |         struct rusage usage{};
+      |                ^

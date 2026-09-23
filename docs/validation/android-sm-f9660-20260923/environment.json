@@ -1,0 +1,35 @@
+{
+  "base_commit": "a6256d61ffd3ebe4cba06fdb3b46e0b7eb78feaa",
+  "date": "2026-09-23",
+  "device_model": "SM-F9660",
+  "soc_reported": "SM8750",
+  "android_release": "16",
+  "android_sdk": 36,
+  "abi": "arm64-v8a",
+  "cpu_policies": {
+    "0-5": {
+      "max_khz": 3532800,
+      "governor": "walt"
+    },
+    "6-7": {
+      "max_khz": 4473600,
+      "governor": "walt"
+    }
+  },
+  "memory_total_kib": 11351264,
+  "ndk": "Pkg.Desc = Android NDK\nPkg.Revision = 30.0.14904198-beta1\nPkg.BaseRevision = 30.0.14904198\nPkg.ReleaseName = r30-beta1\n",
+  "compiler": "Android (14475230, +pgo, +bolt, +lto, +mlgo, based on r574158) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 9f872551d3c681d06fd303b36f16ed5c274735eb)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /home/zybi/Android/Sdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin\n",
+  "model_bytes": 576123520,
+  "model_sha256": "2211f40ec7dd56ed424f4bcaccc65869b8deffbbcea65e84806b619e380da6b3",
+  "device_test_dir": "/data/local/tmp/ifairy-validation-20260923",
+  "compile_options": {
+    "android_api": 28,
+    "cpu_arm_arch": "armv8.6-a+dotprod+i8mm+fp16",
+    "openmp": false,
+    "llamafile": true,
+    "build_type": "Release",
+    "jobs": 8
+  },
+  "changes": "Added optional native real-model probe and its CMake target; production inference kernels unchanged.",
+  "probe_sha256": "1689ee89fa30b214513483da24db87e4b986ff3c372055caa6a25313ea719e9c"
+}

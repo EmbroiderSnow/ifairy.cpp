@@ -1,0 +1,50 @@
+{
+  "libllama.so": {
+    "bytes": 1830272,
+    "sha256": "7cb81d59bd1a10d08847c1fe17dfbc896832d546f855a5bddbd4ae5079447e7d"
+  },
+  "libggml.so": {
+    "bytes": 974248,
+    "sha256": "0d57b14c2e9ca9ea42205c506e290ebd4fa202de90b36bd3aa479af2639951ba"
+  },
+  "libggml-base.so": {
+    "bytes": 1038504,
+    "sha256": "9bf269205c7a6a827c659f6f3277ebf82f37651c09832fee4aa1940a62cb1ca7"
+  },
+  "libggml-cpu.so": {
+    "bytes": 901104,
+    "sha256": "c1d3451ff3dcdb19f4231880d5e37debf362dacb5521951a569bfad23d0bed44"
+  },
+  "test-ifairy-lut-mul-mat": {
+    "sha256": "34a133bef62a2f3440faa7a17e49bb7ed4ee6bdae7c040dda340dff7f8572093",
+    "bytes": 53920
+  },
+  "test-legacy-ifairy": {
+    "bytes": 159832,
+    "sha256": "e454d1fa101d2d0b8a2e842016ec33ab19aed89275fc94204cbc98d81702ea31"
+  },
+  "test-legacy-ifairy-direct": {
+    "bytes": 56664,
+    "sha256": "80c1820207dfe4c5e87c982da8d5c6528bbbaf3866f6ea1186b36653a9fe33cc"
+  },
+  "test-ifairy-model": {
+    "bytes": 58088,
+    "sha256": "c1a79795f82ba601a2972e4beeb4a17c7451b4061c5533ccb0d5299a331b7544"
+  },
+  "test-backend-ops": {
+    "bytes": 823304,
+    "sha256": "4e76d4327dad1a039efb9afafd980df69f63b473544052e472f13e9d715a4b02"
+  },
+  "test-ifairy-real-model": {
+    "bytes": 122744,
+    "sha256": "c5ed25a49942437ac79ec6b9ff03c7113f2f29134f2596da14cd49591526bb78"
+  },
+  "llama-cli": {
+    "bytes": 2284016,
+    "sha256": "17156b0c1bcf03622cadad747f1dacecf8011b45e954c21cf7b487a76a25786e"
+  },
+  "llama-bench": {
+    "bytes": 383184,
+    "sha256": "b083063effe475445f08ffe6adfc4bbca21b19373c1c51a00e02df280a1dd49e"
+  }
+}

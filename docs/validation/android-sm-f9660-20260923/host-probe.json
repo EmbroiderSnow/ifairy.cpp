@@ -1,0 +1,17 @@
+{
+  "tag": "host-probe",
+  "command": [
+    "env",
+    "GGML_IFAIRY_LUT=0",
+    "build-rel/bin/test-ifairy-real-model",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+    "/tmp/ifairy-host-probe",
+    "batched",
+    "8"
+  ],
+  "shell_command": "env GGML_IFAIRY_LUT=0 build-rel/bin/test-ifairy-real-model /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf /tmp/ifairy-host-probe batched 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:57:55.669624+08:00",
+  "elapsed_seconds": 1.603,
+  "returncode": 0
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "prompt": 0,
+    "trace_equal": false,
+    "prefill_max_abs": 1.5536727905273438,
+    "prefill_mean_abs": 0.315881924840156
+  },
+  {
+    "prompt": 1,
+    "trace_equal": false,
+    "prefill_max_abs": 1.383279800415039,
+    "prefill_mean_abs": 0.23363516284199431
+  }
+]

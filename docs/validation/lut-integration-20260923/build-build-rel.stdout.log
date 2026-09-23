@@ -1,0 +1,30 @@
+Consolidate compiler generated dependencies of target build_info
+[  1%] Built target build_info
+Consolidate compiler generated dependencies of target ggml-base
+[ 11%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 31%] Built target ggml-cpu
+Consolidate compiler generated dependencies of target ggml
+[ 33%] Built target ggml
+Consolidate compiler generated dependencies of target llama
+[ 61%] Built target llama
+Consolidate compiler generated dependencies of target test-ifairy-real-model
+[ 63%] Built target test-ifairy-real-model
+Consolidate compiler generated dependencies of target common
+[ 80%] Built target common
+Consolidate compiler generated dependencies of target test-legacy-ifairy-direct
+Consolidate compiler generated dependencies of target ifairy-actq-microbench
+Consolidate compiler generated dependencies of target ifairy-vecdot-microbench
+Consolidate compiler generated dependencies of target llama-perplexity
+Consolidate compiler generated dependencies of target test-ifairy-model
+Consolidate compiler generated dependencies of target llama-bench
+Consolidate compiler generated dependencies of target llama-cli
+Consolidate compiler generated dependencies of target test-backend-ops
+[ 86%] Built target ifairy-actq-microbench
+[ 86%] Built target llama-cli
+[ 88%] Built target test-legacy-ifairy-direct
+[ 95%] Built target llama-perplexity
+[ 96%] Built target llama-bench
+[ 95%] Built target test-backend-ops
+[ 97%] Built target test-ifairy-model
+[100%] Built target ifairy-vecdot-microbench

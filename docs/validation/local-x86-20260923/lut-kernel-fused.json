@@ -1,0 +1,25 @@
+{
+  "tag": "lut-kernel-fused",
+  "command": [
+    "build-lut/bin/ifairy-microbench",
+    "--type",
+    "ifairy",
+    "--mode",
+    "fused",
+    "--m",
+    "1536",
+    "--k",
+    "1536",
+    "--iters",
+    "100",
+    "--warmup",
+    "10",
+    "--seed",
+    "42"
+  ],
+  "shell_command": "build-lut/bin/ifairy-microbench --type ifairy --mode fused --m 1536 --k 1536 --iters 100 --warmup 10 --seed 42",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:36:41.470794+08:00",
+  "elapsed_seconds": 0.012,
+  "returncode": 0
+}

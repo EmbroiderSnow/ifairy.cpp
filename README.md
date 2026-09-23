@@ -24,7 +24,9 @@ The installation and demo below were verified on the following system. Version n
 
 The validated build explicitly disables OpenMP, ccache, and libcurl. These are not prerequisites. A system-installed ggml library is not used. Git is only needed if obtaining the source through Git; it is not required when using the source archive.
 
-Only the macOS/arm64 environment above has been validated for this extraction. Existing generic CPU and other architecture-specific fallback code remains, but Linux, Windows, Android, x86, and AVX512 builds have not been validated here.
+The original extraction was validated on the macOS/arm64 environment above. Additional [Linux/x86_64 validation with the real 700M checkpoint](docs/LOCAL_X86_LUT_INFERENCE_REPORT_2026-09-23.md) covers direct and LUT-enabled builds on an AMD Ryzen 7 H 255. The report distinguishes the original ordinary-matmul dispatch gap from the subsequent LUT integration and retest, and records numerical differences between configurations. Windows and the optional legacy AVX512 W2 kernel remain unvalidated by these runs.
+
+The [Android/ARM64 report](docs/ANDROID_SM_F9660_INFERENCE_REPORT_2026-09-23.md) repeats the real-checkpoint tests on a Samsung SM-F9660 (SM8750, Android 16), including native logits checks and sequential benchmarks with temperature records. It documents LUT repeatability, numerical differences from direct inference and across platforms, and sustained-load frequency limits. The tested Android configuration showed no LUT throughput improvement.
 
 ### Hardware
 
@@ -182,22 +184,22 @@ PYTHONPATH="$repo_dir/gguf-py" \
   . /absolute/path/ifairy.gguf
 ```
 
-The output is an iFairy GGUF file that can be supplied to `llama-cli`. Record the installed package versions with `python -m pip freeze` if attempting conversion. No compatible real checkpoint was available for this extraction's validation, so conversion success, pretrained-model generation quality, perplexity, and throughput remain unverified.
+The output is an iFairy GGUF file that can be supplied to `llama-cli`. Record the installed package versions with `python -m pip freeze` if attempting conversion. No compatible real checkpoint was available for the original extraction's validation. The later [local x86 report](docs/LOCAL_X86_LUT_INFERENCE_REPORT_2026-09-23.md) tests generation and throughput using an existing GGUF; full conversion, reference-model fidelity, and corpus-level quality/perplexity remain unverified.
 
 ## 5. Additional validation and reproducibility
 
-To build the retained LUT primitives and run their regression tests:
+To enable the CPU LUT implementation and run its regression tests in a separate build:
 
 ```sh
-cmake -S . -B build-rel \
+cmake -S . -B build-lut \
   -DCMAKE_BUILD_TYPE=Release \
   -DGGML_LEGACY_IFAIRY_CPU_LUT=ON \
   -DLLAMA_CURL=OFF -DGGML_OPENMP=OFF -DGGML_CCACHE=OFF
-cmake --build build-rel -j 8
-ctest --test-dir build-rel --output-on-failure
+cmake --build build-lut -j 8
+ctest --test-dir build-lut --output-on-failure
 ```
 
-The recorded LUT build passed **5/5 tests**. The source-isolation check can additionally be run with Python:
+The updated LUT build passed **6/6 tests**, including ordinary matmul dispatch and an independent complex-product reference. See the [LUT integration and retest report](docs/LUT_MUL_MAT_INTEGRATION_REPORT_2026-09-23.md). The source-isolation check can additionally be run with Python:
 
 ```sh
 python3 scripts/check-ifairy-only.py
@@ -209,7 +211,9 @@ Expected output:
 PASS: no Fairy2i production implementation; only the iFairy graph builder remains.
 ```
 
-**Known LUT limitation:** ordinary iFairy `MUL_MAT` currently executes through vecdot. Enabling `GGML_IFAIRY_LUT=1` prepares packed weights but does not connect ordinary matmul to LUT execution. The legacy W2 primitive has a LUT execution path. Passing LUT primitive tests or seeing `can_mul_mat=true` is not evidence of end-to-end LUT acceleration.
+Run a LUT build with `GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=auto` to execute ordinary 2D `IFAIRY` matmul through LUT. For execution evidence, add `GGML_IFAIRY_LUT_DEBUG=1` and check for `executed MUL_MAT`; disable debug for timing. Unsetting the switch or setting it to `0` preserves direct execution. Unsupported layouts, ordinary `IFAIRY64` matmul, and out-of-range prequantized activations retain direct fallbacks; legacy W2 retains its separate LUT path.
+
+LUT uses the existing 42.6-scaled activation quantization: per input row for `auto`/`lut16`, per block for `lut_c`. Outputs are not bitwise equivalent to default direct inference. Real-model repeatability, per-op complex arithmetic checks, memory overhead and measured throughput on x86 and Android are documented in the report; reference-model fidelity and corpus-level quality remain unverified.
 
 The retained tools include `llama-cli`, `llama-bench`, `llama-perplexity`, `ifairy-actq-microbench`, and `ifairy-vecdot-microbench`; LUT builds additionally include `ifairy-microbench`. Do not run multiple `llama-bench` processes simultaneously when collecting performance measurements.
 

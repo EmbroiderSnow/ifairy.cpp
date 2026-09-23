@@ -1,0 +1,11 @@
+{
+  "artifact": "/tmp/ifairy-lut-phone/test-ifairy-lut-mul-mat-final",
+  "sha256": "34a133bef62a2f3440faa7a17e49bb7ed4ee6bdae7c040dda340dff7f8572093",
+  "status": "deployed_and_passed_after_reconnection",
+  "change_from_tested_regression": "header/style cleanup and skip unsupported architectures; x86/ARM arithmetic cases unchanged",
+  "verified_utc": "2026-09-23T10:20:59.717206+00:00",
+  "exit_code": 0,
+  "log": "phone-lut-dispatch-final.log",
+  "command": "adb shell 'cd /data/local/tmp/ifairy-lut-integration-20260923 && LD_LIBRARY_PATH=./bin ./bin/test-ifairy-lut-mul-mat'",
+  "device_sha256_verified": true
+}

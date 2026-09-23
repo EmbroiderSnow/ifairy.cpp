@@ -1,0 +1,15 @@
+{
+  "tag": "host-rebuild-lut",
+  "command": [
+    "cmake",
+    "--build",
+    "build-lut",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-lut -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:57:51.578187+08:00",
+  "elapsed_seconds": 3.825,
+  "returncode": 0
+}

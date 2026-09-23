@@ -1,0 +1,130 @@
+[
+  {
+    "tag": "host-bench-4t-off",
+    "command": [
+      "build-lut/bin/llama-bench",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "4",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "-p",
+      "128,512",
+      "-n",
+      "128",
+      "-r",
+      "3",
+      "-o",
+      "json"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "0",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:38:46.555427+00:00",
+    "seconds": 70.243,
+    "returncode": 0
+  },
+  {
+    "tag": "host-bench-4t-on",
+    "command": [
+      "build-lut/bin/llama-bench",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "4",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "-p",
+      "128,512",
+      "-n",
+      "128",
+      "-r",
+      "3",
+      "-o",
+      "json"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:39:56.798467+00:00",
+    "seconds": 24.087,
+    "returncode": 0
+  },
+  {
+    "tag": "host-bench-8t-on",
+    "command": [
+      "build-lut/bin/llama-bench",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "8",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "-p",
+      "128,512",
+      "-n",
+      "128",
+      "-r",
+      "3",
+      "-o",
+      "json"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:40:20.886167+00:00",
+    "seconds": 18.671,
+    "returncode": 0
+  },
+  {
+    "tag": "host-bench-8t-off",
+    "command": [
+      "build-lut/bin/llama-bench",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "8",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "-p",
+      "128,512",
+      "-n",
+      "128",
+      "-r",
+      "3",
+      "-o",
+      "json"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "0",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:40:39.557306+00:00",
+    "seconds": 45.847,
+    "returncode": 0
+  }
+]

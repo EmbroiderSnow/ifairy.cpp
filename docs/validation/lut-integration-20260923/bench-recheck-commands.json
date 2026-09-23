@@ -1,0 +1,34 @@
+[
+  {
+    "tag": "host-bench-4t-off-clean",
+    "command": [
+      "build-lut/bin/llama-bench",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "4",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "-p",
+      "128,512",
+      "-n",
+      "128",
+      "-r",
+      "3",
+      "-o",
+      "json"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "0",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:41:48.117556+00:00",
+    "seconds": 64.443,
+    "returncode": 0
+  }
+]

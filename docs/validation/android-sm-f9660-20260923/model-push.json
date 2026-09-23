@@ -1,0 +1,16 @@
+{
+  "tag": "model-push",
+  "command": [
+    "/home/zybi/Android/Sdk/platform-tools/adb",
+    "-s",
+    "R3CY405CZET",
+    "push",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+    "/data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf"
+  ],
+  "shell_command": "/home/zybi/Android/Sdk/platform-tools/adb -s R3CY405CZET push /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf /data/local/tmp/ifairy-validation-20260923/models/ifairy.gguf",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:53:21.725848+08:00",
+  "elapsed_seconds": 13.213,
+  "returncode": 0
+}

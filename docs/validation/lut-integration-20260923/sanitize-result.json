@@ -1,0 +1,18 @@
+{
+  "configure": [
+    "cmake",
+    "-B",
+    "build-lut-sanitize",
+    "-DCMAKE_BUILD_TYPE=Debug",
+    "-DGGML_LEGACY_IFAIRY_CPU_LUT=ON",
+    "-DGGML_LLAMAFILE=OFF",
+    "-DGGML_OPENMP=OFF",
+    "-DGGML_CCACHE=OFF",
+    "-DCMAKE_C_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer",
+    "-DCMAKE_CXX_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer"
+  ],
+  "initial_test_returncode": 1,
+  "initial_failure": "48-byte per-tensor metadata allocations retained by raw pointers; see sanitize-test.log",
+  "final_test_returncode": 0,
+  "final_log": "sanitize-retest.log"
+}

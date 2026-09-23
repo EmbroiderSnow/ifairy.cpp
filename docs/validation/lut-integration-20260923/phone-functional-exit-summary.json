@@ -1,0 +1,18 @@
+{
+  "phone-probe-repeat": 0,
+  "phone-probe-auto": 0,
+  "phone-probe-off": 0,
+  "phone-model-on": 0,
+  "phone-lut-kernels": 0,
+  "phone-lut-dispatch": 0,
+  "phone-ops": 0,
+  "phone-model-off": 0,
+  "phone-direct-kernels": 0,
+  "phone-cli-long": 0,
+  "phone-cli-story": 0,
+  "phone-cli-debug": 0,
+  "phone-probe-same-quant-direct": 0,
+  "phone-probe-serial": 0,
+  "phone-probe-lut-c": 0,
+  "phone-probe-lut16": 0
+}

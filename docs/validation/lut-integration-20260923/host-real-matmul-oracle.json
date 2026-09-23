@@ -1,0 +1,3368 @@
+{
+  "matmuls": 336,
+  "components": 3006,
+  "failures": [],
+  "max_tolerance_ratio": 0.4811306889953175,
+  "rows": [
+    {
+      "name": "Qcur-0",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005235638469457626,
+      "max_tolerance_ratio": 0.3726746458677955,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-0",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0035990383476018906,
+      "max_tolerance_ratio": 0.3771111252871891,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-0",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0036752913147211075,
+      "max_tolerance_ratio": 0.37721067402783287,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-0",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00023719854652881622,
+      "max_tolerance_ratio": 0.3667497374238509,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-0",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00141984224319458,
+      "max_tolerance_ratio": 0.243550035691352,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-0",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0019472986459732056,
+      "max_tolerance_ratio": 0.3711304225729571,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-0",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0011805128306150436,
+      "max_tolerance_ratio": 0.26788400898791015,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-1",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007869817316532135,
+      "max_tolerance_ratio": 0.39479104492966843,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-1",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.013679834082722664,
+      "max_tolerance_ratio": 0.409626342718709,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-1",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00958198681473732,
+      "max_tolerance_ratio": 0.3495230356466672,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-1",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0004432741552591324,
+      "max_tolerance_ratio": 0.31066151365274913,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-1",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0007844474166631699,
+      "max_tolerance_ratio": 0.2932374201485706,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-1",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0009719720110297203,
+      "max_tolerance_ratio": 0.3508212557142341,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-1",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0008805394172668457,
+      "max_tolerance_ratio": 0.37106606153992416,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-2",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.006973758339881897,
+      "max_tolerance_ratio": 0.3250531416243775,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-2",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007758672349154949,
+      "max_tolerance_ratio": 0.42057141846771645,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-2",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003450365737080574,
+      "max_tolerance_ratio": 0.3895462412053892,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-2",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0004692410584539175,
+      "max_tolerance_ratio": 0.29652933008390714,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-2",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001780875027179718,
+      "max_tolerance_ratio": 0.43912620995262375,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-2",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003689521923661232,
+      "max_tolerance_ratio": 0.34195434379874895,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-2",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0006950218230485916,
+      "max_tolerance_ratio": 0.2959819583263794,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-3",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0038349665701389313,
+      "max_tolerance_ratio": 0.3121730632597806,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-3",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0053291842341423035,
+      "max_tolerance_ratio": 0.28456607948898205,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-3",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001629617065191269,
+      "max_tolerance_ratio": 0.3510226342976143,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-3",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00022182613611221313,
+      "max_tolerance_ratio": 0.40071470741943505,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-3",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008462704718112946,
+      "max_tolerance_ratio": 0.40700361432352944,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-3",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0009448006749153137,
+      "max_tolerance_ratio": 0.4223862954146144,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-3",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0019013434648513794,
+      "max_tolerance_ratio": 0.3753349713004673,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-4",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.008211461827158928,
+      "max_tolerance_ratio": 0.3078171079913571,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-4",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.015121511183679104,
+      "max_tolerance_ratio": 0.3260283366745641,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-4",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.009623594582080841,
+      "max_tolerance_ratio": 0.4104468500294479,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-4",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008426159620285034,
+      "max_tolerance_ratio": 0.4127422717613732,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-4",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0017021521925926208,
+      "max_tolerance_ratio": 0.4495429527706829,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-4",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0014605075120925903,
+      "max_tolerance_ratio": 0.2978010665195412,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-4",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.000512830913066864,
+      "max_tolerance_ratio": 0.25003413345850967,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-5",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.006868243217468262,
+      "max_tolerance_ratio": 0.3399269904957313,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-5",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001902485266327858,
+      "max_tolerance_ratio": 0.246494951432679,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-5",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001424841582775116,
+      "max_tolerance_ratio": 0.263622718239374,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-5",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0002816915512084961,
+      "max_tolerance_ratio": 0.3548532651181276,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-5",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0018013855442404747,
+      "max_tolerance_ratio": 0.2519627872822565,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-5",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001537606120109558,
+      "max_tolerance_ratio": 0.3417729534259703,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-5",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0035244524478912354,
+      "max_tolerance_ratio": 0.36296314509572,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-6",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00398273766040802,
+      "max_tolerance_ratio": 0.43120368684240956,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-6",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007559852674603462,
+      "max_tolerance_ratio": 0.41547973256485643,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-6",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.02590093668550253,
+      "max_tolerance_ratio": 0.3530786935321359,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-6",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008908654563128948,
+      "max_tolerance_ratio": 0.384950420021286,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-6",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0031431131064891815,
+      "max_tolerance_ratio": 0.4055933569640826,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-6",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0016366722993552685,
+      "max_tolerance_ratio": 0.3825648390453717,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-6",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0019159317016601562,
+      "max_tolerance_ratio": 0.37504492680974943,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-7",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0034931646659970284,
+      "max_tolerance_ratio": 0.39873378410477356,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-7",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00729021430015564,
+      "max_tolerance_ratio": 0.4197849094170874,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-7",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0034346580505371094,
+      "max_tolerance_ratio": 0.38740196868167187,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-7",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0013746125623583794,
+      "max_tolerance_ratio": 0.28513551174955676,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-7",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0016834549605846405,
+      "max_tolerance_ratio": 0.3786941193587229,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-7",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0013407785445451736,
+      "max_tolerance_ratio": 0.4242310706377966,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-7",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.002808183431625366,
+      "max_tolerance_ratio": 0.37764241999417963,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-8",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007798481732606888,
+      "max_tolerance_ratio": 0.28283664708114487,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-8",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00867760181427002,
+      "max_tolerance_ratio": 0.2705095178161807,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-8",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0022084005177021027,
+      "max_tolerance_ratio": 0.27484206621737267,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-8",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008716846350580454,
+      "max_tolerance_ratio": 0.409621132852302,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-8",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0016631260514259338,
+      "max_tolerance_ratio": 0.39453155117537997,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-8",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0017131287604570389,
+      "max_tolerance_ratio": 0.3838004927160011,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-8",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0023306533694267273,
+      "max_tolerance_ratio": 0.3360909738267391,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-9",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003353152424097061,
+      "max_tolerance_ratio": 0.38262430535674075,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-9",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0031452588737010956,
+      "max_tolerance_ratio": 0.3263765367780976,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-9",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00488242506980896,
+      "max_tolerance_ratio": 0.4076967181566329,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-9",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001031065359711647,
+      "max_tolerance_ratio": 0.3717193269605929,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-9",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003710930235683918,
+      "max_tolerance_ratio": 0.4032280949455451,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-9",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00252480898052454,
+      "max_tolerance_ratio": 0.3729534434477122,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-9",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0014661028981208801,
+      "max_tolerance_ratio": 0.44600664484926367,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-10",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.010998282581567764,
+      "max_tolerance_ratio": 0.35341996953034077,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-10",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005774836987257004,
+      "max_tolerance_ratio": 0.39425652455221494,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-10",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0031077712774276733,
+      "max_tolerance_ratio": 0.40706069447267007,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-10",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.002348015084862709,
+      "max_tolerance_ratio": 0.4225586687038447,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-10",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.002883762586861849,
+      "max_tolerance_ratio": 0.3577719952171517,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-10",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001496260054409504,
+      "max_tolerance_ratio": 0.3236535519870446,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-10",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.005171977914869785,
+      "max_tolerance_ratio": 0.29082757873987586,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-11",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.006939642131328583,
+      "max_tolerance_ratio": 0.4143582204381535,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-11",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0021272171288728714,
+      "max_tolerance_ratio": 0.41259004515432146,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-11",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0034538470208644867,
+      "max_tolerance_ratio": 0.3916054630982467,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-11",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0013265330344438553,
+      "max_tolerance_ratio": 0.32408707453600283,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-11",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0015727141872048378,
+      "max_tolerance_ratio": 0.3396586327395646,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-11",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.000878872349858284,
+      "max_tolerance_ratio": 0.2867007768729361,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-11",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0020960159599781036,
+      "max_tolerance_ratio": 0.439627672031936,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-12",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0038224682211875916,
+      "max_tolerance_ratio": 0.3723507927915302,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-12",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0011637648567557335,
+      "max_tolerance_ratio": 0.37939360774897857,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-12",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.006358008831739426,
+      "max_tolerance_ratio": 0.2818158387829488,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-12",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008294293656945229,
+      "max_tolerance_ratio": 0.43950378404584284,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-12",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0028258762322366238,
+      "max_tolerance_ratio": 0.36806923726817165,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-12",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001724600326269865,
+      "max_tolerance_ratio": 0.23642604778087248,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-12",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.001559699885547161,
+      "max_tolerance_ratio": 0.33995229252123627,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-13",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00401768833398819,
+      "max_tolerance_ratio": 0.30278309031741496,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-13",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0025913044810295105,
+      "max_tolerance_ratio": 0.36095867339339993,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-13",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0038134604692459106,
+      "max_tolerance_ratio": 0.3106288498149657,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-13",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003542918711900711,
+      "max_tolerance_ratio": 0.41256573939463226,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-13",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0008684294298291206,
+      "max_tolerance_ratio": 0.35961431213094547,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-13",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0016666296869516373,
+      "max_tolerance_ratio": 0.3095321834049125,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-13",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0036408156156539917,
+      "max_tolerance_ratio": 0.3919438071905578,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-14",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.014917030930519104,
+      "max_tolerance_ratio": 0.42753646179707266,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-14",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003796931356191635,
+      "max_tolerance_ratio": 0.31816709970087137,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-14",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0021106889471411705,
+      "max_tolerance_ratio": 0.26020083893971185,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-14",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0010021880734711885,
+      "max_tolerance_ratio": 0.3118166205998458,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-14",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005185909569263458,
+      "max_tolerance_ratio": 0.35169081325018287,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-14",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0034029483795166016,
+      "max_tolerance_ratio": 0.2886980427909457,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-14",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.005559705197811127,
+      "max_tolerance_ratio": 0.3429991282404699,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-15",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0027006659656763077,
+      "max_tolerance_ratio": 0.32032074053651594,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-15",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.009979065507650375,
+      "max_tolerance_ratio": 0.23829785988116114,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-15",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0068282149732112885,
+      "max_tolerance_ratio": 0.43019379526584484,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-15",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0017557032406330109,
+      "max_tolerance_ratio": 0.3935190599488671,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-15",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0018397271633148193,
+      "max_tolerance_ratio": 0.3238581936794702,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-15",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.000990082509815693,
+      "max_tolerance_ratio": 0.3855304179848978,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-15",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.002131924033164978,
+      "max_tolerance_ratio": 0.20864747328339187,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-16",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005223827436566353,
+      "max_tolerance_ratio": 0.37775276922604495,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-16",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00395585224032402,
+      "max_tolerance_ratio": 0.42938593437529154,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-16",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0018600160256028175,
+      "max_tolerance_ratio": 0.3220043153200581,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-16",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0024770423769950867,
+      "max_tolerance_ratio": 0.38382872363810955,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-16",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0021196994930505753,
+      "max_tolerance_ratio": 0.4375208262563465,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-16",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.001749916933476925,
+      "max_tolerance_ratio": 0.328799645040146,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-16",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.00779549777507782,
+      "max_tolerance_ratio": 0.33192301914581174,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-17",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0031442977488040924,
+      "max_tolerance_ratio": 0.32707759600007186,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-17",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0038354843854904175,
+      "max_tolerance_ratio": 0.3772552132708192,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-17",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0014470703899860382,
+      "max_tolerance_ratio": 0.4050558984071143,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-17",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.002469398081302643,
+      "max_tolerance_ratio": 0.2656993001748061,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-17",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0010965317487716675,
+      "max_tolerance_ratio": 0.3346709874378697,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-17",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0014857295900583267,
+      "max_tolerance_ratio": 0.2892330431215954,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-17",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.005050182342529297,
+      "max_tolerance_ratio": 0.4117956455969344,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-18",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0040741367265582085,
+      "max_tolerance_ratio": 0.3118722750606179,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-18",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005890410393476486,
+      "max_tolerance_ratio": 0.3279213283221108,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-18",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007202114909887314,
+      "max_tolerance_ratio": 0.3137850603381052,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-18",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.005353805609047413,
+      "max_tolerance_ratio": 0.3749171320137403,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-18",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0006843786686658859,
+      "max_tolerance_ratio": 0.3970519343141332,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-18",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00162606593221426,
+      "max_tolerance_ratio": 0.354866299978092,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-18",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.010718286037445068,
+      "max_tolerance_ratio": 0.4013440872680386,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-19",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0032791923731565475,
+      "max_tolerance_ratio": 0.37658644855146006,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-19",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0058675846084952354,
+      "max_tolerance_ratio": 0.3205114776992378,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-19",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0024490319192409515,
+      "max_tolerance_ratio": 0.24513833487461056,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-19",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.004246249794960022,
+      "max_tolerance_ratio": 0.4811306889953175,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-19",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0019233925268054008,
+      "max_tolerance_ratio": 0.371659023707386,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-19",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0007206778973340988,
+      "max_tolerance_ratio": 0.33420566590708944,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-19",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.004995226860046387,
+      "max_tolerance_ratio": 0.4023597938195864,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-20",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007691025733947754,
+      "max_tolerance_ratio": 0.44396561066671025,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-20",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007219130173325539,
+      "max_tolerance_ratio": 0.3756498583710593,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-20",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0032654106616973877,
+      "max_tolerance_ratio": 0.4173936052425025,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-20",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0019295699894428253,
+      "max_tolerance_ratio": 0.4667906678219008,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-20",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0016614096239209175,
+      "max_tolerance_ratio": 0.3187960949978314,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-20",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0017714807763695717,
+      "max_tolerance_ratio": 0.3549361998301838,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-20",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.02419644594192505,
+      "max_tolerance_ratio": 0.3949073226350937,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-21",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0059496816247701645,
+      "max_tolerance_ratio": 0.3152053861587778,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-21",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0047325510531663895,
+      "max_tolerance_ratio": 0.2948481078295606,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-21",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.004353860393166542,
+      "max_tolerance_ratio": 0.3391405968123925,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-21",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003540351986885071,
+      "max_tolerance_ratio": 0.39693706199652784,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-21",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.00250798836350441,
+      "max_tolerance_ratio": 0.25643885227916774,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-21",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0038358140736818314,
+      "max_tolerance_ratio": 0.3152685851271486,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-21",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.0037410855293273926,
+      "max_tolerance_ratio": 0.32187581732169507,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-22",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007708791643381119,
+      "max_tolerance_ratio": 0.41789610288254003,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-22",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0072255320847034454,
+      "max_tolerance_ratio": 0.426466125396902,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-22",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0028337454423308372,
+      "max_tolerance_ratio": 0.26166292245307454,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-22",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0027431342750787735,
+      "max_tolerance_ratio": 0.4360746110597811,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-22",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.003229813650250435,
+      "max_tolerance_ratio": 0.32007502681196226,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-22",
+      "M": 4096,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0009147152304649353,
+      "max_tolerance_ratio": 0.27441965436879046,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-22",
+      "M": 1536,
+      "N": 5,
+      "K": 4096,
+      "components": 12,
+      "max_abs": 0.011892855167388916,
+      "max_tolerance_ratio": 0.3021931648256278,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-23",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.006424117833375931,
+      "max_tolerance_ratio": 0.36276810550809274,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-23",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.014031666330993176,
+      "max_tolerance_ratio": 0.35638464004473724,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-23",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.0019453493878245354,
+      "max_tolerance_ratio": 0.4651790049707983,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-23",
+      "M": 1536,
+      "N": 5,
+      "K": 1536,
+      "components": 12,
+      "max_abs": 0.007340352050960064,
+      "max_tolerance_ratio": 0.39224542352857084,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-23",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0034140069037675858,
+      "max_tolerance_ratio": 0.3928105120994194,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-23",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005794309079647064,
+      "max_tolerance_ratio": 0.2831513608804083,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-23",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.011601954698562622,
+      "max_tolerance_ratio": 0.4277363407513938,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-0",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0028171520680189133,
+      "max_tolerance_ratio": 0.46833514543456883,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-0",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003449433483183384,
+      "max_tolerance_ratio": 0.35216611574586465,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-0",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005553886294364929,
+      "max_tolerance_ratio": 0.32857556971936225,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-0",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0006122253835201263,
+      "max_tolerance_ratio": 0.3011601427823991,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-0",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00027115270495414734,
+      "max_tolerance_ratio": 0.27639545007002775,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-0",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001812230795621872,
+      "max_tolerance_ratio": 0.3138334871425512,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-0",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0007537752389907837,
+      "max_tolerance_ratio": 0.3750663462295254,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-1",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.014778133481740952,
+      "max_tolerance_ratio": 0.34667484884059097,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-1",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007111974060535431,
+      "max_tolerance_ratio": 0.3494017862460838,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-1",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001646069809794426,
+      "max_tolerance_ratio": 0.21956169526083033,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-1",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.000901001738384366,
+      "max_tolerance_ratio": 0.3740083168270739,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-1",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0009718984365463257,
+      "max_tolerance_ratio": 0.3821904950746142,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-1",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.000875864177942276,
+      "max_tolerance_ratio": 0.3393351828796035,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-1",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0003441646695137024,
+      "max_tolerance_ratio": 0.3916864806182103,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-2",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.014584660530090332,
+      "max_tolerance_ratio": 0.35899220672294035,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-2",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003084041178226471,
+      "max_tolerance_ratio": 0.2195386539860945,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-2",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0014163851737976074,
+      "max_tolerance_ratio": 0.21700484702026307,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-2",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0007486826507374644,
+      "max_tolerance_ratio": 0.36660251139983513,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-2",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0007845424115657806,
+      "max_tolerance_ratio": 0.23775944406393196,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-2",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012054736725986004,
+      "max_tolerance_ratio": 0.19037370481387664,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-2",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0007467977702617645,
+      "max_tolerance_ratio": 0.25799236897873645,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-3",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.004900157451629639,
+      "max_tolerance_ratio": 0.3824015185717034,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-3",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007154833525419235,
+      "max_tolerance_ratio": 0.2526670629595392,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-3",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0037624426186084747,
+      "max_tolerance_ratio": 0.4414072481756954,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-3",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00038200896233320236,
+      "max_tolerance_ratio": 0.29904875806554787,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-3",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001749422401189804,
+      "max_tolerance_ratio": 0.25694664226969305,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-3",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00183897465467453,
+      "max_tolerance_ratio": 0.31827506881309675,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-3",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.00038382038474082947,
+      "max_tolerance_ratio": 0.2947697200289476,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-4",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007491055876016617,
+      "max_tolerance_ratio": 0.4033971319487517,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-4",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.017103329300880432,
+      "max_tolerance_ratio": 0.34534044605044045,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-4",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.014758467674255371,
+      "max_tolerance_ratio": 0.34991103367640897,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-4",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0009406115859746933,
+      "max_tolerance_ratio": 0.4591092898159741,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-4",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0010147979483008385,
+      "max_tolerance_ratio": 0.2889447637332856,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-4",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0025719255208969116,
+      "max_tolerance_ratio": 0.3910601327768543,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-4",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.00044927000999450684,
+      "max_tolerance_ratio": 0.31528943848471386,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-5",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.006478145718574524,
+      "max_tolerance_ratio": 0.3332923799711002,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-5",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0073813945055007935,
+      "max_tolerance_ratio": 0.44869111049559224,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-5",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0034252405166625977,
+      "max_tolerance_ratio": 0.27447569158871177,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-5",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00041220802813768387,
+      "max_tolerance_ratio": 0.31462114833656935,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-5",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018606549128890038,
+      "max_tolerance_ratio": 0.3204635848462137,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-5",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0010109283030033112,
+      "max_tolerance_ratio": 0.43782916213134104,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-5",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0005394723266363144,
+      "max_tolerance_ratio": 0.3112081705625477,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-6",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0056947022676467896,
+      "max_tolerance_ratio": 0.24755565647399774,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-6",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.011327236890792847,
+      "max_tolerance_ratio": 0.3364254459886041,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-6",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018997564911842346,
+      "max_tolerance_ratio": 0.41762412079448624,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-6",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0007091951556503773,
+      "max_tolerance_ratio": 0.32228343836606277,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-6",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00137222558259964,
+      "max_tolerance_ratio": 0.34777946319087594,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-6",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005697333253920078,
+      "max_tolerance_ratio": 0.37798951120647417,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-6",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0005052946507930756,
+      "max_tolerance_ratio": 0.4197692429083208,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-7",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.004236001521348953,
+      "max_tolerance_ratio": 0.24449381822406704,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-7",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0070156678557395935,
+      "max_tolerance_ratio": 0.33284044096464654,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-7",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005942583084106445,
+      "max_tolerance_ratio": 0.24341109016560186,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-7",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0007522422820329666,
+      "max_tolerance_ratio": 0.34942241383228995,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-7",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018898341804742813,
+      "max_tolerance_ratio": 0.27778970407718734,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-7",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0006675515323877335,
+      "max_tolerance_ratio": 0.2880904431095137,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-7",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0007886318489909172,
+      "max_tolerance_ratio": 0.35714306733298895,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-8",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005031321197748184,
+      "max_tolerance_ratio": 0.24212441147671157,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-8",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007325528189539909,
+      "max_tolerance_ratio": 0.44890654177919626,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-8",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007336682640016079,
+      "max_tolerance_ratio": 0.2925742923361073,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-8",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018643662333488464,
+      "max_tolerance_ratio": 0.41627256398064455,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-8",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.000877483282238245,
+      "max_tolerance_ratio": 0.3792234880823842,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-8",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0023559080436825752,
+      "max_tolerance_ratio": 0.2936317438498899,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-8",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0009093228727579117,
+      "max_tolerance_ratio": 0.25960438358655824,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-9",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.006523385643959045,
+      "max_tolerance_ratio": 0.3225047147176779,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-9",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005959729664027691,
+      "max_tolerance_ratio": 0.23784046162303737,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-9",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007383285090327263,
+      "max_tolerance_ratio": 0.3407414478932949,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-9",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0009757047519087791,
+      "max_tolerance_ratio": 0.40131582189426335,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-9",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0019442136399447918,
+      "max_tolerance_ratio": 0.43562407415624255,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-9",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0013879542239010334,
+      "max_tolerance_ratio": 0.4378079525901782,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-9",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0007697939872741699,
+      "max_tolerance_ratio": 0.39423414692079944,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-10",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.004200930707156658,
+      "max_tolerance_ratio": 0.24117488842106144,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-10",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.010881860740482807,
+      "max_tolerance_ratio": 0.34600348145594967,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-10",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0015823356807231903,
+      "max_tolerance_ratio": 0.3640350944821882,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-10",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012287124991416931,
+      "max_tolerance_ratio": 0.18666833099274485,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-10",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0025498452596366405,
+      "max_tolerance_ratio": 0.34310175299734236,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-10",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003637956455349922,
+      "max_tolerance_ratio": 0.42582086877538583,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-10",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0008657053112983704,
+      "max_tolerance_ratio": 0.23399347993215502,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-11",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003763750195503235,
+      "max_tolerance_ratio": 0.3441225861508278,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-11",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007810973562300205,
+      "max_tolerance_ratio": 0.4749037459545863,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-11",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0038620121777057648,
+      "max_tolerance_ratio": 0.28651846633269284,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-11",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0017494913190603256,
+      "max_tolerance_ratio": 0.3345668590726997,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-11",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0015114196576178074,
+      "max_tolerance_ratio": 0.19991242921364574,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-11",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012962184846401215,
+      "max_tolerance_ratio": 0.34116477517299926,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-11",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.003974065184593201,
+      "max_tolerance_ratio": 0.42421236943694474,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-12",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0008888058364391327,
+      "max_tolerance_ratio": 0.4403266922115164,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-12",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00645176786929369,
+      "max_tolerance_ratio": 0.33680834904791973,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-12",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0038235001266002655,
+      "max_tolerance_ratio": 0.3033780392783898,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-12",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001519438810646534,
+      "max_tolerance_ratio": 0.33113538280751986,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-12",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001392981968820095,
+      "max_tolerance_ratio": 0.30267990261115335,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-12",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0014719311147928238,
+      "max_tolerance_ratio": 0.22306398525602542,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-12",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.001460924744606018,
+      "max_tolerance_ratio": 0.24229365229759375,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-13",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007618635892868042,
+      "max_tolerance_ratio": 0.33379858474537377,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-13",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003493480384349823,
+      "max_tolerance_ratio": 0.2757382692836763,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-13",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0019468292593955994,
+      "max_tolerance_ratio": 0.45867911237765324,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-13",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.002427831292152405,
+      "max_tolerance_ratio": 0.214249356755123,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-13",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0037598377093672752,
+      "max_tolerance_ratio": 0.3058663234947522,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-13",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018736450001597404,
+      "max_tolerance_ratio": 0.35301764926026824,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-13",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0019826292991638184,
+      "max_tolerance_ratio": 0.33363112750043245,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-14",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.007154971361160278,
+      "max_tolerance_ratio": 0.3777619848240314,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-14",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003238888457417488,
+      "max_tolerance_ratio": 0.2596132954078819,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-14",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003950430080294609,
+      "max_tolerance_ratio": 0.33773813747835785,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-14",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0019179359078407288,
+      "max_tolerance_ratio": 0.4519070830076654,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-14",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.002371096983551979,
+      "max_tolerance_ratio": 0.45756492121003467,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-14",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0026559196412563324,
+      "max_tolerance_ratio": 0.25939875040402105,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-14",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.004487179219722748,
+      "max_tolerance_ratio": 0.24865370293686534,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-15",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003847455605864525,
+      "max_tolerance_ratio": 0.36958596057139786,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-15",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003190099261701107,
+      "max_tolerance_ratio": 0.37365731043378,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-15",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00309065543115139,
+      "max_tolerance_ratio": 0.2267182225271604,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-15",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0034579969942569733,
+      "max_tolerance_ratio": 0.38798691430379123,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-15",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001050795428454876,
+      "max_tolerance_ratio": 0.2582818675271981,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-15",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001816553995013237,
+      "max_tolerance_ratio": 0.3466550849428423,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-15",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0017920434474945068,
+      "max_tolerance_ratio": 0.38542999204030115,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-16",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00301450677216053,
+      "max_tolerance_ratio": 0.34075252658185723,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-16",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0011357059702277184,
+      "max_tolerance_ratio": 0.25128350075055866,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-16",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.002279244363307953,
+      "max_tolerance_ratio": 0.22547341551435365,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-16",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0008676359429955482,
+      "max_tolerance_ratio": 0.18079989608138802,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-16",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0037264684215188026,
+      "max_tolerance_ratio": 0.3983317407292201,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-16",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012653986923396587,
+      "max_tolerance_ratio": 0.27802569458557347,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-16",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0034468695521354675,
+      "max_tolerance_ratio": 0.40035364378831934,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-17",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.006445679813623428,
+      "max_tolerance_ratio": 0.31539936752179104,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-17",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.002890847623348236,
+      "max_tolerance_ratio": 0.18035799140586148,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-17",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0032447222620248795,
+      "max_tolerance_ratio": 0.31705187370443305,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-17",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0014501139521598816,
+      "max_tolerance_ratio": 0.25364284361702605,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-17",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0013401024043560028,
+      "max_tolerance_ratio": 0.3975462015217584,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-17",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001586148515343666,
+      "max_tolerance_ratio": 0.2557654549382166,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-17",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.004752442240715027,
+      "max_tolerance_ratio": 0.25450850255164187,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-18",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003543402999639511,
+      "max_tolerance_ratio": 0.397627354589286,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-18",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.004169698804616928,
+      "max_tolerance_ratio": 0.2569662102222419,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-18",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0038993321359157562,
+      "max_tolerance_ratio": 0.38121502954572617,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-18",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003013603389263153,
+      "max_tolerance_ratio": 0.37155021871547295,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-18",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0004797922447323799,
+      "max_tolerance_ratio": 0.2058400440122044,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-18",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0015200208872556686,
+      "max_tolerance_ratio": 0.28623796877139196,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-18",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.003215014934539795,
+      "max_tolerance_ratio": 0.26687753627320665,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-19",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003815263509750366,
+      "max_tolerance_ratio": 0.47084451441233055,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-19",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0054230038076639175,
+      "max_tolerance_ratio": 0.2976954565399036,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-19",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0008677951991558075,
+      "max_tolerance_ratio": 0.2535046551552575,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-19",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0009564757347106934,
+      "max_tolerance_ratio": 0.23728482211509136,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-19",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0027496065013110638,
+      "max_tolerance_ratio": 0.28658162525061387,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-19",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0017666434869170189,
+      "max_tolerance_ratio": 0.31605806509829437,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-19",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.007569462060928345,
+      "max_tolerance_ratio": 0.4217101060586626,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-20",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.00579235702753067,
+      "max_tolerance_ratio": 0.39305463273352914,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-20",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0018600225448608398,
+      "max_tolerance_ratio": 0.25792092547617324,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-20",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0027800053358078003,
+      "max_tolerance_ratio": 0.326150031101667,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-20",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0032100994139909744,
+      "max_tolerance_ratio": 0.33406106568141397,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-20",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0016019418835639954,
+      "max_tolerance_ratio": 0.3092176830903865,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-20",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0015667295083403587,
+      "max_tolerance_ratio": 0.3942400937468167,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-20",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.004220876842737198,
+      "max_tolerance_ratio": 0.34409989644505745,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-21",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.006421130150556564,
+      "max_tolerance_ratio": 0.3282556623225588,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-21",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0076866671442985535,
+      "max_tolerance_ratio": 0.4253002634015857,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-21",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012086890637874603,
+      "max_tolerance_ratio": 0.23373091884543754,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-21",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0019159391522407532,
+      "max_tolerance_ratio": 0.34112000649433144,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-21",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.001932237297296524,
+      "max_tolerance_ratio": 0.24652305132900662,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-21",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.002693619579076767,
+      "max_tolerance_ratio": 0.3374764215476118,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-21",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.0018898546695709229,
+      "max_tolerance_ratio": 0.29165728637824573,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-22",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0023962827399373055,
+      "max_tolerance_ratio": 0.2534292806197504,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-22",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0016595711931586266,
+      "max_tolerance_ratio": 0.3843953509181124,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-22",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005692831240594387,
+      "max_tolerance_ratio": 0.386969888904735,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-22",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0052103688940405846,
+      "max_tolerance_ratio": 0.3253847099326537,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-22",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0012135505676269531,
+      "max_tolerance_ratio": 0.24583885944344375,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-22",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0009589642286300659,
+      "max_tolerance_ratio": 0.1791073799580729,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-22",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.006161738187074661,
+      "max_tolerance_ratio": 0.30338525137590755,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Qcur-23",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.008164331316947937,
+      "max_tolerance_ratio": 0.4005483069588507,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Kcur-23",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.0034756381064653397,
+      "max_tolerance_ratio": 0.2519546922119861,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "Vcur-23",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.006738526746630669,
+      "max_tolerance_ratio": 0.4133016885898381,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "attn_proj-23",
+      "M": 1536,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.005755397491157055,
+      "max_tolerance_ratio": 0.4007258437551993,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_up-23",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003874693065881729,
+      "max_tolerance_ratio": 0.35643612919530804,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_gate-23",
+      "M": 4096,
+      "N": 1,
+      "K": 1536,
+      "components": 6,
+      "max_abs": 0.003381483256816864,
+      "max_tolerance_ratio": 0.34940014506488837,
+      "weight_scale_changes": 0
+    },
+    {
+      "name": "ffn_out-23",
+      "M": 1536,
+      "N": 1,
+      "K": 4096,
+      "components": 6,
+      "max_abs": 0.009142018854618073,
+      "max_tolerance_ratio": 0.30226303767238527,
+      "weight_scale_changes": 0
+    }
+  ]
+}

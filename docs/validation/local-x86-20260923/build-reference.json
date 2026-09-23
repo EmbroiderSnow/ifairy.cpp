@@ -1,0 +1,18 @@
+{
+  "tag": "build-reference",
+  "command": [
+    "cmake",
+    "--build",
+    "build-lut-reference",
+    "--target",
+    "llama",
+    "test-ifairy-model",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-lut-reference --target llama test-ifairy-model -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:37:18.854854+08:00",
+  "elapsed_seconds": 58.901,
+  "returncode": 0
+}

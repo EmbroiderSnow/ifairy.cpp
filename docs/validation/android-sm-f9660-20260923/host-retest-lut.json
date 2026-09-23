@@ -1,0 +1,14 @@
+{
+  "tag": "host-retest-lut",
+  "command": [
+    "ctest",
+    "--test-dir",
+    "build-lut",
+    "--output-on-failure"
+  ],
+  "shell_command": "ctest --test-dir build-lut --output-on-failure",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:57:55.437393+08:00",
+  "elapsed_seconds": 0.202,
+  "returncode": 0
+}

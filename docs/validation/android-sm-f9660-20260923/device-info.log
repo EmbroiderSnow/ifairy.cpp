@@ -1,0 +1,142 @@
+SM-F9660
+SM8750
+16
+36
+arm64-v8a
+Linux localhost 6.6.98-android15-8-p8ecb760-ud-abogkiF9660ZCUABZF1-4k #1 SMP PREEMPT Mon Jun  1 12:03:43 UTC 2026 aarch64 Toybox
+MemTotal:       11351264 kB
+MemFree:          887320 kB
+MemAvailable:    7051260 kB
+Buffers:           17652 kB
+Cached:          5504500 kB
+processor	: 0
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 1
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 2
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 3
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 4
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 5
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x4
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 6
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x3
+CPU part	: 0x001
+CPU revision	: 4
+
+processor	: 7
+BogoMIPS	: 38.40
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 asimdfhm dit uscat ilrcpc flagm ssbs sb paca pacg dcpodp flagm2 frint i8mm bf16 rng bti ecv afp rpres
+CPU implementer	: 0x51
+CPU architecture: 8
+CPU variant	: 0x3
+CPU part	: 0x001
+CPU revision	: 4
+
+/sys/devices/system/cpu/cpufreq/policy0
+0 1 2 3 4 5
+3532800
+walt
+/sys/devices/system/cpu/cpufreq/policy6
+6 7
+4473600
+walt
+Current Battery Service state:
+  AC powered: false
+  USB powered: true
+  Wireless powered: false
+  Dock powered: false
+  Max charging current: 0
+ Time when the latest updated value of the Max charging current was sent via battery changed broadcast: 0
+  Max charging voltage: 0
+  Charge counter: 1196800
+  status: 2
+  health: 2
+  present: true
+  level: 27
+  scale: 100
+  voltage: 3916
+ Time when the latest updated value of the voltage was sent via battery changed broadcast: 0
+ The last voltage value sent via the battery changed broadcast: 3914
+  temperature: 300
+  technology: Li-ion
+  Charging state: 0
+  Charging policy: 0
+  Capacity level: -1
+  batteryMiscEvent: 268500992
+  batteryCurrentEvent: 32768
+  mSecPlugTypeSummary: 2
+  LED Charging: true
+  LED Low Battery: true
+  current now: 1621249
+IsStatusOverride: false
+ThermalEventListeners:
+	callbacks: 4
+	killed: false
+	broadcasts count: -1
+ThermalStatusListeners:
+	callbacks: 3
+	killed: false
+	broadcasts count: -1
+Thermal Status: 0
+Cached temperatures:
+	Temperature{mValue=32.3, mType=2, mName=SUBBAT, mStatus=0}
+	Temperature{mValue=53.9, mType=0, mName=AP, mStatus=0}
+	Temperature{mValue=41.5, mType=12, mName=CP, mStatus=0}
+	Temperature{mValue=44.1, mType=5, mName=PA, mStatus=0}
+	Temperature{mValue=33.3, mType=2, mName=BAT, mStatus=0}
+	Temperature{mValue=33.3, mType=4, mName=USB, mStatus=0}
+	Temperature{mValue=37.9, mType=3, mName=SKIN, mStatus=0}
+HAL Ready: true
+HAL connection:
+	ThermalHAL AIDL 3  connected: yes
+Current temperatures from HAL:
+0

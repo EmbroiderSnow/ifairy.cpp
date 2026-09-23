@@ -1,0 +1,7 @@
+{
+  "native_probe_vs_previous_python_probe": [
+    true,
+    true
+  ],
+  "all_equal": true
+}

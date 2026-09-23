@@ -1,0 +1,47 @@
+
+=================================================================
+==34777==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 2592 byte(s) in 54 object(s) allocated from:
+    #0 0x7ffa3672d2a1 in operator new(unsigned long) (/usr/lib/libasan.so.8+0x12d2a1) (BuildId: b8a4241051a1621937fdc46e867ba7ecb56d96ea)
+    #1 0x7ffa35c3ddb3 in ggml_ifairy_lut_transform_tensor_impl<block_ifairy, ifairy_lut_wtile_16> /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:302
+    #2 0x7ffa35c3b3a1 in ggml_ifairy_lut_transform_tensor_ifairy /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:322
+    #3 0x7ffa35c3b519 in ggml_ifairy_lut_transform_tensor /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:344
+    #4 0x7ffa35c03e86 in ggml_legacy_ifairy_cpu_prepare_graph /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp:236
+    #5 0x7ffa35936e63 in ggml_graph_compute /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3488
+    #6 0x7ffa35937334 in ggml_graph_compute_with_ctx /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3538
+    #7 0x55559d33e312 in run_case /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:130
+    #8 0x55559d340779 in main /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:189
+    #9 0x7ffa33827780  (/usr/lib/libc.so.6+0x27780) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #10 0x7ffa338278b8 in __libc_start_main (/usr/lib/libc.so.6+0x278b8) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #11 0x55559d33c4c4 in _start (/home/zybi/projects/ifairy.cpp/build-lut-sanitize/bin/test-ifairy-lut-mul-mat+0x164c4) (BuildId: 0b16503010ab4464ae97ca45353b8228e4db61a3)
+
+Direct leak of 144 byte(s) in 3 object(s) allocated from:
+    #0 0x7ffa3672d2a1 in operator new(unsigned long) (/usr/lib/libasan.so.8+0x12d2a1) (BuildId: b8a4241051a1621937fdc46e867ba7ecb56d96ea)
+    #1 0x7ffa35c3ddb3 in ggml_ifairy_lut_transform_tensor_impl<block_ifairy, ifairy_lut_wtile_16> /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:302
+    #2 0x7ffa35c3b3a1 in ggml_ifairy_lut_transform_tensor_ifairy /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:322
+    #3 0x7ffa35c3b519 in ggml_ifairy_lut_transform_tensor /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:344
+    #4 0x7ffa35c03e86 in ggml_legacy_ifairy_cpu_prepare_graph /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp:236
+    #5 0x7ffa35936e63 in ggml_graph_compute /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3488
+    #6 0x7ffa35937334 in ggml_graph_compute_with_ctx /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3538
+    #7 0x55559d33e312 in run_case /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:130
+    #8 0x55559d340a2f in main /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:195
+    #9 0x7ffa33827780  (/usr/lib/libc.so.6+0x27780) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #10 0x7ffa338278b8 in __libc_start_main (/usr/lib/libc.so.6+0x278b8) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #11 0x55559d33c4c4 in _start (/home/zybi/projects/ifairy.cpp/build-lut-sanitize/bin/test-ifairy-lut-mul-mat+0x164c4) (BuildId: 0b16503010ab4464ae97ca45353b8228e4db61a3)
+
+Direct leak of 144 byte(s) in 3 object(s) allocated from:
+    #0 0x7ffa3672d2a1 in operator new(unsigned long) (/usr/lib/libasan.so.8+0x12d2a1) (BuildId: b8a4241051a1621937fdc46e867ba7ecb56d96ea)
+    #1 0x7ffa35c3ddb3 in ggml_ifairy_lut_transform_tensor_impl<block_ifairy, ifairy_lut_wtile_16> /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:302
+    #2 0x7ffa35c3b3a1 in ggml_ifairy_lut_transform_tensor_ifairy /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:322
+    #3 0x7ffa35c3b519 in ggml_ifairy_lut_transform_tensor /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp:344
+    #4 0x7ffa35c03e86 in ggml_legacy_ifairy_cpu_prepare_graph /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp:236
+    #5 0x7ffa35936e63 in ggml_graph_compute /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3488
+    #6 0x7ffa35937334 in ggml_graph_compute_with_ctx /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3538
+    #7 0x55559d33e312 in run_case /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:130
+    #8 0x55559d3409a7 in main /home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:193
+    #9 0x7ffa33827780  (/usr/lib/libc.so.6+0x27780) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #10 0x7ffa338278b8 in __libc_start_main (/usr/lib/libc.so.6+0x278b8) (BuildId: 503200d7fda94a5dc6058d7e0694e5d1dcb2e372)
+    #11 0x55559d33c4c4 in _start (/home/zybi/projects/ifairy.cpp/build-lut-sanitize/bin/test-ifairy-lut-mul-mat+0x164c4) (BuildId: 0b16503010ab4464ae97ca45353b8228e4db61a3)
+
+SUMMARY: AddressSanitizer: 2880 byte(s) leaked in 60 allocation(s).

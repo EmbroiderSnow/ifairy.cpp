@@ -1,0 +1,9 @@
+{
+  "ggml/src/ggml-cpu/ggml-cpu.c": "d7859f0dd31b7ed36d662f89c3186deec0fe08347907e12683e7135246ab4961",
+  "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp": "cf4641b4a66e98c3534cbfe9e47b97763bb88d4ba3d4f2a8b5ecf291b33d3e57",
+  "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-qgemm.cpp": "75a07c16455649834285d4469972fb25125f0d6a37687376853a5ab960f4ded3",
+  "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut-transform.cpp": "9a49088db0bea2459533a24b98a55b8efb98e6a1a69b38e53f2daad5a7deaa86",
+  "ggml/src/ggml-cpu/legacy-ifairy/lut/ggml-ifairy-lut.h": "265997f4e4bbbe651e00d73875278994fe34b17d61b6b06e980b0536ecad9a8b",
+  "tests/test-ifairy-lut-mul-mat.cpp": "ac49937dc620d4ed2ddaa818bbf6811d4badf5ea40b6589cf57515b7bd26f6e1",
+  "tests/test-ifairy-real-model.cpp": "1689ee89fa30b214513483da24db87e4b986ff3c372055caa6a25313ea719e9c"
+}

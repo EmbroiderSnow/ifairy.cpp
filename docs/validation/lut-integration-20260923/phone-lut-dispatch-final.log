@@ -1,0 +1,1 @@
+LUT MUL_MAT: 144 graph executions passed (dispatch, complex oracle, tails, strides, broadcasts, range fallback).

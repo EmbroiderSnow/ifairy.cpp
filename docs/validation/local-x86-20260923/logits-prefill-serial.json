@@ -1,0 +1,19 @@
+{
+  "tag": "logits-prefill-serial",
+  "command": [
+    "env",
+    "GGML_IFAIRY_LUT=1",
+    "GGML_IFAIRY_LUT_IMPL=auto",
+    "IFAIRY_PROBE_DUMP_DIR=/tmp/ifairy-prefill-serial",
+    "python3",
+    "docs/validation/local-x86-20260923/check_logits.py",
+    "build-lut",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+    "serial"
+  ],
+  "shell_command": "env GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=auto IFAIRY_PROBE_DUMP_DIR=/tmp/ifairy-prefill-serial python3 docs/validation/local-x86-20260923/check_logits.py build-lut /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf serial",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:35:23.128477+08:00",
+  "elapsed_seconds": 3.074,
+  "returncode": 0
+}

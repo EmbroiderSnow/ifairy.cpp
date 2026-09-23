@@ -1,0 +1,16 @@
+Internal ctest changing into directory: /home/zybi/projects/ifairy.cpp/build-lut
+Test project /home/zybi/projects/ifairy.cpp/build-lut
+    Start 1: test-legacy-ifairy-direct
+1/5 Test #1: test-legacy-ifairy-direct ........   Passed    0.01 sec
+    Start 2: test-ifairy-model
+2/5 Test #2: test-ifairy-model ................   Passed    0.01 sec
+    Start 3: test-ifairy-ops
+3/5 Test #3: test-ifairy-ops ..................   Passed    0.15 sec
+    Start 4: test-legacy-ifairy
+4/5 Test #4: test-legacy-ifairy ...............   Passed    0.02 sec
+    Start 5: test-ifairy-model-lut
+5/5 Test #5: test-ifairy-model-lut ............   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =   0.21 sec

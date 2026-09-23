@@ -1,0 +1,115 @@
+[
+  {
+    "tag": "configure-build-rel",
+    "command": [
+      "cmake",
+      "-B",
+      "build-rel",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DGGML_LEGACY_IFAIRY_CPU_LUT=OFF"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:30.135532+00:00",
+    "seconds": 0.246,
+    "returncode": 0
+  },
+  {
+    "tag": "build-build-rel",
+    "command": [
+      "cmake",
+      "--build",
+      "build-rel",
+      "-j",
+      "8"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:30.383111+00:00",
+    "seconds": 0.387,
+    "returncode": 0
+  },
+  {
+    "tag": "ctest-build-rel",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-rel",
+      "--output-on-failure",
+      "-V"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:30.770440+00:00",
+    "seconds": 0.329,
+    "returncode": 0
+  },
+  {
+    "tag": "configure-build-lut",
+    "command": [
+      "cmake",
+      "-B",
+      "build-lut",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DGGML_LEGACY_IFAIRY_CPU_LUT=ON"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:31.099887+00:00",
+    "seconds": 0.163,
+    "returncode": 0
+  },
+  {
+    "tag": "build-build-lut",
+    "command": [
+      "cmake",
+      "--build",
+      "build-lut",
+      "-j",
+      "8"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:31.263196+00:00",
+    "seconds": 1.586,
+    "returncode": 0
+  },
+  {
+    "tag": "ctest-build-lut",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-lut",
+      "--output-on-failure",
+      "-V"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:32.849760+00:00",
+    "seconds": 0.35,
+    "returncode": 0
+  },
+  {
+    "tag": "build-reference",
+    "command": [
+      "cmake",
+      "--build",
+      "build-lut-reference",
+      "-j",
+      "8"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:33.200458+00:00",
+    "seconds": 1.675,
+    "returncode": 0
+  },
+  {
+    "tag": "ctest-reference",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "build-lut-reference",
+      "--output-on-failure"
+    ],
+    "environment": {},
+    "started": "2026-09-23T10:05:34.876030+00:00",
+    "seconds": 0.3,
+    "returncode": 0
+  }
+]

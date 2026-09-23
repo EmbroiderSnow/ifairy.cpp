@@ -1,0 +1,4 @@
+Checked identical source in a temporary shared local clone, avoiding the cross-filesystem temporary-index rename failure. Real index unchanged.
+git clang-format --diff a6256d61ffd3ebe4cba06fdb3b46e0b7eb78feaa -- tests/test-ifairy-real-model.cpp
+clang-format did not modify any files
+source_sha256=1689ee89fa30b214513483da24db87e4b986ff3c372055caa6a25313ea719e9c

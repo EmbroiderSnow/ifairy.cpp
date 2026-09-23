@@ -1,0 +1,13 @@
+{
+  "tag": "runtime-env",
+  "command": [
+    "python3",
+    "-c",
+    "import os,json; print(json.dumps({k:v for k,v in os.environ.items() if k.startswith((\"GGML_\", \"OMP_\", \"LLAMA_\"))}, indent=2))"
+  ],
+  "shell_command": "python3 -c 'import os,json; print(json.dumps({k:v for k,v in os.environ.items() if k.startswith((\"GGML_\", \"OMP_\", \"LLAMA_\"))}, indent=2))'",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:30:29.095007+08:00",
+  "elapsed_seconds": 0.023,
+  "returncode": 0
+}

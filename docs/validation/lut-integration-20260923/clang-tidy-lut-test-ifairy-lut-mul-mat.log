@@ -1,0 +1,6 @@
+37409 warnings generated.
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-lut-mul-mat.cpp:111:63: warning: result of integer division used in a floating point context; possible loss of precision [bugprone-integer-division]
+  111 |                 const float scale = 1.0f + static_cast<float>(j / QK_IFAIRY) * 0.5f;
+      |                                                               ^
+Suppressed 37408 warnings (37408 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

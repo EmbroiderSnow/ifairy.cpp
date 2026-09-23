@@ -1,0 +1,247 @@
+[
+  {
+    "tag": "host-probe-off",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-off",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "0",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:29:59.826698+00:00",
+    "seconds": 2.028,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-auto",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-auto",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:01.854703+00:00",
+    "seconds": 2.415,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-repeat",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-repeat",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:04.270145+00:00",
+    "seconds": 2.073,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-lut16",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-lut16",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "lut16",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:06.342986+00:00",
+    "seconds": 2.022,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-lut-c",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-lut-c",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "lut_c",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:08.365298+00:00",
+    "seconds": 2.033,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-serial",
+    "command": [
+      "build-lut/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-serial",
+      "serial",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:10.398254+00:00",
+    "seconds": 2.131,
+    "returncode": 0
+  },
+  {
+    "tag": "host-probe-same-quant-direct",
+    "command": [
+      "build-lut-reference/bin/test-ifairy-real-model",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "/tmp/ifairy-lut-integration/host-probe-same-quant-direct",
+      "batched",
+      "8"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "0",
+      "GGML_IFAIRY_LUT_IMPL": "auto",
+      "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "1",
+      "GGML_IFAIRY_LUT_DEBUG": "0"
+    },
+    "started": "2026-09-23T09:30:12.529778+00:00",
+    "seconds": 1.876,
+    "returncode": 0
+  },
+  {
+    "tag": "host-cli-debug",
+    "command": [
+      "build-lut/bin/llama-cli",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "8",
+      "-tb",
+      "8",
+      "-c",
+      "2048",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "--seed",
+      "42",
+      "--temp",
+      "0",
+      "-no-cnv",
+      "--no-display-prompt",
+      "--simple-io",
+      "-p",
+      "The capital of France is",
+      "-n",
+      "1"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1",
+      "GGML_IFAIRY_LUT_DEBUG": "1"
+    },
+    "started": "2026-09-23T09:30:14.405902+00:00",
+    "seconds": 1.214,
+    "returncode": 0
+  },
+  {
+    "tag": "host-cli-story",
+    "command": [
+      "build-lut/bin/llama-cli",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "8",
+      "-tb",
+      "8",
+      "-c",
+      "2048",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "--seed",
+      "42",
+      "--temp",
+      "0",
+      "-no-cnv",
+      "--no-display-prompt",
+      "--simple-io",
+      "-p",
+      "Once upon a time, in a small village",
+      "-n",
+      "128"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1"
+    },
+    "started": "2026-09-23T09:30:15.620715+00:00",
+    "seconds": 3.094,
+    "returncode": 0
+  },
+  {
+    "tag": "host-cli-long",
+    "command": [
+      "build-lut/bin/llama-cli",
+      "-m",
+      "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+      "-ngl",
+      "0",
+      "-t",
+      "8",
+      "-tb",
+      "8",
+      "-c",
+      "2048",
+      "-b",
+      "512",
+      "-ub",
+      "512",
+      "--seed",
+      "42",
+      "--temp",
+      "0",
+      "-no-cnv",
+      "--no-display-prompt",
+      "--simple-io",
+      "-f",
+      "docs/validation/local-x86-20260923/long-prompt.txt",
+      "-n",
+      "256"
+    ],
+    "environment": {
+      "GGML_IFAIRY_LUT": "1"
+    },
+    "started": "2026-09-23T09:30:18.715168+00:00",
+    "seconds": 12.598,
+    "returncode": 0
+  }
+]

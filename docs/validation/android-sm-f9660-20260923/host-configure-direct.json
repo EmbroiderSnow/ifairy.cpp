@@ -1,0 +1,15 @@
+{
+  "tag": "host-configure-direct",
+  "command": [
+    "cmake",
+    "-B",
+    "build-rel",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+  ],
+  "shell_command": "cmake -B build-rel -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:55:17.744342+08:00",
+  "elapsed_seconds": 0.178,
+  "returncode": 0
+}

@@ -1,0 +1,4 @@
+/home/zybi/projects/ifairy.cpp/tests/test-backend-ops.cpp: In function ‘std::vector<std::unique_ptr<test_case> > make_test_cases_eval()’:
+/home/zybi/projects/ifairy.cpp/tests/test-backend-ops.cpp:7466:122: warning: bitwise operation between different enumeration types ‘ggml_scale_mode’ and ‘ggml_scale_flag’ is deprecated [-Wdeprecated-enum-enum-conversion]
+ 7466 |     test_cases.emplace_back(new test_interpolate(GGML_TYPE_F32, {2, 5,  7, 11}, {5, 7, 11, 13}, GGML_SCALE_MODE_BILINEAR | GGML_SCALE_FLAG_ALIGN_CORNERS));
+      |                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

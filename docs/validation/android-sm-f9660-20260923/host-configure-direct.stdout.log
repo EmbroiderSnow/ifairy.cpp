@@ -1,0 +1,10 @@
+-- CMAKE_SYSTEM_PROCESSOR: x86_64
+-- GGML_SYSTEM_ARCH: x86
+-- Including CPU backend
+-- x86 detected
+-- Adding CPU backend variant ggml-cpu: -march=native 
+-- ggml version: 0.0.2
+-- ggml commit:  a6256d6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zybi/projects/ifairy.cpp/build-rel

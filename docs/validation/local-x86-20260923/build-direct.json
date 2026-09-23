@@ -1,0 +1,15 @@
+{
+  "tag": "build-direct",
+  "command": [
+    "cmake",
+    "--build",
+    "build-rel",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-rel -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:29:31.933144+08:00",
+  "elapsed_seconds": 77.607,
+  "returncode": 0
+}

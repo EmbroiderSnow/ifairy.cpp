@@ -1,0 +1,16 @@
+{
+  "tag": "host-configure-lut",
+  "command": [
+    "cmake",
+    "-B",
+    "build-lut",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DGGML_LEGACY_IFAIRY_CPU_LUT=ON"
+  ],
+  "shell_command": "cmake -B build-lut -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGGML_LEGACY_IFAIRY_CPU_LUT=ON",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:55:23.911038+08:00",
+  "elapsed_seconds": 0.129,
+  "returncode": 0
+}

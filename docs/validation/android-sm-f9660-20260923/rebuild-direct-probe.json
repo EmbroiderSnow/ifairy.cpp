@@ -1,0 +1,17 @@
+{
+  "tag": "rebuild-direct-probe",
+  "command": [
+    "cmake",
+    "--build",
+    "build-android-direct",
+    "--target",
+    "test-ifairy-real-model",
+    "-j",
+    "8"
+  ],
+  "shell_command": "cmake --build build-android-direct --target test-ifairy-real-model -j 8",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:57:42.267237+08:00",
+  "elapsed_seconds": 2.926,
+  "returncode": 0
+}

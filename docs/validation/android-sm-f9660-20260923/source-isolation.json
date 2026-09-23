@@ -1,0 +1,12 @@
+{
+  "tag": "source-isolation",
+  "command": [
+    "python3",
+    "scripts/check-ifairy-only.py"
+  ],
+  "shell_command": "python3 scripts/check-ifairy-only.py",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T17:03:17.488519+08:00",
+  "elapsed_seconds": 0.141,
+  "returncode": 0
+}

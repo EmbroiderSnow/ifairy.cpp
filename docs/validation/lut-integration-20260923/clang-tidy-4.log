@@ -1,0 +1,6 @@
+37466 warnings generated.
+/home/zybi/projects/ifairy.cpp/tests/test-ifairy-real-model.cpp:121:16: warning: no header providing "rusage" is directly included [misc-include-cleaner]
+    5 |         struct rusage usage{};
+      |                ^
+Suppressed 37479 warnings (37465 in non-user code, 14 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

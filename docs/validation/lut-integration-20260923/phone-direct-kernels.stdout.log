@@ -1,0 +1,17 @@
+========================================
+Legacy iFairy Direct CPU Tests
+========================================
+
+=== legacy iFairy vecdot direct compare (per-block) ===
+  vecdot compare (per-block): PASS
+
+=== legacy iFairy vecdot direct compare (tensor-scale) ===
+  vecdot compare (tensor-scale): PASS
+
+=== legacy iFairy64 W2 direct fuse smoke ===
+  packed compare max diff: 0.000732 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+  packed compare max diff: 0.001953 (threshold 0.010000)
+
+legacy iFairy direct tests: PASS

@@ -1,0 +1,65 @@
+CMAKE_BUILD_TYPE=Release
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_CUDA_FA=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_CUDA_GRAPHS=OFF for the
+  CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_HIP_NO_VMM=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_HIP_MMQ_MFMA=OFF for the
+  CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_SYCL_GRAPH=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_SYCL_DNN=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_OPENCL_EMBED_KERNELS=OFF for
+  the CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_OPENCL_USE_ADRENO_KERNELS=OFF
+  for the CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+error: unknown target CPU 'armv8.6-a+dotprod+i8mm+fp16'
+note: valid target CPU values are: nocona, core2, penryn, bonnell, atom, silvermont, slm, goldmont, goldmont-plus, tremont, nehalem, corei7, westmere, sandybridge, corei7-avx, ivybridge, core-avx-i, haswell, core-avx2, broadwell, skylake, skylake-avx512, skx, cascadelake, cooperlake, cannonlake, icelake-client, rocketlake, icelake-server, tigerlake, sapphirerapids, alderlake, raptorlake, meteorlake, arrowlake, arrowlake-s, lunarlake, gracemont, pantherlake, sierraforest, grandridge, graniterapids, graniterapids-d, emeraldrapids, clearwaterforest, diamondrapids, knl, knm, k8, athlon64, athlon-fx, opteron, k8-sse3, athlon64-sse3, opteron-sse3, amdfam10, barcelona, btver1, btver2, bdver1, bdver2, bdver3, bdver4, znver1, znver2, znver3, znver4, znver5, x86-64, x86-64-v2, x86-64-v3, x86-64-v4
+CMake Warning at ggml/src/ggml-cpu/CMakeLists.txt:269 (message):
+  Failed to get ARM features
+Call Stack (most recent call first):
+  ggml/src/CMakeLists.txt:377 (ggml_add_cpu_backend_variant_impl)
+
+

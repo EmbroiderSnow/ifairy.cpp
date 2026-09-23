@@ -1,0 +1,108 @@
+[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o
+[  6%] Building CXX object common/CMakeFiles/build_info.dir/build-info.cpp.o
+[  6%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o
+[  6%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o
+[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o
+[  6%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o
+[  7%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o
+[  8%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o
+[  8%] Built target build_info
+[  9%] Building C object ggml/src/CMakeFiles/ggml-base.dir/ggml-turbo-quant.c.o
+[ 10%] Building CXX object ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o
+[ 11%] Linking CXX shared library ../../bin/libggml-base.so
+[ 11%] Built target ggml-base
+[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o
+[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o
+[ 15%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o
+[ 15%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o
+[ 17%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o
+[ 18%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o
+[ 19%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o
+[ 20%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o
+[ 21%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o
+[ 22%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o
+[ 24%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o
+[ 24%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o
+[ 25%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/row4/row4-cpu.cpp.o
+[ 26%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp.o
+[ 27%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/legacy-ifairy/wide-linear.cpp.o
+[ 28%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/llamafile/sgemm.cpp.o
+[ 29%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o
+[ 30%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o
+[ 31%] Linking CXX shared library ../../bin/libggml-cpu.so
+[ 31%] Built target ggml-cpu
+[ 32%] Building CXX object ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o
+[ 34%] Linking CXX shared library ../../bin/libggml.so
+[ 34%] Built target ggml
+[ 36%] Building CXX object src/CMakeFiles/llama.dir/llama.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/llama.dir/llama-adapter.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/llama.dir/llama-arch.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/llama.dir/llama-batch.cpp.o
+[ 39%] Building CXX object src/CMakeFiles/llama.dir/llama-grammar.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/llama.dir/llama-chat.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/llama.dir/llama-context.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/llama.dir/llama-cparams.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/llama.dir/llama-graph.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/llama.dir/llama-hparams.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/llama.dir/llama-impl.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/llama.dir/llama-io.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/llama.dir/llama-kv-cache-iswa.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/llama.dir/llama-memory.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-hybrid.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/llama.dir/llama-memory-recurrent.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/llama.dir/llama-mmap.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/llama.dir/llama-model-loader.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/llama.dir/llama-model-saver.cpp.o
+[ 56%] Building CXX object src/CMakeFiles/llama.dir/llama-model.cpp.o
+[ 57%] Building CXX object src/CMakeFiles/llama.dir/llama-quant.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/llama.dir/llama-sampling.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/llama.dir/llama-vocab.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/llama.dir/unicode-data.cpp.o
+[ 61%] Building CXX object src/CMakeFiles/llama.dir/unicode.cpp.o
+[ 62%] Linking CXX shared library ../bin/libllama.so
+[ 62%] Built target llama
+[ 67%] Building CXX object common/CMakeFiles/common.dir/common.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/common.dir/chat-parser.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/common.dir/arg.cpp.o
+[ 67%] Building CXX object common/CMakeFiles/common.dir/chat.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/common.dir/json-schema-to-grammar.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/common.dir/console.cpp.o
+[ 70%] Building CXX object common/CMakeFiles/common.dir/json-partial.cpp.o
+[ 71%] Building CXX object common/CMakeFiles/common.dir/llguidance.cpp.o
+[ 72%] Building CXX object common/CMakeFiles/common.dir/log.cpp.o
+[ 73%] Building CXX object common/CMakeFiles/common.dir/ngram-cache.cpp.o
+[ 74%] Building CXX object common/CMakeFiles/common.dir/ngram-map.cpp.o
+[ 75%] Building CXX object common/CMakeFiles/common.dir/ngram-mod.cpp.o
+[ 76%] Building CXX object common/CMakeFiles/common.dir/regex-partial.cpp.o
+[ 77%] Building CXX object common/CMakeFiles/common.dir/sampling.cpp.o
+[ 78%] Building CXX object common/CMakeFiles/common.dir/speculative.cpp.o
+[ 79%] Linking CXX static library libcommon.a
+[ 79%] Built target common
+[ 80%] Building CXX object tests/CMakeFiles/test-backend-ops.dir/test-backend-ops.cpp.o
+[ 82%] Building CXX object tests/CMakeFiles/test-legacy-ifairy-direct.dir/test-legacy-ifairy-direct.cpp.o
+[ 82%] Building CXX object tests/CMakeFiles/test-ifairy-model.dir/test-ifairy-model.cpp.o
+[ 84%] Building CXX object tools/perplexity/CMakeFiles/llama-perplexity.dir/perplexity.cpp.o
+[ 85%] Building CXX object tools/main/CMakeFiles/llama-cli.dir/main.cpp.o
+[ 86%] Building CXX object tools/ifairy-vecdot-microbench/CMakeFiles/ifairy-vecdot-microbench.dir/ifairy-vecdot-microbench.cpp.o
+[ 87%] Building CXX object tools/llama-bench/CMakeFiles/llama-bench.dir/llama-bench.cpp.o
+[ 88%] Building CXX object tools/ifairy-actq-microbench/CMakeFiles/ifairy-actq-microbench.dir/ifairy-actq-microbench.cpp.o
+[ 89%] Linking CXX executable ../../bin/ifairy-actq-microbench
+[ 90%] Building CXX object tests/CMakeFiles/test-legacy-ifairy-direct.dir/get-model.cpp.o
+[ 91%] Linking CXX executable ../bin/test-legacy-ifairy-direct
+[ 91%] Built target ifairy-actq-microbench
+[ 92%] Building CXX object tests/CMakeFiles/test-backend-ops.dir/get-model.cpp.o
+[ 93%] Building CXX object tests/CMakeFiles/test-ifairy-model.dir/get-model.cpp.o
+[ 93%] Built target test-legacy-ifairy-direct
+[ 94%] Linking CXX executable ../../bin/ifairy-vecdot-microbench
+[ 94%] Built target ifairy-vecdot-microbench
+[ 95%] Linking CXX executable ../bin/test-ifairy-model
+[ 95%] Built target test-ifairy-model
+[ 96%] Linking CXX executable ../../bin/llama-cli
+[ 96%] Built target llama-cli
+[ 97%] Linking CXX executable ../../bin/llama-perplexity
+[ 97%] Built target llama-perplexity
+[ 98%] Linking CXX executable ../../bin/llama-bench
+[ 98%] Built target llama-bench
+[100%] Linking CXX executable ../bin/test-backend-ops
+[100%] Built target test-backend-ops

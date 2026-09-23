@@ -1,0 +1,6 @@
+38877 warnings generated.
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp:25:6: warning: enum 'ggml_legacy_ifairy_lut_impl' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   25 | enum ggml_legacy_ifairy_lut_impl {
+      |      ^
+Suppressed 38876 warnings (38876 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,0 +1,59 @@
+2026-09-23T09:02:05Z
+Current Battery Service state:
+  AC powered: false
+  USB powered: true
+  Wireless powered: false
+  Dock powered: false
+  Max charging current: 0
+ Time when the latest updated value of the Max charging current was sent via battery changed broadcast: 0
+  Max charging voltage: 0
+  Charge counter: 1355200
+  status: 2
+  health: 2
+  present: true
+  level: 31
+  scale: 100
+  voltage: 3919
+ Time when the latest updated value of the voltage was sent via battery changed broadcast: 0
+ The last voltage value sent via the battery changed broadcast: 3916
+  temperature: 321
+  technology: Li-ion
+  Charging state: 0
+  Charging policy: 0
+  Capacity level: -1
+  batteryMiscEvent: 268500992
+  batteryCurrentEvent: 32768
+  mSecPlugTypeSummary: 2
+  LED Charging: true
+  LED Low Battery: true
+  current now: 1624062
+IsStatusOverride: false
+ThermalEventListeners:
+	callbacks: 4
+	killed: false
+	broadcasts count: -1
+ThermalStatusListeners:
+	callbacks: 3
+	killed: false
+	broadcasts count: -1
+Thermal Status: 0
+Cached temperatures:
+	Temperature{mValue=32.3, mType=2, mName=SUBBAT, mStatus=0}
+	Temperature{mValue=53.9, mType=0, mName=AP, mStatus=0}
+	Temperature{mValue=41.5, mType=12, mName=CP, mStatus=0}
+	Temperature{mValue=44.1, mType=5, mName=PA, mStatus=0}
+	Temperature{mValue=33.3, mType=2, mName=BAT, mStatus=0}
+	Temperature{mValue=33.3, mType=4, mName=USB, mStatus=0}
+	Temperature{mValue=37.9, mType=3, mName=SKIN, mStatus=0}
+HAL Ready: true
+HAL connection:
+	ThermalHAL AIDL 3  connected: yes
+Current temperatures from HAL:
+  mWakefulness=Awake
+mWakefulness=1
+/sys/devices/system/cpu/cpufreq/policy0
+2745600
+3532800
+/sys/devices/system/cpu/cpufreq/policy6
+1017600
+4473600

@@ -1,0 +1,782 @@
+27901 warnings generated.
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1:9: warning: declaration uses identifier '_CRT_SECURE_NO_DEPRECATE', which is a reserved identifier [bugprone-reserved-identifier]
+    1 | #define _CRT_SECURE_NO_DEPRECATE // Disables "unsafe" warnings on Windows
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         CRT_SECURE_NO_DEPRECATE
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2:9: warning: declaration uses identifier '_USE_MATH_DEFINES', which is a reserved identifier [bugprone-reserved-identifier]
+    2 | #define _USE_MATH_DEFINES // For M_PI on MSVC
+      |         ^~~~~~~~~~~~~~~~~
+      |         USE_MATH_DEFINES
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:7:1: warning: included header ggml-backend-impl.h is not used directly [misc-include-cleaner]
+    7 | #include "ggml-backend-impl.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    8 | #include "ggml-backend.h"
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:8:1: warning: included header ggml-backend.h is not used directly [misc-include-cleaner]
+    8 | #include "ggml-backend.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+    9 | #include "ggml-cpu-impl.h"
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:30:1: warning: included header alloca.h is not used directly [misc-include-cleaner]
+   30 | #include <alloca.h>
+      | ^~~~~~~~~~~~~~~~~~~
+   31 | #endif
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:34:1: warning: included header errno.h is not used directly [misc-include-cleaner]
+   34 | #include <errno.h>
+      | ^~~~~~~~~~~~~~~~~~
+   35 | #include <time.h>
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:36:1: warning: included header math.h is not used directly [misc-include-cleaner]
+   36 | #include <math.h>
+      | ^~~~~~~~~~~~~~~~~
+   37 | #include <stdlib.h>
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:45:1: warning: included header signal.h is not used directly [misc-include-cleaner]
+   45 | #include <signal.h>
+      | ^~~~~~~~~~~~~~~~~~~
+   46 | #include <pthread.h>
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:223:1: warning: included header unistd.h is not used directly [misc-include-cleaner]
+  223 | #include <unistd.h>
+      | ^~~~~~~~~~~~~~~~~~~
+  224 | 
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:227:9: warning: no header providing "pthread_t" is directly included [misc-include-cleaner]
+    1 | typedef pthread_t ggml_thread_t;
+      |         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:546:9: warning: no header providing "pthread_cond_t" is directly included [misc-include-cleaner]
+  546 | typedef pthread_cond_t     ggml_cond_t;
+      |         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:547:9: warning: no header providing "pthread_mutex_t" is directly included [misc-include-cleaner]
+  547 | typedef pthread_mutex_t    ggml_mutex_t;
+      |         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:577:8: warning: Excessive padding in 'struct ggml_threadpool' (166 padding bytes, where 102 is optimal). Optimal fields order: n_barrier, n_graph, cgraph, cplan, workers, mutex, cond, abort, n_threads_max, n_barrier_passed, n_threads_cur, prio, poll, ec, stop, pause, current_chunk, consider reordering the fields or adding explicit padding members [clang-analyzer-optin.performance.Padding]
+  577 | struct ggml_threadpool {
+      | ~~~~~~~^~~~~~~~~~~~~~~~~
+  578 |     ggml_mutex_t mutex;       // mutex for cond.var
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  579 |     ggml_cond_t  cond;        // cond.var for waiting for new work
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  580 | 
+  581 |     struct ggml_cgraph * cgraph;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  582 |     struct ggml_cplan  * cplan;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  583 | 
+  584 |     // synchronization primitives
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  585 |     atomic_int n_graph;       // incremented when there is work to be done (i.e each graph)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  586 |     atomic_int GGML_CACHE_ALIGN n_barrier;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  587 |     atomic_int GGML_CACHE_ALIGN n_barrier_passed;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |     atomic_int GGML_CACHE_ALIGN current_chunk; // currently processing chunk during Mat_Mul, shared between all the threads.
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  589 | 
+  590 |     // these are atomic as an annotation for thread-sanitizer
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  591 |     atomic_bool stop;         // Used for stopping the threadpool altogether
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  592 |     atomic_bool pause;        // Used for pausing the threadpool or individual threads
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:577:8: note: Excessive padding in 'struct ggml_threadpool' (166 padding bytes, where 102 is optimal). Optimal fields order: n_barrier, n_graph, cgraph, cplan, workers, mutex, cond, abort, n_threads_max, n_barrier_passed, n_threads_cur, prio, poll, ec, stop, pause, current_chunk, consider reordering the fields or adding explicit padding members
+  577 | struct ggml_threadpool {
+      | ~~~~~~~^~~~~~~~~~~~~~~~~
+  578 |     ggml_mutex_t mutex;       // mutex for cond.var
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  579 |     ggml_cond_t  cond;        // cond.var for waiting for new work
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  580 | 
+  581 |     struct ggml_cgraph * cgraph;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  582 |     struct ggml_cplan  * cplan;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  583 | 
+  584 |     // synchronization primitives
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  585 |     atomic_int n_graph;       // incremented when there is work to be done (i.e each graph)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  586 |     atomic_int GGML_CACHE_ALIGN n_barrier;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  587 |     atomic_int GGML_CACHE_ALIGN n_barrier_passed;
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |     atomic_int GGML_CACHE_ALIGN current_chunk; // currently processing chunk during Mat_Mul, shared between all the threads.
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  589 | 
+  590 |     // these are atomic as an annotation for thread-sanitizer
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  591 |     atomic_bool stop;         // Used for stopping the threadpool altogether
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  592 |     atomic_bool pause;        // Used for pausing the threadpool or individual threads
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:766:5: warning: no header providing "__GLIBC__" is directly included [misc-include-cleaner]
+    1 | #if __GLIBC__ > 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ > 33) || defined(__COSMOPOLITAN__)
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:766:41: warning: no header providing "__GLIBC_MINOR__" is directly included [misc-include-cleaner]
+  766 | #if __GLIBC__ > 2 || (__GLIBC__ == 2 && __GLIBC_MINOR__ > 33) || defined(__COSMOPOLITAN__)
+      |                                         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:885:72: warning: no header providing "GGML_CPU_FP32_TO_FP16" is directly included [misc-include-cleaner]
+    1 |                     ggml_vec_set_f16(nc, (ggml_fp16_t *)(data + i*n1), GGML_CPU_FP32_TO_FP16(value));
+      |                                                                        ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:995:24: warning: no header providing "GGML_CPU_FP16_TO_FP32" is directly included [misc-include-cleaner]
+  995 |                 return GGML_CPU_FP16_TO_FP32(((ggml_fp16_t *)(tensor->data))[i]);
+      |                        ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1269:29: warning: Division by zero [clang-analyzer-core.DivideZero]
+ 1269 |     const int64_t r2 = ne12 / ne02;
+      |                        ~~~~~^~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: Assuming 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'ne02' initialized to 0
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |     ^~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:309:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  309 |     GGML_TENSOR_LOCALS(int64_t, ne0, src0, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src0' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:310:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  310 |     GGML_TENSOR_LOCALS(size_t,  nb0, src0, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: Assuming 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:311:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  311 |     GGML_TENSOR_LOCALS(int64_t, ne1, src1, ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'src1' is null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |                                      ^~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is false
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:312:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  312 |     GGML_TENSOR_LOCALS(size_t,  nb1, src1, nb) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:313:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  313 |     GGML_TENSOR_LOCALS(int64_t, ne,  dst,  ne) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:290:5: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  290 |     GGML_TENSOR_LOCALS_1    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:287:28: note: expanded from macro 'GGML_TENSOR_LOCALS_1'
+  287 |     const type prefix##0 = (pointer) ? (pointer)->array[0] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:294:5: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  294 |     GGML_TENSOR_LOCALS_2    (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:291:28: note: expanded from macro 'GGML_TENSOR_LOCALS_2'
+  291 |     const type prefix##1 = (pointer) ? (pointer)->array[1] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:298:5: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  298 |     GGML_TENSOR_LOCALS_3  (type, prefix, pointer, array) \
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:295:28: note: expanded from macro 'GGML_TENSOR_LOCALS_3'
+  295 |     const type prefix##2 = (pointer) ? (pointer)->array[2] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: 'dst' is non-null
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:38: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |                                      ^~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1261:5: note: '?' condition is true
+ 1261 |     GGML_TENSOR_BINARY_OP_LOCALS
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:314:5: note: expanded from macro 'GGML_TENSOR_BINARY_OP_LOCALS'
+  314 |     GGML_TENSOR_LOCALS(size_t,  nb,  dst,  nb)
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/../include/ggml.h:299:28: note: expanded from macro 'GGML_TENSOR_LOCALS'
+  299 |     const type prefix##3 = (pointer) ? (pointer)->array[3] : 0; \
+      |                            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1269:29: note: Division by zero
+ 1269 |     const int64_t r2 = ne12 / ne02;
+      |                        ~~~~~^~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1381:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 1381 |         for (int64_t i13 = 0; i13 < ne13; i13++)
+      |                                                 ^
+      |                                                  {
+ 1382 |             for (int64_t i12 = 0; i12 < ne12; i12++)
+ 1383 |                 if (!llamafile_sgemm(params,
+ 1384 |                                      ne01, ne11, ne00/ggml_blck_size(src0->type),
+ 1385 |                                      (const char *)src0->data + i12/r2*nb02 + i13/r3*nb03,
+ 1386 |                                      nb01/ggml_type_size(src0->type),
+ 1387 |                                      (const char *)src1->data + i12*nb12 + i13*nb13,
+ 1388 |                                      nb11/ggml_type_size(src1->type),
+ 1389 |                                      (char *)dst->data + i12*nb2 + i13*nb3,
+ 1390 |                                      nb1/ggml_type_size(dst->type),
+ 1391 |                                      src0->type,
+ 1392 |                                      src1->type,
+ 1393 |                                      dst->type))
+ 1394 |                     goto UseGgmlGemm1;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1382:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 1382 |             for (int64_t i12 = 0; i12 < ne12; i12++)
+      |                                                     ^
+      |                                                      {
+ 1383 |                 if (!llamafile_sgemm(params,
+ 1384 |                                      ne01, ne11, ne00/ggml_blck_size(src0->type),
+ 1385 |                                      (const char *)src0->data + i12/r2*nb02 + i13/r3*nb03,
+ 1386 |                                      nb01/ggml_type_size(src0->type),
+ 1387 |                                      (const char *)src1->data + i12*nb12 + i13*nb13,
+ 1388 |                                      nb11/ggml_type_size(src1->type),
+ 1389 |                                      (char *)dst->data + i12*nb2 + i13*nb3,
+ 1390 |                                      nb1/ggml_type_size(dst->type),
+ 1391 |                                      src0->type,
+ 1392 |                                      src1->type,
+ 1393 |                                      dst->type))
+ 1394 |                     goto UseGgmlGemm1;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1393:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 1393 |                                      dst->type))
+      |                                                 ^
+      |                                                  {
+ 1394 |                     goto UseGgmlGemm1;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1459:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 1459 |         for (int64_t i13 = 0; i13 < ne13; i13++)
+      |                                                 ^
+      |                                                  {
+ 1460 |             for (int64_t i12 = 0; i12 < ne12; i12++)
+ 1461 |                 if (!llamafile_sgemm(params,
+ 1462 |                                      ne01, ne11, ne00/ggml_blck_size(src0->type),
+ 1463 |                                      (const char *)src0->data + i12/r2*nb02 + i13/r3*nb03,
+ 1464 |                                      nb01/ggml_type_size(src0->type),
+ 1465 |                                      (const char *)wdata + (i12*ne11 + i13*ne12*ne11)*row_size,
+ 1466 |                                      row_size/ggml_type_size(vec_dot_type),
+ 1467 |                                      (char *)dst->data + i12*nb2 + i13*nb3,
+ 1468 |                                      nb1/ggml_type_size(dst->type),
+ 1469 |                                      src0->type,
+ 1470 |                                      vec_dot_type,
+ 1471 |                                      dst->type))
+ 1472 |                     goto UseGgmlGemm2;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1460:53: warning: statement should be inside braces [readability-braces-around-statements]
+ 1460 |             for (int64_t i12 = 0; i12 < ne12; i12++)
+      |                                                     ^
+      |                                                      {
+ 1461 |                 if (!llamafile_sgemm(params,
+ 1462 |                                      ne01, ne11, ne00/ggml_blck_size(src0->type),
+ 1463 |                                      (const char *)src0->data + i12/r2*nb02 + i13/r3*nb03,
+ 1464 |                                      nb01/ggml_type_size(src0->type),
+ 1465 |                                      (const char *)wdata + (i12*ne11 + i13*ne12*ne11)*row_size,
+ 1466 |                                      row_size/ggml_type_size(vec_dot_type),
+ 1467 |                                      (char *)dst->data + i12*nb2 + i13*nb3,
+ 1468 |                                      nb1/ggml_type_size(dst->type),
+ 1469 |                                      src0->type,
+ 1470 |                                      vec_dot_type,
+ 1471 |                                      dst->type))
+ 1472 |                     goto UseGgmlGemm2;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1471:49: warning: statement should be inside braces [readability-braces-around-statements]
+ 1471 |                                      dst->type))
+      |                                                 ^
+      |                                                  {
+ 1472 |                     goto UseGgmlGemm2;
+      |                                       
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:1617:11: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+ 1617 |     ptr = (void *) GGML_PAD((uintptr_t) ptr, align);
+      |           ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2530:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 2530 |         case GGML_OP_GET_ROWS:
+      |         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2548:20: note: last of these clones ends here
+ 2548 |             } break;
+      |                    ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2549:9: warning: switch has 2 consecutive identical branches [bugprone-branch-clone]
+ 2549 |         case GGML_OP_DIAG_MASK_ZERO:
+      |         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2572:20: note: last of these clones ends here
+ 2572 |             } break;
+      |                    ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2846:12: warning: no header providing "sched_param" is directly included [misc-include-cleaner]
+    1 |     struct sched_param p;
+      |            ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2848:5: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+ 2848 |     switch (prio) {
+      |     ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2895:7: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 2895 |     } else {
+      |       ^~~~~~
+ 2896 |         memset(local_mask, 0, GGML_MAX_N_THREADS);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2897 |         int32_t base_idx = *iter;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2898 |         for (int32_t i = 0; i < GGML_MAX_N_THREADS; i++) {
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2899 |             int32_t idx = base_idx + i;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2900 |             if (idx >= GGML_MAX_N_THREADS) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2901 |                 // Just a cheaper modulo
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~
+ 2902 |                 idx -= GGML_MAX_N_THREADS;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 2903 |             }
+      |             ~
+ 2904 |             if (global_mask[idx]) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~
+ 2905 |                 local_mask[idx] = 1;
+      |                 ~~~~~~~~~~~~~~~~~~~~
+ 2906 |                 *iter = idx + 1;
+      |                 ~~~~~~~~~~~~~~~~
+ 2907 |                 return;
+      |                 ~~~~~~~
+ 2908 |             }
+      |             ~
+ 2909 |         }
+      |         ~
+ 2910 |     }
+      |     ~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:2914:21: warning: statement should be inside braces [readability-braces-around-statements]
+ 2914 |     if (!threadpool) return;
+      |                     ^       
+      |                      {
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3160:66: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+ 3160 |                         if (node->src[1]->type == GGML_TYPE_F32) {
+      |                                                                  ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3163:26: note: end of the original
+ 3163 |                         } else if (node->src[1]->type == GGML_TYPE_F16) {
+      |                          ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3163:73: note: clone 1 starts here
+ 3163 |                         } else if (node->src[1]->type == GGML_TYPE_F16) {
+      |                                                                         ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu.c:3166:74: note: clone 2 starts here
+ 3166 |                         } else if (node->src[1]->type == GGML_TYPE_BF16) {
+      |                                                                          ^
+Suppressed 27869 warnings (27869 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

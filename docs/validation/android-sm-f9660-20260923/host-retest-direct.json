@@ -1,0 +1,14 @@
+{
+  "tag": "host-retest-direct",
+  "command": [
+    "ctest",
+    "--test-dir",
+    "build-rel",
+    "--output-on-failure"
+  ],
+  "shell_command": "ctest --test-dir build-rel --output-on-failure",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:57:51.394879+08:00",
+  "elapsed_seconds": 0.158,
+  "returncode": 0
+}

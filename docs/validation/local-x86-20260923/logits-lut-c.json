@@ -1,0 +1,17 @@
+{
+  "tag": "logits-lut-c",
+  "command": [
+    "env",
+    "GGML_IFAIRY_LUT=1",
+    "GGML_IFAIRY_LUT_IMPL=lut_c",
+    "python3",
+    "docs/validation/local-x86-20260923/check_logits.py",
+    "build-lut",
+    "/home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf"
+  ],
+  "shell_command": "env GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=lut_c python3 docs/validation/local-x86-20260923/check_logits.py build-lut /home/zybi/projects/Fairy-plus-minus-i-700M/ifairy.gguf",
+  "cwd": "/home/zybi/projects/ifairy.cpp",
+  "started": "2026-09-23T16:34:40.193099+08:00",
+  "elapsed_seconds": 3.076,
+  "returncode": 0
+}

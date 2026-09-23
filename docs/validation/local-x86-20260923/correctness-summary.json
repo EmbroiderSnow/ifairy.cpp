@@ -1,0 +1,71 @@
+{
+  "logits-direct": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1218392
+  },
+  "logits-lut-off": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1218648
+  },
+  "logits-lut-auto": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1737656
+  },
+  "logits-lut-repeat": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1737808
+  },
+  "logits-lut16": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1737980
+  },
+  "logits-lut-c": {
+    "all_logits_identical_to_direct": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1737716
+  },
+  "serial_lut_toggle_identical": true,
+  "prefill_batch_vs_serial": [
+    {
+      "prompt": "The capital of France is",
+      "max_abs_diff": 0.0,
+      "mean_abs_diff": 0.0,
+      "rms_diff": 0.0,
+      "argmax_same": true,
+      "first_generated_divergence_1_based": null
+    },
+    {
+      "prompt": "Once upon a time, in a small village",
+      "max_abs_diff": 0.2316303253173828,
+      "mean_abs_diff": 0.043307208575773984,
+      "rms_diff": 0.05475365472834807,
+      "argmax_same": true,
+      "first_generated_divergence_1_based": 15
+    }
+  ],
+  "logits-reference-batched": {
+    "identical_to_reference_batched": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1738164
+  },
+  "logits-reference-serial": {
+    "identical_to_reference_batched": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1737932
+  },
+  "logits-reference-off": {
+    "identical_to_reference_batched": true,
+    "finite_logits": 2112000,
+    "max_rss_kib": 1219004
+  },
+  "reference_prefill_batch_vs_serial_max_abs_diff": [
+    0.0,
+    0.0
+  ],
+  "cli_direct_lut_output_identical": true
+}

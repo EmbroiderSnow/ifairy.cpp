@@ -1,0 +1,30 @@
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp: In function ‘float op_complex_relu2(float)’:
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:28:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   28 |     if ((((ggml_fp16_t *) (&x))[0] & ((ggml_fp16_t *) (&x))[1]) >> 15) {
+      |          ~^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/ggml-cpu-impl.h:6,
+                 from /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/traits.h:3,
+                 from /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/common.h:4,
+                 from /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.h:3,
+                 from /home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:1:
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:33:34: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   33 |     float r = GGML_BF16_TO_FP32(((ggml_bf16_t *) (&x))[0]);
+      |                                 ~^~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/./ggml-impl.h:546:56: note: in definition of macro ‘GGML_BF16_TO_FP32’
+  546 | #define GGML_BF16_TO_FP32(x) ggml_compute_bf16_to_fp32(x)
+      |                                                        ^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:33:34: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/zybi/projects/ifairy.cpp/ggml/src/./ggml-impl.h:546:56: note: in definition of macro ‘GGML_BF16_TO_FP32’
+  546 | #define GGML_BF16_TO_FP32(x) ggml_compute_bf16_to_fp32(x)
+      |                                                        ^
+/home/zybi/projects/ifairy.cpp/ggml/src/./ggml-impl.h:513:59: note: initializing argument 1 of ‘float ggml_compute_bf16_to_fp32(ggml_bf16_t)’
+  513 | static inline float ggml_compute_bf16_to_fp32(ggml_bf16_t h) {
+      |                                               ~~~~~~~~~~~~^
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:39:6: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   39 |     ((ggml_bf16_t *) (&ret))[0] = GGML_FP32_TO_BF16(r);
+      |     ~^~~~~~~~~~~~~~~~~~~~~~~
+/home/zybi/projects/ifairy.cpp/ggml/src/ggml-cpu/unary-ops.cpp:39:6: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+/home/zybi/projects/ifairy.cpp/tests/test-backend-ops.cpp: In function ‘std::vector<std::unique_ptr<test_case> > make_test_cases_eval()’:
+/home/zybi/projects/ifairy.cpp/tests/test-backend-ops.cpp:7466:122: warning: bitwise operation between different enumeration types ‘ggml_scale_mode’ and ‘ggml_scale_flag’ is deprecated [-Wdeprecated-enum-enum-conversion]
+ 7466 |     test_cases.emplace_back(new test_interpolate(GGML_TYPE_F32, {2, 5,  7, 11}, {5, 7, 11, 13}, GGML_SCALE_MODE_BILINEAR | GGML_SCALE_FLAG_ALIGN_CORNERS));
+      |                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

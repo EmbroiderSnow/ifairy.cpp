@@ -1,0 +1,35 @@
+Consolidate compiler generated dependencies of target build_info
+[  0%] Built target build_info
+Consolidate compiler generated dependencies of target ggml-base
+[ 10%] Built target ggml-base
+Consolidate compiler generated dependencies of target ggml-cpu
+[ 33%] Built target ggml-cpu
+Consolidate compiler generated dependencies of target ggml
+[ 35%] Built target ggml
+Consolidate compiler generated dependencies of target llama
+[ 60%] Built target llama
+[ 61%] Building CXX object tests/CMakeFiles/test-ifairy-real-model.dir/test-ifairy-real-model.cpp.o
+Consolidate compiler generated dependencies of target common
+[ 76%] Built target common
+Consolidate compiler generated dependencies of target test-legacy-ifairy-direct
+Consolidate compiler generated dependencies of target llama-bench
+Consolidate compiler generated dependencies of target test-backend-ops
+Consolidate compiler generated dependencies of target test-ifairy-model
+Consolidate compiler generated dependencies of target test-legacy-ifairy
+Consolidate compiler generated dependencies of target llama-perplexity
+Consolidate compiler generated dependencies of target llama-cli
+[ 81%] Built target test-legacy-ifairy-direct
+[ 82%] Built target llama-bench
+[ 84%] Built target test-ifairy-model
+[ 90%] Built target test-legacy-ifairy
+[ 90%] Built target test-backend-ops
+[ 92%] Built target llama-cli
+[ 93%] Built target llama-perplexity
+Consolidate compiler generated dependencies of target ifairy-vecdot-microbench
+Consolidate compiler generated dependencies of target ifairy-actq-microbench
+Consolidate compiler generated dependencies of target ifairy-microbench
+[ 99%] Built target ifairy-microbench
+[ 99%] Built target ifairy-vecdot-microbench
+[ 99%] Built target ifairy-actq-microbench
+[100%] Linking CXX executable ../bin/test-ifairy-real-model
+[100%] Built target test-ifairy-real-model
