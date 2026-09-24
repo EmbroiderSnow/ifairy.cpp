@@ -1,228 +1,160 @@
-# iFairy CPU inference with llama.cpp
+# iFairy CPU inference
 
-This repository provides a CPU inference implementation for the original iFairy model. It loads GGUF files with `general.architecture = "ifairy"` and implements model loading, prompt processing (prefill), autoregressive decoding, token sampling, and KV caching. Complex matrix multiplication preserves the original `w * conj(x)` convention and packed BF16 representation.
-
-The code was extracted from llama.cpp revision `fe79b5dc5a449922caa64a37451948f30c124318`. The tested extraction revision is `609eacf`. Other model graph builders, Fairy2i-specific inference and conversion implementations, and GPU backend implementations have been removed. Other GGUF architectures are rejected during model loading. Legacy `IFAIRY64` and `IFAIRY_WIDE_LINEAR_W2` primitives remain for compatibility; they do not provide an entry point for loading other model architectures.
-
-The package includes source code, small synthetic reference datasets, and a self-contained inference demo. No pretrained model, Python installation, GPU, or network connection is required to run the C++ demo once the build tools are installed. See the [code inventory and implementation limitations](docs/IFAIRY_INVENTORY.md) for further details.
+CPU inference for iFairy models, with checkpoint conversion and text generation through `llama-cli`.
 
 ## 1. System requirements
 
-### Required software and tested versions
+### Software dependencies and tested versions
 
-The installation and demo below were verified on the following system. Version numbers describe the tested environment, not a claim that every other version is supported.
+Building requires a C11/C++17 compiler, **CMake ≥ 3.14**, and a build tool such as Make. The C++ dependencies are bundled in this repository; system runtime libraries come with the operating system/toolchain. Git is needed to clone the source (tested on macOS: 2.54.0, Apple Git-157). Android deployment additionally requires `adb`; its version was not recorded in the device report. Python and internet access are required to download and convert the demo model.
 
-| Component | Requirement | Tested version or configuration |
-| --- | --- | --- |
-| Operating system | macOS with the Command Line Tools and SDK for a native build | macOS 27.0, build 26A428, arm64 |
-| C/C++ compiler | C11 and C++17 support | Apple clang 21.0.0 (`clang-2100.3.34.2`) |
-| Apple Command Line Tools / SDK | Required for the tested macOS build | Command Line Tools `27.0.0.0.1788430756`; macOS SDK 27.0 |
-| CMake and CTest | CMake ≥ 3.14, as declared by the project | 4.4.2 |
-| Build tool | Make for the commands below | GNU Make 3.81 |
-| C/C++ runtime, system threads, Accelerate | Supplied by the tested operating system and toolchain | Bundled macOS versions; no separate installation |
-| ggml and other bundled C/C++ dependencies | Use the copies included in this source package | Versions vendored in extraction revision `609eacf` |
+| Component | macOS / ARM64 | Linux / x86_64 | Android / ARM64 |
+| --- | --- | --- | --- |
+| Tested operating system | macOS 27.0, build 26A428 | Arch Linux, kernel `7.2.3-arch1-3` | Android 16 / API 36, kernel `6.6.98-android15-8` |
+| Test device | Apple M5 Max, 128 GiB RAM | AMD Ryzen 7 H 255, approximately 30 GiB RAM | Samsung SM-F9660 / SM8750, 10.83 GiB RAM |
+| Compiler | Apple clang 21.0.0 (`clang-2100.3.34.2`) | GCC `16.2.1 20260810` | NDK Clang 21.0.0, build 14475230 |
+| SDK / toolchain | Command Line Tools `27.0.0.0.1788430756`; macOS SDK 27.0 | Native GCC toolchain | NDK `30.0.14904198` (r30-beta1); API 28 build target, `arm64-v8a`, `c++_static` |
+| Build tools | CMake/CTest 4.4.2; GNU Make 3.81 | CMake 3.22.1-g37088a8; Make | Cross-compiled on the Linux host using CMake and the NDK |
 
-The validated build explicitly disables OpenMP, ccache, and libcurl. These are not prerequisites. A system-installed ggml library is not used. Git is only needed if obtaining the source through Git; it is not required when using the source archive.
+Real-model inference was tested on all three systems. The complete download, conversion and generation demo below was tested on macOS with these Python dependencies:
 
-The original extraction was validated on the macOS/arm64 environment above. Additional [Linux/x86_64 validation with the real 700M checkpoint](docs/LOCAL_X86_LUT_INFERENCE_REPORT_2026-09-23.md) covers direct and LUT-enabled builds on an AMD Ryzen 7 H 255. The report distinguishes the original ordinary-matmul dispatch gap from the subsequent LUT integration and retest, and records numerical differences between configurations. Windows and the optional legacy AVX512 W2 kernel remain unvalidated by these runs.
+| Dependency | Tested version |
+| --- | --- |
+| Python | 3.12.13 |
+| PyTorch / safetensors | 2.14.0 / 0.8.0 |
+| Transformers / tokenizers | 4.52.4 / 0.21.4 |
+| huggingface_hub | 0.36.2 |
+| NumPy / PyYAML / tqdm | 2.5.3 / 6.0.3 / 4.70.1 |
+| Bundled `gguf` | 0.17.1, installed from `gguf-py/` |
 
-The [Android/ARM64 report](docs/ANDROID_SM_F9660_INFERENCE_REPORT_2026-09-23.md) repeats the real-checkpoint tests on a Samsung SM-F9660 (SM8750, Android 16), including native logits checks and sequential benchmarks with temperature records. It documents LUT repeatability, numerical differences from direct inference and across platforms, and sustained-load frequency limits. The tested Android configuration showed no LUT throughput improvement.
+The [complete Python dependency list](docs/validation/macos-m5max-20260924/environment-python-packages.stdout.log) includes transitive dependencies and their tested versions.
 
-### Hardware
+### Hardware requirements
 
-No non-standard hardware or accelerator is required. The software uses the CPU; no CUDA toolkit, GPU, or GPU memory is needed. ARM NEON/dotprod paths are selected when available. The test computer was an **Apple M5 Max with 128 GiB of RAM**. That memory capacity is not a requirement for the small demo. For a real model, available RAM must accommodate the model, KV cache, and compute buffers; requirements therefore depend on the checkpoint and context length.
-
-### Optional Python dependencies
-
-Python is only needed for reference-data regeneration, the source-isolation audit, or checkpoint conversion. It is not part of the C++ installation or demo.
-
-| Workflow / dependency | Version information | Validation status |
-| --- | --- | --- |
-| Reference-data generator: Python / NumPy | Python 3.12.13 / NumPy 2.5.3 | Used to generate the bundled reference JSON files |
-| Source-isolation audit | Python 3; standard library only | Executed successfully |
-| Local `gguf` package | 0.17.1, from `gguf-py/` | Package import and iFairy type mapping checked |
-| `gguf` import dependencies | NumPy 2.5.3, PyYAML 6.0.3, tqdm 4.70.1 | Used in the import check; declared lower bounds are in [package metadata](gguf-py/pyproject.toml) |
-| Full checkpoint conversion | PyTorch, safetensors, and Transformers, in addition to the dependencies above | Versions are not pinned in this package; no complete checkpoint conversion has been validated |
-
-The converter calls a Hugging Face tokenizer through Transformers. Install that dependency explicitly if using the optional conversion workflow; it is not currently included in the root `requirements.txt`. This repository does not yet supply a validated, version-locked conversion environment.
+No non-standard hardware or GPU is required. The demo downloads approximately **3.12 GB** and produces a **0.58 GB** GGUF; allow additional disk space for Python packages and build files. On the test Mac, conversion used **5.45 GiB peak RAM**, and direct inference used approximately **1.12 GiB** at context length 2048. These are process measurements; leave additional memory for the operating system.
 
 ## 2. Installation guide
 
-### Obtain the source
-
-Extract the supplied source archive and enter its root directory, which contains `CMakeLists.txt`:
-
-```sh
-tar -xzf llama.cpp-ifairy-source.tar.gz
-cd llama.cpp-ifairy
-```
-
-Alternatively, clone this inference repository:
+Install the compiler, CMake, Make and Python 3.12 first. On macOS, `xcode-select --install` installs the Command Line Tools. From a terminal:
 
 ```sh
 git clone https://github.com/EmbroiderSnow/ifairy.cpp.git
 cd ifairy.cpp
-```
 
-If the source is already available as a checkout, enter that directory instead. The related research project linked below is separate from this inference repository.
-
-### Build the CPU runtime and demo
-
-Ensure that the compiler, CMake, and Make listed above are installed. On macOS, `xcode-select --install` installs the Command Line Tools if they are missing; CMake must also be available on `PATH`. Check your tools with `clang --version`, `cmake --version`, and `make --version`.
-
-Run from the source root:
-
-```sh
 cmake -S . -B build-direct \
   -DCMAKE_BUILD_TYPE=Release \
   -DGGML_LEGACY_IFAIRY_CPU_LUT=OFF \
-  -DLLAMA_CURL=OFF \
-  -DGGML_OPENMP=OFF \
-  -DGGML_CCACHE=OFF
+  -DLLAMA_CURL=OFF -DGGML_OPENMP=OFF -DGGML_CCACHE=OFF
 cmake --build build-direct -j 8
+
+python3.12 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt \
+  "torch==2.14.0" "safetensors==0.8.0" \
+  "transformers==4.52.4" "tokenizers==0.21.4" \
+  "huggingface_hub==0.36.2" "numpy==2.5.3" \
+  "PyYAML==6.0.3" "tqdm==4.70.1"
 ```
 
-Executables and their shared libraries are placed in `build-direct/bin/`. Run them from that directory layout; no system-wide installation or administrator privileges are needed. Reduce `-j 8` on a computer with fewer available cores or limited memory.
+The executable is `build-direct/bin/llama-cli`. Reduce `-j 8` if fewer cores or less memory are available. Android cross-compilation and deployment instructions are provided in the [Android installation instructions](docs/ANDROID_SM_F9660_INFERENCE_REPORT_2026-09-23.md#6-复现记录与改动范围).
 
-### Installation time
+### Typical installation time
 
-A fresh build in an empty build directory on the test computer took **2.55 seconds to configure and 16.00 seconds to compile**, approximately **19 seconds in total**, using eight parallel build jobs and no compiler cache. This includes the retained tools and tests, and excludes installing the compiler/CMake or downloading the source.
+Allow **1–5 minutes** to compile on a conventional desktop with prerequisites installed. The fresh direct build on the Apple M5 Max took **2.78 s to configure and 16.80 s to compile** using eight jobs. This excludes tool installation, Python package downloads and model download/conversion.
 
-For planning on a conventional desktop with the prerequisites already installed, allow **1–5 minutes**. This is an estimate, not a measurement on additional computers. Tool installation and optional Python dependency downloads can take longer and are not included.
+## 3. Demo
 
-## 3. Demo: inference on a small synthetic dataset
+The demo downloads [PKU-DS-LAB/Fairy-plus-minus-i-700M](https://huggingface.co/PKU-DS-LAB/Fairy-plus-minus-i-700M), converts it to GGUF and generates a continuation of the short input prompt `The capital of France is`. Small numerical reference datasets are also included in [tests/ifairy-test-data](tests/ifairy-test-data/).
 
-### Included data
+Run the following steps in the same shell, from the repository root, with `.venv` activated.
 
-The primary demo is [test-ifairy-model.cpp](tests/test-ifairy-model.cpp). It generates a deterministic, one-layer iFairy GGUF fixture locally with embedding and feed-forward widths of 256, four attention heads, a vocabulary size of 32, and context length 32. It uses non-zero synthetic weights and token IDs `[1, 2, 3, 4]`.
+### Download the model
 
-The fixture is written to the operating system's temporary directory, loaded by the normal model loader, and deleted after the test. It is intended to demonstrate inference mechanics rather than language quality: it has no text tokenizer and does not generate meaningful sentences.
-
-Small numerical reference datasets are also included:
-
-- [quant_test.json](tests/ifairy-test-data/quant_test.json): quantization/dequantization reference data.
-- [rope_test.json](tests/ifairy-test-data/rope_test.json): rotary-position reference data.
-- [matmul_test.json](tests/ifairy-test-data/matmul_test.json): complex matrix-multiplication reference data.
-
-These JSON files are consumed by the legacy test in the optional LUT build described below. They can be regenerated using [test-ifairy-ref.py](tests/test-ifairy-ref.py), which uses NumPy and random seed 42.
-
-### Run the demo
-
-After installation, run from the source root:
+Download the complete snapshot, including weights, configuration and tokenizer files:
 
 ```sh
-GGML_IFAIRY_LUT=0 ./build-direct/bin/test-ifairy-model
+repo_dir="$PWD"
+model_dir="$repo_dir/models/Fairy-plus-minus-i-700M"
+gguf_file="$repo_dir/models/Fairy-plus-minus-i-700M.gguf"
+
+python - <<'PYMODEL'
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="PKU-DS-LAB/Fairy-plus-minus-i-700M",
+    revision="c274e9bb0b9a82fbe0bc20eeedbf4b8a3fcd358b",
+    local_dir="models/Fairy-plus-minus-i-700M",
+)
+PYMODEL
 ```
 
-The demo checks model loading, three-token prefill, single-token decoding, serial versus batched prompt processing, finite logits, repeatability, and rejection of unsupported model architectures. It uses two CPU inference threads.
+### Convert to GGUF
+
+The converter reads tokenizer files from the current directory, so run it inside the downloaded model directory:
+
+```sh
+(
+  cd "$model_dir" &&
+  PYTHONPATH="$repo_dir/gguf-py" \
+    python "$repo_dir/gguf-py/convert_ifairy.py" . "$gguf_file"
+)
+```
+
+Successful conversion creates `models/Fairy-plus-minus-i-700M.gguf` and prints `转换成功！GGUF 文件已保存至:` followed by the output path.
+
+### Run inference
+
+```sh
+GGML_IFAIRY_LUT=0 "$repo_dir/build-direct/bin/llama-cli" \
+  -m "$gguf_file" -ngl 0 -t 4 -tb 4 \
+  -c 2048 -b 512 -ub 512 \
+  -p "The capital of France is" -n 32 \
+  --seed 42 --temp 0 -no-cnv --simple-io
+```
 
 ### Expected output
 
-After diagnostic output, a successful run exits with status `0` and prints:
+The CLI prints model-loading information, the prompt and generated text, followed by timing diagnostics. A successful run exits with status `0` after at most 32 new tokens. The observed output on the test Mac began:
 
 ```text
-iFairy model load, prefill, decode, repeatability and isolation passed; max difference 0.00000000
+The capital of France is Paris, the largest city in the country
 ```
 
-The displayed difference was zero on the tested system. The test requires a maximum absolute difference below `0.05` between batched and serial final logits, and exact repeatability when rerunning the same path.
+This is an excerpt of generated text; the exact continuation can vary by platform and settings.
 
-Messages rejecting `fairy2i`, `llama`, `qwen3`, and `unknown` architectures are **expected negative-test output**, not a demo failure. They verify that this repository only loads iFairy models.
+### Expected runtime
 
-To run the complete default test suite:
+Measured on the Apple M5 Max on 2026-09-24:
 
-```sh
-ctest --test-dir build-direct --output-on-failure
-```
+| Stage | Wall time |
+| --- | ---: |
+| Download the model snapshot | 118.28 s |
+| Convert to GGUF | 64.95 s |
+| Load and generate up to 32 tokens | 0.68 s |
 
-Expected summary:
+The CLI measurement used four threads and warm filesystem caches, and includes process startup and model loading. On a conventional desktop, allow **several minutes for preparation and a few seconds for generation** as a planning estimate. Download time depends on the network; conversion and generation times depend on the hardware. Measurements are recorded in the [demo timing record](docs/validation/macos-m5max-20260924/summary.json).
 
-```text
-100% tests passed out of 3
-```
+## 4. Instructions for use
 
-### Demo runtime
+### Run on your own text
 
-The standalone demo took **1.29 seconds** in the fresh-build verification. The subsequent three-test suite took **0.64 seconds** including process startup; caches were already warm. On a conventional desktop, allow **a few seconds, approximately 1–10 seconds**, as a planning estimate. These times exclude compilation and do not measure pretrained-model token throughput.
-
-## 4. Instructions for use with your own data
-
-### Run an existing iFairy GGUF model
-
-Supply a compatible pretrained GGUF checkpoint whose architecture is `ifairy`, including its tokenizer metadata. Renaming another model's architecture field does not make its tensors compatible. Model weights are not included in this package.
+Save a UTF-8 prompt in a text file and provide a compatible iFairy GGUF checkpoint:
 
 ```sh
 ./build-direct/bin/llama-cli \
-  -m /absolute/path/ifairy.gguf \
-  --gpu-layers 0 -t 4 -c 0 -b 32 \
-  -p "I believe life is" -n 32 \
-  --seed 42 --temp 0 -no-cnv
+  -m /absolute/path/ifairy.gguf -ngl 0 -t 4 -c 2048 \
+  -f /absolute/path/prompt.txt -n 128 \
+  --seed 42 --temp 0 -no-cnv --simple-io
 ```
 
-Replace the model path and prompt with your own. `-c 0` uses the model's declared context length; reduce the context if necessary for available RAM. The command prints generated text and runtime diagnostics, stopping after at most 32 generated tokens or an end-of-generation token. Actual text depends on the checkpoint and prompt; no reference sentence is prescribed.
+Use `-p "your prompt"` instead of `-f` for inline text. Adjust `-n` for the output length and `-c` for the context length supported by your model. This repository loads only checkpoints with `general.architecture=ifairy`.
 
-To use a UTF-8 prompt file, replace `-p "I believe life is"` with `-f /absolute/path/prompt.txt`. Keep the same checkpoint, prompt, context, thread count, seed, and sampling settings when comparing repeated runs.
+For another original iFairy checkpoint, follow the conversion step above with your own input directory and output path. The input directory must contain `config.json`, all `.safetensors` weights, the shard index if applicable, and compatible tokenizer files including `tokenizer.json`.
 
-### Convert an original iFairy checkpoint (optional; not validated end to end)
+To use LUT, build into `build-lut` with `-DGGML_LEGACY_IFAIRY_CPU_LUT=ON` instead of `OFF`, then use `build-lut/bin/llama-cli` with `GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=auto` and the same inference arguments.
 
-The retained [conversion script](gguf-py/convert_ifairy.py) expects an original ComplexNetLM/iFairy checkpoint with `config.json`, its `.safetensors` weights, any required shard index, and compatible tokenizer files including `tokenizer.json`. It is not a converter for arbitrary Hugging Face models.
+## 5. License and source code
 
-From the repository root, create an isolated Python environment:
+This code is distributed under the **MIT License**; see [LICENSE](LICENSE) and the included [third-party licenses](licenses/).
 
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt transformers
-repo_dir="$PWD"
-```
-
-Then enter the checkpoint directory because the converter currently reads tokenizer files from the working directory:
-
-```sh
-cd /absolute/path/checkpoint
-PYTHONPATH="$repo_dir/gguf-py" \
-  python "$repo_dir/gguf-py/convert_ifairy.py" \
-  . /absolute/path/ifairy.gguf
-```
-
-The output is an iFairy GGUF file that can be supplied to `llama-cli`. Record the installed package versions with `python -m pip freeze` if attempting conversion. No compatible real checkpoint was available for the original extraction's validation. The later [local x86 report](docs/LOCAL_X86_LUT_INFERENCE_REPORT_2026-09-23.md) tests generation and throughput using an existing GGUF; full conversion, reference-model fidelity, and corpus-level quality/perplexity remain unverified.
-
-## 5. Additional validation and reproducibility
-
-To enable the CPU LUT implementation and run its regression tests in a separate build:
-
-```sh
-cmake -S . -B build-lut \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DGGML_LEGACY_IFAIRY_CPU_LUT=ON \
-  -DLLAMA_CURL=OFF -DGGML_OPENMP=OFF -DGGML_CCACHE=OFF
-cmake --build build-lut -j 8
-ctest --test-dir build-lut --output-on-failure
-```
-
-The updated LUT build passed **6/6 tests**, including ordinary matmul dispatch and an independent complex-product reference. See the [LUT integration and retest report](docs/LUT_MUL_MAT_INTEGRATION_REPORT_2026-09-23.md). The source-isolation check can additionally be run with Python:
-
-```sh
-python3 scripts/check-ifairy-only.py
-```
-
-Expected output:
-
-```text
-PASS: no Fairy2i production implementation; only the iFairy graph builder remains.
-```
-
-Run a LUT build with `GGML_IFAIRY_LUT=1 GGML_IFAIRY_LUT_IMPL=auto` to execute ordinary 2D `IFAIRY` matmul through LUT. For execution evidence, add `GGML_IFAIRY_LUT_DEBUG=1` and check for `executed MUL_MAT`; disable debug for timing. Unsetting the switch or setting it to `0` preserves direct execution. Unsupported layouts, ordinary `IFAIRY64` matmul, and out-of-range prequantized activations retain direct fallbacks; legacy W2 retains its separate LUT path.
-
-LUT uses the existing 42.6-scaled activation quantization: per input row for `auto`/`lut16`, per block for `lut_c`. Outputs are not bitwise equivalent to default direct inference. Real-model repeatability, per-op complex arithmetic checks, memory overhead and measured throughput on x86 and Android are documented in the report; reference-model fidelity and corpus-level quality remain unverified.
-
-The retained tools include `llama-cli`, `llama-bench`, `llama-perplexity`, `ifairy-actq-microbench`, and `ifairy-vecdot-microbench`; LUT builds additionally include `ifairy-microbench`. Do not run multiple `llama-bench` processes simultaneously when collecting performance measurements.
-
-[Validation records](docs/validation/) and the [implementation inventory](docs/IFAIRY_INVENTORY.md) document the extraction checks. The demo reproduces these functional checks, not quantitative results from a manuscript. Reproducing manuscript results would additionally require the exact checkpoints, datasets, evaluation commands, and reference metrics, which are not supplied here.
-
-## 6. License and source availability
-
-This extracted llama.cpp inference repository is distributed under the **MIT License**, as specified in [LICENSE](LICENSE). Preserve the copyright notices and the applicable [third-party licenses](licenses/). A license stated for a separate research repository does not replace the license of this code package.
-
-Related iFairy research project: [PKULab1806/Fairy-plus-minus-i](https://github.com/PKULab1806/Fairy-plus-minus-i).
-
-Source repository: [EmbroiderSnow/ifairy.cpp](https://github.com/EmbroiderSnow/ifairy.cpp). The extraction is also available as a source archive. For a review submission, distribute the complete source package, including this README, `tests/ifairy-test-data/`, the synthetic demo source, and license files, or provide an accessible link to that exact package. The implementation description and remaining limitations are available in the [inventory](docs/IFAIRY_INVENTORY.md).
+Source repository: [EmbroiderSnow/ifairy.cpp](https://github.com/EmbroiderSnow/ifairy.cpp).
