@@ -6,7 +6,7 @@ CPU inference for iFairy models, with checkpoint conversion and text generation 
 
 ### Software dependencies and tested versions
 
-Building requires a C11/C++17 compiler, **CMake ≥ 3.14**, and a build tool such as Make. The C++ dependencies are bundled in this repository; system runtime libraries come with the operating system/toolchain. Git is needed to clone the source (tested on macOS: 2.54.0, Apple Git-157). Android deployment additionally requires `adb`; its version was not recorded in the device report. Python and internet access are required to download and convert the demo model.
+Building requires a C11/C++17 compiler, **CMake ≥ 3.14**, and a build tool such as Make. The C++ dependencies are bundled in this repository; system runtime libraries come with the operating system/toolchain. Git is needed to clone the source (tested on macOS: 2.54.0, Apple Git-157). Android deployment additionally requires `adb`; its version was not recorded in the device validation records. Python and internet access are required to download and convert the demo model.
 
 | Component | macOS / ARM64 | Linux / x86_64 | Android / ARM64 |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ python -m pip install -r requirements.txt \
   "PyYAML==6.0.3" "tqdm==4.70.1"
 ```
 
-The executable is `build-direct/bin/llama-cli`. Reduce `-j 8` if fewer cores or less memory are available. Android cross-compilation and deployment instructions are provided in the [Android installation instructions](docs/ANDROID_SM_F9660_INFERENCE_REPORT_2026-09-23.md#6-复现记录与改动范围).
+The executable is `build-direct/bin/llama-cli`. Reduce `-j 8` if fewer cores or less memory are available.
 
 ### Typical installation time
 

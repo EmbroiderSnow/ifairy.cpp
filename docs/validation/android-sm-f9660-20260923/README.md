@@ -1,7 +1,5 @@
 # Android SM-F9660 实验原始记录
 
-主报告：[Android 手机 iFairy 700M 推理与 LUT 实验](../../ANDROID_SM_F9660_INFERENCE_REPORT_2026-09-23.md)。
-
 | 文件 | 内容 |
 | --- | --- |
 | `device-info.log`、`environment.json` | 手机、工具链和构建配置 |

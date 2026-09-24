@@ -1,7 +1,5 @@
 # 2026-09-23 本机 x86 验证原始记录
 
-主报告：[本机 x86 iFairy 700M 推理与 LUT 验证](../../LOCAL_X86_LUT_INFERENCE_REPORT_2026-09-23.md)。
-
 | 文件 | 内容 |
 | --- | --- |
 | `environment.json`、`hardware.stdout.log`、`compile-evidence.json` | 系统、模型指纹及真实编译命令 |
