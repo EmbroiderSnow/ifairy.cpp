@@ -103,6 +103,7 @@ tools/server/*.js.hpp
 tools/server/*.mjs.hpp
 tools/server/*.gz.hpp
 !build_64.sh
+!/scripts/build-release.py
 !examples/*.bat
 !examples/*/*.kts
 !examples/*/*/*.kts
