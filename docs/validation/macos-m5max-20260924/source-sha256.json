@@ -1,0 +1,6 @@
+{
+  "gguf-py/convert_ifairy.py": "84f826457ebc4e9d58306a5c48a1d1f8cc6c86f8ad134646a9c2db332394fa34",
+  "ggml/src/ggml-cpu/legacy-ifairy/legacy-ifairy-cpu.cpp": "cf4641b4a66e98c3534cbfe9e47b97763bb88d4ba3d4f2a8b5ecf291b33d3e57",
+  "ggml/src/ggml-cpu/ggml-cpu.c": "d7859f0dd31b7ed36d662f89c3186deec0fe08347907e12683e7135246ab4961",
+  "tests/test-ifairy-real-model.cpp": "1689ee89fa30b214513483da24db87e4b986ff3c372055caa6a25313ea719e9c"
+}

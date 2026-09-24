@@ -1,0 +1,14 @@
+{
+  "tag": "ctest-build-macos-validation-lut",
+  "command": [
+    "ctest",
+    "--test-dir",
+    "build-macos-validation-lut",
+    "--output-on-failure"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:59:25.046065+00:00",
+  "seconds": 2.333,
+  "returncode": 0
+}

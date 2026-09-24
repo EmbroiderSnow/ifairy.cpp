@@ -1,0 +1,13 @@
+{
+  "tag": "bench-4t-direct-power-before",
+  "command": [
+    "pmset",
+    "-g",
+    "therm"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T03:02:56.721186+00:00",
+  "seconds": 0.007,
+  "returncode": 0
+}

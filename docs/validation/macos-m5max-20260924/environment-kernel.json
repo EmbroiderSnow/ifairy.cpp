@@ -1,0 +1,12 @@
+{
+  "tag": "environment-kernel",
+  "command": [
+    "uname",
+    "-a"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:58:49.580303+00:00",
+  "seconds": 0.002,
+  "returncode": 0
+}

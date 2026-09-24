@@ -1,0 +1,20 @@
+{
+  "tag": "probe-serial",
+  "command": [
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/build-macos-validation-lut/bin/test-ifairy-real-model",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M.gguf",
+    "/tmp/ifairy-macos-validation/probe-serial",
+    "serial",
+    "8"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {
+    "GGML_IFAIRY_LUT": "1",
+    "GGML_IFAIRY_LUT_IMPL": "auto",
+    "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+    "GGML_IFAIRY_LUT_DEBUG": "0"
+  },
+  "started_utc": "2026-09-24T03:02:44.049367+00:00",
+  "seconds": 1.521,
+  "returncode": 0
+}

@@ -1,0 +1,57 @@
+CMAKE_BUILD_TYPE=Release
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_CUDA_FA=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_CUDA_GRAPHS=OFF for the
+  CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_HIP_NO_VMM=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_HIP_MMQ_MFMA=OFF for the
+  CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_SYCL_GRAPH=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_SYCL_DNN=OFF for the CPU-only
+  LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_OPENCL_EMBED_KERNELS=OFF for
+  the CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+
+CMake Warning at ggml/CMakeLists.txt:266 (message):
+  GGML_LEGACY_IFAIRY_CPU_LUT=ON: forcing GGML_OPENCL_USE_ADRENO_KERNELS=OFF
+  for the CPU-only LUT path
+Call Stack (most recent call first):
+  ggml/CMakeLists.txt:315 (_ggml_cpu_lut_force_backend_off)
+
+

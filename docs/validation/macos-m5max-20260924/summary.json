@@ -1,0 +1,19 @@
+{
+  "source_commit": "6fbc73c4723cb0295d5300088f776fcfb09991e0",
+  "gguf": {
+    "filename": "Fairy-plus-minus-i-700M.gguf",
+    "bytes": 576123520,
+    "sha256": "39f77bb18ba42b4612dd2bd770f7267143e7e20be6038ec8a33028a48851721e",
+    "source_revision": "c274e9bb0b9a82fbe0bc20eeedbf4b8a3fcd358b"
+  },
+  "checkpoint_revision": "c274e9bb0b9a82fbe0bc20eeedbf4b8a3fcd358b",
+  "download_seconds": 118.275,
+  "conversion_seconds": 64.947,
+  "cli_demo_seconds": 0.675,
+  "debug_executed_matmuls": 336,
+  "total_finite_logits": 14784000,
+  "probe_rss_mib": {
+    "off": 1144.90625,
+    "auto": 1653.8125
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "repo_id": "PKU-DS-LAB/Fairy-plus-minus-i-700M",
+  "revision": "c274e9bb0b9a82fbe0bc20eeedbf4b8a3fcd358b",
+  "files": {
+    ".gitattributes": {
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    "README.md": {
+      "bytes": 10525,
+      "sha256": "2b6dde4287d53d6d4852f2e5be964c15127e318bd9a4ffe5c405ccfb59f621d7"
+    },
+    "config.json": {
+      "bytes": 830,
+      "sha256": "c076ace36cd8d2ea0a679956cdbec3de69fb649b46deb67e8baaf0e29f5b36e1"
+    },
+    "configuration_Fairy_plus_minus_i.py": {
+      "bytes": 3190,
+      "sha256": "836a00f87f2c3e21f8f20cb9c58591c3d6bf289c50aa091a862a780973bc4eff"
+    },
+    "generation_config.json": {
+      "bytes": 111,
+      "sha256": "e3ad524b57740347c31ac7bd416181d31fd70b625378f9e73886469f5a264c73"
+    },
+    "model.safetensors": {
+      "bytes": 3112026544,
+      "sha256": "7d098568f2e51cec2ba2540d29830cae90466a015b44f04d4606ed97bdd4a535"
+    },
+    "modeling_Fairy_plus_minus_i.py": {
+      "bytes": 56752,
+      "sha256": "5edeb4d5cfdf7e26dd104f76a70b38ea49b2f7efd9d67daffda0982879a73ae8"
+    },
+    "special_tokens_map.json": {
+      "bytes": 551,
+      "sha256": "82d96d7a9e6ced037f12394b7ea6a5b02e6ca87e0d11edaa8d60d9be857ce7db"
+    },
+    "tokenizer.json": {
+      "bytes": 3619016,
+      "sha256": "c88bda6bdd84543eadebdf4bd2ec325ae43b71a3ff1fead6a766562c00b29bd8"
+    },
+    "tokenizer_config.json": {
+      "bytes": 983,
+      "sha256": "51e4f0c700b18d6d73ff0b3138e3bb763c159dbf86e490b1bdc10f8896704bd1"
+    }
+  }
+}

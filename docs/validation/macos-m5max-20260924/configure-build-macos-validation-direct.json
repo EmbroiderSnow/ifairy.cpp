@@ -1,0 +1,22 @@
+{
+  "tag": "configure-build-macos-validation-direct",
+  "command": [
+    "cmake",
+    "-S",
+    ".",
+    "-B",
+    "build-macos-validation-direct",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+    "-DGGML_LEGACY_IFAIRY_CPU_LUT=OFF",
+    "-DGGML_LLAMAFILE=ON",
+    "-DLLAMA_CURL=OFF",
+    "-DGGML_OPENMP=OFF",
+    "-DGGML_CCACHE=OFF"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:58:43.744693+00:00",
+  "seconds": 2.782,
+  "returncode": 0
+}

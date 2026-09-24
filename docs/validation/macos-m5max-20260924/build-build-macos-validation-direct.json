@@ -1,0 +1,15 @@
+{
+  "tag": "build-build-macos-validation-direct",
+  "command": [
+    "cmake",
+    "--build",
+    "build-macos-validation-direct",
+    "-j",
+    "8"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:58:46.527596+00:00",
+  "seconds": 16.795,
+  "returncode": 0
+}

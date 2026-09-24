@@ -1,0 +1,40 @@
+{
+  "tag": "cli-demo",
+  "command": [
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/build-macos-validation-direct/bin/llama-cli",
+    "-m",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M.gguf",
+    "-ngl",
+    "0",
+    "-t",
+    "4",
+    "-tb",
+    "4",
+    "-c",
+    "2048",
+    "-b",
+    "512",
+    "-ub",
+    "512",
+    "-p",
+    "The capital of France is",
+    "-n",
+    "32",
+    "--seed",
+    "42",
+    "--temp",
+    "0",
+    "-no-cnv",
+    "--simple-io"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {
+    "GGML_IFAIRY_LUT": "0",
+    "GGML_IFAIRY_LUT_IMPL": "auto",
+    "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+    "GGML_IFAIRY_LUT_DEBUG": "0"
+  },
+  "started_utc": "2026-09-24T03:02:56.023723+00:00",
+  "seconds": 0.675,
+  "returncode": 0
+}

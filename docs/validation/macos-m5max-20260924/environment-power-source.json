@@ -1,0 +1,13 @@
+{
+  "tag": "environment-power-source",
+  "command": [
+    "pmset",
+    "-g",
+    "batt"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:58:49.630543+00:00",
+  "seconds": 0.007,
+  "returncode": 0
+}

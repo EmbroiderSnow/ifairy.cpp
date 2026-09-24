@@ -1,0 +1,12 @@
+{
+  "tag": "source-isolation",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "scripts/check-ifairy-only.py"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:59:27.379309+00:00",
+  "seconds": 0.055,
+  "returncode": 0
+}

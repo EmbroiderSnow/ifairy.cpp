@@ -1,0 +1,34 @@
+{
+  "tag": "bench-8t-direct",
+  "command": [
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/build-macos-validation-lut/bin/llama-bench",
+    "-m",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M.gguf",
+    "-ngl",
+    "0",
+    "-t",
+    "8",
+    "-b",
+    "512",
+    "-ub",
+    "512",
+    "-p",
+    "128,512",
+    "-n",
+    "128",
+    "-r",
+    "3",
+    "-o",
+    "json"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {
+    "GGML_IFAIRY_LUT": "0",
+    "GGML_IFAIRY_LUT_IMPL": "auto",
+    "GGML_IFAIRY_VEC_DOT_ACT_TENSOR": "0",
+    "GGML_IFAIRY_LUT_DEBUG": "0"
+  },
+  "started_utc": "2026-09-24T03:03:48.428632+00:00",
+  "seconds": 12.707,
+  "returncode": 0
+}

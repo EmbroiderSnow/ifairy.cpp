@@ -1,0 +1,19 @@
+Unknown separator token '<s>' in TemplateProcessing<pair>
+       64.94 real        77.13 user         1.45 sys
+          5850218496  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              431957  page reclaims
+                  10  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  30  voluntary context switches
+               72276  involuntary context switches
+       1709030799310  instructions retired
+        343217456514  cycles elapsed
+          2740996808  peak memory footprint

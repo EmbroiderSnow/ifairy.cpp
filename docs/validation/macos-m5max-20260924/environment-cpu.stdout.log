@@ -1,0 +1,4 @@
+machdep.cpu.brand_string: Apple M5 Max
+hw.memsize: 137438953472
+hw.physicalcpu: 18
+hw.logicalcpu: 18

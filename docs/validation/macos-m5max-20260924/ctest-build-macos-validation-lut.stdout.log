@@ -1,0 +1,17 @@
+Test project /Users/1806-admin/Projects/llama.cpp-ifairy/build-macos-validation-lut
+    Start 1: test-legacy-ifairy-direct
+1/6 Test #1: test-legacy-ifairy-direct ........   Passed    1.11 sec
+    Start 2: test-ifairy-model
+2/6 Test #2: test-ifairy-model ................   Passed    0.27 sec
+    Start 3: test-ifairy-ops
+3/6 Test #3: test-ifairy-ops ..................   Passed    0.35 sec
+    Start 4: test-ifairy-lut-mul-mat
+4/6 Test #4: test-ifairy-lut-mul-mat ..........   Passed    0.30 sec
+    Start 5: test-legacy-ifairy
+5/6 Test #5: test-legacy-ifairy ...............   Passed    0.28 sec
+    Start 6: test-ifairy-model-lut
+6/6 Test #6: test-ifairy-model-lut ............   Passed    0.01 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   2.33 sec

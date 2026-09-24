@@ -1,0 +1,18 @@
+{
+  "tag": "convert",
+  "command": [
+    "/usr/bin/time",
+    "-l",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/.venv/bin/python",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/gguf-py/convert_ifairy.py",
+    ".",
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M.gguf"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M",
+  "environment": {
+    "PYTHONPATH": "/Users/1806-admin/Projects/llama.cpp-ifairy/gguf-py"
+  },
+  "started_utc": "2026-09-24T03:01:18.174012+00:00",
+  "seconds": 64.947,
+  "returncode": 0
+}

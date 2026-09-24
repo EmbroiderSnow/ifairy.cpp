@@ -1,0 +1,13 @@
+{
+  "tag": "download",
+  "command": [
+    "/Users/1806-admin/Projects/llama.cpp-ifairy/.venv/bin/python",
+    "-c",
+    "from huggingface_hub import snapshot_download; snapshot_download(repo_id='PKU-DS-LAB/Fairy-plus-minus-i-700M', revision='c274e9bb0b9a82fbe0bc20eeedbf4b8a3fcd358b', local_dir='/Users/1806-admin/Projects/llama.cpp-ifairy/models/Fairy-plus-minus-i-700M')"
+  ],
+  "cwd": "/Users/1806-admin/Projects/llama.cpp-ifairy",
+  "environment": {},
+  "started_utc": "2026-09-24T02:58:49.763671+00:00",
+  "seconds": 118.275,
+  "returncode": 0
+}
