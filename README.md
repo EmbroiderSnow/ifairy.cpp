@@ -35,6 +35,13 @@ No non-standard hardware or GPU is required. The demo downloads approximately **
 
 ## 2. Installation guide
 
+Prebuilt binaries for macOS ARM64, Linux x86_64 and Android ARM64 are available
+from [GitHub Releases](https://github.com/EmbroiderSnow/ifairy.cpp/releases).
+See the included README or [binary usage instructions](docs/binary-usage.md) for
+minimum system requirements, checksum verification and installation. With a
+prebuilt archive, use its `bin/llama-cli` in place of `build-direct/bin/llama-cli`
+in the demo below; the Python download and conversion steps still apply.
+
 Install the compiler, CMake, Make and Python 3.12 first. On macOS, `xcode-select --install` installs the Command Line Tools. From a terminal:
 
 ```sh
